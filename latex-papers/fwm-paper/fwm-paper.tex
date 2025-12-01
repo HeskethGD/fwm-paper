@@ -1,0 +1,104 @@
+\documentclass[12pt,a4paper]{article}
+
+% Packages for math, symbols, and formatting
+\usepackage{amsmath, amssymb, amsfonts}  % Standard math packages
+\usepackage{graphicx}                     % For figures
+\usepackage{hyperref}                     % For links
+\usepackage{geometry}                     % Page layout
+\usepackage{caption}                      % Captions for figures/tables
+\usepackage{bm}                           % Bold math symbols
+
+% Page layout
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+
+% Numbering equations by section
+\numberwithin{equation}{section}
+
+% Title and authors
+\title{The general analytic solution to continuous wave four-wave mixing in nonlinear fiber optics}
+\author{Graham Hesketh \
+\small United Kingdom \
+\small \texttt{[gdh1e10@gmail.com](mailto:gdh1e10@gmail.com)}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The general analytic solution to continuous wave four-wave mixing in nonlinear optical fibers is presented in terms of Weierstrass elliptic $\wp, \sigma, \zeta$ functions. 
+Solutions are provided for the full complex envelopes for all four frequency modes, under all initial conditions, and without any undepleted pump approximation.
+\end{abstract}
+
+\section{Introduction}
+Four-wave mixing (FWM) in nonlinear optical fibers is one of the fundamental parametric processes enabled by the Kerr nonlinearity. 
+It underpins a wide range of applications, including wavelength conversion, parametric amplification, frequency-comb generation, and quantum light sources. 
+Despite this broad relevance, obtaining closed-form analytic descriptions of FWM remains challenging because the underlying coupled-wave equations are nonlinear, phase-sensitive, and generally require numerical integration. 
+As a result, most textbook treatments rely on simplifying assumptions such as undepleted pumps, negligible phase mismatch, or weak signal and idler powers.
+
+Several works have presented analytic or semi-analytic solutions in specific regimes, including the undepleted-pump limit, the perfectly phase-matched case, or configurations with constrained input conditions. 
+However, a fully general analytic solution—valid for arbitrary pump depletion, arbitrary phase mismatch, and arbitrary input power ratios—remains of significant theoretical and practical interest. 
+Such a solution not only clarifies the structure of the FWM interaction but also provides a unified benchmark against which approximate models and numerical simulations can be evaluated.
+
+In this work, we derive the general analytic solution for continuous-wave four-wave mixing in a nonlinear optical fiber. 
+Beginning from the standard coupled-wave equations for the interacting fields, we identify the conserved quantities associated with the parametric interaction and use them to reduce the system to an integrable form. 
+The resulting expressions describe the full evolution of the pump, signal, and idler amplitudes, including amplitude and phase dynamics, for arbitrary initial conditions. 
+These solutions recover the known limiting cases and offer direct physical insight into gain behavior, conversion efficiency, and phase evolution across the full parameter space.
+
+\section{The continuous wave four-wave mixing system}
+The following coupled system of ordinary differential equations is taken from Agrawal and describes four-wave mixing in the continuous wave limit, i.e., in the absence of time derivatives:
+
+\begin{align}
+\label{eq:fwm-system}
+\frac{dA_1}{dz} &= \frac{in_2\omega_1}{c}\left[\left(f_{11}|A_1|^2 + 2\sum_{k\neq 1} f_{1k}|A_k|^2\right)A_1 + 2f_{1234}A_2^*A_3A_4e^{i\Delta kz}\right], \\
+\frac{dA_2}{dz} &= \frac{in_2\omega_2}{c}\left[\left(f_{22}|A_2|^2 + 2\sum_{k\neq 2} f_{2k}|A_k|^2\right)A_2 + 2f_{2134}A_1^*A_3A_4e^{i\Delta kz}\right], \\
+\frac{dA_3}{dz} &= \frac{in_2\omega_3}{c}\left[\left(f_{33}|A_3|^2 + 2\sum_{k\neq 3} f_{3k}|A_k|^2\right)A_3 + 2f_{3412}A_1A_2A_4^*e^{-i\Delta kz}\right], \\
+\frac{dA_4}{dz} &= \frac{in_2\omega_4}{c}\left[\left(f_{44}|A_4|^2 + 2\sum_{k\neq 4} f_{4k}|A_k|^2\right)A_4 + 2f_{4312}A_1A_2A_3^*e^{-i\Delta kz}\right].
+\end{align}
+
+where:
+\begin{itemize}
+    \item $A_j$ are the slowly-varying complex field amplitudes for waves $j = 1, 2, 3, 4$
+    \item $z$ is the propagation distance
+    \item $\omega_j$ are the angular frequencies of the respective waves
+    \item $c$ is the speed of light in vacuum
+    \item $n_2$ is the nonlinear refractive index
+    \item $f_{jj}$ are the self-phase modulation (SPM) coefficients
+    \item $f_{jk}$ (for $j \neq k$) are the cross-phase modulation (XPM) coefficients
+    \item $f_{jklm}$ are the four-wave mixing (FWM) coefficients
+    \item $A^*$ denotes complex conjugation
+    \item $\Delta k = \beta_1 + \beta_2 - \beta_3 - \beta_4$ is the phase mismatch
+    \item $\beta_j = n(\omega_j)\omega_j/c$ are the propagation constants
+\end{itemize}
+
+The modal overlap integrals are defined in terms of the transverse distribution of the fiber mode $F_j(x,y)$ as:
+\begin{align}
+\label{eq:overlaps}
+f_{jklm} &= \frac{\langle F_j^* F_k^* F_l F_m \rangle}{\sqrt{\langle |F_j|^2 \rangle \langle |F_k|^2 \rangle \langle |F_l|^2 \rangle \langle |F_m|^2 \rangle}}, \\
+f_{jk} &= f_{jjkk}, \\
+f_{jj} &= f_{jjjj}, 
+\end{align}
+where $\langle \cdots \rangle = \iint_{-\infty}^{\infty} (\cdots) \, dx\,dy$ denotes the transverse spatial integral.
+
+Agrawal says of \eqref{eq:fwm-system} that the equations ``are quite general in the sense that they include the effects of SPM, XPM, and pump depletion on the FWM process; a numerical approach is necessary to solve them exactly.''
+That said, herein, they are solved analytically in full, as written, without any further approximation.
+\section{Results}
+Describe your findings. Include figures if needed:
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{plots/case1_plot_1.pdf}
+\caption{Example figure caption.}
+\label{fig:example}
+\end{figure}
+
+\section{Conclusion}
+Summarize results and possible future directions.
+
+\section*{Acknowledgements}
+Acknowledge funding or helpful discussions.
+
+\bibliographystyle{plain}
+\bibliography{references}  % Create references.bib file
+
+\end{document}
