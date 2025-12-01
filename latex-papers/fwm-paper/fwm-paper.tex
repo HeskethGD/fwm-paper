@@ -75,15 +75,87 @@ The modal overlap integrals are defined in terms of the transverse distribution 
 \begin{align}
 \label{eq:overlaps}
 f_{jklm} &= \frac{\langle F_j^* F_k^* F_l F_m \rangle}{\sqrt{\langle |F_j|^2 \rangle \langle |F_k|^2 \rangle \langle |F_l|^2 \rangle \langle |F_m|^2 \rangle}}, \\
-f_{jk} &= f_{jjkk}, \\
-f_{jj} &= f_{jjjj}, 
+f_{jk} &= f_{kj} = f_{jjkk}
 \end{align}
 where $\langle \cdots \rangle = \iint_{-\infty}^{\infty} (\cdots) \, dx\,dy$ denotes the transverse spatial integral.
 
 Agrawal says of \eqref{eq:fwm-system} that the equations ``are quite general in the sense that they include the effects of SPM, XPM, and pump depletion on the FWM process; a numerical approach is necessary to solve them exactly.''
 That said, herein, they are solved analytically in full, as written, without any further approximation.
-\section{Results}
-Describe your findings. Include figures if needed:
+
+\section{Simplifying parameter dependence}
+From \eqref{eq:overlaps}, we observe the following symmetries among the wave mixing coefficients:
+
+\begin{align}
+\label{eq:overlap-symms}
+f_{1234} &= |f_{1234}|e^{i\nu}, \\
+f_{2134} &= f_{1234} = |f_{1234}|e^{i\nu}, \\
+f_{3412} &= f_{1234}^* = |f_{1234}|e^{-i\nu}, \\
+f_{4312} &= f_{1234}^* = |f_{1234}|e^{-i\nu},
+\end{align}
+where $\nu$ is the complex phase of $f_{1234}$. 
+Consequently, we can conveniently renormalise the functions, and also absorb the phase $\nu$ as a global phase rotation on the modes, 
+in such a way that the wave mixing coefficients all become equal to one.
+To do so, we introduce the following redefinition of the mode functions 
+(take care to note that, while not crucial, the complex conjugates are shared among $u,v$ in this choice of labels so as to later conveniently give one product over $u$ and one over $v$):
+
+\begin{align}
+T &= \sqrt{\frac{2\,n_2 \left|f_{1234}\right|}{c} \sqrt{ \prod\limits_{k=1}^{4} \omega_k}}, \\
+u_1\left(z\right) &= \frac{T\,\,e^{-i\pi/4}\,e^{-i\nu_{1}/4}}{\sqrt{\omega_{1}}} \,A_{1}\left(z\right)\,e^{i z \beta_{1}}, \\
+u_2\left(z\right) &= \frac{T\,e^{-i\pi/4}\,e^{-i\nu_{1}/4}}{\sqrt{\omega_{2}}}\,A_{2}\left(z\right)\,e^{i z \beta_{2}}, \\
+u_3\left(z\right) &= \frac{T\,e^{i\pi/4}\,e^{-i\nu_{1}/4}}{\sqrt{\omega_{3}}}\,A^*_{3}\left(z\right)\,e^{-i z \beta_{3}}, \\
+u_4\left(z\right) &= \frac{T\,e^{i\pi/4}\,e^{-i\nu_{1}/4}}{\sqrt{\omega_{4}}}\,A^*_{4}\left(z\right)\,e^{-i z \beta_{4}}, \\
+v_1\left(z\right) &= \frac{T\,e^{-i\pi/4}\,e^{i\nu_{1}/4}}{\sqrt{\omega_{1}}}\,A^*_{1}\left(z\right)\,e^{-i z \beta_{1}}, \\
+v_2\left(z\right) &= \frac{T\,e^{-i\pi/4}\,e^{i\nu_{1}/4}}{\sqrt{\omega_{2}}}\,A^*_{2}\left(z\right)\,e^{-i z \beta_{2}}, \\
+v_3\left(z\right) &= \frac{T\,e^{i\pi/4}\,e^{i\nu_{1}/4}}{\sqrt{\omega_{3}}}\,A_{3}\left(z\right)\,e^{i z \beta_{3}}, \\
+v_4\left(z\right) &= \frac{T\,e^{i\pi/4}\,e^{i\nu_{1}/4}}{\sqrt{\omega_{4}}}\,A_{4}\left(z\right)\,e^{i z \beta_{4}}.
+\end{align}
+
+We subsequently define the remaining phase modulation parameters as:
+\begin{align}
+{a}_{j} &= - i\, s{\left(j \right)} {\beta}_{j}, \\
+{a}_{j,k} &= - \frac{\left(\delta_{j k} - 2\right) s{\left(j \right)}\, s{\left(k \right)}\, {f}_{j,k}\, {\omega}_{j}\, {\omega}_{k}}{2 \left|{{f}_{1,2,3,4}}\right| \sqrt{\prod_{k=1}^{4} {\omega}_{k}}}
+\end{align}
+with Kronecker $\delta$, and $s(j)$ defined such that $s(1) = s(2) = 1, s(3) = s(4) = -1$.
+
+The four-wave mixing system in \eqref{eq:fwm-system} is thus recast as:
+\begin{align}
+\label{eq:uv-system}
+\frac{d}{d z} u_j{\left(z \right)} &= - \left({a}_{j} + \sum_{k=1}^{4} {a}_{j,k}\,u_k v_k \right) u_j + \prod\limits_{k=1, k \ne j}^{4} v_k, \\
+\frac{d}{d z} v_j{\left(z \right)} &= \left({a}_{j} + \sum_{k=1}^{4} {a}_{j,k}\,u_k v_k \right) v_j - \prod\limits_{k=1, k \ne j}^{4} u_k
+\end{align}
+
+The system in \eqref{eq:uv-system} is a canonical Hamiltonian system with:
+\begin{align}
+\label{eq:ham-uv}
+H(u_1,\dots, u_4, v_1, \dots, v_4) &= -\sum_{j=1}^{4} a_{j}\, u_j v_j - \frac{1}{2}\,\sum_{j,k=1}^{4} a_{j,k}\, u_j v_j u_k v_k + \prod\limits_{j=1}^{4} u_j + \prod\limits_{j=1}^{4} v_j, \\
+\frac{d}{d z} u_j{\left(z \right)} &= \frac{\partial H}{\partial v_j}, \\
+\frac{d}{d z} v_j{\left(z \right)} &= -\frac{\partial H}{\partial u_j}, \\
+\frac{d}{d z} H &= 0
+\end{align}
+
+The pair $u_j, v_j$ are Hamiltonian conjugates, and each pair represents one of four degrees of freedom in the system. 
+We refer to their product $u_j v_j$ as the modal power and it evolves according to:
+\begin{equation}
+\label{eq:duv_j}
+\frac{d}{d z} u_j v_j = \prod\limits_{k=1}^{4} v_k - \prod\limits_{k=1}^{4} u_k
+\end{equation}
+
+As the right hand side of \eqref{eq:duv_j} is the same for all $j$, 
+we may define constants $\gamma_j$ and function $\rho(z)$ such that:
+\begin{equation}
+\label{eq:uvj-gam-rho}
+u_j(z) v_j(z) = \gamma_j - \rho(z)
+\end{equation}
+
+from which it follows there are 3 (read as $j > k$ to avoid over counting) intermodal power conservation laws of the form:
+\begin{equation}
+\label{eq:power-conserved}
+u_j(z) v_j(z) - u_k(z) v_k(z) = \gamma_j - \gamma_k.
+\end{equation}
+
+The system has 4 degrees of freedom and four conserved quantities which is a requirement for integrability in the Liouville-Arnold sense.
+
+\section{Solutions in terms of Weierstrass elliptic functions}
 
 \begin{figure}[h]
 \centering
