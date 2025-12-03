@@ -15,7 +15,7 @@
 \numberwithin{equation}{section}
 
 % Title and authors
-\title{The general analytic solution to continuous wave four-wave mixing in nonlinear fiber optics}
+\title{The general analytic solution to continuous wave four-wave mixing in nonlinear fiber optics in Weierstra\ss{} notation}
 \author{Graham Hesketh \
 \small United Kingdom \
 \small \texttt{[gdh1e10@gmail.com](mailto:gdh1e10@gmail.com)}}
@@ -26,9 +26,13 @@
 \maketitle
 
 \begin{abstract}
-The general analytic solution to continuous wave four-wave mixing in nonlinear optical fibers is presented in terms of Weierstrass elliptic $\wp, \sigma, \zeta$ functions. 
+The general analytic solution to continuous wave four-wave mixing in nonlinear optical fibers is presented in terms of Weierstra\ss{} elliptic $\wp, \sigma, \zeta$ functions. 
 Solutions are provided for the full complex envelopes for all four frequency modes, under all initial conditions, and without any undepleted pump approximation.
 \end{abstract}
+
+
+% ---------- SECTION -------------
+% --------------------------------
 
 \section{Introduction}
 Four-wave mixing (FWM) in nonlinear optical fibers is one of the fundamental parametric processes enabled by the Kerr nonlinearity. 
@@ -44,6 +48,10 @@ In this work, we derive the general analytic solution for continuous-wave four-w
 Beginning from the standard coupled-wave equations for the interacting fields, we identify the conserved quantities associated with the parametric interaction and use them to reduce the system to an integrable form. 
 The resulting expressions describe the full evolution of the pump, signal, and idler amplitudes, including amplitude and phase dynamics, for arbitrary initial conditions. 
 These solutions recover the known limiting cases and offer direct physical insight into gain behavior, conversion efficiency, and phase evolution across the full parameter space.
+
+
+% ---------- SECTION -------------
+% --------------------------------
 
 \section{The continuous wave four-wave mixing system}
 The following coupled system of ordinary differential equations is taken from Agrawal and describes four-wave mixing in the continuous wave limit, i.e., in the absence of time derivatives:
@@ -82,38 +90,42 @@ where $\langle \cdots \rangle = \iint_{-\infty}^{\infty} (\cdots) \, dx\,dy$ den
 Agrawal says of \eqref{eq:fwm-system} that the equations ``are quite general in the sense that they include the effects of SPM, XPM, and pump depletion on the FWM process; a numerical approach is necessary to solve them exactly.''
 That said, herein, they are solved analytically in full, as written, without any further approximation.
 
+
+% ---------- SECTION -------------
+% --------------------------------
+
 \section{Simplifying parameter dependence}
 From \eqref{eq:overlaps}, we observe the following symmetries among the wave mixing coefficients:
 
 \begin{align}
 \label{eq:overlap-symms}
-f_{1234} &= |f_{1234}|e^{i\nu}, \\
-f_{2134} &= f_{1234} = |f_{1234}|e^{i\nu}, \\
-f_{3412} &= f_{1234}^* = |f_{1234}|e^{-i\nu}, \\
-f_{4312} &= f_{1234}^* = |f_{1234}|e^{-i\nu},
+f_{1234} &= |f_{1234}|e^{i\theta}, \\
+f_{2134} &= f_{1234} = |f_{1234}|e^{i\theta}, \\
+f_{3412} &= f_{1234}^* = |f_{1234}|e^{-i\theta}, \\
+f_{4312} &= f_{1234}^* = |f_{1234}|e^{-i\theta},
 \end{align}
-where $\nu$ is the complex phase of $f_{1234}$. 
-Consequently, we can conveniently renormalise the functions, and also absorb the phase $\nu$ as a global phase rotation on the modes, 
+where $\theta$ is the phase of $f_{1234}$. 
+Consequently, we can conveniently renormalise the functions, and also absorb the phase $\theta$ as a global phase rotation of the modes, 
 in such a way that the wave mixing coefficients all become equal to one.
 To do so, we introduce the following redefinition of the mode functions 
 (take care to note that, while not crucial, the complex conjugates are shared among $u,v$ in this choice of labels so as to later conveniently give one product over $u$ and one over $v$):
 
 \begin{align}
 T &= \sqrt{\frac{2\,n_2 \left|f_{1234}\right|}{c} \sqrt{ \prod\limits_{k=1}^{4} \omega_k}}, \\
-u_1\left(z\right) &= \frac{T\,\,e^{-i\pi/4}\,e^{-i\nu_{1}/4}}{\sqrt{\omega_{1}}} \,A_{1}\left(z\right)\,e^{i z \beta_{1}}, \\
-u_2\left(z\right) &= \frac{T\,e^{-i\pi/4}\,e^{-i\nu_{1}/4}}{\sqrt{\omega_{2}}}\,A_{2}\left(z\right)\,e^{i z \beta_{2}}, \\
-u_3\left(z\right) &= \frac{T\,e^{i\pi/4}\,e^{-i\nu_{1}/4}}{\sqrt{\omega_{3}}}\,A^*_{3}\left(z\right)\,e^{-i z \beta_{3}}, \\
-u_4\left(z\right) &= \frac{T\,e^{i\pi/4}\,e^{-i\nu_{1}/4}}{\sqrt{\omega_{4}}}\,A^*_{4}\left(z\right)\,e^{-i z \beta_{4}}, \\
-v_1\left(z\right) &= \frac{T\,e^{-i\pi/4}\,e^{i\nu_{1}/4}}{\sqrt{\omega_{1}}}\,A^*_{1}\left(z\right)\,e^{-i z \beta_{1}}, \\
-v_2\left(z\right) &= \frac{T\,e^{-i\pi/4}\,e^{i\nu_{1}/4}}{\sqrt{\omega_{2}}}\,A^*_{2}\left(z\right)\,e^{-i z \beta_{2}}, \\
-v_3\left(z\right) &= \frac{T\,e^{i\pi/4}\,e^{i\nu_{1}/4}}{\sqrt{\omega_{3}}}\,A_{3}\left(z\right)\,e^{i z \beta_{3}}, \\
-v_4\left(z\right) &= \frac{T\,e^{i\pi/4}\,e^{i\nu_{1}/4}}{\sqrt{\omega_{4}}}\,A_{4}\left(z\right)\,e^{i z \beta_{4}}.
+u_1\left(z\right) &= \frac{T\,\,e^{-i\pi/4}\,e^{-i\theta/4}}{\sqrt{\omega_{1}}} \,A_{1}\left(z\right)\,e^{i z \beta_{1}}, \\
+u_2\left(z\right) &= \frac{T\,e^{-i\pi/4}\,e^{-i\theta/4}}{\sqrt{\omega_{2}}}\,A_{2}\left(z\right)\,e^{i z \beta_{2}}, \\
+u_3\left(z\right) &= \frac{T\,e^{i\pi/4}\,e^{-i\theta/4}}{\sqrt{\omega_{3}}}\,A^*_{3}\left(z\right)\,e^{-i z \beta_{3}}, \\
+u_4\left(z\right) &= \frac{T\,e^{i\pi/4}\,e^{-i\theta/4}}{\sqrt{\omega_{4}}}\,A^*_{4}\left(z\right)\,e^{-i z \beta_{4}}, \\
+v_1\left(z\right) &= \frac{T\,e^{-i\pi/4}\,e^{i\theta/4}}{\sqrt{\omega_{1}}}\,A^*_{1}\left(z\right)\,e^{-i z \beta_{1}}, \\
+v_2\left(z\right) &= \frac{T\,e^{-i\pi/4}\,e^{i\theta/4}}{\sqrt{\omega_{2}}}\,A^*_{2}\left(z\right)\,e^{-i z \beta_{2}}, \\
+v_3\left(z\right) &= \frac{T\,e^{i\pi/4}\,e^{i\theta/4}}{\sqrt{\omega_{3}}}\,A_{3}\left(z\right)\,e^{i z \beta_{3}}, \\
+v_4\left(z\right) &= \frac{T\,e^{i\pi/4}\,e^{i\theta/4}}{\sqrt{\omega_{4}}}\,A_{4}\left(z\right)\,e^{i z \beta_{4}}.
 \end{align}
 
-We subsequently define the remaining phase modulation parameters as:
+We subsequently redefine the remaining phase modulation parameters as:
 \begin{align}
 {a}_{j} &= - i\, s{\left(j \right)} {\beta}_{j}, \\
-{a}_{j,k} &= - \frac{\left(\delta_{j k} - 2\right) s{\left(j \right)}\, s{\left(k \right)}\, {f}_{j,k}\, {\omega}_{j}\, {\omega}_{k}}{2 \left|{{f}_{1,2,3,4}}\right| \sqrt{\prod_{k=1}^{4} {\omega}_{k}}}
+{a}_{j,k} &= {a}_{k,j} = - \frac{\left(\delta_{j k} - 2\right) s{\left(j \right)}\, s{\left(k \right)}\, {f}_{j,k}\, {\omega}_{j}\, {\omega}_{k}}{2 \left|{{f}_{1,2,3,4}}\right| \sqrt{\prod_{l=1}^{4} {\omega}_{l}}}
 \end{align}
 with Kronecker $\delta$, and $s(j)$ defined such that $s(1) = s(2) = 1, s(3) = s(4) = -1$.
 
@@ -124,7 +136,13 @@ The four-wave mixing system in \eqref{eq:fwm-system} is thus recast as:
 \frac{d}{d z} v_j{\left(z \right)} &= \left({a}_{j} + \sum_{k=1}^{4} {a}_{j,k}\,u_k v_k \right) v_j - \prod\limits_{k=1, k \ne j}^{4} u_k
 \end{align}
 
-The system in \eqref{eq:uv-system} is a canonical Hamiltonian system with:
+
+% ---------- SECTION -------------
+% --------------------------------
+
+\section{Conserved quantities}
+
+Based on prior experience of similar systems we are prompted to ask if the system in \eqref{eq:uv-system} is a canonical Hamiltonian system, and indeed we confirm that it is with:
 \begin{align}
 \label{eq:ham-uv}
 H(u_1,\dots, u_4, v_1, \dots, v_4) &= -\sum_{j=1}^{4} a_{j}\, u_j v_j - \frac{1}{2}\,\sum_{j,k=1}^{4} a_{j,k}\, u_j v_j u_k v_k + \prod\limits_{j=1}^{4} u_j + \prod\limits_{j=1}^{4} v_j, \\
@@ -133,7 +151,7 @@ H(u_1,\dots, u_4, v_1, \dots, v_4) &= -\sum_{j=1}^{4} a_{j}\, u_j v_j - \frac{1}
 \frac{d}{d z} H &= 0
 \end{align}
 
-The pair $u_j, v_j$ are Hamiltonian conjugates, and each pair represents one of four degrees of freedom in the system. 
+The conservation of $H$ is to be expected as a consequence of \eqref{eq:ham-uv} lacking an explicit $z$ dependence. The pair $u_j, v_j$ are Hamiltonian conjugates, and each pair represents one of four degrees of freedom in the system. 
 We refer to their product $u_j v_j$ as the modal power and it evolves according to:
 \begin{equation}
 \label{eq:duv_j}
@@ -147,7 +165,7 @@ we may define constants $\gamma_j$ and function $\rho(z)$ such that:
 u_j(z) v_j(z) = \gamma_j - \rho(z)
 \end{equation}
 
-from which it follows there are 3 (read as $j > k$ to avoid over counting) intermodal power conservation laws of the form:
+from which it follows that there are 3 (read as $j > k$ to avoid over counting) intermodal power conservation laws of the form:
 \begin{equation}
 \label{eq:power-conserved}
 u_j(z) v_j(z) - u_k(z) v_k(z) = \gamma_j - \gamma_k.
@@ -155,7 +173,80 @@ u_j(z) v_j(z) - u_k(z) v_k(z) = \gamma_j - \gamma_k.
 
 The system has 4 degrees of freedom and four conserved quantities which is a requirement for integrability in the Liouville-Arnold sense.
 
-\section{Solutions in terms of Weierstrass elliptic functions}
+
+% ---------- SECTION -------------
+% --------------------------------
+
+\section{Solutions for modal powers in terms of Weierstra\ss{} \texorpdfstring{$\wp$}{wp} elliptic functions}
+
+One key thing to note in order to obtain elliptic functions solutions is that the derivative of the modal power in \eqref{eq:duv_j} is proportional to the difference of the two wave mixing product terms, and that the Hamiltonian in \eqref{eq:ham-uv} contains their sum.
+We then note the simple but important identity:
+\begin{equation}
+\label{eq:prod-id}
+\left(\prod\limits_{k=1}^{4} v_k - \prod\limits_{k=1}^{4} u_k\right)^2 - \left(\prod\limits_{k=1}^{4} v_k + \prod\limits_{k=1}^{4} u_k\right)^2 = - 4 \prod\limits_{j=1}^{4} u_j v_j
+\end{equation}
+which enables us to square \eqref{eq:duv_j} and replace wave mixing terms with phase modulation terms.
+
+To proceed in this manner let us introduce the function $Q$ which represents the phase modulation part of the Hamiltonian:
+\begin{equation}
+\label{eq:Q-uv}
+Q(u_1(z)v_1(z), \dots, u_4(z)v_4(z)) = a_0 + \sum_{j=1}^{4} a_{j}\, u_j v_j + \frac{1}{2}\,\sum_{j,k=1}^{4} a_{j,k}\, u_j v_j u_k v_k 
+\end{equation}
+with $a_0=H$, and observe that by squaring \eqref{eq:duv_j} and substituting \eqref{eq:ham-uv}, \eqref{eq:uvj-gam-rho}, \eqref{eq:prod-id}, and \eqref{eq:Q-uv}, we obtain:
+\begin{align}
+\label{eq:drho-sqrd}
+\left(\frac{d}{d z} \rho{\left(z \right)}\right)^{2} &= Q^{2}{\left({\gamma}_{1} - \rho{\left(z \right)}, \dots, {\gamma}_{4}  - \rho{\left(z \right)}\right)} - 4 \prod_{j=1}^{4} \left({\gamma}_{j} - \rho{\left(z \right)}\right), \\
+\left(\frac{d}{d z} \rho{\left(z \right)}\right)^{2} &= \sum_{l=0}^{4}d_l\,\rho\left(z\right)^l, \\
+\left(\frac{d}{d z} \rho{\left(z \right)}\right)^{2} &= d_4 \prod_{l=1}^{4} \left(\rho\left(z\right) -  \lambda_l\right),
+\end{align}
+where the simple but verbose formulas for $d_l$ in terms of other parameters and initial conditions are given in the Appendix, and where $\lambda_l$ are the roots of the corresponding quartic polynomial in $\rho(z)$ such that $\sum_{l=0}^{4}d_l\,\lambda^l=0$.
+We now transform \eqref{eq:drho-sqrd} from quartic to the standard cubic form of the Weierstra\ss{} $\wp$ function using the classical trick which can be conceptualised in three steps:
+\begin{align}
+\label{eq:wp-4-to-3}
+\rho\left(z\right) &= q\left(z\right) + \lambda_1 & \text{shift so rhs is 0 for $q(z)=0$}, \\
+s\left(z\right) &= 1/q\left(z\right) & \text{invert to make the quartic a cubic}, \\
+w\left(z\right) &= C_1\,s\left(z\right) + C_0 & \text{shift/scale for some $C_j$ to match Weierstra\ss{} coefficients}.
+\end{align}
+
+The procedure sketched in \eqref{eq:wp-4-to-3} is implemented in one go using the following transformation:
+\begin{align}
+\rho{\left(z \right)} &= {\lambda}_{1} + \frac{d_4}{- 4 w{\left(z \right)} \prod_{l=1}^{3} {\Omega}_{l}  + \frac{d_4}{3} \sum_{l=1}^{3} {\Omega}_{l} }, \\
+\Omega_l &= \frac{1}{\lambda_{l+1} - \lambda_1},\\
+\label{eq:dwp}
+\left(\frac{d}{d z} w{\left(z \right)}\right)^{2} &= 4\,w{\left(z \right)}^3 - g_2\,w{\left(z \right)} - g_3, \\
+g_{2} &= {d}_{0} {d}_{4} - \frac{{d}_{1} {d}_{3}}{4} + \frac{{d}_{2}^{2}}{12}, \\
+g_{3} &= \frac{{d}_{0} {d}_{2} {d}_{4}}{6} - \frac{{d}_{0} {d}_{3}^{2}}{16} - \frac{{d}_{1}^{2} {d}_{4}}{16} + \frac{{d}_{1} {d}_{2} {d}_{3}}{48} - \frac{{d}_{2}^{3}}{216}
+\end{align}
+where the constants $g_2$ and $g_3$ are known as Weierstra\ss{} elliptic invariants. 
+The equation \eqref{eq:dwp} is the defining differential equation for the Weierstra\ss{} elliptic $\wp$ function and the solution is:
+\begin{equation}
+w(z) = \wp (z - z_0, g_2, g_3)
+\end{equation}
+where $z_0$ is a constant chosen to match initial conditions. This constant $z_0$, and others that we will now introduce, can be obtained by inverting $\wp$ using an elliptic integral, (e.g. Carlson's symmetric $R_F$ integral). 
+As $\wp$ is an even function, it is neccessary to also specify a corresponding condition for the derivative when inverting, i.e., to find $z$ from known $x,y$ we give conditions such as $\wp\left(z\right)=x, \wp^{'}\left(z\right)=y$, where $\wp^{'}$ is the derivative of $\wp$ known as Weiertra\ss{} p-prime. 
+The points obtained during such an inversion are determined modulo the period lattice of the doubly periodic $\wp$. 
+Let us proceed to define the point $z_0$, and introduce the point $z_1$ as the pole of $\rho(z)$, and points $\mu_j - z_0$ as the zeroes of $u_j(z)v_j(z)$:
+\begin{align}
+\wp{\left(z_{0}\right)} &= \frac{{d}_{2}}{12} + \frac{{d}_{3} {\lambda}_{1}}{4} + \frac{{d}_{4} {\lambda}_{1}^{2}}{2} + \frac{- {d}_{1} - 2 {d}_{2} {\lambda}_{1} - 3 {d}_{3} {\lambda}_{1}^{2} - 4 {d}_{4} {\lambda}_{1}^{3}}{4 \left(- \rho{\left(0 \right)} + {\lambda}_{1}\right)}, \\
+\wp'{\left(z_{0}\right)} &= \frac{\left({d}_{1} + 2 {d}_{2} {\lambda}_{1} + 3 {d}_{3} {\lambda}_{1}^{2} + 4 {d}_{4} {\lambda}_{1}^{3}\right) }{4 \left(\rho{\left(0 \right)} - {\lambda}_{1}\right)^{2}}\left. \frac{d}{d z} \rho{\left(z \right)} \right|_{\substack{ z=0 }} , \\
+\wp{\left(z_{1}\right)} &= \frac{{d}_{2}}{12} + \frac{{d}_{3} {\lambda}_{1}}{4} + \frac{{d}_{4} {\lambda}_{1}^{2}}{2}, \\
+\wp'{\left(z_{1}\right)} &= \frac{\left(- {d}_{1} - 2 {d}_{2} {\lambda}_{1} - 3 {d}_{3} {\lambda}_{1}^{2} - 4 {d}_{4} {\lambda}_{1}^{3}\right) \sqrt{{d}_{4}}}{4},\\
+\wp{\left({\mu}_{j} - z_{0}\right)} &= \frac{{d}_{2}}{12} + \frac{{d}_{3} {\lambda}_{1}}{4} + \frac{{d}_{4} {\lambda}_{1}^{2}}{2} - \frac{- {d}_{1} - 2 {d}_{2} {\lambda}_{1} - 3 {d}_{3} {\lambda}_{1}^{2} - 4 {d}_{4} {\lambda}_{1}^{3}}{4 \left({\gamma}_{j} - {\lambda}_{1}\right)}, \\
+\wp'{\left({\mu}_{j}- z_{0}\right)} &= - \frac{\left({b}_{0} + {b}_{1} {\gamma}_{j} + {b}_{2} {\gamma}_{j}^{2}\right) \left({d}_{1} + 2 {d}_{2} {\lambda}_{1} + 3 {d}_{3} {\lambda}_{1}^{2} + 4 {d}_{4} {\lambda}_{1}^{3}\right)}{4 \left({\gamma}_{j} - {\lambda}_{1}\right)^{2}}.
+\end{align}
+
+The modal powers can then be expressed in terms of the constants as follows:
+\begin{align}
+u_j{\left(z\right)} v_j{\left(z\right)} &= \frac{\wp'{\left(z_{1}\right)}}{ \sqrt{{d}_{4}} \left(\wp{\left(z_{1}\right)} - \wp{\left({\mu}_{j} - z_{0}\right)}\right)} - \frac{\wp'{\left(z_{1}\right)}}{\sqrt{{d}_{4}} \left(\wp{\left(z_{1}\right)} - \wp{\left(z - z_{0}\right)}\right) }, \\
+&= \frac{\wp'{\left(z_{1}\right)} \left(\wp{\left(z - z_{0}\right)} - \wp{\left({\mu}_{j} - z_{0}\right)}\right) }{ \sqrt{{d}_{4}} \left(\wp{\left(z_{1}\right)} - \wp{\left({\mu}_{j}- z_{0}\right)}\right) \left(\wp{\left(z - z_{0}\right)} - \wp{\left(z_{1}\right)}\right) }
+\end{align}
+
+% ---------- SECTION -------------
+% --------------------------------
+
+\section{Solutions for modes in terms of Weierstra\ss{} \texorpdfstring{$\sigma$}{sigma}, \texorpdfstring{$\zeta$}{zeta} functions}
+
+
 
 \begin{figure}[h]
 \centering
