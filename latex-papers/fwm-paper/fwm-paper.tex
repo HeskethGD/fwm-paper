@@ -151,7 +151,7 @@ H(u_1,\dots, u_4, v_1, \dots, v_4) &= -\sum_{j=1}^{4} a_{j}\, u_j v_j - \frac{1}
 The conservation of $H$ is to be expected as a consequence of \eqref{eq:ham-uv} lacking an explicit $z$ dependence. The pair $u_j, v_j$ are Hamiltonian conjugates, and each pair represents one of four degrees of freedom in the system. 
 We refer to their product $u_j v_j$ as the modal power and it evolves according to:
 \begin{equation}
-\label{eq:duv_j}
+\label{eq:duv_j} 
 \frac{d}{d z} u_j v_j = \prod\limits_{k=1}^{4} v_k - \prod\limits_{k=1}^{4} u_k
 \end{equation}
 
@@ -191,10 +191,10 @@ We then note the simple but important identity:
 which enables us to square \eqref{eq:duv_j} and replace wave mixing terms with phase modulation terms.
 
 To proceed in this manner let us introduce the function $Q$ which represents the phase modulation part of the Hamiltonian:
-\begin{equation}
-\label{eq:Q-uv}
-Q(u_1(z)v_1(z), \dots, u_4(z)v_4(z)) = a_0 + \sum_{j=1}^{4} a_{j}\, u_j v_j + \frac{1}{2}\,\sum_{j,k=1}^{4} a_{j,k}\, u_j v_j u_k v_k 
-\end{equation}
+\begin{align}
+Q(u_1(z)v_1(z), \dots, u_4(z)v_4(z)) &= a_0 + \sum_{j=1}^{4} a_{j}\, u_j v_j + \frac{1}{2}\,\sum_{j,k=1}^{4} a_{j,k}\, u_j v_j u_k v_k , \notag  \\
+& = \sum_{l=0}^{2}b_l\,\rho\left(z\right)^l \label{eq:Q-uv}
+\end{align}
 
 with $a_0=H$, and observe that by squaring \eqref{eq:duv_j} and substituting \eqref{eq:ham-uv}, \eqref{eq:uvj-gam-rho}, \eqref{eq:prod-id}, and \eqref{eq:Q-uv}, we obtain:
 \begin{align}
@@ -318,6 +318,31 @@ The modal power simplies to:
 u_j{\left(z\right)} v_j{\left(z\right)} = \frac{4 \wp{\left({\mu}_{j} - z_{0} + z_{1}\right)}}{{d}_{3}} - \frac{4 \wp{\left(z - z_{0} + z_{1}\right)}}{{d}_{3}}
 \end{equation}
 
+
+% ---------- SECTION -------------
+% --------------------------------
+
+\section{The Frobenius-Stickelberger determinant}
+
+In this section we show that the conservation of the Hamiltonian can be viewed as a manifestation of the Frobenius-Stickelberger determinant formula.
+The starting point is the following relation established via \eqref{eq:ham-uv}, \eqref{eq:duv_j}, and \eqref{eq:Q-uv}:
+
+\begin{align}
+2 \prod_{j=1}^{4} u_j &= - \frac{\partial}{\partial z} u_j\, v_j + {a}_{0} + \sum_{j=1}^{4} u_j v_j {a}_{j} + \frac{1}{2}\sum\limits_{j,k=1}^{4} u_j v_j u_k v_k \,{a}_{j,k}, \notag \\
+&=\rho' + \sum_{l=0}^{2}b_l\,\rho\left(z\right)^l \label{eq:fs-det-start}
+\end{align}
+
+The following algebraic identity follows from Waring-Lagrange interpolation and holds for any values of the variables and functions:
+\begin{align}
+\sum_{l=0}^{2}b_l\,\rho\left(z\right)^l =\, &\frac{\left({\gamma}_{1} - \rho{\left(z \right)}\right) \left({\gamma}_{2} - \rho{\left(z \right)}\right)}{\left({\gamma}_{1} - {\gamma}_{3}\right) \left({\gamma}_{2} - {\gamma}_{3}\right)} \sum\limits_{l=0}^{2}b_l\,\gamma_1^l + \notag \\
+&\frac{\left({\gamma}_{1} - \rho{\left(z \right)}\right) \left({\gamma}_{3} - \rho{\left(z \right)}\right)}{\left({\gamma}_{1} - {\gamma}_{2}\right) \left({\gamma}_{3} - {\gamma}_{2}\right)} \sum\limits_{l=0}^{2}b_l\,\gamma_2^l + \notag \\
+&\frac{\left({\gamma}_{2} - \rho{\left(z \right)}\right) \left({\gamma}_{3} - \rho{\left(z \right)}\right)}{\left({\gamma}_{1} - {\gamma}_{2}\right) \left({\gamma}_{1} - {\gamma}_{3}\right)} \sum\limits_{l=0}^{2}b_l\,\gamma_3^l \label{eq:waring-lagrange}
+\end{align}
+
+where recall $\gamma_j=\rho(\mu_j)$ and the sum over $b_l \gamma_j$ can be written using \eqref{eq:drho-sqrd-2} as:
+\begin{align}
+\sum\limits_{l=0}^{2}b_l\,\gamma_j^l = \rho'\left(\mu_j\right)
+\end{align}
 
 % ---------- SECTION -------------
 % --------------------------------
