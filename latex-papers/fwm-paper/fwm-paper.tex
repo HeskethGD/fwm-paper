@@ -57,11 +57,10 @@ These solutions recover the known limiting cases and offer direct physical insig
 The following coupled system of ordinary differential equations is taken from Agrawal and describes four-wave mixing in the continuous wave limit, i.e., in the absence of time derivatives:
 
 \begin{align}
-\label{eq:fwm-system}
-\frac{dA_1}{dz} &= \frac{in_2\omega_1}{c}\left[\left(f_{11}|A_1|^2 + 2\sum_{k\neq 1} f_{1k}|A_k|^2\right)A_1 + 2f_{1234}A_2^*A_3A_4e^{i\Delta kz}\right], \\
-\frac{dA_2}{dz} &= \frac{in_2\omega_2}{c}\left[\left(f_{22}|A_2|^2 + 2\sum_{k\neq 2} f_{2k}|A_k|^2\right)A_2 + 2f_{2134}A_1^*A_3A_4e^{i\Delta kz}\right], \\
-\frac{dA_3}{dz} &= \frac{in_2\omega_3}{c}\left[\left(f_{33}|A_3|^2 + 2\sum_{k\neq 3} f_{3k}|A_k|^2\right)A_3 + 2f_{3412}A_1A_2A_4^*e^{-i\Delta kz}\right], \\
-\frac{dA_4}{dz} &= \frac{in_2\omega_4}{c}\left[\left(f_{44}|A_4|^2 + 2\sum_{k\neq 4} f_{4k}|A_k|^2\right)A_4 + 2f_{4312}A_1A_2A_3^*e^{-i\Delta kz}\right].
+\frac{dA_1}{dz} &= \frac{in_2\omega_1}{c}\left[\left(f_{11}|A_1|^2 + 2\sum_{k\neq 1} f_{1k}|A_k|^2\right)A_1 + 2f_{1234}A_2^*A_3A_4e^{i\Delta kz}\right], \notag \\
+\frac{dA_2}{dz} &= \frac{in_2\omega_2}{c}\left[\left(f_{22}|A_2|^2 + 2\sum_{k\neq 2} f_{2k}|A_k|^2\right)A_2 + 2f_{2134}A_1^*A_3A_4e^{i\Delta kz}\right], \notag \\
+\frac{dA_3}{dz} &= \frac{in_2\omega_3}{c}\left[\left(f_{33}|A_3|^2 + 2\sum_{k\neq 3} f_{3k}|A_k|^2\right)A_3 + 2f_{3412}A_1A_2A_4^*e^{-i\Delta kz}\right], \notag \\
+\frac{dA_4}{dz} &= \frac{in_2\omega_4}{c}\left[\left(f_{44}|A_4|^2 + 2\sum_{k\neq 4} f_{4k}|A_k|^2\right)A_4 + 2f_{4312}A_1A_2A_3^*e^{-i\Delta kz}\right]. \label{eq:fwm-system}
 \end{align}
 
 where:
@@ -98,11 +97,10 @@ That said, herein, they are solved analytically in full, as written, without any
 From \eqref{eq:overlaps}, we observe the following symmetries among the wave mixing coefficients:
 
 \begin{align}
-\label{eq:overlap-symms}
-f_{1234} &= |f_{1234}|e^{i\theta}, \\
-f_{2134} &= f_{1234} = |f_{1234}|e^{i\theta}, \\
-f_{3412} &= f_{1234}^* = |f_{1234}|e^{-i\theta}, \\
-f_{4312} &= f_{1234}^* = |f_{1234}|e^{-i\theta},
+f_{1234} &= |f_{1234}|e^{i\theta}, \notag \\
+f_{2134} &= f_{1234} = |f_{1234}|e^{i\theta}, \notag \\
+f_{3412} &= f_{1234}^* = |f_{1234}|e^{-i\theta}, \notag \\
+f_{4312} &= f_{1234}^* = |f_{1234}|e^{-i\theta}, \label{eq:overlap-symms}
 \end{align}
 where $\theta$ is the phase of $f_{1234}$. 
 Consequently, we can conveniently renormalise the functions, and also absorb the phase $\theta$ as a global phase rotation of the modes, 
@@ -111,15 +109,15 @@ To do so, we introduce the following redefinition of the mode functions
 (take care to note that, while not crucial, the complex conjugates are shared among $u,v$ in this choice of labels so as to later conveniently give one product over $u$ and one over $v$):
 
 \begin{align}
-T &= \sqrt{\frac{2\,n_2 \left|f_{1234}\right|}{c} \sqrt{ \prod\limits_{k=1}^{4} \omega_k}}, \\
-u_1\left(z\right) &= \frac{T\,\,e^{-i\pi/4}\,e^{-i\theta/4}}{\sqrt{\omega_{1}}} \,A_{1}\left(z\right)\,e^{i z \beta_{1}}, \\
-u_2\left(z\right) &= \frac{T\,e^{-i\pi/4}\,e^{-i\theta/4}}{\sqrt{\omega_{2}}}\,A_{2}\left(z\right)\,e^{i z \beta_{2}}, \\
-u_3\left(z\right) &= \frac{T\,e^{i\pi/4}\,e^{-i\theta/4}}{\sqrt{\omega_{3}}}\,A^*_{3}\left(z\right)\,e^{-i z \beta_{3}}, \\
-u_4\left(z\right) &= \frac{T\,e^{i\pi/4}\,e^{-i\theta/4}}{\sqrt{\omega_{4}}}\,A^*_{4}\left(z\right)\,e^{-i z \beta_{4}}, \\
-v_1\left(z\right) &= \frac{T\,e^{-i\pi/4}\,e^{i\theta/4}}{\sqrt{\omega_{1}}}\,A^*_{1}\left(z\right)\,e^{-i z \beta_{1}}, \\
-v_2\left(z\right) &= \frac{T\,e^{-i\pi/4}\,e^{i\theta/4}}{\sqrt{\omega_{2}}}\,A^*_{2}\left(z\right)\,e^{-i z \beta_{2}}, \\
-v_3\left(z\right) &= \frac{T\,e^{i\pi/4}\,e^{i\theta/4}}{\sqrt{\omega_{3}}}\,A_{3}\left(z\right)\,e^{i z \beta_{3}}, \\
-v_4\left(z\right) &= \frac{T\,e^{i\pi/4}\,e^{i\theta/4}}{\sqrt{\omega_{4}}}\,A_{4}\left(z\right)\,e^{i z \beta_{4}}.
+T &= \sqrt{\frac{2\,n_2 \left|f_{1234}\right|}{c} \sqrt{ \prod\limits_{k=1}^{4} \omega_k}}, \label{eq:T-def} \\
+u_1\left(z\right) &= \frac{T\,\,e^{-i\pi/4}\,e^{-i\theta/4}}{\sqrt{\omega_{1}}} \,A_{1}\left(z\right)\,e^{i z \beta_{1}}, \notag \\
+u_2\left(z\right) &= \frac{T\,e^{-i\pi/4}\,e^{-i\theta/4}}{\sqrt{\omega_{2}}}\,A_{2}\left(z\right)\,e^{i z \beta_{2}}, \notag \\
+u_3\left(z\right) &= \frac{T\,e^{i\pi/4}\,e^{-i\theta/4}}{\sqrt{\omega_{3}}}\,A^*_{3}\left(z\right)\,e^{-i z \beta_{3}}, \notag \\
+u_4\left(z\right) &= \frac{T\,e^{i\pi/4}\,e^{-i\theta/4}}{\sqrt{\omega_{4}}}\,A^*_{4}\left(z\right)\,e^{-i z \beta_{4}}, \notag \\
+v_1\left(z\right) &= \frac{T\,e^{-i\pi/4}\,e^{i\theta/4}}{\sqrt{\omega_{1}}}\,A^*_{1}\left(z\right)\,e^{-i z \beta_{1}}, \notag \\
+v_2\left(z\right) &= \frac{T\,e^{-i\pi/4}\,e^{i\theta/4}}{\sqrt{\omega_{2}}}\,A^*_{2}\left(z\right)\,e^{-i z \beta_{2}}, \notag \\
+v_3\left(z\right) &= \frac{T\,e^{i\pi/4}\,e^{i\theta/4}}{\sqrt{\omega_{3}}}\,A_{3}\left(z\right)\,e^{i z \beta_{3}}, \notag \\
+v_4\left(z\right) &= \frac{T\,e^{i\pi/4}\,e^{i\theta/4}}{\sqrt{\omega_{4}}}\,A_{4}\left(z\right)\,e^{i z \beta_{4}}. \label{eq:u-v-A}
 \end{align}
 
 We subsequently redefine the remaining phase modulation parameters as:
@@ -131,9 +129,8 @@ with Kronecker $\delta$, and $s(j)$ defined such that $s(1) = s(2) = 1, s(3) = s
 
 The four-wave mixing system in \eqref{eq:fwm-system} is thus recast as:
 \begin{align}
-\label{eq:uv-system}
-\frac{d}{d z} u_j{\left(z \right)} &= - \left({a}_{j} + \sum_{k=1}^{4} {a}_{j,k}\,u_k v_k \right) u_j + \prod\limits_{k=1, k \ne j}^{4} v_k, \\
-\frac{d}{d z} v_j{\left(z \right)} &= \left({a}_{j} + \sum_{k=1}^{4} {a}_{j,k}\,u_k v_k \right) v_j - \prod\limits_{k=1, k \ne j}^{4} u_k
+\frac{d}{d z} u_j{\left(z \right)} &= - \left({a}_{j} + \sum_{k=1}^{4} {a}_{j,k}\,u_k v_k \right) u_j + \prod\limits_{k=1, k \ne j}^{4} v_k, \notag \\
+\frac{d}{d z} v_j{\left(z \right)} &= \left({a}_{j} + \sum_{k=1}^{4} {a}_{j,k}\,u_k v_k \right) v_j - \prod\limits_{k=1, k \ne j}^{4} u_k \label{eq:uv-system}
 \end{align}
 
 
@@ -198,57 +195,57 @@ To proceed in this manner let us introduce the function $Q$ which represents the
 \label{eq:Q-uv}
 Q(u_1(z)v_1(z), \dots, u_4(z)v_4(z)) = a_0 + \sum_{j=1}^{4} a_{j}\, u_j v_j + \frac{1}{2}\,\sum_{j,k=1}^{4} a_{j,k}\, u_j v_j u_k v_k 
 \end{equation}
+
 with $a_0=H$, and observe that by squaring \eqref{eq:duv_j} and substituting \eqref{eq:ham-uv}, \eqref{eq:uvj-gam-rho}, \eqref{eq:prod-id}, and \eqref{eq:Q-uv}, we obtain:
 \begin{align}
-\label{eq:drho-sqrd}
-\left(\frac{d}{d z} \rho{\left(z \right)}\right)^{2} &= Q^{2}{\left({\gamma}_{1} - \rho{\left(z \right)}, \dots, {\gamma}_{4}  - \rho{\left(z \right)}\right)} - 4 \prod_{j=1}^{4} \left({\gamma}_{j} - \rho{\left(z \right)}\right), \\
-\left(\frac{d}{d z} \rho{\left(z \right)}\right)^{2} &= \sum_{l=0}^{4}d_l\,\rho\left(z\right)^l, \\
-\left(\frac{d}{d z} \rho{\left(z \right)}\right)^{2} &= d_4 \prod_{l=1}^{4} \left(\rho\left(z\right) -  \lambda_l\right),
+\left(\frac{d}{d z} \rho{\left(z \right)}\right)^{2} &= Q^{2}{\left({\gamma}_{1} - \rho{\left(z \right)}, \dots, {\gamma}_{4}  - \rho{\left(z \right)}\right)} - 4 \prod_{j=1}^{4} \left({\gamma}_{j} - \rho{\left(z \right)}\right), \label{eq:drho-sqrd-1} \\
+\left(\frac{d}{d z} \rho{\left(z \right)}\right)^{2} &=  \left(\sum_{l=0}^{2}b_l\,\rho\left(z\right)^l\right)^{2} - 4 \prod_{j=1}^{4} \left({\gamma}_{j} - \rho{\left(z \right)}\right), \label{eq:drho-sqrd-2} \\
+\left(\frac{d}{d z} \rho{\left(z \right)}\right)^{2} &= \sum_{l=0}^{4}d_l\,\rho\left(z\right)^l, \label{eq:drho-sqrd-3} \\
+\left(\frac{d}{d z} \rho{\left(z \right)}\right)^{2} &= d_4 \prod_{l=1}^{4} \left(\rho\left(z\right) -  \lambda_l\right), \label{eq:drho-sqrd-4}
 \end{align}
-where the simple but verbose formulas for $d_l$ in terms of other parameters and initial conditions are given in the Appendix, and where $\lambda_l$ are the roots of the corresponding quartic polynomial in $\rho(z)$ such that $\sum_{l=0}^{4}d_l\,\lambda^l=0$.
-We now transform \eqref{eq:drho-sqrd} from quartic to the standard cubic form of the Weierstra\ss{} $\wp$ function using the classical trick which can be conceptualised in three steps:
+
+where $b_l$, and $d_l$ are given in terms of other parameters and initial conditions in Appendices \ref{app:param-def-appendix} and \ref{app:init-conds}, and where $\lambda_l$ are the roots of the quartic polynomial in $\rho(z)$, i.e., $\sum_{l=0}^{4}d_l\,\lambda^l=0$.
+We now transform \eqref{eq:drho-sqrd-4} from quartic to the standard cubic form of the Weierstra\ss{} $\wp$ function using the classical trick which can be conceptualised in three steps:
 \begin{align}
-\label{eq:wp-4-to-3}
-\rho\left(z\right) &= q\left(z\right) + \lambda_1 & \text{shift so rhs is 0 for $q(z)=0$}, \\
-s\left(z\right) &= 1/q\left(z\right) & \text{invert to make the quartic a cubic}, \\
-w\left(z\right) &= C_1\,s\left(z\right) + C_0 & \text{shift/scale for some $C_j$ to match Weierstra\ss{} coefficients}.
+\rho\left(z\right) &= q\left(z\right) + \lambda_1 & \text{shift so rhs is 0 for $q(z)=0$}, \notag \\
+s\left(z\right) &= 1/q\left(z\right) & \text{invert to make the quartic a cubic}, \notag \\
+w\left(z\right) &= C_1\,s\left(z\right) + C_0 & \text{shift and scale with $C_j$ to match Weierstra\ss{} coefficients}. \label{eq:wp-4-to-3}
 \end{align}
 
 The procedure sketched in \eqref{eq:wp-4-to-3} is implemented in the following single transformation:
 \begin{align}
-\label{eq:rho-wp}
-\rho{\left(z \right)} &= {\lambda}_{1} + \frac{d_4}{- 4 w{\left(z \right)} \prod_{l=1}^{3} {\Omega}_{l}  + \frac{d_4}{3} \sum_{l=1}^{3} {\Omega}_{l} }, \\
-\Omega_l &= \frac{1}{\lambda_{l+1} - \lambda_1},\\
-\label{eq:dwp}
-\left(\frac{d}{d z} w{\left(z \right)}\right)^{2} &= 4\,w{\left(z \right)}^3 - g_2\,w{\left(z \right)} - g_3, \\
-g_{2} &= {d}_{0} {d}_{4} - \frac{{d}_{1} {d}_{3}}{4} + \frac{{d}_{2}^{2}}{12}, \\
-g_{3} &= \frac{{d}_{0} {d}_{2} {d}_{4}}{6} - \frac{{d}_{0} {d}_{3}^{2}}{16} - \frac{{d}_{1}^{2} {d}_{4}}{16} + \frac{{d}_{1} {d}_{2} {d}_{3}}{48} - \frac{{d}_{2}^{3}}{216}
+\rho{\left(z \right)} &= {\lambda}_{1} + \frac{d_4}{- 4 w{\left(z \right)} \prod_{l=1}^{3} {\Omega}_{l}  + \frac{d_4}{3} \sum_{l=1}^{3} {\Omega}_{l} }, \label{eq:rho-wp-1} \\
+\Omega_l &= \frac{1}{\lambda_{l+1} - \lambda_1}, \notag \\
+\left(\frac{d}{d z} w{\left(z \right)}\right)^{2} &= 4\,w{\left(z \right)}^3 - g_2\,w{\left(z \right)} - g_3, \label{eq:dwp} \\
+g_{2} &= {d}_{0} {d}_{4} - \frac{{d}_{1} {d}_{3}}{4} + \frac{{d}_{2}^{2}}{12}, \label{eq:g2-d} \\
+g_{3} &= \frac{{d}_{0} {d}_{2} {d}_{4}}{6} - \frac{{d}_{0} {d}_{3}^{2}}{16} - \frac{{d}_{1}^{2} {d}_{4}}{16} + \frac{{d}_{1} {d}_{2} {d}_{3}}{48} - \frac{{d}_{2}^{3}}{216} \label{eq:3-d}
 \end{align}
 where the constants $g_2$ and $g_3$ are known as Weierstra\ss{} elliptic invariants. 
+
 Equation \eqref{eq:dwp} defines the Weierstra\ss{} elliptic $\wp$ function and the solution is:
 \begin{equation}
 w(z) = \wp (z - z_0, g_2, g_3)
 \end{equation}
 where $z_0$ is a constant chosen to match initial conditions. This constant $z_0$, and others that we will now introduce, can be obtained by inverting $\wp$ using an elliptic integral, (e.g. Carlson's symmetric $R_F$ integral). 
-As $\wp$ is an even function, it is neccessary to also specify a corresponding condition for the derivative when inverting, i.e., to find $z$ from known $x,y$ we give conditions such as $\wp\left(z\right)=x, \wp'\left(z\right)=y$, where $\wp'$ is the derivative of $\wp$ known as Weiertra\ss{} p-prime. 
+As $\wp$ is an even function, it is neccessary to also specify a corresponding condition for the derivative when inverting, i.e., to find $z$ from known $x,y$ we give conditions such as $\wp\left(z\right)=x, \wp'\left(z\right)=y$, where $\wp'$ is the derivative of $\wp$ known as Weierstra\ss{} p-prime. 
 The points obtained during such an inversion are determined modulo the period lattice of the doubly periodic $\wp$. 
-Let us proceed to define the point $z_0$, and introduce the point $z_1$ as the pole of $\rho(z)$, and points $\mu_j - z_0$ as the zeroes of $u_j(z)v_j(z)$:
+Let us proceed to define the point $z_0$, and introduce the point $z_1$ as the pole of $\rho(z)$, and points $\mu_j$ as zeroes of $u_j(z)v_j(z)$:
 \begin{align}
-\wp{\left(z_{0}\right)} &= \frac{{d}_{2}}{12} + \frac{{d}_{3} {\lambda}_{1}}{4} + \frac{{d}_{4} {\lambda}_{1}^{2}}{2} + \frac{- {d}_{1} - 2 {d}_{2} {\lambda}_{1} - 3 {d}_{3} {\lambda}_{1}^{2} - 4 {d}_{4} {\lambda}_{1}^{3}}{4 \left(- \rho{\left(0 \right)} + {\lambda}_{1}\right)}, \\
-\wp'{\left(z_{0}\right)} &= \frac{\left({d}_{1} + 2 {d}_{2} {\lambda}_{1} + 3 {d}_{3} {\lambda}_{1}^{2} + 4 {d}_{4} {\lambda}_{1}^{3}\right) }{4 \left(\rho{\left(0 \right)} - {\lambda}_{1}\right)^{2}}\left. \frac{d}{d z} \rho{\left(z \right)} \right|_{\substack{ z=0 }} , \\
-\wp{\left(z_{1}\right)} &= \frac{{d}_{2}}{12} + \frac{{d}_{3} {\lambda}_{1}}{4} + \frac{{d}_{4} {\lambda}_{1}^{2}}{2}, \\
-\wp'{\left(z_{1}\right)} &= \frac{\left(- {d}_{1} - 2 {d}_{2} {\lambda}_{1} - 3 {d}_{3} {\lambda}_{1}^{2} - 4 {d}_{4} {\lambda}_{1}^{3}\right) \sqrt{{d}_{4}}}{4},\\
-\wp{\left({\mu}_{j} - z_{0}\right)} &= \frac{{d}_{2}}{12} + \frac{{d}_{3} {\lambda}_{1}}{4} + \frac{{d}_{4} {\lambda}_{1}^{2}}{2} - \frac{- {d}_{1} - 2 {d}_{2} {\lambda}_{1} - 3 {d}_{3} {\lambda}_{1}^{2} - 4 {d}_{4} {\lambda}_{1}^{3}}{4 \left({\gamma}_{j} - {\lambda}_{1}\right)}, \\
-\wp'{\left({\mu}_{j}- z_{0}\right)} &= - \frac{\left({b}_{0} + {b}_{1} {\gamma}_{j} + {b}_{2} {\gamma}_{j}^{2}\right) \left({d}_{1} + 2 {d}_{2} {\lambda}_{1} + 3 {d}_{3} {\lambda}_{1}^{2} + 4 {d}_{4} {\lambda}_{1}^{3}\right)}{4 \left({\gamma}_{j} - {\lambda}_{1}\right)^{2}}.
+\wp{\left(z_{0}\right)} &= \frac{{d}_{2}}{12} + \frac{{d}_{3} {\lambda}_{1}}{4} + \frac{{d}_{4} {\lambda}_{1}^{2}}{2} + \frac{- {d}_{1} - 2 {d}_{2} {\lambda}_{1} - 3 {d}_{3} {\lambda}_{1}^{2} - 4 {d}_{4} {\lambda}_{1}^{3}}{4 \left(- \rho{\left(0 \right)} + {\lambda}_{1}\right)}, \notag \\
+\wp'{\left(z_{0}\right)} &= \frac{\left({d}_{1} + 2 {d}_{2} {\lambda}_{1} + 3 {d}_{3} {\lambda}_{1}^{2} + 4 {d}_{4} {\lambda}_{1}^{3}\right) }{4 \left(\rho{\left(0 \right)} - {\lambda}_{1}\right)^{2}}\left. \frac{d}{d z} \rho{\left(z \right)} \right|_{\substack{ z=0 }}, \notag \\
+\wp{\left(z_{1}\right)} &= \frac{{d}_{2}}{12} + \frac{{d}_{3} {\lambda}_{1}}{4} + \frac{{d}_{4} {\lambda}_{1}^{2}}{2}, \notag \\
+\wp'{\left(z_{1}\right)} &= \frac{\left(- {d}_{1} - 2 {d}_{2} {\lambda}_{1} - 3 {d}_{3} {\lambda}_{1}^{2} - 4 {d}_{4} {\lambda}_{1}^{3}\right) \sqrt{{d}_{4}}}{4}, \notag \\
+\wp{\left({\mu}_{j} - z_{0}\right)} &= \frac{{d}_{2}}{12} + \frac{{d}_{3} {\lambda}_{1}}{4} + \frac{{d}_{4} {\lambda}_{1}^{2}}{2} - \frac{- {d}_{1} - 2 {d}_{2} {\lambda}_{1} - 3 {d}_{3} {\lambda}_{1}^{2} - 4 {d}_{4} {\lambda}_{1}^{3}}{4 \left({\gamma}_{j} - {\lambda}_{1}\right)}, \notag \\
+\wp'{\left({\mu}_{j}- z_{0}\right)} &= - \frac{\left({b}_{0} + {b}_{1} {\gamma}_{j} + {b}_{2} {\gamma}_{j}^{2}\right) \left({d}_{1} + 2 {d}_{2} {\lambda}_{1} + 3 {d}_{3} {\lambda}_{1}^{2} + 4 {d}_{4} {\lambda}_{1}^{3}\right)}{4 \left({\gamma}_{j} - {\lambda}_{1}\right)^{2}}. \label{eq:wp-points}
 \end{align}
 
 The solutions for modal powers are then:
 \begin{align}
-\label{eq:uv-wp}
-u_j{\left(z\right)} v_j{\left(z\right)} &= \rho(\mu_j) - \rho(z),\\
-&= \frac{\wp'{\left(z_{1}\right)}}{ \sqrt{{d}_{4}} \left(\wp{\left(z_{1}\right)} - \wp{\left({\mu}_{j} - z_{0}\right)}\right)} - \frac{\wp'{\left(z_{1}\right)}}{\sqrt{{d}_{4}} \left(\wp{\left(z_{1}\right)} - \wp{\left(z - z_{0}\right)}\right) }, \\
-&= \frac{\wp'{\left(z_{1}\right)} }{ \sqrt{{d}_{4}} \left(\wp{\left(z_{1}\right)} - \wp{\left({\mu}_{j}- z_{0}\right)}\right)} \frac{ \left(\wp{\left(z - z_{0}\right)} - \wp{\left({\mu}_{j} - z_{0}\right)}\right) }{ \left(\wp{\left(z - z_{0}\right)} - \wp{\left(z_{1}\right)}\right) }
+u_j{\left(z\right)} v_j{\left(z\right)} &= \rho(\mu_j) - \rho(z), \notag \\
+&= \frac{\wp'{\left(z_{1}\right)}}{ \sqrt{{d}_{4}} \left(\wp{\left(z_{1}\right)} - \wp{\left({\mu}_{j} - z_{0}\right)}\right)} - \frac{\wp'{\left(z_{1}\right)}}{\sqrt{{d}_{4}} \left(\wp{\left(z_{1}\right)} - \wp{\left(z - z_{0}\right)}\right) }, \notag \\
+&= \frac{\wp'{\left(z_{1}\right)} }{ \sqrt{{d}_{4}} \left(\wp{\left(z_{1}\right)} - \wp{\left({\mu}_{j}- z_{0}\right)}\right)} \frac{ \left(\wp{\left(z - z_{0}\right)} - \wp{\left({\mu}_{j} - z_{0}\right)}\right) }{ \left(\wp{\left(z - z_{0}\right)} - \wp{\left(z_{1}\right)}\right) } \label{eq:uv-wp}
 \end{align}
+
 
 % ---------- SECTION -------------
 % --------------------------------
@@ -257,26 +254,24 @@ u_j{\left(z\right)} v_j{\left(z\right)} &= \rho(\mu_j) - \rho(z),\\
 
 Through substitution of \eqref{eq:ham-uv}, \eqref{eq:duv_j}, \eqref{eq:uvj-gam-rho}, and \eqref{eq:power-conserved} into \eqref{eq:uv-system}, it can be shown that \eqref{eq:uv-system} can be written as logarithmic derivatives such that the right hand side is a function of $\rho$ and its derivative $\rho'$ in the form:
 \begin{align}
-\label{eq:dlog-u-v-rho}
-\frac{\frac{\partial}{\partial z} u_j{\left(z\right)}}{u_j{\left(z\right)}} &= \frac{1}{2}\frac{\rho'{\left(z \right)} - \rho'{\left({\mu}_{j} \right)}}{\rho{\left(z \right)} - \rho{\left({\mu}_{j} \right)}} + \rho{\left(z \right)} {\Lambda}_{1,j} + {\Lambda}_{0,j}, \\
-\frac{\frac{\partial}{\partial z} v_j{\left(z\right)}}{v_j{\left(z\right)}} &= \frac{1}{2}\frac{\rho'{\left(z \right)} + \rho'{\left({\mu}_{j} \right)}}{\rho{\left(z \right)} - \rho{\left({\mu}_{j} \right)}} - \rho{\left(z \right)} {\Lambda}_{1,j} - {\Lambda}_{0,j}, \\
+\frac{\frac{\partial}{\partial z} u_j{\left(z\right)}}{u_j{\left(z\right)}} &= \frac{1}{2}\frac{\rho'{\left(z \right)} - \rho'{\left({\mu}_{j} \right)}}{\rho{\left(z \right)} - \rho{\left({\mu}_{j} \right)}} + \rho{\left(z \right)} {\Lambda}_{1,j} + {\Lambda}_{0,j}, \notag \\
+\frac{\frac{\partial}{\partial z} v_j{\left(z\right)}}{v_j{\left(z\right)}} &= \frac{1}{2}\frac{\rho'{\left(z \right)} + \rho'{\left({\mu}_{j} \right)}}{\rho{\left(z \right)} - \rho{\left({\mu}_{j} \right)}} - \rho{\left(z \right)} {\Lambda}_{1,j} - {\Lambda}_{0,j}, \label{eq:dlog-u-v-rho} \\
 {\Lambda}_{0,j} &= - {a}_{j} - \frac{{\gamma}_{j}}{4} \sum\limits_{k,l=1}^{4} {a}_{k,l} - \sum_{k=1}^{4} {a}_{j,k} {\gamma}_{k} + \frac{1}{2}\sum_{k=1}^{4} {\gamma}_{k} \sum_{l=1}^{4} {a}_{k,l} + \frac{1}{2}\sum_{k=1}^{4} {a}_{k}, \\
 {\Lambda}_{1,j} &= \sum_{k=1}^{4} {a}_{j,k} - \frac{1}{4}\sum\limits_{k,l=1}^{4}  {a}_{k,l}.
 \end{align}
 
-We can then substitute \eqref{eq:uv-wp} into \eqref{eq:dlog-u-v-rho} and make use of the following Weierstra\ss{} elliptic function identity:
+We substitute \eqref{eq:uv-wp} into \eqref{eq:dlog-u-v-rho} and use the Weierstra\ss{} elliptic function identity:
 \begin{equation}
 \frac{\wp'{\left(x,g_{2},g_{3} \right)}}{\wp{\left(x,g_{2},g_{3} \right)} - \wp{\left(y,g_{2},g_{3} \right)}} = \zeta{\left(x + y,g_{2},g_{3} \right)} + \zeta{\left(x - y,g_{2},g_{3} \right)} - 2 \zeta{\left(x,g_{2},g_{3} \right)}
 \end{equation}
-which gives:
+to write the right hand side in terms of $\zeta$ and constants:
 \begin{align}
-\label{eq:dlog-u-v-zeta}
 \frac{\frac{\partial}{\partial z} u{\left(z,{\mu}_{j} \right)}}{u{\left(z,{\mu}_{j} \right)}} =& \frac{\left(\zeta{\left(z - z_{0} + z_{1} \right)} - 2 \zeta{\left(z_{1} \right)} - \zeta{\left(z - z_{0} - z_{1} \right)}\right) {\Lambda}_{1,j}}{\sqrt{{d}_{4}}} \nonumber \\[6pt]
 & + \zeta{\left(z - 2 z_{0} + {\mu}_{j} \right)} - \frac{\zeta{\left(z - z_{0} - z_{1} \right)}}{2} - \frac{\zeta{\left(z - z_{0} + z_{1} \right)}}{2} \nonumber \\[6pt]
-& - \frac{\zeta{\left({\mu}_{j} - z_{0} - z_{1}\right)}}{2} - \frac{\zeta{\left({\mu}_{j} - z_{0} + z_{1}\right)}}{2} + {\Lambda}_{0,j} + {\Lambda}_{1,j} {\lambda}_{1} \\[12pt]
+& - \frac{\zeta{\left({\mu}_{j} - z_{0} - z_{1}\right)}}{2} - \frac{\zeta{\left({\mu}_{j} - z_{0} + z_{1}\right)}}{2} + {\Lambda}_{0,j} + {\Lambda}_{1,j} {\lambda}_{1} \notag \\[12pt]
 \frac{\frac{\partial}{\partial z} v{\left(z,{\mu}_{j} \right)}}{v{\left(z,{\mu}_{j} \right)}} =& - \frac{\left(\zeta{\left(z - z_{0} + z_{1} \right)} - 2 \zeta{\left(z_{1} \right)} - \zeta{\left(z - z_{0} - z_{1} \right)}\right) {\Lambda}_{1,j}}{\sqrt{{d}_{4}}} \nonumber \\[6pt]
 & + \zeta{\left(z - {\mu}_{j} \right)} - \frac{\zeta{\left(z - z_{0} - z_{1} \right)}}{2} - \frac{\zeta{\left(z - z_{0} + z_{1} \right)}}{2} \nonumber \\[6pt]
-& + \frac{\zeta{\left({\mu}_{j} - z_{0} - z_{1}\right)}}{2} + \frac{\zeta{\left({\mu}_{j} - z_{0} + z_{1} \right)}}{2} - {\Lambda}_{0,j} - {\Lambda}_{1,j} {\lambda}_{1}
+& + \frac{\zeta{\left({\mu}_{j} - z_{0} - z_{1}\right)}}{2} + \frac{\zeta{\left({\mu}_{j} - z_{0} + z_{1} \right)}}{2} - {\Lambda}_{0,j} - {\Lambda}_{1,j} {\lambda}_{1} \label{eq:dlog-u-v-zeta}
 \end{align}
 
 Equations \eqref{eq:dlog-u-v-zeta} can be integrated by noting that the Weierstra\ss{} $\zeta$ function is the logarithmic derivative of the Weierstra\ss{} $\sigma$ function:
@@ -285,16 +280,10 @@ Equations \eqref{eq:dlog-u-v-zeta} can be integrated by noting that the Weierstr
 \zeta\left(z, g_2, g_3\right)=\frac{\partial}{\partial z} \sigma\left(z, g_2, g_3\right).
 \end{equation}
 
-Performing the integration and taking exponentials gives the solutions for modes $u_j, v_j$ as:
-% \begin{align}
-% \label{eq:u-v-j-sol}
-% u_j{\left(z\right)} &= \frac{{\alpha}_{j} \sqrt{\wp'{\left(z_{1} \right)}} \sigma{\left(z_{1} \right)} \sigma{\left(z - 2 z_{0} + {\mu}_{j} \right)} \exp\left(z {r}_{0,j} + \log{\left(\frac{\sigma{\left(z - z_{0} + z_{1} \right)}}{\sigma{\left(z - z_{0} - z_{1} \right)}} \right)} {r}_{2,j}\right)}{\sqrt[4]{{d}_{4}}\sqrt{\wp{\left(z_{1} \right)} - \wp{\left({\mu}_{j} - z_{0}\right)}} \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0} - z_{1} \right)}} 
-% \end{align}
-
-
+Performing the integration and taking exponentials gives the solutions for modes $u_j, v_j$:
 \begin{align}
-u{\left(z\right)} &= \frac{\alpha_j\,\sqrt{W_j} \,\sigma{\left(z - 2 z_{0} + {\mu}_{j} \right)} \exp\left(z {r}_{0,j} + \log{\left(\frac{\sigma{\left(z - z_{0} + z_{1} \right)}}{\sigma{\left(z - z_{0} - z_{1} \right)}} \right)} {r}_{1,j}\right)}{\sqrt{\wp{\left(z_{1} \right)} - \wp{\left(z - z_{0} \right)}} \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0} \right)}}, \\[12pt]
-v_j{\left(z\right)} &= \frac{\sqrt{W_j} \, \sigma{\left(z - {\mu}_{j} \right)} \exp\left(- z {r}_{0,j} - \log{\left(\frac{\sigma{\left(z - z_{0} + z_{1} \right)}}{\sigma{\left(z - z_{0} - z_{1} \right)}} \right)} {r}_{1,j} \right)}{\alpha_j\,\sqrt{\wp{\left(z_{1} \right)} - \wp{\left(z - z_{0} \right)}} \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0} \right)}}
+u_j{\left(z\right)} &= \frac{\alpha_j\,\sqrt{W_j} \,\sigma{\left(z - 2 z_{0} + {\mu}_{j} \right)} \exp\left(z {r}_{0,j} + \log{\left(\frac{\sigma{\left(z - z_{0} + z_{1} \right)}}{\sigma{\left(z - z_{0} - z_{1} \right)}} \right)} {r}_{1,j}\right)}{\sqrt{\wp{\left(z_{1} \right)} - \wp{\left(z - z_{0} \right)}} \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0} \right)}}, \notag \\[12pt]
+v_j{\left(z\right)} &= \frac{\sqrt{W_j} \, \sigma{\left(z - {\mu}_{j} \right)} \exp\left(- z {r}_{0,j} - \log{\left(\frac{\sigma{\left(z - z_{0} + z_{1} \right)}}{\sigma{\left(z - z_{0} - z_{1} \right)}} \right)} {r}_{1,j} \right)}{\alpha_j\,\sqrt{\wp{\left(z_{1} \right)} - \wp{\left(z - z_{0} \right)}} \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0} \right)}} \label{eq:u-v-quartic}
 \end{align}
 
 where $\alpha_j$ is the integration constant that can be fixed by initial conditions to capture any phase offset between a mode and its conjugate, and where the other constants are:
@@ -305,18 +294,111 @@ r_{1,j} &= \frac{{\Lambda}_{1,j}}{\sqrt{{d}_{4}}}.
 \end{align}
 
 
-\begin{figure}[h]
+
+% ---------- SECTION -------------
+% --------------------------------
+
+\section{When quartic terms cancel to leave a cubic}
+
+There will be no $\rho(z)^4$ term in the differential equation when $d_4=0$. 
+For $d_4=0$, we require $b_2 \pm 2$, which is a parameter requirement, i.e., it cannot be achieved in general through tailored initial conditions of the modes.
+This case is simpler to solve in some ways but it is not easily obtained by taking the limit $d_4\rightarrow0$ because $d_4$ appears in the denominator in several places. 
+When $d_4=0$, we get $\wp'(z_1)=0$, i.e., $z_1$ is congruent to a half-period of the elliptic function, commonly denoted $\omega_i$, for $i=1,2,3$. 
+It can then be shown either by solving the differential equation starting from the cubic, or by applying elliptic function identities to intermediate results in the quartic derivation,
+that the solutions for modes simplify to:
+
+\begin{align}
+u_j{\left(z\right)} &= \frac{\alpha_j\, 2 \sigma{\left(z - 2 z_{0} + 2 z_{1} + {\mu}_{j}\right)} \exp\left( z \left( {\Lambda}_{0,j} + \frac{{d}_{2}}{3 {d}_{3}} {\Lambda}_{1,j} -\zeta{\left({\mu}_{j} -z_{0} + z_{1}\right)}\right) \right)}{ \sqrt{{d}_{3}}\, \sigma{\left({\mu}_{j} - z_{0} + z_{1}\right)} \sigma{\left(z - z_{0} + z_{1}\right)}}, \notag \\[12pt]
+v_j{\left(z\right)} &= \frac{2 \sigma{\left(z - {\mu}_{j}\right)} \exp\left( - z \left({\Lambda}_{0,j} + \frac{{d}_{2}}{3 {d}_{3}}{\Lambda}_{1,j}  -\zeta{\left({\mu}_{j} -z_{0} + z_{1}\right)}\right) \right)}{ \alpha_j\, \sqrt{{d}_{3}}\, \sigma{\left({\mu}_{j} - z_{0} + z_{1}\right)} \sigma{\left(z - z_{0} + z_{1}\right)}} \label{eq:u-v-cubic}
+\end{align}
+where the integration constant $\alpha_j$ is to be determined by initial conditions using \eqref{eq:u-v-cubic} and is therefore not the same $\alpha_j$ as in \eqref{eq:u-v-quartic}, but where all other parameters retain their prior definitions.
+The modal power simplies to:
+\begin{equation}
+\label{eq:modal-power-cubic}
+u_j{\left(z\right)} v_j{\left(z\right)} = \frac{4 \wp{\left({\mu}_{j} - z_{0} + z_{1}\right)}}{{d}_{3}} - \frac{4 \wp{\left(z - z_{0} + z_{1}\right)}}{{d}_{3}}
+\end{equation}
+
+
+% ---------- SECTION -------------
+% --------------------------------
+
+\section{Plotting analytic vs numeric solution}
+
+To check the validity of the solutions, we evaluate the analytic solutions using Sympy in Python and we plot them against numeric solutions of the corresponding system of differential equations founds using scipy in Python.
+
+
+\begin{figure}[htbp]
 \centering
-\includegraphics[width=0.6\textwidth]{plots/case1_plot_1.pdf}
-\caption{Example figure caption.}
-\label{fig:example}
+\includegraphics[width=1.0\textwidth]{plots/case1_plot_1.pdf}
+\caption{Real part of analytic Equation~\eqref{eq:uv-wp} against numeric solutions.}
+\label{fig:u-v-re}
 \end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1.0\textwidth]{plots/case1_plot_2.pdf}
+\caption{Imaginary part of analytic Equation~\eqref{eq:uv-wp} against numeric solutions.}
+\label{fig:u-v-im}
+\end{figure}
+
+In Figures \ref{fig:u-v-re} and \ref{fig:u-v-im} we plot the real and imaginary parts, respectively, of the product of $u_jv_j$ in an abstract non-physical $u,v$ scenario.
+The analytic dashed lines are shown to be in agreement with the numeric solutions shown as symbols.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1.0\textwidth]{plots/case2_plot_1.pdf}
+\caption{$\left|A_j\right|^2$ using analytic Equation~\eqref{eq:u-v-quartic} in \eqref{eq:u-v-A} against numeric solutions.}
+\label{fig:A-abs}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1.0\textwidth]{plots/case2_plot_2.pdf}
+\caption{Phase $\phi_j$ using analytic Equation~\eqref{eq:u-v-quartic} in \eqref{eq:u-v-A} against numeric solutions.}
+\label{fig:A-phi}
+\end{figure}
+
+In Figures \ref{fig:A-abs} and \ref{fig:A-phi} we plot the absolute value squared and phase, respectively, of $A_j$ in a physical four-wave mixing case.
+The value of $A_j$ was found using \eqref{eq:u-v-quartic} to first obtain $u_j, v_j$, before converting to $A_j, A_j^{*}$ using \eqref{eq:u-v-A}.
+The analytic dashed lines are shown to be in agreement with the numeric solutions shown as symbols. 
+As expected in nonlinear fiber optic four-wave mixing, periodic intermodal power exchnage is seen between modes in Figure \ref{fig:A-abs}, 
+while the phase plot in Figure \ref{fig:A-phi} is dominated by linear phase velocity effects with some nonlinear effects visible as areas of high curvature in the plotted lines.
 
 \section{Conclusion}
 Summarize results and possible future directions.
 
 \section*{Acknowledgements}
 Acknowledge funding or helpful discussions.
+
+\appendix
+\section{Parameter definitions}
+\label{app:param-def-appendix}
+
+\begin{align}
+{b}_{0} &= {a}_{0} + \sum_{j=1}^{4} {a}_{j} {\gamma}_{j} + \frac{1}{2}\sum\limits_{j,k=1}^{4} {a}_{j,k} {\gamma}_{j} {\gamma}_{k}, \notag \\
+{b}_{1} &= - \sum_{j=1}^{4} {a}_{j} - \frac{1}{2}\sum\limits_{j,k=1}^{4} \left({\gamma}_{j} + {\gamma}_{k}\right) {a}_{j,k}, \notag \\
+{b}_{2} &= \frac{1}{2}\sum\limits_{j,k=1}^{4} {a}_{j,k}, \notag \\
+{c}_{0} &= \prod_{j=1}^{4} {\gamma}_{j}, \notag \\
+{c}_{1} &= - \sum_{k=1}^{4} \prod_{\substack{j=1 \\ j \ne k}}^{4} {\gamma}_{j}, \notag \\
+{c}_{2} &= \frac{3}{2} \sum_{j=1}^{4} {\gamma}_{j}^{2} - \frac{1}{4}\sum\limits_{j,k=1}^{4} \left({\gamma}_{j} - {\gamma}_{k}\right)^{2} = - \frac{1}{2}\sum_{j=1}^{4} {\gamma}_{j}^{2}, \notag \\
+{c}_{3} &= 0, \notag \\
+{c}_{4} &= 1, \notag \\
+{d}_{0} &= {b}_{0}^{2} - 4 {c}_{0}, \notag \\
+{d}_{1} &= 2 {b}_{0} {b}_{1} - 4 {c}_{1}, \notag \\
+{d}_{2} &= 2 {b}_{0} {b}_{2} + {b}_{1}^{2} - 4 {c}_{2}, \notag \\
+{d}_{3} &= 2 {b}_{1} {b}_{2} - 4 {c}_{3}, \notag \\
+{d}_{3} &= 2 {b}_{1} {b}_{2} - 4 {c}_{3}, \notag \\
+{d}_{4} &= {b}_{2}^{2} - 4 {c}_{4}
+\end{align}
+
+\section{Initial condition relations}
+\label{app:init-conds}
+
+\begin{align}
+\rho{\left(0 \right)} &= - \frac{1}{4}\sum_{j=1}^{4} u_j{\left(0 \right)} v_j{\left(0 \right)}, \notag \\
+{\gamma}_{j} &= u_j{\left(0\right)} v_j{\left(0 \right)} - \frac{1}{4}\sum_{j=1}^{4} u_j{\left(0\right)} v_j{\left(0\right)}, \notag \\
+\left. \frac{d}{d z} \rho{\left(z \right)} \right|_{\substack{ z=0 }} &= \prod_{j=1}^{4} u_j(0) - \prod_{j=1}^{4} v_j(0)
+\end{align}
 
 \bibliographystyle{plain}
 \bibliography{references}  % Create references.bib file
