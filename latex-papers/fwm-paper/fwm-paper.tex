@@ -15,10 +15,10 @@
 \numberwithin{equation}{section}
 
 % Title and authors
-\title{The general analytic solution to continuous wave four-wave mixing in nonlinear fiber optics in Weierstra\ss{} notation}
-\author{Graham Hesketh \
-\small United Kingdom \
-\small \texttt{[gdh1e10@gmail.com](mailto:gdh1e10@gmail.com)}}
+\title{The general analytic solution to continuous wave four-wave mixing in nonlinear fiber optics in Weierstrass notation}
+\author{Graham Hesketh \\
+\small United Kingdom \\
+\small \texttt{gdh1e10@gmail.com}}
 \date{\today}
 
 \begin{document}
@@ -26,7 +26,7 @@
 \maketitle
 
 \begin{abstract}
-The general analytic solution to continuous wave four-wave mixing in nonlinear optical fibers is presented in terms of Weierstra\ss{} elliptic $\wp, \sigma, \zeta$ functions. 
+The general analytic solution to continuous wave four-wave mixing in nonlinear optical fibers is presented in terms of Weierstrass elliptic $\wp, \sigma, \zeta$ functions. 
 Solutions are provided for the full complex envelopes for all four frequency modes, under all initial conditions, and without any undepleted pump approximation.
 \end{abstract}
 
@@ -176,11 +176,13 @@ We choose to impose the constraint that:
 \sum\limits_{j=1}^{4}\gamma_j = 0.
 \end{equation} 
 
+Remark: Appendix-\ref{app:fs-det-ham-proof} shows that \eqref{eq:ham-uv} is the Frobenius-Stickelberger determinant.
+
 
 % ---------- SECTION -------------
 % --------------------------------
 
-\section{Solutions for modal powers in terms of Weierstra\ss{} \texorpdfstring{$\wp$}{wp} elliptic functions}
+\section{Solutions for modal powers in terms of Weierstrass \texorpdfstring{$\wp$}{wp} elliptic functions}
 
 One key thing to note in order to obtain elliptic functions solutions is that the derivative of the modal power in \eqref{eq:duv_j} is proportional to the difference of the two wave mixing product terms, and that the Hamiltonian in \eqref{eq:ham-uv} contains their sum.
 We then note the simple but important identity:
@@ -205,11 +207,11 @@ with $a_0=H$, and observe that by squaring \eqref{eq:duv_j} and substituting \eq
 \end{align}
 
 where $b_l$, and $d_l$ are given in terms of other parameters and initial conditions in Appendices \ref{app:param-def-appendix} and \ref{app:init-conds}, and where $\lambda_l$ are the roots of the quartic polynomial in $\rho(z)$, i.e., $\sum_{l=0}^{4}d_l\,\lambda^l=0$.
-We now transform \eqref{eq:drho-sqrd-4} from quartic to the standard cubic form of the Weierstra\ss{} $\wp$ function using the classical trick which can be conceptualised in three steps:
+We now transform \eqref{eq:drho-sqrd-4} from quartic to the standard cubic form of the $\wp$ function using the classical trick which can be conceptualised in three steps:
 \begin{align}
 \rho\left(z\right) &= q\left(z\right) + \lambda_1 & \text{shift so rhs is 0 for $q(z)=0$}, \notag \\
 s\left(z\right) &= 1/q\left(z\right) & \text{invert to make the quartic a cubic}, \notag \\
-w\left(z\right) &= C_1\,s\left(z\right) + C_0 & \text{shift and scale with $C_j$ to match Weierstra\ss{} coefficients}. \label{eq:wp-4-to-3}
+w\left(z\right) &= C_1\,s\left(z\right) + C_0 & \text{shift and scale with $C_j$ to match Weierstrass coefficients}. \label{eq:wp-4-to-3}
 \end{align}
 
 The procedure sketched in \eqref{eq:wp-4-to-3} is implemented in the following single transformation:
@@ -220,14 +222,14 @@ The procedure sketched in \eqref{eq:wp-4-to-3} is implemented in the following s
 g_{2} &= {d}_{0} {d}_{4} - \frac{{d}_{1} {d}_{3}}{4} + \frac{{d}_{2}^{2}}{12}, \label{eq:g2-d} \\
 g_{3} &= \frac{{d}_{0} {d}_{2} {d}_{4}}{6} - \frac{{d}_{0} {d}_{3}^{2}}{16} - \frac{{d}_{1}^{2} {d}_{4}}{16} + \frac{{d}_{1} {d}_{2} {d}_{3}}{48} - \frac{{d}_{2}^{3}}{216} \label{eq:3-d}
 \end{align}
-where the constants $g_2$ and $g_3$ are known as Weierstra\ss{} elliptic invariants. 
+where the constants $g_2$ and $g_3$ are known as Weierstrass elliptic invariants. 
 
-Equation \eqref{eq:dwp} defines the Weierstra\ss{} elliptic $\wp$ function and the solution is:
+Equation \eqref{eq:dwp} defines the Weierstrass elliptic $\wp$ function and the solution is:
 \begin{equation}
 w(z) = \wp (z - z_0, g_2, g_3)
 \end{equation}
 where $z_0$ is a constant chosen to match initial conditions. This constant $z_0$, and others that we will now introduce, can be obtained by inverting $\wp$ using an elliptic integral, (e.g. Carlson's symmetric $R_F$ integral). 
-As $\wp$ is an even function, it is neccessary to also specify a corresponding condition for the derivative when inverting, i.e., to find $z$ from known $x,y$ we give conditions such as $\wp\left(z\right)=x, \wp'\left(z\right)=y$, where $\wp'$ is the derivative of $\wp$ known as Weierstra\ss{} p-prime. 
+As $\wp$ is an even function, it is neccessary to also specify a corresponding condition for the derivative when inverting, i.e., to find $z$ from known $x,y$ we give conditions such as $\wp\left(z\right)=x, \wp'\left(z\right)=y$, where $\wp'$ is the derivative of $\wp$ known as Weierstrass p-prime. 
 The points obtained during such an inversion are determined modulo the period lattice of the doubly periodic $\wp$. 
 Let us proceed to define the point $z_0$, and introduce the point $z_1$ as the pole of $\rho(z)$, and points $\mu_j$ as zeroes of $u_j(z)v_j(z)$:
 \begin{align}
@@ -250,7 +252,7 @@ u_j{\left(z\right)} v_j{\left(z\right)} &= \rho(\mu_j) - \rho(z), \notag \\
 % ---------- SECTION -------------
 % --------------------------------
 
-\section{Solutions for modes in terms of Weierstra\ss{} \texorpdfstring{$\sigma$}{sigma}, \texorpdfstring{$\zeta$}{zeta} functions}
+\section{Solutions for modes in terms of Weierstrass \texorpdfstring{$\sigma$}{sigma}, \texorpdfstring{$\zeta$}{zeta} functions}
 
 Through substitution of \eqref{eq:ham-uv}, \eqref{eq:duv_j}, \eqref{eq:uvj-gam-rho}, and \eqref{eq:power-conserved} into \eqref{eq:uv-system}, it can be shown that \eqref{eq:uv-system} can be written as logarithmic derivatives such that the right hand side is a function of $\rho$ and its derivative $\rho'$ in the form:
 \begin{align}
@@ -260,7 +262,7 @@ Through substitution of \eqref{eq:ham-uv}, \eqref{eq:duv_j}, \eqref{eq:uvj-gam-r
 {\Lambda}_{1,j} &= \sum_{k=1}^{4} {a}_{j,k} - \frac{1}{4}\sum\limits_{k,l=1}^{4}  {a}_{k,l}.
 \end{align}
 
-We substitute \eqref{eq:uv-wp} into \eqref{eq:dlog-u-v-rho} and use the Weierstra\ss{} elliptic function identity:
+We substitute \eqref{eq:uv-wp} into \eqref{eq:dlog-u-v-rho} and use the elliptic function identity:
 \begin{equation}
 \frac{\wp'{\left(x,g_{2},g_{3} \right)}}{\wp{\left(x,g_{2},g_{3} \right)} - \wp{\left(y,g_{2},g_{3} \right)}} = \zeta{\left(x + y,g_{2},g_{3} \right)} + \zeta{\left(x - y,g_{2},g_{3} \right)} - 2 \zeta{\left(x,g_{2},g_{3} \right)}
 \end{equation}
@@ -274,7 +276,7 @@ to write the right hand side in terms of $\zeta$ and constants:
 & + \frac{\zeta{\left({\mu}_{j} - z_{0} - z_{1}\right)}}{2} + \frac{\zeta{\left({\mu}_{j} - z_{0} + z_{1} \right)}}{2} - {\Lambda}_{0,j} - {\Lambda}_{1,j} {\lambda}_{1} \label{eq:dlog-u-v-zeta}
 \end{align}
 
-Equations \eqref{eq:dlog-u-v-zeta} can be integrated by noting that the Weierstra\ss{} $\zeta$ function is the logarithmic derivative of the Weierstra\ss{} $\sigma$ function:
+Equations \eqref{eq:dlog-u-v-zeta} can be integrated by noting that the Weierstrass $\zeta$ function is the logarithmic derivative of the $\sigma$ function:
 \begin{equation}
 \label{eq:zeta-dlog_sigma}
 \zeta\left(z, g_2, g_3\right)=\frac{\partial}{\partial z} \sigma\left(z, g_2, g_3\right).
@@ -318,31 +320,6 @@ The modal power simplies to:
 u_j{\left(z\right)} v_j{\left(z\right)} = \frac{4 \wp{\left({\mu}_{j} - z_{0} + z_{1}\right)}}{{d}_{3}} - \frac{4 \wp{\left(z - z_{0} + z_{1}\right)}}{{d}_{3}}
 \end{equation}
 
-
-% ---------- SECTION -------------
-% --------------------------------
-
-\section{The Frobenius-Stickelberger determinant}
-
-In this section we show that the conservation of the Hamiltonian can be viewed as a manifestation of the Frobenius-Stickelberger determinant formula.
-The starting point is the following relation established via \eqref{eq:ham-uv}, \eqref{eq:duv_j}, and \eqref{eq:Q-uv}:
-
-\begin{align}
-2 \prod_{j=1}^{4} u_j &= - \frac{\partial}{\partial z} u_j\, v_j + {a}_{0} + \sum_{j=1}^{4} u_j v_j {a}_{j} + \frac{1}{2}\sum\limits_{j,k=1}^{4} u_j v_j u_k v_k \,{a}_{j,k}, \notag \\
-&=\rho' + \sum_{l=0}^{2}b_l\,\rho\left(z\right)^l \label{eq:fs-det-start}
-\end{align}
-
-The following algebraic identity follows from Waring-Lagrange interpolation and holds for any values of the variables and functions:
-\begin{align}
-\sum_{l=0}^{2}b_l\,\rho\left(z\right)^l =\, &\frac{\left({\gamma}_{1} - \rho{\left(z \right)}\right) \left({\gamma}_{2} - \rho{\left(z \right)}\right)}{\left({\gamma}_{1} - {\gamma}_{3}\right) \left({\gamma}_{2} - {\gamma}_{3}\right)} \sum\limits_{l=0}^{2}b_l\,\gamma_1^l + \notag \\
-&\frac{\left({\gamma}_{1} - \rho{\left(z \right)}\right) \left({\gamma}_{3} - \rho{\left(z \right)}\right)}{\left({\gamma}_{1} - {\gamma}_{2}\right) \left({\gamma}_{3} - {\gamma}_{2}\right)} \sum\limits_{l=0}^{2}b_l\,\gamma_2^l + \notag \\
-&\frac{\left({\gamma}_{2} - \rho{\left(z \right)}\right) \left({\gamma}_{3} - \rho{\left(z \right)}\right)}{\left({\gamma}_{1} - {\gamma}_{2}\right) \left({\gamma}_{1} - {\gamma}_{3}\right)} \sum\limits_{l=0}^{2}b_l\,\gamma_3^l \label{eq:waring-lagrange}
-\end{align}
-
-where recall $\gamma_j=\rho(\mu_j)$ and the sum over $b_l \gamma_j$ can be written using \eqref{eq:drho-sqrd-2} as:
-\begin{align}
-\sum\limits_{l=0}^{2}b_l\,\gamma_j^l = \rho'\left(\mu_j\right)
-\end{align}
 
 % ---------- SECTION -------------
 % --------------------------------
@@ -396,6 +373,11 @@ Summarize results and possible future directions.
 Acknowledge funding or helpful discussions.
 
 \appendix
+
+
+% ---------- APPENDIX ------------
+% --------------------------------
+
 \section{Parameter definitions}
 \label{app:param-def-appendix}
 
@@ -416,6 +398,10 @@ Acknowledge funding or helpful discussions.
 {d}_{4} &= {b}_{2}^{2} - 4 {c}_{4}
 \end{align}
 
+
+% ---------- APPENDIX ------------
+% --------------------------------
+
 \section{Initial condition relations}
 \label{app:init-conds}
 
@@ -424,6 +410,89 @@ Acknowledge funding or helpful discussions.
 {\gamma}_{j} &= u_j{\left(0\right)} v_j{\left(0 \right)} - \frac{1}{4}\sum_{j=1}^{4} u_j{\left(0\right)} v_j{\left(0\right)}, \notag \\
 \left. \frac{d}{d z} \rho{\left(z \right)} \right|_{\substack{ z=0 }} &= \prod_{j=1}^{4} u_j(0) - \prod_{j=1}^{4} v_j(0)
 \end{align}
+
+
+% ---------- APPENDIX ------------
+% --------------------------------
+
+\section{The Frobenius-Stickelberger determinant}
+\label{app:fs-det-ham-proof}
+
+The Frobenius-Stickelberger (FS) determinant formula is an elliptic function identity that relates products of $\sigma$ functions to a multivariate determinant of higher order derivatives of $\wp$.
+In this section we show that the conservation of the Hamiltonian can be viewed as a manifestation of FS.
+We are interested in the $4\times4$ case of FS in the form:
+\begin{align}
+\label{eq:fs-det-m}
+\frac{C\,\sigma{\left(z + {\nu}_{1}\right)} \sigma{\left(z + {\nu}_{2}\right)} \sigma{\left(z + {\nu}_{3}\right)} \sigma{\left(z - {\nu}_{1} - {\nu}_{2} - {\nu}_{3}\right)}}{\sigma^{4}{\left(z\right)}} & = \det M
+\end{align}
+where:
+\begin{align}
+C = &\frac{12  \sigma{\left({\nu}_{1} - {\nu}_{2}\right)} \sigma{\left({\nu}_{1} - {\nu}_{3}\right)} \sigma{\left({\nu}_{2} - {\nu}_{3}\right)} }{\sigma{\left({\nu}_{1}\right)} \sigma^{4}{\left({\nu}_{2}\right)} \sigma^{4}{\left({\nu}_{3}\right)}} \\[6pt]
+\det M = &
+\begin{vmatrix}
+1 & \wp(z) & \frac{\partial \wp(z)}{\partial z} & \frac{\partial^2 \wp(z)}{\partial z^2} \\
+1 & \wp(\nu_1) & -\frac{\partial \wp(\nu_1)}{\partial \nu_1} & \frac{\partial^2 \wp(\nu_1)}{\partial \nu_1^2} \\
+1 & \wp(\nu_2) & -\frac{\partial \wp(\nu_2)}{\partial \nu_2} & \frac{\partial^2 \wp(\nu_2)}{\partial \nu_2^2} \\
+1 & \wp(\nu_3) & -\frac{\partial \wp(\nu_3)}{\partial \nu_3} & \frac{\partial^2 \wp(\nu_3)}{\partial \nu_3^2} \\
+\end{vmatrix}  \notag \\[6pt]
+= & - 6 \left(\wp{\left({\nu}_{1}\right)} - \wp{\left(z\right)}\right) \left(\wp{\left({\nu}_{2}\right)} - \wp{\left(z\right)}\right) \left(\wp{\left({\nu}_{1}\right)} - \wp{\left({\nu}_{2}\right)}\right) \wp'{\left({\nu}_{3}\right)} \notag \\
+& + 6 \left(\wp{\left({\nu}_{1}\right)} - \wp{\left(z\right)}\right) \left(\wp{\left({\nu}_{3}\right)} - \wp{\left(z\right)}\right) \left(\wp{\left({\nu}_{1}\right)} - \wp{\left({\nu}_{3}\right)}\right) \wp'{\left({\nu}_{2}\right)}  \notag \\
+& - 6 \left(\wp{\left({\nu}_{2}\right)} - \wp{\left(z\right)}\right) \left(\wp{\left({\nu}_{3}\right)} - \wp{\left(z\right)}\right) \left(\wp{\left({\nu}_{2}\right)} - \wp{\left({\nu}_{3}\right)}\right) \wp'{\left({\nu}_{1}\right)}  \notag \\
+& - 6 \left(\wp{\left({\nu}_{1}\right)} - \wp{\left({\nu}_{2}\right)}\right) \left(\wp{\left({\nu}_{1}\right)} - \wp{\left({\nu}_{3}\right)}\right) \left(\wp{\left({\nu}_{2}\right)} - \wp{\left({\nu}_{3}\right)}\right) \wp'{\left(z\right)}
+\end{align}
+
+The starting point for us is the following relation established via \eqref{eq:ham-uv}, \eqref{eq:duv_j}, and \eqref{eq:Q-uv}:
+\begin{align}
+2 \prod_{j=1}^{4} u_j &= - \frac{\partial}{\partial z} u_j\, v_j + {a}_{0} + \sum_{j=1}^{4} u_j v_j {a}_{j} + \frac{1}{2}\sum\limits_{j,k=1}^{4} u_j v_j u_k v_k \,{a}_{j,k}, \notag \\
+&=\rho' + \sum_{l=0}^{2}b_l\,\rho\left(z\right)^l. \label{eq:fs-det-start}
+\end{align}
+We will show how \eqref{eq:fs-det-start} can be transformed into \eqref{eq:fs-det-m}
+
+\subsection{The left hand side}
+From \eqref{eq:uv-wp}, the right hand side of \eqref{eq:fs-det-start} is a doubly periodic elliptic function,
+so too then is the left. Thus for integers $m,n$ and half-periods $\omega_1, \omega_3$ we must have:
+\begin{align}
+\prod_{j=1}^{4} \frac{u_j{\left(z\right)}}{u_j{\left(2 m {\omega}_{3} + 2 n {\omega}_{1} + z\right)}} & = 1. \label{eq:u-prod-is-one}
+\end{align}
+
+We substitute our solution \eqref{eq:u-v-quartic} into \eqref{eq:u-prod-is-one} and use the quasi-periodicity of $\sigma$:
+\begin{align}
+\sigma{\left(2 m {\omega}_{3} + 2 n {\omega}_{1} + z\right)} = \left(-1\right)^{m n + m + n} \sigma{\left(z\right)} e^{\left(2 m {\omega}_{3} + 2 n {\omega}_{1} + 2 z\right) \zeta{\left(m {\omega}_{3} + n {\omega}_{1}\right)}} \label{eq:quasi-sigma}
+\end{align}
+
+to reduce the product in \eqref{eq:u-prod-is-one} to an exponential which, as it is equal to one, must have argument $2\pi i \mathrm{N}(n,m)$, with $\mathrm{N}(n,m)$ an integer that varies with $n,m$.
+This leads to:
+\begin{align}
+2 i \pi \mathrm{N}{\left(n,m \right)} &= - \left(2 m {\omega}_{3} + 2 n {\omega}_{1}\right) \sum_{j=1}^{4} {r}_{0,j} - 2 \zeta{\left(m {\omega}_{3} + n {\omega}_{1}\right)} \sum_{j=1}^{4} {\nu}_{j}, \label{eq:exp-arg-is-one} \\ 
+\sum_{j=1}^{4} {\nu}_{j} &= 2 \mathrm{N}{\left(1,0 \right)} {\omega}_{3} - 2 \mathrm{N}{\left(0,1 \right)} {\omega}_{1} = 0 \pmod{\text{lattice}}, \label{eq:nuj-sum-zero}  \\ 
+\sum_{j=1}^{4} {r}_{0,j} &= 2 \,\zeta{\left(\mathrm{N}{\left(0,1 \right)} {\omega}_{1} - \mathrm{N}{\left(1,0 \right)} {\omega}_{3}\right)} \label{eq:roj-is-zeta} 
+\end{align}
+
+where $\nu_j=\mu_j-z_0$, and in moving from \eqref{eq:exp-arg-is-one} to \eqref{eq:nuj-sum-zero} and \eqref{eq:roj-is-zeta} we made use of the identity $\zeta{\left({\omega}_{3}\right)} {\omega}_{1} - \zeta{\left({\omega}_{1}\right)} {\omega}_{3} = i \pi /2$. 
+Ultimateley, equations \eqref{eq:quasi-sigma}, \eqref{eq:nuj-sum-zero} and \eqref{eq:roj-is-zeta} allow us to make the following substitution in the left hand side of \eqref{eq:fs-det-start}:
+\begin{align}
+\frac{\sigma{\left(z + {\nu}_{4} \right)}}{\sigma{\left({\nu}_{4} \right)}}\,\exp{\left(z \sum\limits_{j=1}^{4} {r}_{0,j}\right)} = - \frac{\sigma{\left(z - {\nu}_{1} - {\nu}_{2} - {\nu}_{3} \right)}}{\sigma{\left({\nu}_{1} + {\nu}_{2} + {\nu}_{3} \right)}}
+\end{align}
+
+\subsection{The right hand side}
+The following algebraic identity follows from Waring-Lagrange interpolation and holds for any values of the variables and functions:
+\begin{align}
+\sum_{l=0}^{2}b_l\,\rho\left(z\right)^l =\, &\frac{\left({\gamma}_{1} - \rho{\left(z \right)}\right) \left({\gamma}_{2} - \rho{\left(z \right)}\right)}{\left({\gamma}_{1} - {\gamma}_{3}\right) \left({\gamma}_{2} - {\gamma}_{3}\right)} \sum\limits_{l=0}^{2}b_l\,\gamma_1^l + \notag \\
+&\frac{\left({\gamma}_{1} - \rho{\left(z \right)}\right) \left({\gamma}_{3} - \rho{\left(z \right)}\right)}{\left({\gamma}_{1} - {\gamma}_{2}\right) \left({\gamma}_{3} - {\gamma}_{2}\right)} \sum\limits_{l=0}^{2}b_l\,\gamma_2^l + \notag \\
+&\frac{\left({\gamma}_{2} - \rho{\left(z \right)}\right) \left({\gamma}_{3} - \rho{\left(z \right)}\right)}{\left({\gamma}_{1} - {\gamma}_{2}\right) \left({\gamma}_{1} - {\gamma}_{3}\right)} \sum\limits_{l=0}^{2}b_l\,\gamma_3^l \label{eq:waring-lagrange}
+\end{align}
+
+where in our case $\gamma_j=\rho(\mu_j)$ and the sum over $b_l \gamma_j$ can be written using \eqref{eq:drho-sqrd-2} as:
+\begin{align}
+\sum\limits_{l=0}^{2}b_l\,\gamma_j^l = \rho'\left(\mu_j\right).
+\end{align}
+
+We can the use \eqref{eq:uv-wp} to express $\rho$ in terms of $\wp$ to substitute all variables in \eqref{eq:waring-lagrange} for values in terms of $\wp, \wp'$. 
+We then divide both sides of \eqref{eq:fs-det-start} by:
+\begin{align}
+\frac{\wp'{\left(z_{1}\right)}}{\sqrt{{d}_{4}} \left(\wp{\left(z_{1}\right)} - \wp{\left(z - z_{0}\right)}\right)^2 }
+\end{align}
+and observe that it takes the equivalent form to \eqref{eq:fs-det-m} up to constant factors that may look different but can be shown to be identical by multiplying by $\sigma(z)^4$ and taking $z\rightarrow 0$.
 
 \bibliographystyle{plain}
 \bibliography{references}  % Create references.bib file
