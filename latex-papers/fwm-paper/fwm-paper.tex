@@ -324,9 +324,114 @@ u_j{\left(z\right)} v_j{\left(z\right)} = \frac{4 \wp{\left({\mu}_{j} - z_{0} + 
 % ---------- SECTION -------------
 % --------------------------------
 
-\section{Plotting analytic vs numeric solution}
+\section{Transforming to canonical coordinates}
 
-To check the validity of the solutions, we evaluate the analytic solutions using Sympy in Python and we plot them against numeric solutions of the corresponding system of differential equations founds using scipy in Python.
+In this section we will demonstrate an application of the analytic solution by showing how its form guides us towards a canonical coordinate system for the analysis of four-wave mixing.
+In the canonical coordinate system:
+\begin{itemize}
+    \item there is no cross-phase modulation XPM 
+    \item solutions are single-valued meromorphic functions, namely Kronecker theta functions
+    \item polynomials in modal powers in the differential equations for modal power are cubic not quartic
+    \item conservation laws, intermodal power ratios, the cross-ratio between any four distinct modal powers, and the structure of the differential equations in the dynamic system are all preserved under the transformation                                                                                                                           
+\end{itemize}
+
+\subsection{Removing cross-phase modulation with a gauge transform}
+
+Let us consider a gauge transform of the system in \eqref{eq:uv-system} of the following form:
+
+\begin{align}
+u_j(z) &= \hat{u}_j(z) e^{- \phi_j(z)} \notag \\
+v_j(z) &= \hat{v}_j(z) e^{\phi_j(z)} \\ 
+\sum_{j=1}^{4} \phi_j(z) &= 0
+\end{align}
+
+where transforming the conjugate mode with the opposing phase leaves modal powers unchanged, and where the sum over $\phi_j$ being zero ensures we do not encounter any new terms appearing in the exponents of wave mixing terms.
+We make the following choice for $\phi_j$ composed of a linear part ($L$) and a nonlinear part ($NL$) (where $L$ and $NL$ are function labels not exponents):
+
+\begin{align}
+\phi_j(z) &= \phi_j^{L}(z) + \phi_j^{NL}(z) \\
+\phi_j^{L}(z) &= z\left({a}_{j} - \frac{1}{4}\sum_{m=1}^{4} a_{m} - \frac{{\gamma}_{j}}{4} \sum\limits_{l,k=1}^{4} a_{l,k}\right) \\
+\phi_j^{NL}(z)  &= \sum_{k=1}^{4} \left({a}_{j,k} - \frac{1}{4}\sum_{l=1}^{4} {a}_{l,k}\right) \int \hat{u}_k (z) \hat{v}_k (z) \, dz \\
+\sum_{j=1}^{4} \phi_j(z) &= \sum_{j=1}^{4} \phi_j^{L}(z) = \sum_{j=1}^{4} \phi_j^{NL}(z) =0.
+\end{align}
+
+This transforms \eqref{eq:uv-system} into the following system:
+\begin{align}
+\frac{\partial}{\partial z} \hat{u}_j &= \left(\frac{b_1}{4} - \frac{b_2}{2}\hat{u}_j \hat{v}_j \right) \hat{u}_j + \prod\limits_{k=1, k \ne j}^{4} \hat{v}_k \notag \\
+\frac{\partial}{\partial z} \hat{v}_j &= \left( - \frac{b_1}{4} + \frac{b_2}{2}\hat{u}_j \hat{v}_j\right) \hat{v}_j - \prod\limits_{k=1, k \ne j}^{4} \hat{u}_k \label{eq:uv-hat-system}
+\end{align}
+
+for which the conserved canonical Hamiltonian is:
+\begin{align}
+\hat{H} &= \prod_{l=1}^{4} \hat{u}_l + \prod_{l=1}^{4} \hat{v}_l - \frac{1}{4}\sum_{l=1}^{4} \left(b_2 \hat{u}^{2}_l \hat{v}^{2}_l  - b_1 \hat{u}_l \hat{v}_l \right)
+\end{align}
+and the intermodal power conservation laws are unchanged such that $\hat{u}_j \hat{v}_j - \hat{u}_k \hat{v}_k = \gamma_j - \gamma_k$.
+In comparison to \eqref{eq:uv-system}, we see that in \eqref{eq:uv-hat-system} we now have a single phase velocity coefficient for all modes $b_1/4$, a single self-phase modulation coefficient $b_2/2$, and no cross-phase modulation terms.
+In terms of the solutions to the system, the effect of the $\phi_j^{NL}$ transform is to remove the $z$ dependent log terms weighted by $r_{1,j}$ in \eqref{eq:u-v-quartic}.
+
+\subsection{Reducing the quartic to a cubic via local normalisation}
+
+Next, we show how we can perform a coordinate transformation that involves a local, i.e. $z$ dependent, normalisation of the modes themselves and, at the same time, induces a Mobius transform on modal powers. 
+The transform is constructed such that the Mobius transform is that of the classic trick that reduces the quartic to the cubic but it is implemented at the mode level so that we can observe the corresponding effect on the coupled system.
+When we do this, we will see that it further reduces the number of parameters in the system such that the phase velocity coefficient becomes the reciprocal of the SPM coefficient.
+Let us define the local normalisation function $h(z)$ and its associated coordinate transform $\hat{u}_j, \hat{v}_j \rightarrow \bar{u}_j, \bar{v}_j$ (note the hat to bar change in notation):
+\begin{align}
+\hat{u}_j(z) &= 2 \sqrt{{\lambda}_{1} \left({\gamma}_{j} - {\lambda}_{1}\right)} \frac{\bar{u}_j(z) e^{-\theta_j z}}{\sqrt{h{\left(z \right)}}} \notag \\
+\hat{v}_j(z) &= 2 \sqrt{{\lambda}_{1} \left({\gamma}_{j} - {\lambda}_{1}\right)}  \frac{\bar{v}_j(z) e^{\theta_j z} }{\sqrt{h{\left(z \right)}}} \notag \\
+h{\left(z \right)} &= {d}_{5} - \sum_{l=1}^{4} \left({\gamma}_{l} - {\lambda}_{1}\right) \bar{u}_l \bar{v}_l = 4 {\lambda}_{1} \bar{u}_j \bar{v}_j - \frac{{\lambda}_{1}{d}_{5} }{{\gamma}_{j} - {\lambda}_{1}} \label{eq:hat-to-bar} \\
+{\theta}_{j} &= \frac{b_0 + b_1 {\lambda}_{1} + b_2{\lambda}_{1}^2}{2\left({\gamma}_{j} - {\lambda}_{1}\right)} + \frac{{b}_{1}}{4} + \frac{{b}_{2} {\gamma}_{j}}{2} + \frac{{b}_{2} {\lambda}_{1}}{2} - \frac{1}{\chi}, \quad \sum\limits_{j=1}^{4} \theta_j = 0\\
+\chi &= \frac{8\left(b_0 + b_1 {\lambda}_{1} + b_2{\lambda}_{1}^2\right)}{d_5} = \frac{16}{d_5}\sqrt{\prod\limits_{j=1}^4 \gamma_j - \lambda_1}
+\end{align}
+
+The transformation in \eqref{eq:hat-to-bar} sends \eqref{eq:uv-hat-system} to:
+\begin{align}
+\frac{\partial}{\partial z} \bar{u}_j &= -\left(\frac{1}{\chi} - 4\chi\,\bar{u}_j \bar{v}_j \right) \bar{u}_j - 4\chi \prod\limits_{k=1, k \ne j}^{4} \bar{v}_k, \notag \\
+\frac{\partial}{\partial z} \bar{v}_j &= \left( \frac{1}{\chi} - 4\chi\,\bar{u}_j \bar{v}_j\right) \bar{v}_j + 4\chi \prod\limits_{k=1, k \ne j}^{4} \bar{u}_k \label{eq:uv-bar-system}
+\end{align}
+
+for which the conserved canonical Hamiltonian is:
+\begin{align}
+\bar{H} &= \sum_{l=1}^{4} \left(\frac{\chi}{8} \bar{u}^{2}_l \bar{v}^{2}_l  - \frac{1}{\chi}  \bar{u}_l \bar{v}_l \right) - \frac{\chi}{4}\prod_{l=1}^{4} \bar{u}_l - \frac{\chi}{4}\prod_{l=1}^{4} \bar{v}_l.
+\end{align}
+
+To solve this system, we may define the function $\bar{w}(z)$ in terms of $h$ by:
+\begin{align}
+h{\left(z \right)} = \frac{\left({d}_{2} + 3 {d}_{3} {\lambda}_{1} + 6 {d}_{4} {\lambda}_{1}^{2}\right) {\lambda}_{1}}{3} - 4 \bar{w}{\left(z \right)} {\lambda}_{1}
+\end{align}
+
+and we find then that:
+\begin{align}
+\left(\frac{d}{d z} \bar{w}{\left(z \right)}\right)^{2} &= 4\,\bar{w}{\left(z \right)}^3 - g_2\,\bar{w}{\left(z \right)} - g_3, \notag \\
+\bar{w}(z) &= \wp (z - z_0, g_2, g_3) \label{eq:dwp-bar} 
+\end{align}
+where $z_0$, $g_2$, and $g_3$ retain their previous definitions. 
+Thus, we have seen that as a result of the transformation in \eqref{eq:hat-to-bar}, the right hand side of \eqref{eq:dwp-bar} is cubic in $\bar{w}$ and thus any differential equation in $h$ or $\bar{u}_j\bar{v}_j$ is also cubic.
+
+\subsection{A parameterless system via rescaling}
+
+It is now simple to remove the remaining parameter via a scaling of the modes and the length variable as follows (note the bar to tilde notation change):
+\begin{align}
+\bar{u}_j(z) &= -\frac{2i}{\chi}\tilde{u}_j\left(\frac{z}{\chi}\right) \\
+\bar{v}_j(z) &= \frac{2i}{\chi}\tilde{v}_j\left(\frac{z}{\chi}\right) \\
+z &= \chi\xi
+\end{align}
+This substitution transforms \eqref{eq:uv-bar-system} to:
+\begin{align}
+\frac{\partial}{\partial \xi} \tilde{u}_j &= -\left(1 - \tilde{u}_j \tilde{v}_j \right) \tilde{u}_j - \prod\limits_{k=1, k \ne j}^{4} \tilde{v}_k \notag \\
+\frac{\partial}{\partial \xi} \tilde{v}_j &= \left( 1 - \tilde{u}_j \tilde{v}_j\right) \tilde{v}_j + \prod\limits_{k=1, k \ne j}^{4} \tilde{u}_k \label{eq:uv-tilde-system}
+\end{align}
+
+for which the conserved canonical Hamiltonian is:
+\begin{align}
+\tilde{H} &= \sum_{l=1}^{4} \left(\frac{1}{2} \tilde{u}^{2}_l \tilde{v}^{2}_l  - \tilde{u}_l \tilde{v}_l \right) - \prod_{l=1}^{4} \tilde{u}_l - \prod_{l=1}^{4} \tilde{v}_l
+\end{align}
+
+% ---------- SECTION -------------
+% --------------------------------
+
+\section{Plotting analytic vs numeric solutions}
+
+To check the validity of the solutions, we evaluate the analytic solutions using Sympy in Python and we plot them against numeric solutions of the corresponding system of differential equations found using the DOP853 Runge-Kutta algorithm from SciPy in Python.
 
 
 \begin{figure}[htbp]
@@ -363,7 +468,7 @@ The analytic dashed lines are shown to be in agreement with the numeric solution
 In Figures \ref{fig:A-abs} and \ref{fig:A-phi} we plot the absolute value squared and phase, respectively, of $A_j$ in a physical four-wave mixing case.
 The value of $A_j$ was found using \eqref{eq:u-v-quartic} to first obtain $u_j, v_j$, before converting to $A_j, A_j^{*}$ using \eqref{eq:u-v-A}.
 The analytic dashed lines are shown to be in agreement with the numeric solutions shown as symbols. 
-As expected in nonlinear fiber optic four-wave mixing, periodic intermodal power exchnage is seen between modes in Figure \ref{fig:A-abs}, 
+As expected in nonlinear fiber optic four-wave mixing, periodic intermodal power exchange is seen between modes in Figure \ref{fig:A-abs}, 
 while the phase plot in Figure \ref{fig:A-phi} is dominated by linear phase velocity effects with some nonlinear effects visible as areas of high curvature in the plotted lines.
 
 \section{Conclusion}
@@ -469,7 +574,7 @@ This leads to:
 \end{align}
 
 where $\nu_j=\mu_j-z_0$, and in moving from \eqref{eq:exp-arg-is-one} to \eqref{eq:nuj-sum-zero} and \eqref{eq:roj-is-zeta} we made use of the identity $\zeta{\left({\omega}_{3}\right)} {\omega}_{1} - \zeta{\left({\omega}_{1}\right)} {\omega}_{3} = i \pi /2$. 
-Ultimateley, equations \eqref{eq:quasi-sigma}, \eqref{eq:nuj-sum-zero} and \eqref{eq:roj-is-zeta} allow us to make the following substitution in the left hand side of \eqref{eq:fs-det-start}:
+Ultimately, equations \eqref{eq:quasi-sigma}, \eqref{eq:nuj-sum-zero} and \eqref{eq:roj-is-zeta} allow us to make the following substitution in the left hand side of \eqref{eq:fs-det-start}:
 \begin{align}
 \frac{\sigma{\left(z + {\nu}_{4} \right)}}{\sigma{\left({\nu}_{4} \right)}}\,\exp{\left(z \sum\limits_{j=1}^{4} {r}_{0,j}\right)} = - \frac{\sigma{\left(z - {\nu}_{1} - {\nu}_{2} - {\nu}_{3} \right)}}{\sigma{\left({\nu}_{1} + {\nu}_{2} + {\nu}_{3} \right)}}
 \end{align}
