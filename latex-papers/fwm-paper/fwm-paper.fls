@@ -227,6 +227,10 @@ INPUT ./plots/case2_plot_2.pdf
 INPUT ./plots/case2_plot_2.pdf
 INPUT ./plots/case2_plot_2.pdf
 INPUT ./plots/case2_plot_2.pdf
+INPUT ./fwm-paper.bbl
+INPUT ./fwm-paper.bbl
+INPUT fwm-paper.bbl
+INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT fwm-paper.aux
 INPUT ./fwm-paper.out
 INPUT ./fwm-paper.out
@@ -245,4 +249,5 @@ INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb

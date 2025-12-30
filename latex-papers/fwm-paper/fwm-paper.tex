@@ -8,6 +8,7 @@
 \usepackage{caption}                      % Captions for figures/tables
 \usepackage{bm}                           % Bold math symbols
 
+
 % Page layout
 \geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
 
@@ -36,9 +37,9 @@ Solutions are provided for the full complex envelopes for all four frequency mod
 
 \section{Introduction}
 Four-wave mixing (FWM) in nonlinear optical fibers is one of the fundamental parametric processes enabled by the Kerr nonlinearity. 
-It underpins a wide range of applications, including wavelength conversion, parametric amplification, frequency-comb generation, and quantum light sources. 
+It underpins a wide range of applications, including wavelength conversion, parametric amplification, frequency-comb generation, and quantum light sources (see \cite{agrawalNonlinearFiberOptics2019} and references therein). 
 Despite this broad relevance, obtaining closed-form analytic descriptions of FWM remains challenging because the underlying coupled-wave equations are nonlinear, phase-sensitive, and generally require numerical integration. 
-As a result, most textbook treatments rely on simplifying assumptions such as undepleted pumps, negligible phase mismatch, or weak signal and idler powers.
+As a result, most textbook treatments rely on simplifying assumptions such as undepleted pumps, single effective mode areas, negligible phase mismatch, or weak signal and idler powers.
 
 Several works have presented analytic or semi-analytic solutions in specific regimes, including the undepleted-pump limit, the perfectly phase-matched case, or configurations with constrained input conditions. 
 However, a fully general analytic solution—valid for arbitrary pump depletion, arbitrary phase mismatch, and arbitrary input power ratios—remains of significant theoretical and practical interest. 
@@ -49,12 +50,12 @@ Beginning from the standard coupled-wave equations for the interacting fields, w
 The resulting expressions describe the full evolution of the pump, signal, and idler amplitudes, including amplitude and phase dynamics, for arbitrary initial conditions. 
 These solutions recover the known limiting cases and offer direct physical insight into gain behavior, conversion efficiency, and phase evolution across the full parameter space.
 
-
 % ---------- SECTION -------------
 % --------------------------------
 
 \section{The continuous wave four-wave mixing system}
-The following coupled system of ordinary differential equations is taken from Agrawal and describes four-wave mixing in the continuous wave limit, i.e., in the absence of time derivatives:
+The following coupled system of ordinary differential equations is taken from \cite{agrawalNonlinearFiberOptics2019} which credits \cite{stolenParametricAmplificationFrequency1982} with its creation. 
+The system describes four-wave mixing in the continuous wave limit, i.e., in the absence of time derivatives:
 
 \begin{align}
 \frac{dA_1}{dz} &= \frac{in_2\omega_1}{c}\left[\left(f_{11}|A_1|^2 + 2\sum_{k\neq 1} f_{1k}|A_k|^2\right)A_1 + 2f_{1234}A_2^*A_3A_4e^{i\Delta kz}\right], \notag \\
@@ -500,7 +501,18 @@ As expected in nonlinear fiber optic four-wave mixing, periodic intermodal power
 while the phase plot in Figure \ref{fig:A-phi} is dominated by linear phase velocity effects with some nonlinear effects visible as areas of high curvature in the plotted lines.
 
 \section{Conclusion}
-Summarize results and possible future directions.
+We have derived a complete analytic solution to the continuous-wave four-wave mixing system. 
+The solutions are expressed in terms of Weierstrass elliptic functions, and we have demonstrated how they may be evaluated numerically using open-source Python code. 
+Motivated by the structure of these analytic solutions, we investigated a class of coordinate transformations that yield a canonical coordinate system in which the governing differential equations simplify substantially and the solutions become single-valued, taking the form of Kronecker theta functions.
+
+Through this exploration of coordinate transformations, we showed that the full four-wave mixing system can be reduced to a significantly simpler, parameter-free system. 
+Remarkably, the structural form of the differential equations is preserved under these transformations, despite the fact that the transformations themselves depend explicitly on the independent variable $z$.
+
+Four-wave mixing provides an important and challenging test case for mathematical analysis, and is arguably among the more intricate examples of dynamical systems admitting elliptic (genus-one) function solutions due to the presence of quartic polynomials. 
+In this work, we have demonstrated in detail how these difficulties can be systematically addressed. 
+The methods developed here are directly transferable to the analysis of related nonlinear systems, such as the interaction of modes in multimode nonlinear fiber optics.
+
+In forthcoming work, we intend to present a unified framework for integrable nonlinear coupled ordinary differential equations with elliptic and hyperelliptic function solutions, for which the four-wave mixing system studied here will serve as a central example.
 
 \section*{Acknowledgements}
 Acknowledge funding or helpful discussions.
@@ -632,7 +644,8 @@ We then divide both sides of \eqref{eq:fs-det-start} by:
 \end{align}
 and observe that it takes the equivalent form to \eqref{eq:fs-det-m} up to constant factors that may look different but can be shown to be identical by multiplying by $\sigma(z)^4$ and taking $z\rightarrow 0$.
 
-\bibliographystyle{plain}
-\bibliography{references}  % Create references.bib file
+
+\bibliographystyle{alpha}  % or plain, alpha, etc.
+\bibliography{CW-FWM-Analytic-Solutions}
 
 \end{document}
