@@ -182,7 +182,7 @@ Remark: Appendix-\ref{app:fs-det-ham-proof} shows that \eqref{eq:ham-uv} is the 
 % ---------- SECTION -------------
 % --------------------------------
 
-\section{Solutions for modal powers in terms of Weierstrass \texorpdfstring{$\wp$}{wp} elliptic functions}
+\section{Solutions for modal powers in terms of Weierstrass \texorpdfstring{$\wp$}{wp} elliptic functions}\label{sec:mode-power}
 
 One key thing to note in order to obtain elliptic functions solutions is that the derivative of the modal power in \eqref{eq:duv_j} is proportional to the difference of the two wave mixing product terms, and that the Hamiltonian in \eqref{eq:ham-uv} contains their sum.
 We then note the simple but important identity:
@@ -214,7 +214,7 @@ s\left(z\right) &= 1/q\left(z\right) & \text{invert to make the quartic a cubic}
 w\left(z\right) &= C_1\,s\left(z\right) + C_0 & \text{shift and scale with $C_j$ to match Weierstrass coefficients}. \label{eq:wp-4-to-3}
 \end{align}
 
-The procedure sketched in \eqref{eq:wp-4-to-3} is implemented in the following single transformation:
+After choosing a root, $\lambda_1$, the procedure sketched in \eqref{eq:wp-4-to-3} is implemented in the following single transformation:
 \begin{align}
 \rho{\left(z \right)} &= {\lambda}_{1} + \frac{d_4}{- 4 w{\left(z \right)} \prod_{l=1}^{3} {\Omega}_{l}  + \frac{d_4}{3} \sum_{l=1}^{3} {\Omega}_{l} }, \label{eq:rho-wp-1} \\
 \Omega_l &= \frac{1}{\lambda_{l+1} - \lambda_1}, \notag \\
@@ -327,17 +327,24 @@ u_j{\left(z\right)} v_j{\left(z\right)} = \frac{4 \wp{\left({\mu}_{j} - z_{0} + 
 \section{Transforming to canonical coordinates}
 
 In this section we will demonstrate an application of the analytic solution by showing how its form guides us towards a canonical coordinate system for the analysis of four-wave mixing.
-In the canonical coordinate system:
+In the canonical coordinates the system is simplified in the following ways:
 \begin{itemize}
     \item there is no cross-phase modulation XPM 
-    \item solutions are single-valued meromorphic functions, namely Kronecker theta functions
-    \item polynomials in modal powers in the differential equations for modal power are cubic not quartic
-    \item conservation laws, intermodal power ratios, the cross-ratio between any four distinct modal powers, and the structure of the differential equations in the dynamic system are all preserved under the transformation                                                                                                                           
+    \item differential equations for modal powers involve cubic not quartic polynomials
+    \item system parameters are greatly reduced and if desired completely removable
+    \item solutions are single-valued meromorphic Kronecker theta functions                                                                                                                      
+\end{itemize}
+The transformations preserve the following:
+\begin{itemize}
+    \item conservation of the Hamiltonian and intermodal power laws
+    \item intermodal power ratios
+    \item the cross-ratio between any four distinct modal powers, 
+    \item the differential equations structure in regards to recognisable four-wave mixing terms                                                                                                                      
 \end{itemize}
 
 \subsection{Removing cross-phase modulation with a gauge transform}
 
-Let us consider a gauge transform of the system in \eqref{eq:uv-system} of the following form:
+To begin, let us consider a transform of the system in \eqref{eq:uv-system} of the following form:
 
 \begin{align}
 u_j(z) &= \hat{u}_j(z) e^{- \phi_j(z)} \notag \\
@@ -367,21 +374,23 @@ for which the conserved canonical Hamiltonian is:
 \end{align}
 and the intermodal power conservation laws are unchanged such that $\hat{u}_j \hat{v}_j - \hat{u}_k \hat{v}_k = \gamma_j - \gamma_k$.
 In comparison to \eqref{eq:uv-system}, we see that in \eqref{eq:uv-hat-system} we now have a single phase velocity coefficient for all modes $b_1/4$, a single self-phase modulation coefficient $b_2/2$, and no cross-phase modulation terms.
-In terms of the solutions to the system, the effect of the $\phi_j^{NL}$ transform is to remove the $z$ dependent log terms weighted by $r_{1,j}$ in \eqref{eq:u-v-quartic}.
+In terms of the solutions to the system, the effect of the $\phi_j^{NL}$ transform is to remove the $z$ dependent log terms weighted by $r_{1,j}$ in \eqref{eq:u-v-quartic}. 
 
 \subsection{Reducing the quartic to a cubic via local normalisation}
 
-Next, we show how we can perform a coordinate transformation that involves a local, i.e. $z$ dependent, normalisation of the modes themselves and, at the same time, induces a Mobius transform on modal powers. 
-The transform is constructed such that the Mobius transform is that of the classic trick that reduces the quartic to the cubic but it is implemented at the mode level so that we can observe the corresponding effect on the coupled system.
+Next, we show how we can perform a coordinate transformation that involves a local, i.e. $z$ dependent, normalisation of the modes themselves and, at the same time, induces a Mobius transform on modal powers which implements the classic trick that reduces the quartic to the cubic discussed in Section~\ref{sec:mode-power}.
+However, here that same effect is delivered at the level of modes $u_j, v_j$ not only at the mode power level $u_j v_j$ so that we can observe a corresponding effect on the coupled system.
 When we do this, we will see that it further reduces the number of parameters in the system such that the phase velocity coefficient becomes the reciprocal of the SPM coefficient.
+
 Let us define the local normalisation function $h(z)$ and its associated coordinate transform $\hat{u}_j, \hat{v}_j \rightarrow \bar{u}_j, \bar{v}_j$ (note the hat to bar change in notation):
 \begin{align}
 \hat{u}_j(z) &= 2 \sqrt{{\lambda}_{1} \left({\gamma}_{j} - {\lambda}_{1}\right)} \frac{\bar{u}_j(z) e^{-\theta_j z}}{\sqrt{h{\left(z \right)}}} \notag \\
 \hat{v}_j(z) &= 2 \sqrt{{\lambda}_{1} \left({\gamma}_{j} - {\lambda}_{1}\right)}  \frac{\bar{v}_j(z) e^{\theta_j z} }{\sqrt{h{\left(z \right)}}} \notag \\
-h{\left(z \right)} &= {d}_{5} - \sum_{l=1}^{4} \left({\gamma}_{l} - {\lambda}_{1}\right) \bar{u}_l \bar{v}_l = 4 {\lambda}_{1} \bar{u}_j \bar{v}_j - \frac{{\lambda}_{1}{d}_{5} }{{\gamma}_{j} - {\lambda}_{1}} \label{eq:hat-to-bar} \\
-{\theta}_{j} &= \frac{b_0 + b_1 {\lambda}_{1} + b_2{\lambda}_{1}^2}{2\left({\gamma}_{j} - {\lambda}_{1}\right)} + \frac{{b}_{1}}{4} + \frac{{b}_{2} {\gamma}_{j}}{2} + \frac{{b}_{2} {\lambda}_{1}}{2} - \frac{1}{\chi}, \quad \sum\limits_{j=1}^{4} \theta_j = 0\\
-\chi &= \frac{8\left(b_0 + b_1 {\lambda}_{1} + b_2{\lambda}_{1}^2\right)}{d_5} = \frac{16}{d_5}\sqrt{\prod\limits_{j=1}^4 \gamma_j - \lambda_1}
+h{\left(z \right)} &= {d}_{5} - \sum_{l=1}^{4} \left({\gamma}_{l} - {\lambda}_{1}\right) \bar{u}_l \bar{v}_l = 4 {\lambda}_{1} \bar{u}_j \bar{v}_j - \frac{{\lambda}_{1}{d}_{5} }{{\gamma}_{j} - {\lambda}_{1}} \label{eq:hat-to-bar}
 \end{align}
+where $\theta_j$ and $d_5$ are given in Appendix \ref{app:param-def-appendix}. 
+The $\theta_j$ parameter is not involved in the reduction of the quartic to the cubic but its inclusion keeps the phase velocity coefficient the same for all modes after the transform.
+The key parameter in the transformation is the root $\lambda_1$ previously defined for the purpose of quartic to cubic reduction.
 
 The transformation in \eqref{eq:hat-to-bar} sends \eqref{eq:uv-hat-system} to:
 \begin{align}
@@ -393,6 +402,10 @@ for which the conserved canonical Hamiltonian is:
 \begin{align}
 \bar{H} &= \sum_{l=1}^{4} \left(\frac{\chi}{8} \bar{u}^{2}_l \bar{v}^{2}_l  - \frac{1}{\chi}  \bar{u}_l \bar{v}_l \right) - \frac{\chi}{4}\prod_{l=1}^{4} \bar{u}_l - \frac{\chi}{4}\prod_{l=1}^{4} \bar{v}_l.
 \end{align}
+and the intermodal power conservation laws are:
+\begin{align}
+\bar{u}_j(z) \bar{v}_j(z) - \bar{u}_k(z) \bar{v}_k(z) = \frac{{d}_{5}}{4 \left({\gamma}_{j} - {\lambda}_{1}\right)} - \frac{{d}_{5}}{4 \left({\gamma}_{k} - {\lambda}_{1}\right)}
+\end{align}
 
 To solve this system, we may define the function $\bar{w}(z)$ in terms of $h$ by:
 \begin{align}
@@ -402,10 +415,25 @@ h{\left(z \right)} = \frac{\left({d}_{2} + 3 {d}_{3} {\lambda}_{1} + 6 {d}_{4} {
 and we find then that:
 \begin{align}
 \left(\frac{d}{d z} \bar{w}{\left(z \right)}\right)^{2} &= 4\,\bar{w}{\left(z \right)}^3 - g_2\,\bar{w}{\left(z \right)} - g_3, \notag \\
-\bar{w}(z) &= \wp (z - z_0, g_2, g_3) \label{eq:dwp-bar} 
+\bar{w}(z) &= \wp (z - z_0) \label{eq:dwp-bar} \\
+h(z) &= 4\lambda_1\left(\wp (z_1) - \wp (z - z_0)\right) \label{eq:dwp-h-bar} \\
+\bar{u}_j(z)\bar{v}_j(z) &= \wp(\mu_j - z_0) - \wp(z - z_0)
 \end{align}
-where $z_0$, $g_2$, and $g_3$ retain their previous definitions. 
-Thus, we have seen that as a result of the transformation in \eqref{eq:hat-to-bar}, the right hand side of \eqref{eq:dwp-bar} is cubic in $\bar{w}$ and thus any differential equation in $h$ or $\bar{u}_j\bar{v}_j$ is also cubic.
+where $z_0$, $z_1$, $\mu_j$, $g_2$, and $g_3$ retain their previous definitions from the original coordinates. 
+We see that as a result of the transformation in \eqref{eq:hat-to-bar}, the right hand side of \eqref{eq:dwp-bar} is cubic in $\bar{w}$ and thus any differential equation in $h$ or $\bar{u}_j\bar{v}_j$ is also cubic in those functions as they are linearly related.
+The elliptic function form of $h(z)$ is not a surprise as it was purposely constructed in the transformation so as to remove the corresponding term from the denominator in \eqref{eq:u-v-quartic}.
+
+The solutions for modes $\bar{u}_j, \bar{v}_j$ are:
+\begin{align}
+\bar{u}_j(z) &= \frac{\bar{\alpha}_{j} \sigma{\left(z - 2 z_{0} + {\mu}_{j}\right)} \exp{\left( z \bar{\kappa}_j\right)} }{\sigma{\left(z - z_{0}\right)} \sigma{\left({\mu}_{j} - z_{0}\right)}} \\
+\bar{v}_j(z) &= \frac{\sigma{\left(z - {\mu}_{j}\right)} \exp{\left(- z \bar{\kappa}_j\right)}}{\bar{\alpha}_{j} \sigma{\left(z - z_{0}\right)} \sigma{\left({\mu}_{j} - z_{0}\right)} } \label{eq:u-v-bar}
+\end{align}
+where the Weierstrass $\sigma$ functions use the same $g_2,g_3$ from the original coordinates, 
+$\bar{\kappa}_j$ is given in Appendix \ref{app:param-def-appendix} and $\bar{\alpha}_j$ is an integration constant fixed by initial conditions and used to capture any relative phase offset between a mode $\bar{u}_j$ and its conjugate $\bar{v}_j$.
+The solutions in \eqref{eq:u-v-bar} are Kronecker theta functions (up to constant and $z$ dependent exponential factors), which simply put are a ratio of two Weierstrass $\sigma$ functions shifted relative to each other in $z$.
+This form is similar to that obtained in other systems in nonlinear optics. 
+The exponentials and $\sigma$ functions are entire functions and this ratio is a single valued meromorphic function, unlike the solutions in \eqref{eq:u-v-quartic}. 
+The solutions are quasi-periodic and modulo the lattice they have zeros where the argument of $\sigma$ vanishes in the numerator, and poles where the argument of $\sigma$ vanishes in the denominator. 
 
 \subsection{A parameterless system via rescaling}
 
@@ -500,8 +528,13 @@ Acknowledge funding or helpful discussions.
 {d}_{2} &= 2 {b}_{0} {b}_{2} + {b}_{1}^{2} - 4 {c}_{2}, \notag \\
 {d}_{3} &= 2 {b}_{1} {b}_{2} - 4 {c}_{3}, \notag \\
 {d}_{3} &= 2 {b}_{1} {b}_{2} - 4 {c}_{3}, \notag \\
-{d}_{4} &= {b}_{2}^{2} - 4 {c}_{4}
+{d}_{4} &= {b}_{2}^{2} - 4 {c}_{4}, \notag  \\
+{d}_{5} &= {d}_{1} + 2 {d}_{2} {\lambda}_{1} + 3 {d}_{3} {\lambda}_{1}^{2} + 4 {d}_{4} {\lambda}_{1}^{3}, \notag  \\
+\chi &= \frac{8\left(b_0 + b_1 {\lambda}_{1} + b_2{\lambda}_{1}^2\right)}{d_5} = \frac{16}{d_5}\sqrt{\prod\limits_{j=1}^4 \gamma_j - \lambda_1}, \notag \\
+{\theta}_{j} &= \frac{b_0 + b_1 {\lambda}_{1} + b_2{\lambda}_{1}^2}{2\left({\gamma}_{j} - {\lambda}_{1}\right)} + \frac{{b}_{1}}{4} + \frac{{b}_{2} {\gamma}_{j}}{2} + \frac{{b}_{2} {\lambda}_{1}}{2} - \frac{1}{\chi}, \quad \sum\limits_{j=1}^{4} \theta_j = 0, \notag \\
+\bar{\kappa}_j &= - \zeta{\left(- z_{0} + {\mu}_{j}, g_2, g_3\right)} - {b}_{2} {\gamma}_{j} + 2 {\theta}_{j} + \frac{1}{\chi}
 \end{align}
+In equating the two equivalent definitions of $\chi$ we have chosen the positive branch of the square root when evaluating \eqref{eq:drho-sqrd-2} at $\rho(z)=\lambda_1$.
 
 
 % ---------- APPENDIX ------------
@@ -592,7 +625,7 @@ where in our case $\gamma_j=\rho(\mu_j)$ and the sum over $b_l \gamma_j$ can be 
 \sum\limits_{l=0}^{2}b_l\,\gamma_j^l = \rho'\left(\mu_j\right).
 \end{align}
 
-We can the use \eqref{eq:uv-wp} to express $\rho$ in terms of $\wp$ to substitute all variables in \eqref{eq:waring-lagrange} for values in terms of $\wp, \wp'$. 
+We can then use \eqref{eq:uv-wp} to express $\rho$ in terms of $\wp$ so that we can substitute all variables in \eqref{eq:waring-lagrange} for values in terms of $\wp, \wp'$. 
 We then divide both sides of \eqref{eq:fs-det-start} by:
 \begin{align}
 \frac{\wp'{\left(z_{1}\right)}}{\sqrt{{d}_{4}} \left(\wp{\left(z_{1}\right)} - \wp{\left(z - z_{0}\right)}\right)^2 }
