@@ -1,49 +1,15 @@
-This is BibTeX, Version 0.99d (TeX Live 2024)
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: fwm-paper.aux
-The style file: alpha.bst
-Database file #1: CW-FWM-Analytic-Solutions.bib
-Warning--empty journal in stolenParametricAmplificationFrequency1982
-Warning--empty year in stolenParametricAmplificationFrequency1982
-You've used 2 entries,
-            2543 wiz_defined-function locations,
-            572 strings with 4779 characters,
-and the built_in function-call counts, 738 in all, are:
-= -- 69
-> -- 27
-< -- 1
-+ -- 8
-- -- 8
-* -- 56
-:= -- 128
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 11
-chr.to.int$ -- 2
-cite$ -- 4
-duplicate$ -- 30
-empty$ -- 58
-format.name$ -- 11
-if$ -- 144
-int.to.chr$ -- 1
-int.to.str$ -- 0
-missing$ -- 3
-newline$ -- 13
-num.names$ -- 6
-pop$ -- 17
-preamble$ -- 1
-purify$ -- 13
-quote$ -- 0
-skip$ -- 20
-stack$ -- 0
-substring$ -- 45
-swap$ -- 1
-text.length$ -- 1
-text.prefix$ -- 1
-top$ -- 0
-type$ -- 12
-warning$ -- 2
-while$ -- 7
-width$ -- 4
-write$ -- 26
-(There were 2 warnings)
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is 'fwm-paper.blg'
+[37] biber-darwin:340> INFO - === Tue Dec 30, 2025, 22:23:46
+[46] Biber.pm:420> INFO - Reading 'fwm-paper.bcf'
+[86] Biber.pm:994> INFO - Found 5 citekeys in bib section 0
+[93] Biber.pm:4463> INFO - Processing section 0
+[99] Biber.pm:4654> INFO - Looking for bibtex file 'CW-FWM-Analytic-Solutions.bib' for section 0
+[100] bibtex.pm:1713> INFO - LaTeX decoding ...
+[108] bibtex.pm:1519> INFO - Found BibTeX data source 'CW-FWM-Analytic-Solutions.bib'
+[147] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[147] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[147] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[147] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[153] bbl.pm:676> INFO - Writing 'fwm-paper.bbl' with encoding 'UTF-8'
+[154] bbl.pm:779> INFO - Output to fwm-paper.bbl

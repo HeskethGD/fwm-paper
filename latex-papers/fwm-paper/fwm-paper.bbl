@@ -1,13 +1,283 @@
-\begin{thebibliography}{Agr19}
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem[Agr19]{agrawalNonlinearFiberOptics2019}
-Govind~P. Agrawal.
-\newblock {\em Nonlinear {{Fiber Optics}}}.
-\newblock Academic Press, 6 edition, August 2019.
 
-\bibitem[SB]{stolenParametricAmplificationFrequency1982}
-R.~Stolen and J.~Bjorkholm.
-\newblock Parametric amplification and frequency conversion in optical fibers.
-\newblock 18(7):1062--1072.
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{agrawalNonlinearFiberOptics2019}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=910d801de7c7b036bee279a678fc8362}{%
+           family={Agrawal},
+           familyi={A\bibinitperiod},
+           given={Govind\bibnamedelima P.},
+           giveni={G\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Academic Press}%
+      }
+      \strng{namehash}{910d801de7c7b036bee279a678fc8362}
+      \strng{fullhash}{910d801de7c7b036bee279a678fc8362}
+      \strng{fullhashraw}{910d801de7c7b036bee279a678fc8362}
+      \strng{bibnamehash}{910d801de7c7b036bee279a678fc8362}
+      \strng{authorbibnamehash}{910d801de7c7b036bee279a678fc8362}
+      \strng{authornamehash}{910d801de7c7b036bee279a678fc8362}
+      \strng{authorfullhash}{910d801de7c7b036bee279a678fc8362}
+      \strng{authorfullhashraw}{910d801de7c7b036bee279a678fc8362}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Nonlinear Fiber Optics, Sixth Edition, provides an up-to-date accounting of the nonlinear phenomena occurring inside optical fibers in telecommunicati}
+      \field{edition}{6}
+      \field{isbn}{978-0-12-817042-7}
+      \field{langid}{american}
+      \field{month}{8}
+      \field{title}{Nonlinear {{Fiber Optics}}}
+      \field{urlday}{30}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /Users/grahamhesketh/Zotero/storage/GQ3UVRS2/978-0-12-817042-7.html
+      \endverb
+    \endentry
+    \entry{chenFourwaveMixingOptical1989}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=eb52453427a56e9815ad2687dbc97c45}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yijiang},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Optica Publishing Group}%
+      }
+      \strng{namehash}{eb52453427a56e9815ad2687dbc97c45}
+      \strng{fullhash}{eb52453427a56e9815ad2687dbc97c45}
+      \strng{fullhashraw}{eb52453427a56e9815ad2687dbc97c45}
+      \strng{bibnamehash}{eb52453427a56e9815ad2687dbc97c45}
+      \strng{authorbibnamehash}{eb52453427a56e9815ad2687dbc97c45}
+      \strng{authornamehash}{eb52453427a56e9815ad2687dbc97c45}
+      \strng{authorfullhash}{eb52453427a56e9815ad2687dbc97c45}
+      \strng{authorfullhashraw}{eb52453427a56e9815ad2687dbc97c45}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Exact solutions to the equations describing general nonlinear four-wave mixing (including parametric mixing and three-wave sum-frequency generation) in optical fibers are presented. This complements our earlier research on four-photon parametric mixing in optical fibers [ Opt. Lett.14, 87 ( 1989)].}
+      \field{day}{1}
+      \field{issn}{1520-8540}
+      \field{journaltitle}{JOSA B}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{number}{11}
+      \field{shortjournal}{J. Opt. Soc. Am. B, JOSAB}
+      \field{shorttitle}{Four-Wave Mixing in Optical Fibers}
+      \field{title}{Four-Wave Mixing in Optical Fibers: Exact Solution}
+      \field{urlday}{30}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{6}
+      \field{year}{1989}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1986\bibrangedash 1993}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1364/JOSAB.6.001986
+      \endverb
+      \verb{file}
+      \verb /Users/grahamhesketh/Zotero/storage/RPIZIC5R/Chen - 1989 - Four-wave mixing in optical fibers exact solution.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://opg.optica.org/josab/abstract.cfm?uri=josab-6-11-1986
+      \endverb
+      \verb{url}
+      \verb https://opg.optica.org/josab/abstract.cfm?uri=josab-6-11-1986
+      \endverb
+      \keyw{Four wave mixing,Nonlinear parametric processes,Optical fibers,Raman scattering,Sum frequency generation,Three wave mixing}
+    \endentry
+    \entry{heskethGeneralComplexEnvelope2015}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=1d7bc127dff7603699c24117aaf97d4c}{%
+           family={Hesketh},
+           familyi={H\bibinitperiod},
+           given={Graham\bibnamedelima D.},
+           giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Optica Publishing Group}%
+      }
+      \strng{namehash}{1d7bc127dff7603699c24117aaf97d4c}
+      \strng{fullhash}{1d7bc127dff7603699c24117aaf97d4c}
+      \strng{fullhashraw}{1d7bc127dff7603699c24117aaf97d4c}
+      \strng{bibnamehash}{1d7bc127dff7603699c24117aaf97d4c}
+      \strng{authorbibnamehash}{1d7bc127dff7603699c24117aaf97d4c}
+      \strng{authornamehash}{1d7bc127dff7603699c24117aaf97d4c}
+      \strng{authorfullhash}{1d7bc127dff7603699c24117aaf97d4c}
+      \strng{authorfullhashraw}{1d7bc127dff7603699c24117aaf97d4c}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The analytic general solutions for the complex field envelopes are derived using Weierstrass elliptic functions for two- and three-mode systems of differential equations coupled via quadratic χ2 type nonlinearity as well as two-mode systems coupled via cubic χ3 type nonlinearity. For the first time, a compact form of the solutions is given involving simple ratios of Weierstrass sigma functions (or equivalently Jacobi theta functions). A Fourier series is also given. All possible launch states are considered. The models describe sum- and difference-frequency generation, polarization dynamics, parity-time dynamics, and optical processing applications.}
+      \field{day}{1}
+      \field{issn}{1520-8540}
+      \field{journaltitle}{JOSA B}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{number}{12}
+      \field{shortjournal}{J. Opt. Soc. Am. B, JOSAB}
+      \field{title}{General Complex Envelope Solutions of Coupled-Mode Optics with Quadratic or Cubic Nonlinearity}
+      \field{urlday}{30}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{32}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{2391\bibrangedash 2399}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1364/JOSAB.32.002391
+      \endverb
+      \verb{file}
+      \verb /Users/grahamhesketh/Zotero/storage/27QRLWXW/Hesketh - 2015 - General complex envelope solutions of coupled-mode optics with quadratic or cubic nonlinearity.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://opg.optica.org/josab/abstract.cfm?uri=josab-32-12-2391
+      \endverb
+      \verb{url}
+      \verb https://opg.optica.org/josab/abstract.cfm?uri=josab-32-12-2391
+      \endverb
+      \keyw{Circular polarization,Optical fields,Optical properties,Periodically poled lithium niobate,Phase shift,Refractive index}
+    \endentry
+    \entry{marhicAnalyticSolutionsPhases2013}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=4f4d22cd768a6d500984e982b8a071f6}{%
+           family={Marhic},
+           familyi={M\bibinitperiod},
+           given={Michel\bibnamedelima E.},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Optica Publishing Group}%
+      }
+      \strng{namehash}{4f4d22cd768a6d500984e982b8a071f6}
+      \strng{fullhash}{4f4d22cd768a6d500984e982b8a071f6}
+      \strng{fullhashraw}{4f4d22cd768a6d500984e982b8a071f6}
+      \strng{bibnamehash}{4f4d22cd768a6d500984e982b8a071f6}
+      \strng{authorbibnamehash}{4f4d22cd768a6d500984e982b8a071f6}
+      \strng{authornamehash}{4f4d22cd768a6d500984e982b8a071f6}
+      \strng{authorfullhash}{4f4d22cd768a6d500984e982b8a071f6}
+      \strng{authorfullhashraw}{4f4d22cd768a6d500984e982b8a071f6}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We show that the phases of waves coupled by four-wave mixing (FWM) can be calculated in closed form, for either degenerate or nondegenerate FWM. The phase of each wave is the sum of a linear function of distance z, and elliptic integrals of the third kind. A variety of behaviors as a function of z are possible. The results can be used for obtaining the phase transfer function between any input wave and any output wave, a subject of interest for phase regeneration of communication signals.}
+      \field{day}{1}
+      \field{issn}{1520-8540}
+      \field{journaltitle}{JOSA B}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{number}{1}
+      \field{shortjournal}{J. Opt. Soc. Am. B, JOSAB}
+      \field{title}{Analytic Solutions for the Phases of Waves Coupled by Degenerate or Nondegenerate Four-Wave Mixing}
+      \field{urlday}{30}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{30}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{62\bibrangedash 70}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1364/JOSAB.30.000062
+      \endverb
+      \verb{file}
+      \verb /Users/grahamhesketh/Zotero/storage/GTZ8VSJK/Marhic - 2013 - Analytic solutions for the phases of waves coupled by degenerate or nondegenerate four-wave mixing.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://opg.optica.org/josab/abstract.cfm?uri=josab-30-1-62
+      \endverb
+      \verb{url}
+      \verb https://opg.optica.org/josab/abstract.cfm?uri=josab-30-1-62
+      \endverb
+      \keyw{Four wave mixing,Nonlinear optical fibers,Numerical simulation,Optical amplifiers,Phase shift,Quantum fluctuations}
+    \endentry
+    \entry{stolenParametricAmplificationFrequency1982}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=1f7ac5bd48842e08a84f02ad043366e0}{%
+           family={Stolen},
+           familyi={S\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=54098d620b5215bc6bdca71eaf8eb429}{%
+           family={Bjorkholm},
+           familyi={B\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{2f212be4d1e61ddd9153403837fda0dc}
+      \strng{fullhash}{2f212be4d1e61ddd9153403837fda0dc}
+      \strng{fullhashraw}{2f212be4d1e61ddd9153403837fda0dc}
+      \strng{bibnamehash}{2f212be4d1e61ddd9153403837fda0dc}
+      \strng{authorbibnamehash}{2f212be4d1e61ddd9153403837fda0dc}
+      \strng{authornamehash}{2f212be4d1e61ddd9153403837fda0dc}
+      \strng{authorfullhash}{2f212be4d1e61ddd9153403837fda0dc}
+      \strng{authorfullhashraw}{2f212be4d1e61ddd9153403837fda0dc}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We find that the parametric four-photon gain for light pulses decreases for fibers longer than a characteristic length. This length is related to the common experimental observation that stimulated parametric emission is usually prominent only in short fibers while in long fibers stimulated Raman scattering dominates. Despite the fact that the actual process involves an intensity dependent bandwidth and broadening of the pump linewidth from self-phase modulation, it is possible to develop a simple expression for the characteristic length which requires only the initial pump linewidth and the low-power parametric bandwidth. This bandwidth can often be estimated from the pump wavelength and the measured frequency shift between the pump and the generated waves. Expressions for gain and amplification are derived from coupled wave equations and in the Appendixes it is shown that these are of the same form as the planewave equations, but modified by coupling coefficients called overlap integrals.}
+      \field{issn}{1558-1713}
+      \field{journaltitle}{IEEE Journal of Quantum Electronics}
+      \field{month}{7}
+      \field{number}{7}
+      \field{title}{Parametric Amplification and Frequency Conversion in Optical Fibers}
+      \field{urlday}{30}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{18}
+      \field{year}{1982}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1062\bibrangedash 1072}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1109/JQE.1982.1071660
+      \endverb
+      \verb{file}
+      \verb /Users/grahamhesketh/Zotero/storage/38QSQGW4/Stolen and Bjorkholm - 1982 - Parametric amplification and frequency conversion in optical fibers.pdf;/Users/grahamhesketh/Zotero/storage/LCBWJCT5/1071660.html
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/1071660
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/1071660
+      \endverb
+      \keyw{Bandwidth,Frequency conversion,Frequency estimation,Frequency measurement,Integral equations,Intensity modulation,Optical fibers,Optical pulses,Pulse amplifiers,Raman scattering}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
 
-\end{thebibliography}

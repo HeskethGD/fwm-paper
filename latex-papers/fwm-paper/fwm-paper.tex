@@ -8,9 +8,15 @@
 \usepackage{caption}                      % Captions for figures/tables
 \usepackage{bm}                           % Bold math symbols
 
+% Add bibilography
+\usepackage[backend=biber,style=numeric]{biblatex}
+\addbibresource{CW-FWM-Analytic-Solutions.bib}
 
 % Page layout
 \geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+
+% Fix plot positions
+\usepackage{float}
 
 % Numbering equations by section
 \numberwithin{equation}{section}
@@ -39,16 +45,19 @@ Solutions are provided for the full complex envelopes for all four frequency mod
 Four-wave mixing (FWM) in nonlinear optical fibers is one of the fundamental parametric processes enabled by the Kerr nonlinearity. 
 It underpins a wide range of applications, including wavelength conversion, parametric amplification, frequency-comb generation, and quantum light sources (see \cite{agrawalNonlinearFiberOptics2019} and references therein). 
 Despite this broad relevance, obtaining closed-form analytic descriptions of FWM remains challenging because the underlying coupled-wave equations are nonlinear, phase-sensitive, and generally require numerical integration. 
-As a result, most textbook treatments rely on simplifying assumptions such as undepleted pumps, single effective mode areas, negligible phase mismatch, or weak signal and idler powers.
+As a result, most textbook treatments rely on simplifying assumptions such as undepleted pumps, identical effective mode areas, negligible phase mismatch, or weak signal and idler powers.
 
-Several works have presented analytic or semi-analytic solutions in specific regimes, including the undepleted-pump limit, the perfectly phase-matched case, or configurations with constrained input conditions. 
-However, a fully general analytic solution—valid for arbitrary pump depletion, arbitrary phase mismatch, and arbitrary input power ratios—remains of significant theoretical and practical interest. 
-Such a solution not only clarifies the structure of the FWM interaction but also provides a unified benchmark against which approximate models and numerical simulations can be evaluated.
+Two notable works have previously presented relevant analytic solutions for four-wave mixing. 
+In \cite{chenFourwaveMixingOptical1989} solutions for the power in each of the frequency modes is derived by inverting elliptic integrals to obtain elliptic functions.
+In \cite{marhicAnalyticSolutionsPhases2013} elliptic integrals are given for the phases for each mode. Both works use Jacobi elliptic functions. 
+In contrast, this work derives complete solutions for the complex mode envelopes themselves, avoiding decomposition into amplitude and phase or real and imaginary parts, and does so using Weierstrass elliptic functions.
 
-In this work, we derive the general analytic solution for continuous-wave four-wave mixing in a nonlinear optical fiber. 
-Beginning from the standard coupled-wave equations for the interacting fields, we identify the conserved quantities associated with the parametric interaction and use them to reduce the system to an integrable form. 
-The resulting expressions describe the full evolution of the pump, signal, and idler amplitudes, including amplitude and phase dynamics, for arbitrary initial conditions. 
-These solutions recover the known limiting cases and offer direct physical insight into gain behavior, conversion efficiency, and phase evolution across the full parameter space.
+The structure of the resulting analytic solutions naturally motivates a transformation to a new set of canonical coordinates. 
+Remarkably, although this transformation depends explicitly on the propagation variable $z$, it leaves the coupled differential equations structurally invariant, preserving the characteristic interaction terms of four-wave mixing dynamics. 
+At the same time, the transformation leads to a substantial simplification of both the analysis and the solutions which become single-valued meromorphic functions, specifically Kronecker theta functions. 
+The emergence of these functions establishes a direct connection between four-wave mixing and other nonlinear optical systems \cite{heskethGeneralComplexEnvelope2015}. 
+Within this framework, the four-wave mixing system is cast as a canonical Hamiltonian system, and the associated conservation laws are shown to arise from the Frobenius–Stickelberger determinant formula.
+
 
 % ---------- SECTION -------------
 % --------------------------------
@@ -462,37 +471,37 @@ for which the conserved canonical Hamiltonian is:
 
 To check the validity of the solutions, we evaluate the analytic solutions using Sympy in Python and we plot them against numeric solutions of the corresponding system of differential equations found using the DOP853 Runge-Kutta algorithm from SciPy in Python.
 
+In Figures \ref{fig:u-v-re} and \ref{fig:u-v-im} we plot the real and imaginary parts, respectively, of the product of $u_jv_j$ in an abstract non-physical $u,v$ scenario.
+The analytic dashed lines are shown to be in agreement with the numeric solutions shown as symbols.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{plots/case1_plot_1.pdf}
 \caption{Real part of analytic Equation~\eqref{eq:uv-wp} against numeric solutions.}
 \label{fig:u-v-re}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{plots/case1_plot_2.pdf}
 \caption{Imaginary part of analytic Equation~\eqref{eq:uv-wp} against numeric solutions.}
 \label{fig:u-v-im}
 \end{figure}
 
-In Figures \ref{fig:u-v-re} and \ref{fig:u-v-im} we plot the real and imaginary parts, respectively, of the product of $u_jv_j$ in an abstract non-physical $u,v$ scenario.
-The analytic dashed lines are shown to be in agreement with the numeric solutions shown as symbols.
-
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{plots/case2_plot_1.pdf}
 \caption{$\left|A_j\right|^2$ using analytic Equation~\eqref{eq:u-v-quartic} in \eqref{eq:u-v-A} against numeric solutions.}
 \label{fig:A-abs}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{plots/case2_plot_2.pdf}
 \caption{Phase $\phi_j$ using analytic Equation~\eqref{eq:u-v-quartic} in \eqref{eq:u-v-A} against numeric solutions.}
 \label{fig:A-phi}
 \end{figure}
+
 
 In Figures \ref{fig:A-abs} and \ref{fig:A-phi} we plot the absolute value squared and phase, respectively, of $A_j$ in a physical four-wave mixing case.
 The value of $A_j$ was found using \eqref{eq:u-v-quartic} to first obtain $u_j, v_j$, before converting to $A_j, A_j^{*}$ using \eqref{eq:u-v-A}.
@@ -644,8 +653,6 @@ We then divide both sides of \eqref{eq:fs-det-start} by:
 \end{align}
 and observe that it takes the equivalent form to \eqref{eq:fs-det-m} up to constant factors that may look different but can be shown to be identical by multiplying by $\sigma(z)^4$ and taking $z\rightarrow 0$.
 
-
-\bibliographystyle{alpha}  % or plain, alpha, etc.
-\bibliography{CW-FWM-Analytic-Solutions}
+\printbibliography
 
 \end{document}
