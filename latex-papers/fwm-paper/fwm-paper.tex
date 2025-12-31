@@ -9,7 +9,7 @@
 \usepackage{bm}                           % Bold math symbols
 
 % Add bibilography
-\usepackage[backend=biber,style=numeric]{biblatex}
+\usepackage[backend=biber,style=numeric, sorting=none]{biblatex}
 \addbibresource{CW-FWM-Analytic-Solutions.bib}
 
 % Page layout
@@ -22,7 +22,7 @@
 \numberwithin{equation}{section}
 
 % Title and authors
-\title{The general analytic solution to continuous wave four-wave mixing in nonlinear fiber optics in Weierstrass notation}
+\title{The analytic solution to four-wave mixing in nonlinear fibers in Weierstrass notation}
 \author{Graham Hesketh \\
 \small United Kingdom \\
 \small \texttt{gdh1e10@gmail.com}}
@@ -140,7 +140,7 @@ with Kronecker $\delta$, and $s(j)$ defined such that $s(1) = s(2) = 1, s(3) = s
 The four-wave mixing system in \eqref{eq:fwm-system} is thus recast as:
 \begin{align}
 \frac{d}{d z} u_j{\left(z \right)} &= - \left({a}_{j} + \sum_{k=1}^{4} {a}_{j,k}\,u_k v_k \right) u_j + \prod\limits_{k=1, k \ne j}^{4} v_k, \notag \\
-\frac{d}{d z} v_j{\left(z \right)} &= \left({a}_{j} + \sum_{k=1}^{4} {a}_{j,k}\,u_k v_k \right) v_j - \prod\limits_{k=1, k \ne j}^{4} u_k \label{eq:uv-system}
+\frac{d}{d z} v_j{\left(z \right)} &= \left({a}_{j} + \sum_{k=1}^{4} {a}_{j,k}\,u_k v_k \right) v_j - \prod\limits_{k=1, k \ne j}^{4} u_k. \label{eq:uv-system}
 \end{align}
 
 
@@ -194,7 +194,8 @@ Remark: Appendix-\ref{app:fs-det-ham-proof} shows that \eqref{eq:ham-uv} is the 
 
 \section{Solutions for modal powers in terms of Weierstrass \texorpdfstring{$\wp$}{wp} elliptic functions}\label{sec:mode-power}
 
-One key thing to note in order to obtain elliptic functions solutions is that the derivative of the modal power in \eqref{eq:duv_j} is proportional to the difference of the two wave mixing product terms, and that the Hamiltonian in \eqref{eq:ham-uv} contains their sum.
+The fundamental Weierstrass elliptic function theory used in coming sections can be found in \cite{whittakerCourseModernAnalysis2021}. 
+One key thing to note in order to obtain elliptic functions solutions in wave mixing dynamics is that the derivative of the modal power in \eqref{eq:duv_j} is proportional to the difference of the two wave mixing product terms, and that the Hamiltonian in \eqref{eq:ham-uv} contains their sum.
 We then note the simple but important identity:
 \begin{equation}
 \label{eq:prod-id}
@@ -417,6 +418,16 @@ and the intermodal power conservation laws are:
 \bar{u}_j(z) \bar{v}_j(z) - \bar{u}_k(z) \bar{v}_k(z) = \frac{{d}_{5}}{4 \left({\gamma}_{j} - {\lambda}_{1}\right)} - \frac{{d}_{5}}{4 \left({\gamma}_{k} - {\lambda}_{1}\right)}
 \end{align}
 
+The modal power in these coordinates evolves according to:
+\begin{equation}
+\label{eq:duv_bar_j} 
+\frac{d}{d z} \bar{u}_j \bar{v}_j = 4\chi\left(\prod\limits_{k=1}^{4} \bar{v}_k - \prod\limits_{k=1}^{4} \bar{u}_k\right)
+\end{equation}
+
+Remarkably, the terms in \eqref{eq:hat-to-bar} are the same as those in \eqref{eq:uv-hat-system} only with different coefficients. 
+We thus say that the system is invariant under the transformation, which is quite suprising given the $z$ dependence of the normalisation.
+Similarly, by comparing \eqref{eq:duv_bar_j} to \eqref{eq:duv_j} we see that \eqref{eq:duv_j} is invariant up to a constant factor.
+
 To solve this system, we may define the function $\bar{w}(z)$ in terms of $h$ by:
 \begin{align}
 h{\left(z \right)} = \frac{\left({d}_{2} + 3 {d}_{3} {\lambda}_{1} + 6 {d}_{4} {\lambda}_{1}^{2}\right) {\lambda}_{1}}{3} - 4 \bar{w}{\left(z \right)} {\lambda}_{1}
@@ -435,13 +446,13 @@ The elliptic function form of $h(z)$ is not a surprise as it was purposely const
 
 The solutions for modes $\bar{u}_j, \bar{v}_j$ are:
 \begin{align}
-\bar{u}_j(z) &= \frac{\bar{\alpha}_{j} \sigma{\left(z - 2 z_{0} + {\mu}_{j}\right)} \exp{\left( z \bar{\kappa}_j\right)} }{\sigma{\left(z - z_{0}\right)} \sigma{\left({\mu}_{j} - z_{0}\right)}} \\
+\bar{u}_j(z) &= \frac{\bar{\alpha}_{j} \sigma{\left(z - 2 z_{0} + {\mu}_{j}\right)} \exp{\left( z \bar{\kappa}_j\right)} }{\sigma{\left(z - z_{0}\right)} \sigma{\left({\mu}_{j} - z_{0}\right)}} \notag \\
 \bar{v}_j(z) &= \frac{\sigma{\left(z - {\mu}_{j}\right)} \exp{\left(- z \bar{\kappa}_j\right)}}{\bar{\alpha}_{j} \sigma{\left(z - z_{0}\right)} \sigma{\left({\mu}_{j} - z_{0}\right)} } \label{eq:u-v-bar}
 \end{align}
 where the Weierstrass $\sigma$ functions use the same $g_2,g_3$ from the original coordinates, 
 $\bar{\kappa}_j$ is given in Appendix \ref{app:param-def-appendix} and $\bar{\alpha}_j$ is an integration constant fixed by initial conditions and used to capture any relative phase offset between a mode $\bar{u}_j$ and its conjugate $\bar{v}_j$.
 The solutions in \eqref{eq:u-v-bar} are Kronecker theta functions (up to constant and $z$ dependent exponential factors), which simply put are a ratio of two Weierstrass $\sigma$ functions shifted relative to each other in $z$.
-This form is similar to that obtained in other systems in nonlinear optics. 
+This form is similar to that obtained in other systems in nonlinear optics such as two and three wave mixing in quadratic nonlinear media, polarisation dynamics in nonlinear fibers, and parity-time symmetric nonlinear couplers \cite{heskethGeneralComplexEnvelope2015}. 
 The exponentials and $\sigma$ functions are entire functions and this ratio is a single valued meromorphic function, unlike the solutions in \eqref{eq:u-v-quartic}. 
 The solutions are quasi-periodic and modulo the lattice they have zeros where the argument of $\sigma$ vanishes in the numerator, and poles where the argument of $\sigma$ vanishes in the denominator. 
 
@@ -519,7 +530,7 @@ Remarkably, the structural form of the differential equations is preserved under
 
 Four-wave mixing provides an important and challenging test case for mathematical analysis, and is arguably among the more intricate examples of dynamical systems admitting elliptic (genus-one) function solutions due to the presence of quartic polynomials. 
 In this work, we have demonstrated in detail how these difficulties can be systematically addressed. 
-The methods developed here are directly transferable to the analysis of related nonlinear systems, such as the interaction of modes in multimode nonlinear fiber optics.
+The methods developed here may be transferable to the analysis of related nonlinear systems, such as the interaction of modes in multimode nonlinear fiber optics (see e.g. Chapter 4 in \cite{heskethNonlinearEffectsMultimode2014}).
 
 In forthcoming work, we intend to present a unified framework for integrable nonlinear coupled ordinary differential equations with elliptic and hyperelliptic function solutions, for which the four-wave mixing system studied here will serve as a central example.
 
@@ -577,7 +588,7 @@ In equating the two equivalent definitions of $\chi$ we have chosen the positive
 \section{The Frobenius-Stickelberger determinant}
 \label{app:fs-det-ham-proof}
 
-The Frobenius-Stickelberger (FS) determinant formula is an elliptic function identity that relates products of $\sigma$ functions to a multivariate determinant of higher order derivatives of $\wp$.
+The Frobenius-Stickelberger (FS) determinant formula is an elliptic function identity that relates products of $\sigma$ functions to a multivariate determinant of higher order derivatives of $\wp$ \cite{frobeniusZurTheorieElliptischen1877, whittakerCourseModernAnalysis2021}.
 In this section we show that the conservation of the Hamiltonian can be viewed as a manifestation of FS.
 We are interested in the $4\times4$ case of FS in the form:
 \begin{align}
