@@ -43,6 +43,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Nonlinear Fiber Optics, Sixth Edition, provides an up-to-date accounting of the nonlinear phenomena occurring inside optical fibers in telecommunicati}
+      \field{day}{15}
       \field{edition}{6}
       \field{isbn}{978-0-12-817042-7}
       \field{langid}{american}
@@ -52,9 +53,16 @@
       \field{urlmonth}{12}
       \field{urlyear}{2025}
       \field{year}{2019}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{file}
       \verb /Users/grahamhesketh/Zotero/storage/GQ3UVRS2/978-0-12-817042-7.html
+      \endverb
+      \verb{urlraw}
+      \verb https://shop.elsevier.com/books/nonlinear-fiber-optics/agrawal/978-0-12-817042-7
+      \endverb
+      \verb{url}
+      \verb https://shop.elsevier.com/books/nonlinear-fiber-optics/agrawal/978-0-12-817042-7
       \endverb
     \endentry
     \entry{chenFourwaveMixingOptical1989}{article}{}{}
