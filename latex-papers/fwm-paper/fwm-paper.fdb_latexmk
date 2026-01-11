@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber fwm-paper"] 1768061430.95646 "fwm-paper.bcf" "fwm-paper.bbl" "fwm-paper" 1768147012.77467 0
-  "CW-FWM-Analytic-Solutions.bib" 1768055808.96076 19928 15a8f3407ff38958b375e860e1278b4e ""
-  "fwm-paper.bcf" 1768147012.69996 108677 c863a9681dbd1f9dd4a0be183c9ed76c "pdflatex"
+["biber fwm-paper"] 1768168290.06182 "fwm-paper.bcf" "fwm-paper.bbl" "fwm-paper" 1768170760.53047 0
+  "CW-FWM-Analytic-Solutions.bib" 1768167860.14907 22466 f5716e0adf3f40758609ef608eea8ef3 ""
+  "fwm-paper.bcf" 1768170760.44373 109287 83a18e09d03d4ae8fc1bfb29a3d49eba "pdflatex"
   (generated)
   "fwm-paper.bbl"
   "fwm-paper.blg"
   (rewritten before read)
-["pdflatex"] 1768147011.82199 "/Users/grahamhesketh/mycode/journal-papers/latex-papers/fwm-paper/fwm-paper.tex" "fwm-paper.pdf" "fwm-paper" 1768147012.77493 0
-  "/Users/grahamhesketh/mycode/journal-papers/latex-papers/fwm-paper/fwm-paper.tex" 1768147011.60916 55607 6c6d8c8c199d15fc262cfca1cdb7a2b8 ""
+["pdflatex"] 1768170759.42127 "/Users/grahamhesketh/mycode/journal-papers/latex-papers/fwm-paper/fwm-paper.tex" "fwm-paper.pdf" "fwm-paper" 1768170760.53074 0
+  "/Users/grahamhesketh/mycode/journal-papers/latex-papers/fwm-paper/fwm-paper.tex" 1768170759.18537 58389 646f0834b61c5191d2d02c674d94c03f ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -145,11 +145,11 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1767117489 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1767117381 3345747 f63bc61d33022117040a9f04f0c0b490 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "fwm-paper.aux" 1768147012.69804 12320 091675e1a764fd17940d70ec4d2c4d97 "pdflatex"
-  "fwm-paper.bbl" 1768061432.9589 24230 d0a540b4339fc8caa4bcecd24a9574d8 "biber fwm-paper"
-  "fwm-paper.out" 1768147012.69923 4425 379e22f25b5e81189f53f3e7307778b8 "pdflatex"
-  "fwm-paper.run.xml" 1768147012.70056 2355 c362ced048897574efcbb93c4a2929b3 "pdflatex"
-  "fwm-paper.tex" 1768147011.60916 55607 6c6d8c8c199d15fc262cfca1cdb7a2b8 ""
+  "fwm-paper.aux" 1768170760.44153 14067 a0e31268567d9f127f34dbee22956fcc "pdflatex"
+  "fwm-paper.bbl" 1768168291.99765 42488 51178207a789fc43dce98c4f56803e8f "biber fwm-paper"
+  "fwm-paper.out" 1768170760.44298 4971 9581184f4c6d40dcc5bccdbaa6b49c69 "pdflatex"
+  "fwm-paper.run.xml" 1768170760.44443 2355 c362ced048897574efcbb93c4a2929b3 "pdflatex"
+  "fwm-paper.tex" 1768170759.18537 58389 646f0834b61c5191d2d02c674d94c03f ""
   "plots/case1_plot_1.pdf" 1768049556.85995 23683 14e5c0b508dfdd93ef16b9b61f31f96d ""
   "plots/case1_plot_2.pdf" 1768049557.15115 22454 cecb909547ac6667d9d23cadbce192e7 ""
   "plots/case2_plot_1.pdf" 1768049579.40298 19657 1c838e3e174581318cec1b04126ac920 ""

@@ -1,4 +1,5 @@
-from mpmath import jtheta, pi, exp, sqrt, agm, qfrom, mpc, elliprf, im, zeta, polyroots, almosteq, gamma
+from mpmath import jtheta, pi, exp, sqrt, agm, qfrom, mpc, elliprf, im, zeta, polyroots, gamma, isinf
+
 
 class Weierstrass:
     
@@ -58,7 +59,7 @@ class Weierstrass:
             # Note there is s type definition variation on j so the below does not always work. 
             # Revisit this later but for now we wrap in try/except
             isinf_condition = (isinf(_j.real) or isinf(_j.imag))
-        except:
+        except Exception:
             pass
             
         if isinf_condition:
@@ -67,13 +68,13 @@ class Weierstrass:
             sqrt_arg = 3*(1728*_j**2 - _j**3)
             try:
                 sqrt_arg = sqrt_arg.evalf()
-            except:
+            except Exception:
                 pass
             t = ( -_j**3 + 2304*_j**2 - 884736*_j + 12288*sqrt(sqrt_arg) )**(1/3)
             x = 1/768*t + (1 - _j/768) - ( 1536*_j - _j**2 ) / (768*t)
             try:
                 x = x.evalf()
-            except:
+            except Exception:
                 pass
         lbd = (1 + sqrt(1 - 4*x)) / 2 # there are two possible choices here +/- sqrt
         tau = 1j * agm(1, sqrt(1-lbd)) / agm(1, sqrt(lbd))
@@ -156,14 +157,14 @@ class Weierstrass:
         j = self.kleinj(g2, g3)
         try:
             j = j.evalf()
-        except:
+        except Exception:
             pass
         try:
             # Note there is s type definition variation on j so the below does not always work. 
             # Revisit this later but for now we wrap in try/except
             if (isinf(j.real) or isinf(j.imag)):
                 return -1j*pi/2/sqrt(3), mpc("inf", "inf")
-        except:
+        except Exception:
             pass
         tau = self.inverse_kleinj(j)
         
@@ -350,7 +351,7 @@ class Weierstrass:
             _sqrt_arg = g2/g3 * G6/G4 * 7/12
             try:
                 _sqrt_arg = _sqrt_arg.evalf()
-            except:
+            except Exception:
                 pass
             omegaA = sqrt(_sqrt_arg)
             
@@ -494,7 +495,7 @@ class Weierstrass:
         try:
             z_real, z_imag = z.as_real_imag()
             return float(z_real) + float(z_imag)*1j
-        except:
+        except Exception:
             return z
     
 
