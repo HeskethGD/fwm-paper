@@ -387,7 +387,7 @@ and the intermodal power conservation laws are unchanged such that $\hat{u}_j \h
 In comparison to \eqref{eq:uv-system}, we see that in \eqref{eq:uv-hat-system} we now have a single phase velocity coefficient for all modes $b_1/4$, a single self-phase modulation coefficient $b_2/2$, and no cross-phase modulation terms.
 In terms of the solutions to the system, the effect of the $\phi_j^{NL}$ transform is to remove the $z$ dependent log terms weighted by $r_{1,j}$ in \eqref{eq:u-v-quartic}. 
 
-\subsection{Reducing the quartic to a cubic via local normalisation}
+\subsection{Reducing the quartic to a cubic via local normalisation}\label{subsec:bar-coords}
 
 Next, we show how we can perform a coordinate transformation that involves a local, i.e. $z$ dependent, normalisation of the modes themselves and, at the same time, induces a Mobius transform on modal powers which implements the classic trick that reduces the quartic to the cubic discussed in Section~\ref{sec:mode-power}.
 However, here that same effect is delivered at the level of modes $u_j, v_j$ not only at the mode power level $u_j v_j$ so that we can observe a corresponding effect on the coupled system.
@@ -405,8 +405,8 @@ The key parameter in the transformation is the root $\lambda_1$ previously defin
 
 The transformation in \eqref{eq:hat-to-bar} sends \eqref{eq:uv-hat-system} to:
 \begin{align}
-\frac{\partial}{\partial z} \bar{u}_j &= -\left(\frac{1}{\chi} - 4\chi\,\bar{u}_j \bar{v}_j \right) \bar{u}_j - 4\chi \prod\limits_{k=1, k \ne j}^{4} \bar{v}_k, \notag \\
-\frac{\partial}{\partial z} \bar{v}_j &= \left( \frac{1}{\chi} - 4\chi\,\bar{u}_j \bar{v}_j\right) \bar{v}_j + 4\chi \prod\limits_{k=1, k \ne j}^{4} \bar{u}_k \label{eq:uv-bar-system}
+\frac{\partial}{\partial z} \bar{u}_j &= -\left(\frac{1}{\chi} - \frac{\chi}{4}\bar{u}_j \bar{v}_j \right) \bar{u}_j - \frac{\chi}{4} \prod\limits_{k=1, k \ne j}^{4} \bar{v}_k, \notag \\
+\frac{\partial}{\partial z} \bar{v}_j &= \left( \frac{1}{\chi} - \frac{\chi}{4}\bar{u}_j \bar{v}_j\right) \bar{v}_j + \frac{\chi}{4} \prod\limits_{k=1, k \ne j}^{4} \bar{u}_k \label{eq:uv-bar-system}
 \end{align}
 
 for which the conserved canonical Hamiltonian is:
@@ -421,7 +421,7 @@ and the intermodal power conservation laws are:
 The modal power in these coordinates evolves according to:
 \begin{equation}
 \label{eq:duv_bar_j} 
-\frac{d}{d z} \bar{u}_j \bar{v}_j = 4\chi\left(\prod\limits_{k=1}^{4} \bar{v}_k - \prod\limits_{k=1}^{4} \bar{u}_k\right)
+\frac{d}{d z} \bar{u}_j \bar{v}_j = \frac{\chi}{4}\left(\prod\limits_{k=1}^{4} \bar{v}_k - \prod\limits_{k=1}^{4} \bar{u}_k\right)
 \end{equation}
 
 Remarkably, the terms in \eqref{eq:hat-to-bar} are the same as those in \eqref{eq:uv-hat-system} only with different coefficients. 
@@ -456,24 +456,31 @@ This form is similar to that obtained in other systems in nonlinear optics such 
 The exponentials and $\sigma$ functions are entire functions and this ratio is a single valued meromorphic function, unlike the solutions in \eqref{eq:u-v-quartic}. 
 The solutions are quasi-periodic and modulo the lattice they have zeros where the argument of $\sigma$ vanishes in the numerator, and poles where the argument of $\sigma$ vanishes in the denominator. 
 
-\subsection{A parameterless system via rescaling}
+\subsection{A parameterless system via rescaling}\label{subsec:tilde-coords}
 
 It is now simple to remove the remaining parameter via a scaling of the modes and the length variable as follows (note the bar to tilde notation change):
 \begin{align}
-\bar{u}_j(z) &= -\frac{2i}{\chi}\tilde{u}_j\left(\frac{z}{\chi}\right) \\
-\bar{v}_j(z) &= \frac{2i}{\chi}\tilde{v}_j\left(\frac{z}{\chi}\right) \\
+\bar{u}_j(z) &= -\frac{i}{\chi}\tilde{u}_j\left(\frac{z}{\chi}\right) \\
+\bar{v}_j(z) &= \frac{i}{\chi}\tilde{v}_j\left(\frac{z}{\chi}\right) \\
 z &= \chi\xi
 \end{align}
 This substitution transforms \eqref{eq:uv-bar-system} to:
 \begin{align}
-\frac{\partial}{\partial \xi} \tilde{u}_j &= -\left(1 - \tilde{u}_j \tilde{v}_j \right) \tilde{u}_j - \prod\limits_{k=1, k \ne j}^{4} \tilde{v}_k \notag \\
-\frac{\partial}{\partial \xi} \tilde{v}_j &= \left( 1 - \tilde{u}_j \tilde{v}_j\right) \tilde{v}_j + \prod\limits_{k=1, k \ne j}^{4} \tilde{u}_k \label{eq:uv-tilde-system}
+\frac{\partial}{\partial \xi} \tilde{u}_j &= -\left(1 - \frac{\tilde{u}_j \tilde{v}_j}{4} \right) \tilde{u}_j - \frac{1}{4}\prod\limits_{k=1, k \ne j}^{4} \tilde{v}_k \notag \\
+\frac{\partial}{\partial \xi} \tilde{v}_j &= \left( 1 - \frac{\tilde{u}_j \tilde{v}_j}{4}\right) \tilde{v}_j + \frac{1}{4}\prod\limits_{k=1, k \ne j}^{4} \tilde{u}_k \label{eq:uv-tilde-system}
 \end{align}
 
 for which the conserved canonical Hamiltonian is:
 \begin{align}
-\tilde{H} &= \sum_{l=1}^{4} \left(\frac{1}{2} \tilde{u}^{2}_l \tilde{v}^{2}_l  - \tilde{u}_l \tilde{v}_l \right) - \prod_{l=1}^{4} \tilde{u}_l - \prod_{l=1}^{4} \tilde{v}_l
+\tilde{H} &= \sum_{l=1}^{4} \left(\frac{1}{8} \tilde{u}^{2}_l \tilde{v}^{2}_l  - \tilde{u}_l \tilde{v}_l \right) - \frac{1}{4}\left(\prod_{l=1}^{4} \tilde{u}_l + \prod_{l=1}^{4} \tilde{v}_l\right) \label{eq:H-tilde}
 \end{align}
+
+and the solutions are:
+\begin{align}
+\tilde{u}_j{\left(\xi\right)} &= \frac{\tilde{\epsilon}_{j} \,\sigma{\left(\xi - 2 \xi_{0} + {\tilde{\mu}}_{j}\right)} \exp\left({\xi \left( 1 + \frac{{\tilde{\gamma}}_{j}}{2} - \zeta{\left( {\tilde{\mu}}_{j} - \xi_{0}\right)}\right)}\right)}{\sigma{\left(\xi - \xi_{0}\right)} \sigma{\left( {\tilde{\mu}}_{j} - \xi_{0}\right)}}, \notag \\
+\tilde{v}_j{\left(\xi\right)} &= \frac{ \sigma{\left(\xi - {\tilde{\mu}}_{j}\right)} \exp\left({-\xi \left( 1 + \frac{{\tilde{\gamma}}_{j}}{2} - \zeta{\left( {\tilde{\mu}}_{j} - \xi_{0}\right)}\right)}\right)}{\tilde{\epsilon}_{j} \,\sigma{\left(\xi - \xi_{0}\right)} \sigma{\left( {\tilde{\mu}}_{j} - \xi_{0}\right)}}
+\end{align}
+where the $\sigma$ and $\zeta$ functions use the scaled invariants $\tilde{g}_2$ and $\tilde{g}_3$ given in Appendix \ref{app:scaled-params} together with $\xi_0$, $\tilde{\epsilon}_j$, $\tilde{\mu}_j$ and $\tilde{\gamma}_j$.
 
 % ---------- SECTION -------------
 % --------------------------------
@@ -663,6 +670,41 @@ We then divide both sides of \eqref{eq:fs-det-start} by:
 \frac{\wp'{\left(z_{1}\right)}}{\sqrt{{d}_{4}} \left(\wp{\left(z_{1}\right)} - \wp{\left(z - z_{0}\right)}\right)^2 }
 \end{align}
 and observe that it takes the equivalent form to \eqref{eq:fs-det-m} up to constant factors that may look different but can be shown to be identical by multiplying by $\sigma(z)^4$ and taking $z\rightarrow 0$.
+
+% ---------- APPENDIX ------------
+% --------------------------------
+
+\section{The scaled parameters}
+\label{app:scaled-params}
+When the system in subsection \ref{subsec:tilde-coords} (tilde notation) is considered a transform of that in subsection \ref{subsec:bar-coords} (bar notation), then parameters are related via the following scaling laws:
+\begin{align}
+\tilde{H} &= \chi^3\bar{H}, \\
+\tilde{\epsilon}_j &= \epsilon_j e^{\frac{i\pi m}{4}}, \notag \\
+\tilde{\gamma}_j &= \chi^2\bar{\gamma}_j, \notag \\
+\tilde{g}_2 &= \chi^4 g_2, \notag \\
+\tilde{g}_3 &= \chi^6 g_3, \notag \\
+\xi_0 &= \frac{z_0}{\chi}, \notag \\
+\tilde{\mu}_j &= \frac{\mu_j}{\chi}.
+\end{align}
+
+If the system in subsection \ref{subsec:tilde-coords} is considered as a standalone system irrespective of any transformation,
+then the paramters can be given exclusively in the coordinate system denoted by tilde notation as follows.
+Firstly, $\tilde{H}$ can be obtained from substituting $\tilde{u}_j{\left(0\right)}, \tilde{v}_j{\left(0 \right)}$ into \eqref{eq:H-tilde}
+and $\tilde{\epsilon}_j$ can be considered an integration constant fixed by initial conditions to capture any phase offset between $\tilde{u}_j, \tilde{v}_j$. 
+We may further use relations:
+\begin{align}
+\tilde{\gamma}_{j} =& \tilde{u}_j{\left(0\right)} \tilde{v}_j{\left(0 \right)} - \frac{1}{4}\sum_{j=1}^{4} \tilde{u}_j{\left(0\right)} \tilde{v}_j{\left(0\right)}, \notag \\
+\tilde{g}_{2} =& \frac{\tilde{H}^{2}}{12} + \tilde{H} \left(\frac{{\tilde{e}}_{2}}{12} + \frac{16}{3}\right) + \frac{{\tilde{e}}_{2}^{2}}{48} + \frac{2 {\tilde{e}}_{2}}{3} - \frac{{\tilde{e}}_{3}}{4} + \frac{64}{3}, \notag \\
+\tilde{g}_{3} =& \frac{\tilde{H}^{3}}{216} + \tilde{H}^{2} \left(\frac{{\tilde{e}}_{2}}{144} - \frac{5}{9}\right) + \tilde{H} \left(\frac{{\tilde{e}}_{2}^{2}}{288} - \frac{2 {\tilde{e}}_{2}}{9} - \frac{{\tilde{e}}_{3}}{48} - \frac{64}{9}\right) \notag \\
+&+ \frac{{\tilde{e}}_{2}^{3}}{1728} - \frac{5 {\tilde{e}}_{2}^{2}}{144} - \frac{{\tilde{e}}_{2} {\tilde{e}}_{3}}{96} - \frac{8 {\tilde{e}}_{2}}{9} + \frac{{\tilde{e}}_{3}}{3} + \frac{{\tilde{e}}_{4}}{4} - \frac{512}{27}
+\end{align}
+where $\tilde{e}_j=\tilde{e}_j\left(\tilde{\gamma}_1, \tilde{\gamma}_2, \tilde{\gamma}_3, \tilde{\gamma}_4\right)$ is the $j^{th}$ order \emph{elementary symmetric polynomial} formed with the four $\tilde{\gamma}_j$, and the points $\xi_0, \tilde{\mu}_j$ can be found by inverting:
+\begin{align}
+\wp{\left(\xi_{0},\tilde{g}_{2},\tilde{g}_{3} \right)} &= - \frac{\tilde{H}}{12} - \frac{{\tilde{e}}_{2}}{24} - \frac{\sum_{j=1}^{4} \tilde{u}{\left(0,{\mu}_{j} \right)} \tilde{v}{\left(0,{\mu}_{j} \right)}}{4} + \frac{4}{3}, \notag \\
+\wp'{\left(\xi_{0},\tilde{g}_{2},\tilde{g}_{3} \right)} &= \frac{1}{4}\left(\prod_{j=1}^{4}{\tilde{u}_j(0)} - \prod_{j=1}^{4}{\tilde{v}_j(0)}\right), \notag \\
+\wp{\left({\tilde{\mu}}_{j} - \xi_{0},\tilde{g}_{2},\tilde{g}_{3} \right)} &= - \frac{\tilde{H}}{12} - \frac{{\tilde{e}}_{2}}{24} + {\tilde{\gamma}}_{j} + \frac{4}{3}, \notag \\
+\wp'{\left({\tilde{\mu}}_{j} - \xi_{0},\tilde{g}_{2},\tilde{g}_{3} \right)} &= \tilde{H} + \frac{{\tilde{e}}_{2}}{4} - \frac{{\tilde{\gamma}}_{j}^{2}}{2} - 4 {\tilde{\gamma}}_{j}.
+\end{align}
 
 \printbibliography
 
