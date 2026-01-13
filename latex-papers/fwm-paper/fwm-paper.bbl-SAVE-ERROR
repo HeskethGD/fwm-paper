@@ -347,73 +347,6 @@
       \endverb
       \keyw{Bandwidth,Frequency conversion,Frequency estimation,Frequency measurement,Integral equations,Intensity modulation,Optical fibers,Optical pulses,Pulse amplifiers,Raman scattering}
     \endentry
-    \entry{sarmaContinuousDiscreteSchrodinger2014}{article}{}{}
-      \name{author}{4}{}{%
-        {{hash=05aac231917fa0533374dcf511cb077e}{%
-           family={Sarma},
-           familyi={S\bibinitperiod},
-           given={Amarendra\bibnamedelima K.},
-           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
-        {{hash=361bd42f47c4fbcfd04fb4c87fac2f40}{%
-           family={Miri},
-           familyi={M\bibinitperiod},
-           given={Mohammad-Ali},
-           giveni={M\bibinithyphendelim A\bibinitperiod}}}%
-        {{hash=c5fa412e387baec4172c30918eaa964f}{%
-           family={Musslimani},
-           familyi={M\bibinitperiod},
-           given={Ziad\bibnamedelima H.},
-           giveni={Z\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
-        {{hash=44479a430ed24a07155a1065a5ac92c9}{%
-           family={Christodoulides},
-           familyi={C\bibinitperiod},
-           given={Demetrios\bibnamedelima N.},
-           giveni={D\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {American Physical Society}%
-      }
-      \strng{namehash}{10e123f4dba710344ad5106d62857bf9}
-      \strng{fullhash}{3037d80642729c702a26f49baa23e467}
-      \strng{fullhashraw}{3037d80642729c702a26f49baa23e467}
-      \strng{bibnamehash}{10e123f4dba710344ad5106d62857bf9}
-      \strng{authorbibnamehash}{10e123f4dba710344ad5106d62857bf9}
-      \strng{authornamehash}{10e123f4dba710344ad5106d62857bf9}
-      \strng{authorfullhash}{3037d80642729c702a26f49baa23e467}
-      \strng{authorfullhashraw}{3037d80642729c702a26f49baa23e467}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{We investigate the dynamical behavior of continuous and discrete Schrödinger systems exhibiting parity-time (PT) invariant nonlinearities. We show that such equations behave in a fundamentally different fashion than their nonlinear Schrödinger counterparts. In particular, the PT-symmetric nonlinear Schrödinger equation can simultaneously support both bright and dark soliton solutions. In addition, we study a discretized version of this PT-nonlinear Schrödinger equation on a lattice. When only two elements are involved, by obtaining the underlying invariants, we show that this system is fully integrable and we identify the PT-symmetry-breaking conditions. This arrangement is unique in the sense that the exceptional points are fully dictated by the nonlinearity itself.}
-      \field{day}{30}
-      \field{journaltitle}{Physical Review E}
-      \field{month}{5}
-      \field{number}{5}
-      \field{shortjournal}{Phys. Rev. E}
-      \field{title}{Continuous and Discrete {{Schr}}\textbackslash "odinger Systems with Parity-Time-Symmetric Nonlinearities}
-      \field{urlday}{13}
-      \field{urlmonth}{1}
-      \field{urlyear}{2026}
-      \field{volume}{89}
-      \field{year}{2014}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{052918}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1103/PhysRevE.89.052918
-      \endverb
-      \verb{file}
-      \verb /Users/grahamhesketh/Zotero/storage/Y9VKYJLS/Sarma et al. - 2014 - Continuous and discrete Schrodinger systems with parity-time-symmetric nonlinearities.pdf;/Users/grahamhesketh/Zotero/storage/LULSK8IP/PhysRevE.89.html
-      \endverb
-      \verb{urlraw}
-      \verb https://link.aps.org/doi/10.1103/PhysRevE.89.052918
-      \endverb
-      \verb{url}
-      \verb https://link.aps.org/doi/10.1103/PhysRevE.89.052918
-      \endverb
-    \endentry
     \entry{whittakerCourseModernAnalysis2021}{book}{}{}
       \name{author}{2}{}{%
         {{hash=5132db19fe0ad334db14252f9887f29d}{%
@@ -452,8 +385,8 @@
       \strng{editornamehash}{459db79507400740d3b2b1509ee49e18}
       \strng{editorfullhash}{459db79507400740d3b2b1509ee49e18}
       \strng{editorfullhashraw}{459db79507400740d3b2b1509ee49e18}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This classic work has been a unique resource for thousands of mathematicians, scientists and engineers since its first appearance in 1902. Never out of print, its continuing value lies in its thorough and exhaustive treatment of special functions of mathematical physics and the analysis of differential equations from which they emerge. The book also is of historical value as it was the first book in English to introduce the then modern methods of complex analysis. This fifth edition preserves the style and content of the original, but it has been supplemented with more recent results and references where appropriate. All the formulas have been checked and many corrections made. A complete bibliographical search has been conducted to present the references in modern form for ease of use. A new foreword by Professor S.J. Patterson sketches the circumstances of the book's genesis and explains the reasons for its longevity. A welcome addition to any mathematician's bookshelf, this will allow a whole new generation to experience the beauty contained in this text.}
@@ -577,36 +510,6 @@
       \endverb
       \verb{url}
       \verb https://ems.press/doi/10.4171/news/101/4
-      \endverb
-    \endentry
-    \entry{laurentPyweierstrass2022}{software}{}{}
-      \name{author}{1}{}{%
-        {{hash=3f501810ff9c0a4833114b7395db82e3}{%
-           family={Laurent},
-           familyi={L\bibinitperiod},
-           given={Stéphane},
-           giveni={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{3f501810ff9c0a4833114b7395db82e3}
-      \strng{fullhash}{3f501810ff9c0a4833114b7395db82e3}
-      \strng{fullhashraw}{3f501810ff9c0a4833114b7395db82e3}
-      \strng{bibnamehash}{3f501810ff9c0a4833114b7395db82e3}
-      \strng{authorbibnamehash}{3f501810ff9c0a4833114b7395db82e3}
-      \strng{authornamehash}{3f501810ff9c0a4833114b7395db82e3}
-      \strng{authorfullhash}{3f501810ff9c0a4833114b7395db82e3}
-      \strng{authorfullhashraw}{3f501810ff9c0a4833114b7395db82e3}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Pyweierstrass}
-      \field{year}{2022}
-      \field{dateera}{ce}
-      \verb{urlraw}
-      \verb https://pyweierstrass.readthedocs.io/en/latest/
-      \endverb
-      \verb{url}
-      \verb https://pyweierstrass.readthedocs.io/en/latest/
       \endverb
     \endentry
     \entry{MpmathPythonLibrary2023}{software}{}{}
@@ -952,6 +855,7 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{stephanePyweierstrass2022}
 \endrefsection
 \endinput
 
