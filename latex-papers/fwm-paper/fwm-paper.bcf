@@ -2383,15 +2383,16 @@
     <bcf:citekey order="8" intorder="1">whittakerCourseModernAnalysis2021</bcf:citekey>
     <bcf:citekey order="9" intorder="1">whittakerCourseModernAnalysis2021</bcf:citekey>
     <bcf:citekey order="10" intorder="1">whittakerCourseModernAnalysis2021</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">weilEllipticFunctionsAccording1976</bcf:citekey>
-    <bcf:citekey order="11" intorder="2">charolloisEllipticFunctionsAccording2016</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">heskethGeneralComplexEnvelope2015</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">laurentPyweierstrass2022</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">MpmathPythonLibrary2023</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">virtanenSciPy10Fundamental2020</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">heskethNonlinearEffectsMultimode2014</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">frobeniusZurTheorieElliptischen1877</bcf:citekey>
-    <bcf:citekey order="17" intorder="2">whittakerCourseModernAnalysis2021</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">whittakerCourseModernAnalysis2021</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">weilEllipticFunctionsAccording1976</bcf:citekey>
+    <bcf:citekey order="12" intorder="2">charolloisEllipticFunctionsAccording2016</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">heskethGeneralComplexEnvelope2015</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">laurentPyweierstrass2022</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">MpmathPythonLibrary2023</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">virtanenSciPy10Fundamental2020</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">heskethNonlinearEffectsMultimode2014</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">whittakerCourseModernAnalysis2021</bcf:citekey>
+    <bcf:citekey order="18" intorder="2">frobeniusZurTheorieElliptischen1877</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

@@ -251,14 +251,14 @@ We then note the simple but important identity:
 \label{eq:prod-id}
 \left(\prod\limits_{k=1}^{4} u_k - \prod\limits_{k=1}^{4} v_k\right)^2 - \left(\prod\limits_{k=1}^{4} u_k + \prod\limits_{k=1}^{4} v_k\right)^2 = - 4 \prod\limits_{j=1}^{4} u_j v_j
 \end{equation}
-which enables us to square \eqref{eq:duv_j} and replace wave mixing terms with phase modulation terms, i.e., monomials of $u_j v_j$.
-To proceed in this manner, let us introduce the function $Q$ which represents the phase modulation part of the Hamiltonian:
+which enables us to square \eqref{eq:duv_j} and replace wave mixing terms with phase modulation terms, i.e., monomials of $u_j v_j$ which can all be expressed in terms of $\rho(z)$ via \eqref{eq:uvj-gam-rho}.
+To proceed in this manner, let us introduce the function $Q$ which represents the phase modulation part of the Hamiltonian and is thus itself expressible as a polynomial of $\rho(z)$:
 \begin{align}
 Q(u_1(z)v_1(z), \dots, u_4(z)v_4(z)) &= a_0 + \sum_{j=1}^{4} a_{j}\, u_j v_j + \frac{1}{2}\,\sum_{j,k=1}^{4} a_{j,k}\, u_j v_j u_k v_k , \notag  \\
 & = \sum_{l=0}^{2}b_l\,\rho\left(z\right)^l \label{eq:Q-uv}
 \end{align}
 
-with $a_0=H$, and observe that by squaring \eqref{eq:duv_j} and substituting \eqref{eq:ham-uv}, \eqref{eq:uvj-gam-rho}, \eqref{eq:prod-id}, and \eqref{eq:Q-uv}, we obtain:
+with $a_0=H$. Observe that squaring \eqref{eq:duv_j} and substituting \eqref{eq:ham-uv}, \eqref{eq:uvj-gam-rho}, \eqref{eq:prod-id}, and \eqref{eq:Q-uv} gives:
 \begin{align}
 \left(\frac{d}{d z} \rho{\left(z \right)}\right)^{2} &= Q^{2}{\left({\gamma}_{1} - \rho{\left(z \right)}, \dots, {\gamma}_{4}  - \rho{\left(z \right)}\right)} - 4 \prod_{j=1}^{4} \left({\gamma}_{j} - \rho{\left(z \right)}\right), \label{eq:drho-sqrd-1} \\
 \left(\frac{d}{d z} \rho{\left(z \right)}\right)^{2} &=  \left(\sum_{l=0}^{2}b_l\,\rho\left(z\right)^l\right)^{2} - 4 \prod_{j=1}^{4} \left({\gamma}_{j} - \rho{\left(z \right)}\right), \label{eq:drho-sqrd-2} \\
@@ -267,20 +267,22 @@ with $a_0=H$, and observe that by squaring \eqref{eq:duv_j} and substituting \eq
 \end{align}
 
 where $b_l$, and $d_l$ are given in terms of other parameters and initial conditions in Appendices \ref{app:param-def-appendix} and \ref{app:init-conds}, and where $\lambda_l$ are the roots of the quartic polynomial in $\rho(z)$, i.e. $0=\sum_{k=0}^{4}d_k\,\lambda_{l}^k$.
-We now transform \eqref{eq:drho-sqrd-4} from quartic to the standard cubic form of the $\wp$ function using the classical trick which can be conceptualised in three steps \cite{whittakerCourseModernAnalysis2021}:
+Equation \eqref{eq:drho-sqrd-4} is a differential equation for an elliptic function and by separating phase modulation and wave mixing terms in the Hamiltonian, and by exploiting intermodal power conservation, we were able to obtain it directly without inverting elliptic integrals first.
+To solve it, we now transform \eqref{eq:drho-sqrd-4} from quartic to the standard cubic form of the Weierstrass $\wp$ function using the classical trick which can be conceptualised in three steps \cite{whittakerCourseModernAnalysis2021}:
 \begin{equation}
 \label{eq:wp-4-to-3}
 \begin{array}{l rcl}
-\text{(shift so RHS is 0 when $q(z)=0$)} 
+\text{(1) shift by any root so RHS is 0 when $q(z)=0$} 
 & \rho(z) &=& q(z) + \lambda_1,\\
-\text{(invert to reduce the quartic to a cubic)} 
+\text{(2) invert to reduce the quartic to a cubic} 
 & s(z) &=& \dfrac{1}{q(z)},\\
-\text{(shift and scale to match Weierstrass coefficients)} 
+\text{(3) shift and scale to match Weierstrass coefficients} 
 & w(z) &=& C_1 s(z) + C_0.
 \end{array}
 \end{equation}
 
-After choosing any root, let us say $\lambda_1$, the procedure sketched in \eqref{eq:wp-4-to-3} is implemented in the following single transformation:
+Without loss of generality, we choose root $\lambda_1$. 
+The procedure sketched in \eqref{eq:wp-4-to-3} is then implemented in the following single transformation:
 \begin{align}
 \rho{\left(z \right)} &= {\lambda}_{1} + \frac{d_4}{- 4 w{\left(z \right)} \prod_{l=1}^{3} {\Omega}_{l}  + \frac{d_4}{3} \sum_{l=1}^{3} {\Omega}_{l} }, \label{eq:rho-wp-1} \\
 \Omega_l &= \frac{1}{\lambda_{l+1} - \lambda_1}, \notag \\
@@ -295,10 +297,10 @@ Equation \eqref{eq:dwp} defines the Weierstrass elliptic $\wp$ function and the 
 w(z) = \wp (z - z_0, g_2, g_3)
 \end{equation}
 where $z_0$ is a constant chosen to match initial conditions. 
-This constant $z_0$, and others that we will now introduce, can be obtained by inverting $\wp$ using an elliptic integral, (e.g. Carlson's symmetric $R_F$ integral). 
-As $\wp$ is an even function, it is necessary to also specify a corresponding condition for the derivative when inverting, i.e., to find $z$ from known $x,y$ we give conditions such as $\wp\left(z\right)=x, \wp'\left(z\right)=y$, where $\wp'$ is the derivative of $\wp$ known as Weierstrass p-prime. 
+This constant $z_0$, and others that we will now introduce, can be obtained by inverting $\wp$ using an elliptic integral \cite{whittakerCourseModernAnalysis2021}. 
+As $\wp$ is an even function, it is necessary to also specify a corresponding condition for the derivative when inverting to fix the sign, i.e., to find $z$ from known $x,y$ we give conditions such as $\wp\left(z\right)=x, \wp'\left(z\right)=y$, where $\wp'$ is the derivative of $\wp$ known as Weierstrass p-prime. 
 The points obtained during such an inversion are determined modulo the period lattice of the doubly periodic $\wp$. 
-In addition to $z_0$, we introduce two other types of special points that characterize the solution structure and enable the use of elliptic function identities to solve for the modes in the following section.
+In addition to $z_0$, we introduce two other types of special points that characterize the solution structure and enable the use of elliptic function identities to solve for the modes in Section \ref{sec:mode-sols-u-v}.
 The point $z_1$ corresponds to the pole of $\rho(z)$ where the denominator in \eqref{eq:rho-wp-1} vanishes, and represents a singularity in the mean modal power.
 The points $\mu_j$ are the locations where individual modal powers vanish, $u_j(\mu_j)v_j(\mu_j) = 0$, and thus where $\rho(\mu_j) = \gamma_j$ from \eqref{eq:uvj-gam-rho}.
 These special points are defined implicitly through their Weierstrass function values:
@@ -315,14 +317,14 @@ The solutions for modal powers are then found from \eqref{eq:uvj-gam-rho} and \e
 \begin{align}
 u_j{\left(z\right)} v_j{\left(z\right)} &= \rho(\mu_j) - \rho(z), \notag \\
 &= \frac{\wp'{\left(z_{1}\right)}}{ \sqrt{{d}_{4}} \left(\wp{\left(z_{1}\right)} - \wp{\left({\mu}_{j} - z_{0}\right)}\right)} - \frac{\wp'{\left(z_{1}\right)}}{\sqrt{{d}_{4}} \left(\wp{\left(z_{1}\right)} - \wp{\left(z - z_{0}\right)}\right) }, \notag \\
-&= \frac{\wp'{\left(z_{1}\right)} }{ \sqrt{{d}_{4}} \left(\wp{\left(z_{1}\right)} - \wp{\left({\mu}_{j}- z_{0}\right)}\right)} \frac{ \left(\wp{\left(z - z_{0}\right)} - \wp{\left({\mu}_{j} - z_{0}\right)}\right) }{ \left(\wp{\left(z - z_{0}\right)} - \wp{\left(z_{1}\right)}\right) } \label{eq:uv-wp}
+&= \frac{\wp'{\left(z_{1}\right)} }{ \sqrt{{d}_{4}} \left(\wp{\left(z_{1}\right)} - \wp{\left({\mu}_{j}- z_{0}\right)}\right)} \frac{ \left(\wp{\left(z - z_{0}\right)} - \wp{\left({\mu}_{j} - z_{0}\right)}\right) }{ \left(\wp{\left(z - z_{0}\right)} - \wp{\left(z_{1}\right)}\right) }. \label{eq:uv-wp}
 \end{align}
 
 
 % ---------- SECTION -------------
 % --------------------------------
 
-\section{Solutions for modes in terms of Weierstrass \texorpdfstring{$\sigma$}{sigma}, \texorpdfstring{$\zeta$}{zeta} functions}
+\section{Solutions for modes in terms of Weierstrass \texorpdfstring{$\sigma$}{sigma}, \texorpdfstring{$\zeta$}{zeta} functions} \label{sec:mode-sols-u-v}
 
 Having obtained the modal power solutions in the previous section, we now proceed to find solutions for the individual modes $u_j(z)$ and $v_j(z)$ themselves.
 Direct substitution of \eqref{eq:ham-uv}, \eqref{eq:duv_j}, \eqref{eq:uvj-gam-rho}, and \eqref{eq:power-conserved} into \eqref{eq:uv-system} shows that the equations can be recast in terms of logarithmic derivatives:
@@ -339,7 +341,7 @@ We substitute the modal power solution \eqref{eq:uv-wp} into \eqref{eq:dlog-u-v-
 \begin{equation}
 \frac{\wp'{\left(x,g_{2},g_{3} \right)}}{\wp{\left(x,g_{2},g_{3} \right)} - \wp{\left(y,g_{2},g_{3} \right)}} = \zeta{\left(x + y,g_{2},g_{3} \right)} + \zeta{\left(x - y,g_{2},g_{3} \right)} - 2 \zeta{\left(x,g_{2},g_{3} \right)}
 \end{equation}
-which allows us to express the right-hand side in terms of $\zeta$ functions and constants:
+which allows us to express the right-hand side in terms of Weierstrass $\zeta$ functions and constants:
 \begin{align}
 \frac{\frac{\partial}{\partial z} u{\left(z,{\mu}_{j} \right)}}{u{\left(z,{\mu}_{j} \right)}} =& \frac{\left(\zeta{\left(z - z_{0} + z_{1} \right)} - 2 \zeta{\left(z_{1} \right)} - \zeta{\left(z - z_{0} - z_{1} \right)}\right) {\Lambda}_{1,j}}{\sqrt{{d}_{4}}} \nonumber \\[6pt]
 & + \zeta{\left(z - 2 z_{0} + {\mu}_{j} \right)} - \frac{\zeta{\left(z - z_{0} - z_{1} \right)}}{2} - \frac{\zeta{\left(z - z_{0} + z_{1} \right)}}{2} \nonumber \\[6pt]
@@ -349,10 +351,10 @@ which allows us to express the right-hand side in terms of $\zeta$ functions and
 & + \frac{\zeta{\left({\mu}_{j} - z_{0} - z_{1}\right)}}{2} + \frac{\zeta{\left({\mu}_{j} - z_{0} + z_{1} \right)}}{2} - {\Lambda}_{0,j} - {\Lambda}_{1,j} {\lambda}_{1} \label{eq:dlog-u-v-zeta}
 \end{align}
 
-Equations \eqref{eq:dlog-u-v-zeta} can be integrated by noting that the Weierstrass $\zeta$ function is the logarithmic derivative of the $\sigma$ function:
+Equations \eqref{eq:dlog-u-v-zeta} can be integrated by noting that the Weierstrass $\zeta$ function is the logarithmic derivative of the Weierstrass $\sigma$ function:
 \begin{equation}
 \label{eq:zeta-dlog_sigma}
-\zeta\left(z, g_2, g_3\right)=\frac{\partial}{\partial z} \sigma\left(z, g_2, g_3\right).
+\zeta\left(z, g_2, g_3\right)=\frac{\partial}{\partial z} \log{\left(\sigma\left(z, g_2, g_3\right)\right)}.
 \end{equation}
 
 Performing the integration and taking exponentials gives the first main result of this paper, the complete analytic solutions for the complex mode envelopes $u_j, v_j$ without decomposition into amplitude and phase:
@@ -361,7 +363,7 @@ u_j{\left(z\right)} &= \frac{\alpha_j\,\sqrt{W_j} \,\sigma{\left(z - 2 z_{0} + {
 v_j{\left(z\right)} &= \frac{\sqrt{W_j} \, \sigma{\left(z - {\mu}_{j} \right)} \exp\left(- z {r}_{0,j} - \log{\left(\frac{\sigma{\left(z - z_{0} + z_{1} \right)}}{\sigma{\left(z - z_{0} - z_{1} \right)}} \right)} {r}_{1,j} \right)}{\alpha_j\,\sqrt{\wp{\left(z_{1} \right)} - \wp{\left(z - z_{0} \right)}} \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0} \right)}} \label{eq:u-v-quartic}
 \end{align}
 
-where the branch of the logarithm is chosen continuously along the integration path from $z=0$, $\alpha_j$ is the integration constant that can be fixed by initial conditions to capture any phase offset between a mode and its conjugate, and where the other constants are:
+where the branch of the logarithm is chosen continuously along the integration path from $z=0$, $\alpha_j$ is the integration constant that can be fixed by initial conditions to capture any phase offset between a mode and its conjugate, and the other constants are:
 \begin{align}
 W_j &= \frac{\wp'{\left(z_{1} \right)}}{\sqrt{{d}_{4}}\,\left(\wp{\left(z_{1} \right)} - \wp{\left({\mu}_{j} - z_{0}\right)}\right)}, \\[6pt]
 r_{0,j} &= {\Lambda}_{0,j} + {\Lambda}_{1,j} {\lambda}_{1} - \frac{2 \zeta{\left(z_{1} \right)} {\Lambda}_{1,j}}{\sqrt{{d}_{4}}} - \frac{\zeta{\left({\mu}_{j} - z_{0} - z_{1}\right)}}{2} - \frac{\zeta{\left({\mu}_{j} - z_{0} + z_{1}\right)}}{2}, \\[6pt]
@@ -370,12 +372,12 @@ r_{1,j} &= \frac{{\Lambda}_{1,j}}{\sqrt{{d}_{4}}}.
 These solutions are valid for all initial conditions and include full pump depletion, cross-phase modulation, and phase mismatch effects without approximation.
 
 As a remarkable connection, we show in Appendix~\ref{app:fs-det-ham-proof} that the Hamiltonian \eqref{eq:ham-uv} can be expressed as the Frobenius--Stickelberger determinant, a classical identity relating products of Weierstrass $\sigma$ functions to determinants of derivatives of $\wp$.
-This provides a deeper structural understanding of why the Hamiltonian is conserved and connects the four-wave mixing system to the broader theory of elliptic functions.
+This provides a deeper structural understanding of how the Hamiltonian is conserved and connects the four-wave mixing system to the broader theory of elliptic functions.
 
 % ---------- SECTION -------------
 % --------------------------------
 
-\section{When quartic terms cancel by special parameter values}
+\section{When quartic terms cancel through special parameter values}
 
 In this section we examine a special case in which the quartic polynomial in $\rho(z)$ reduces to a cubic, leading to simplified solutions.
 This can occur when specific relationships hold among the system parameters, but it is not achievable through choice of initial conditions alone, nor is it related to the general coordinate transformation we introduce in Section \ref{sec:coord-transforms}.
@@ -420,13 +422,13 @@ We accomplish this through a sequence of three transformations, which we now pre
 To begin, let us consider a transform of the system in \eqref{eq:uv-system} of the following form:
 
 \begin{align}
-u_j(z) &= \hat{u}_j(z) e^{- \phi_j(z)} \notag \\
-v_j(z) &= \hat{v}_j(z) e^{\phi_j(z)} \\ 
-\sum_{j=1}^{4} \phi_j(z) &= 0
+u_j(z) &= \hat{u}_j(z) e^{- \phi_j(z)}, \notag \\
+v_j(z) &= \hat{v}_j(z) e^{\phi_j(z)}, \\ 
+\sum_{j=1}^{4} \phi_j(z) &= 0,
 \end{align}
 
 where transforming the conjugate mode with the opposing phase leaves modal powers unchanged, and where the sum over $\phi_j$ being zero ensures we do not encounter any new terms appearing in the exponents of wave mixing terms.
-We make the following choice for $\phi_j$ composed of a linear part ($L$) and a nonlinear part ($NL$) (where $L$ and $NL$ are function labels not exponents):
+We make the following choice for $\phi_j$ composed of a part linear in $z$ (labelled $L$) and a part nonlinear in $z$ (labelled $NL$) (where $L$ and $NL$ are function labels not exponents):
 
 \begin{align}
 \phi_j(z) &= \phi_j^{L}(z) + \phi_j^{NL}(z) \\
@@ -446,14 +448,16 @@ for which the conserved canonical Hamiltonian is:
 \hat{H} &= \prod_{l=1}^{4} \hat{u}_l + \prod_{l=1}^{4} \hat{v}_l - \frac{1}{4}\sum_{l=1}^{4} \left(b_2 \hat{u}^{2}_l \hat{v}^{2}_l  - b_1 \hat{u}_l \hat{v}_l \right)
 \end{align}
 and the intermodal power conservation laws are unchanged such that $\hat{u}_j \hat{v}_j - \hat{u}_k \hat{v}_k = \gamma_j - \gamma_k$.
-In comparison to \eqref{eq:uv-system}, we see that in \eqref{eq:uv-hat-system} we now have a single propagation constant for all modes $b_1/4$, a single self-phase modulation coefficient $b_2/2$, and no cross-phase modulation terms.
+Comparing \eqref{eq:uv-hat-system} with the original system \eqref{eq:uv-system}, we observe significant simplification.
+All modes now share a single propagation constant $b_1/4$ and a single self-phase modulation coefficient $b_2/2$, whilst all cross-phase modulation terms $a_{j,k}$ with $j \ne k$ have been eliminated.
 In terms of the solutions to the system, the effect of the $\phi_j^{NL}$ transform is to remove the $z$ dependent log terms weighted by $r_{1,j}$ in \eqref{eq:u-v-quartic}. 
+It should be noted that parameters $b_1, b_2$ depend on $\gamma_j$ and thus, in the new coordinates parameters depend on mode power in the original coordinates and are not exclusively fiber parameters.
 
 \subsection{Reducing the quartic to a cubic via local normalisation}\label{subsec:bar-coords}
 
-Next, we show how we can perform a coordinate transformation that involves a local, i.e. $z$ dependent, normalisation of the modes themselves, which at the same time induces a Mobius transform on modal powers. 
-This transform implements the classic trick that reduces the quartic to the cubic discussed in Section~\ref{sec:mode-power}. However, here the effect is delivered at the level of modes $u_j, v_j$ not only at the mode power level $u_j v_j$, thus we can observe a corresponding change to the coupled system.
-When we do this, we will see that it further reduces the number of parameters in the system such that the propagation constant becomes the reciprocal of the SPM coefficient.
+The second transformation is a coordinate change involving a $z$-dependent normalisation of the modes, which induces a M\"obius transformation on the modal powers. 
+This implements the quartic to cubic reduction discussed in Section~\ref{sec:mode-power}, but here the effect is delivered at the level of the modes $u_j, v_j$ themselves rather than only at the modal power level $u_j v_j$, allowing us to observe corresponding changes in the coupled differential equations.
+The transformation further reduces the number of parameters such that the propagation constant becomes the reciprocal of the SPM coefficient.
 
 Let us define the local normalisation function $h(z)$ and its associated coordinate transform $\left(\hat{u}_j, \hat{v}_j\right) \rightarrow \left(\bar{u}_j, \bar{v}_j \right)$ (note the hat to bar change in notation):
 \begin{align}
@@ -464,6 +468,8 @@ h{\left(z \right)} &= {d}_{5} - \sum_{l=1}^{4} \left({\gamma}_{l} - {\lambda}_{1
 where $\theta_j$ and $d_5$ are given in Appendix \ref{app:bar-coords-params}. 
 The $\theta_j$ parameter is not involved in the reduction of the quartic to the cubic but its inclusion keeps the propagation constant the same for all modes after the transform.
 The key parameter in the transformation is the root $\lambda_1$ previously defined in Section \ref{sec:mode-power} for the purpose of quartic to cubic reduction.
+The normalisation function $h(z)$ is constructed specifically to eliminate the factor $\sqrt{\wp(z_1) - \wp(z - z_0)}$ that appears in the denominator of \eqref{eq:u-v-quartic}.
+We therefore already know its effect on the solutions through the simple application in \eqref{eq:hat-to-bar}, but it is fascinating to observe the corresponding effect on the differential equations.
 
 The transformation in \eqref{eq:hat-to-bar} sends \eqref{eq:uv-hat-system} to:
 \begin{align}
@@ -476,15 +482,15 @@ for which the conserved canonical Hamiltonian and intermodal power conservation 
 \bar{H} &= \sum_{l=1}^{4} \left(\frac{\chi}{8} \bar{u}^{2}_l \bar{v}^{2}_l  - \frac{1}{\chi}  \bar{u}_l \bar{v}_l \right) - \frac{\varsigma \chi}{4} \left(\prod_{l=1}^{4} \bar{u}_l + \prod_{l=1}^{4} \bar{v}_l\right), \notag \\
 \bar{\gamma}_j - \bar{\gamma}_k &= \bar{u}_j \bar{v}_j - \bar{u}_k \bar{v}_k,
 \end{align}
-with $\varsigma \pm 1$, $\chi$ and $\bar{\gamma}_j$ given in Appendix \ref{app:bar-coords-params}.
+with $\varsigma =\pm 1$, $\chi$ and $\bar{\gamma}_j$ given in Appendix \ref{app:bar-coords-params}.
 The modal power in these coordinates evolves according to:
 \begin{equation}
 \label{eq:duv_bar_j} 
 \frac{d}{d z} \bar{u}_j \bar{v}_j = -\frac{\varsigma \chi}{4}\left(\prod\limits_{k=1}^{4} \bar{u}_k - \prod\limits_{k=1}^{4} \bar{v}_k\right)
 \end{equation}
 
-Remarkably, the terms in \eqref{eq:hat-to-bar} are the same as those in \eqref{eq:uv-hat-system} only with different coefficients. 
-We thus say that the system is invariant under the transformation, which is quite suprising given the $z$ dependence of the normalisation.
+Remarkably, the terms in \eqref{eq:uv-bar-system} are the same as those in \eqref{eq:uv-hat-system} only with different coefficients. 
+We thus say that the system is invariant under the transformation, which is quite surprising given the $z$ dependence of the normalisation.
 Similarly, by comparing \eqref{eq:duv_bar_j} to \eqref{eq:duv_j} we see that \eqref{eq:duv_j} is invariant up to a constant factor.
 
 To solve this system, we may define the function $\bar{w}(z)$ in terms of $h$ by:
@@ -501,7 +507,7 @@ h(z) &= 4\lambda_1\left(\wp (z_1) - \wp (z - z_0)\right) \label{eq:dwp-h-bar} \\
 \end{align}
 where $z_0$, $z_1$, $\mu_j$, $g_2$, and $g_3$ retain their previous definitions from the original coordinates. 
 We see that as a result of the transformation in \eqref{eq:hat-to-bar}, the right hand side of \eqref{eq:dwp-bar} is cubic in $\bar{w}$ and thus the corresponding differential equations for $h$ and $\bar{u}_j\bar{v}_j$ inherit this simplification as they are linearly related.
-The elliptic function form of $h(z)$ is not a surprise as it was purposely constructed in the transformation so as to remove the corresponding term from the denominator in \eqref{eq:u-v-quartic}.
+The elliptic function form of $h(z)$ in \eqref{eq:dwp-h-bar} confirms that it successfully eliminates the corresponding factor from the denominator in \eqref{eq:u-v-quartic}.
 
 The solutions for modes $\bar{u}_j, \bar{v}_j$ are:
 \begin{align}
@@ -509,16 +515,18 @@ The solutions for modes $\bar{u}_j, \bar{v}_j$ are:
 \bar{v}_j(z) &= \frac{\sigma{\left(z - {\mu}_{j}\right)} \exp{\left(- z \bar{\kappa}_j\right)}}{\bar{\alpha}_{j} \sigma{\left(z - z_{0}\right)} \sigma{\left({\mu}_{j} - z_{0}\right)} } \label{eq:u-v-bar}
 \end{align}
 where the Weierstrass $\sigma$ functions use the same $g_2,g_3$ from the original coordinates, 
-$\bar{\kappa}_j$ is given in Appendix \ref{app:param-def-appendix}, and $\bar{\alpha}_j$ is an integration constant fixed by initial conditions and used to capture any relative phase offset between a mode $\bar{u}_j$ and its conjugate $\bar{v}_j$.
+$\bar{\kappa}_j$ is given in Appendix \ref{app:bar-coords-params}, and $\bar{\alpha}_j$ is an integration constant fixed by initial conditions and used to capture any relative phase offset between a mode $\bar{u}_j$ and its conjugate $\bar{v}_j$.
 
 \subsection{A parameterless system via rescaling}\label{subsec:tilde-coords}
 
-It is now simple to remove the remaining parameter via a scaling of the modes and the length variable as follows (note the bar to tilde notation change):
+The final transformation is a simple rescaling that eliminates all remaining parameters from the system.
+We scale the modes and the propagation variable as follows (note the bar to tilde notation change):
 \begin{align}
 \bar{u}_j(z) &= \frac{\varsigma \sqrt[4]{\varsigma}}{\chi}\tilde{u}_j(\xi), \notag \\
 \bar{v}_j(z) &= \frac{\varsigma }{\sqrt[4]{\varsigma}\,\chi}\tilde{v}_j(\xi), \notag \\
 z &= \chi\xi
 \end{align}
+where the specific form of the mode scaling is chosen to yield parameterless coefficients in the transformed equations (whilst retaining a coefficient of 4 in the cubic term of the corresponding differential equations as per the Weierstrass form).
 This substitution transforms \eqref{eq:uv-bar-system} to:
 \begin{align}
 \frac{\partial}{\partial \xi} \tilde{u}_j &= -\left(1 - \frac{\tilde{u}_j \tilde{v}_j}{4} \right) \tilde{u}_j - \frac{1}{4}\prod\limits_{k=1, k \ne j}^{4} \tilde{v}_k, \notag \\
@@ -536,77 +544,90 @@ and the solutions are:
 \tilde{v}_j{\left(\xi\right)} &= \frac{ \sigma{\left(\xi - {\tilde{\mu}}_{j}\right)} \exp\left({-\xi \left( 1 + \frac{{\tilde{\gamma}}_{j}}{2} - \zeta{\left( {\tilde{\mu}}_{j} - \xi_{0}\right)}\right)}\right)}{\tilde{\epsilon}_{j} \,\sigma{\left(\xi - \xi_{0}\right)} \sigma{\left( {\tilde{\mu}}_{j} - \xi_{0}\right)}}  \label{eq:u-v-tilde}
 \end{align}
 where the $\sigma$ and $\zeta$ functions use the scaled invariants $\tilde{g}_2$ and $\tilde{g}_3$ given in Appendix \ref{app:scaled-params} together with $\xi_0$, $\tilde{\epsilon}_j$, $\tilde{\mu}_j$ and $\tilde{\gamma}_j$.
-The solutions in \eqref{eq:u-v-bar} and \eqref{eq:u-v-tilde} are, up to constant and $z$ dependent exponential factors, Kronecker theta functions, which simply put are a ratio of two Weierstrass $\sigma$ functions shifted relative to each other in their argument.
-The functions are associated with Kronecker after he gave a Fourier series \cite{whittakerCourseModernAnalysis2021} and multipole expansion \cite{weilEllipticFunctionsAccording1976, charolloisEllipticFunctionsAccording2016} for the function, both of which may prove useful in nonlinear optics analysis.
-The form of solutions herein is similar to that obtained in other nonlinear optical systems such as two and three wave mixing in quadratic nonlinear media, polarisation dynamics in nonlinear fibers, and parity-time symmetric nonlinear couplers \cite{heskethGeneralComplexEnvelope2015}. 
-The exponentials and $\sigma$ functions are entire functions and this ratio is a single valued meromorphic function, unlike the solutions in \eqref{eq:u-v-quartic}. 
-The solutions are quasi-periodic and modulo the lattice they have zeros where the argument of $\sigma$ vanishes in the numerator, and poles where the argument of $\sigma$ vanishes in the denominator. 
-Owing to the parameterless form of \eqref{eq:uv-tilde-system} and the simpler form of the solutions in \eqref{eq:u-v-tilde}, we refer to $\tilde{u}_j, \tilde{v}_j$ as the canonical coordinates of four-wave mixing and their derivation is our second main result.
+
+The solutions in both \eqref{eq:u-v-bar} and \eqref{eq:u-v-tilde} take the form of Kronecker theta functions, which are ratios of two Weierstrass $\sigma$ functions with shifted arguments, multiplied by exponential factors.
+These functions are named after Kronecker, who developed both Fourier series \cite{whittakerCourseModernAnalysis2021} and multipole expansion \cite{weilEllipticFunctionsAccording1976, charolloisEllipticFunctionsAccording2016} representations that may prove useful for further analysis in nonlinear optics.
+Importantly, whilst the $\sigma$ functions and exponentials are entire functions, their ratio is a single-valued meromorphic function with well-defined poles and zeros, in contrast to the multi-valued solutions in \eqref{eq:u-v-quartic}.
+The solutions are quasi-periodic, and modulo the period lattice they have zeros where the numerator $\sigma$ function vanishes and poles where the denominator $\sigma$ function vanishes.
+
+The Kronecker theta form establishes a direct connection with other integrable nonlinear optical systems, including two-wave and three-wave mixing in quadratic nonlinear media, polarisation dynamics in nonlinear fibres, and parity-time symmetric nonlinear couplers \cite{heskethGeneralComplexEnvelope2015}, suggesting a unified mathematical framework across different parametric processes.
+
+Owing to the parameter-free form of \eqref{eq:uv-tilde-system}, the simple structure of the Hamiltonian \eqref{eq:H-tilde}, and the elegant Kronecker theta function solutions in \eqref{eq:u-v-tilde}, we refer to $\tilde{u}_j, \tilde{v}_j$ as the canonical coordinates of four-wave mixing.
+The derivation of this canonical form, together with the demonstration that it can be reached from any physical four-wave mixing system through the sequence of transformations presented in this section, constitutes the second main result of this paper.
+
 
 
 % ---------- SECTION -------------
 % --------------------------------
 
-\section{Plotting analytic vs numeric solutions}
+\section{Numerical validation and implementation} \label{sec:num-val}
 
-In this last section we check the validity of the solutions by evaluating them numerically. 
-We simultaneously demonstrate numerical evaluation is possible using open source software in Python. 
-We evaluate analytic solutions numerically using the \emph{pyweierstrass} Python package \cite{laurentPyweierstrass2022} which provide Weierstrass elliptic functions as a wrapper around Jacobi elliptic functions from the \emph{mpmath} Python package \cite{MpmathPythonLibrary2023}. 
-We plot them against numeric solutions of the corresponding differential equations found using the DOP853 Runge-Kutta algorithm from \emph{SciPy} in Python \cite{virtanenSciPy10Fundamental2020}.
+In this section we validate the analytic solutions through numerical evaluation and demonstrate their practical implementation using open-source software.
+This serves two purposes, first, to verify that the solutions correctly satisfy the differential equations, and second, to show that the Weierstrass elliptic functions can be readily evaluated using standard numerical libraries.
 
-In Figures \ref{fig:u-v-re} and \ref{fig:u-v-im} we plot the real and imaginary parts, respectively, of the product of $u_jv_j$ in a non-physical $u,v$ scenario using Equation~\eqref{eq:uv-wp}.
-The analytic dashed lines are shown to be in agreement with the numeric solutions shown as symbols.
-The lines in the plot evolve in unison owing to the intermodal power conservation laws in \eqref{eq:power-conserved}.
+We evaluate the analytic solutions using the \emph{pyweierstrass} Python package \cite{laurentPyweierstrass2022}, which provides Weierstrass elliptic functions as a wrapper around Jacobi elliptic functions from the \emph{mpmath} package \cite{MpmathPythonLibrary2023}. 
+For comparison, we solve the differential equations numerically using the DOP853 Runge-Kutta algorithm from \emph{SciPy} \cite{virtanenSciPy10Fundamental2020}.
 
-In Figures \ref{fig:A-abs} and \ref{fig:A-phi} we plot the absolute value squared and phase, respectively, of $A_j$ in a physical four-wave mixing case.
-The value of $A_j$ was found using \eqref{eq:u-v-quartic} to first obtain $u_j, v_j$, before converting to $A_j, A_j^{*}$ using \eqref{eq:u-v-A}.
-The analytic dashed lines are shown to be in agreement with the numeric solutions shown as symbols. 
-As expected in nonlinear fiber optic four-wave mixing, periodic intermodal power exchange is seen between modes in Figure \ref{fig:A-abs}, 
-while the phase plot in Figure \ref{fig:A-phi} is dominated by linear propagation constant effects with some nonlinear effects visible as areas of high curvature in the plotted lines.
+Figures \ref{fig:u-v-re} and \ref{fig:u-v-im} show the real and imaginary parts of the modal power $u_jv_j$ using the analytic solution \eqref{eq:uv-wp} compared against numerical integration of the abstract system \eqref{eq:uv-system}.
+The analytic solutions (dashed lines) are in excellent agreement with the numerical solutions (symbols).
+The intermodal power conservation laws in \eqref{eq:power-conserved} are evident from the coordinated evolution of all four modes.
+
+Figures \ref{fig:A-abs} and \ref{fig:A-phi} show the intensity and phase evolution of the physical field amplitudes $A_j$ in a representative four-wave mixing scenario.
+The values were obtained by using \eqref{eq:u-v-quartic} to calculate $u_j, v_j$, then converting to $A_j, A_j^{*}$ via \eqref{eq:u-v-A}.
+Again, the analytic solutions (dashed lines) match the numerical integration (symbols) throughout the propagation distance.
+The periodic energy exchange between modes visible in Figure \ref{fig:A-abs} is characteristic of phase-matched four-wave mixing, whilst Figure \ref{fig:A-phi} shows the phase evolution dominated by linear propagation with nonlinear contributions visible as regions of high curvature.
+
+These comparisons confirm both the correctness of the analytic solutions and the feasibility of their numerical evaluation using readily available software tools.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{plots/case1_plot_1.pdf}
-\caption{Real part of analytic Equation~\eqref{eq:uv-wp} against numeric solutions.}
+\caption{Real part of abstract modal power $u_jv_j$: analytic solution \eqref{eq:uv-wp} (dashed lines) compared with numerical integration (symbols).}
 \label{fig:u-v-re}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{plots/case1_plot_2.pdf}
-\caption{Imaginary part of analytic Equation~\eqref{eq:uv-wp} against numeric solutions.}
+\caption{Imaginary part of abstract modal power $u_jv_j$: analytic solution \eqref{eq:uv-wp} (dashed lines) compared with numerical integration (symbols).}
 \label{fig:u-v-im}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{plots/case2_plot_1.pdf}
-\caption{$\left|A_j\right|^2$ using analytic Equation~\eqref{eq:u-v-quartic} in \eqref{eq:u-v-A} against numeric solutions.}
+\caption{Intensity $|A_j|^2$ of physical field amplitudes: analytic solution \eqref{eq:u-v-quartic} converted via \eqref{eq:u-v-A} (dashed lines) compared with numerical integration (symbols).}
 \label{fig:A-abs}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{plots/case2_plot_2.pdf}
-\caption{Phase $\phi_j$ using analytic Equation~\eqref{eq:u-v-quartic} in \eqref{eq:u-v-A} against numeric solutions.}
+\caption{Phase $\phi_j$ of physical field amplitudes: analytic solution \eqref{eq:u-v-quartic} converted via \eqref{eq:u-v-A} (dashed lines) compared with numerical integration (symbols).}
 \label{fig:A-phi}
 \end{figure}
 
 
 \section{Conclusion}
-We have derived a complete analytic solution of the quasi-continuous-wave four-wave mixing system. 
-These solutions are expressed in terms of Weierstrass elliptic functions, and we have demonstrated how they can be evaluated numerically using open-source Python code.
 
-Motivated by the structure of these analytic solutions, we investigated a class of coordinate transformations that yield a canonical coordinate system in which the governing differential equations simplify substantially. 
-Through this analysis, we showed that the full four-wave mixing system can be reduced to a significantly simpler, parameter-free system. 
-Remarkably, the structural form of the differential equations is preserved under these transformations, despite the fact that the transformations themselves depend explicitly on the independent variable $z$. 
-In the canonical coordinates, the solutions become single-valued, meromorphic Kronecker theta functions.
+We have presented complete analytic solutions for quasi-continuous-wave four-wave mixing in nonlinear optical fibres without any of the standard simplifying assumptions.
+The solutions, expressed in terms of Weierstrass elliptic functions, provide the full complex field envelopes for all four waves under arbitrary initial conditions, including pump depletion, cross-phase modulation, and phase mismatch effects.
+These solutions complement previous work in the literature by providing a unified treatment of the complex envelopes themselves rather than treating amplitudes and phases separately.
 
-Four-wave mixing provides an important and challenging test case for mathematical analysis and is arguably among the more intricate examples of dynamical systems admitting elliptic (genus-one) function solutions, owing to the presence of quartic polynomials. 
-In this work, we have shown in detail how these difficulties can be systematically addressed. 
-The methods developed here may be transferable to the analysis of related nonlinear systems, such as the interaction of modes in multimode nonlinear fiber optics (see, e.g., Chapter 4 in \cite{heskethNonlinearEffectsMultimode2014}).
+Guided by the structure of these solutions, we developed a sequence of coordinate transformations that reveal a canonical form of the four-wave mixing equations.
+In these canonical coordinates, the system becomes parameter-free with a universal structure applying to all four-wave mixing processes regardless of specific fibre properties or operating conditions.
+The solutions in canonical coordinates are single-valued meromorphic Kronecker theta functions, connecting four-wave mixing to a broader class of integrable nonlinear optical systems.
+Remarkably, the transformations preserve the essential structure of the differential equations despite depending explicitly on the propagation variable, demonstrating a profound invariance property of four-wave mixing dynamics.
 
-In forthcoming work, we intend to present a unified framework for integrable nonlinear coupled ordinary differential equations with elliptic and hyperelliptic function solutions, in which the four-wave mixing system studied here will serve as a central example.
+The connection between the Hamiltonian formulation and the Frobenius-Stickelberger determinant, established in Appendix~\ref{app:fs-det-ham-proof}, provides deeper insight into why these conservation laws hold and links four-wave mixing to classical elliptic function theory.
+This mathematical framework may prove valuable for analysing related parametric processes and could extend to higher-order mixing or multimode interactions.
+
+The methods developed here are broadly applicable to related nonlinear systems.
+In particular, the approach may be transferable to the analysis of mode coupling in multimode nonlinear fibre optics (see, e.g., Chapter 4 in \cite{heskethNonlinearEffectsMultimode2014}), where similar coupled-mode structures arise.
+
+The practical utility of these solutions has been demonstrated through numerical evaluation using open-source Python libraries, confirming both their validity and computational accessibility.
+These analytic solutions may provide new insights for the design and optimisation of wavelength converters, parametric amplifiers, and quantum light sources by enabling exact analysis where approximations previously proved inadequate.
+
 
 \section*{Acknowledgements}
 The author thanks Maria Dimou for a careful read of the manuscript.
@@ -619,6 +640,9 @@ The author thanks Maria Dimou for a careful read of the manuscript.
 
 \section{Parameter definitions in the original coordinates}
 \label{app:param-def-appendix}
+
+This appendix provides explicit formulae for the parameters $b_l$, $c_l$, and $d_l$ that appear in the quartic polynomial \eqref{eq:drho-sqrd-3} and related expressions throughout Section~\ref{sec:mode-power}.
+These parameters are expressed in terms of the system parameters $a_j$, $a_{j,k}$ and the conserved constants $\gamma_j$.
 
 \begin{align}
 {b}_{0} &= {a}_{0} + \sum_{j=1}^{4} {a}_{j} {\gamma}_{j} + \frac{1}{2}\sum\limits_{j,k=1}^{4} {a}_{j,k} {\gamma}_{j} {\gamma}_{k}, \notag \\
@@ -643,6 +667,9 @@ The author thanks Maria Dimou for a careful read of the manuscript.
 \section{Initial condition relations}
 \label{app:init-conds}
 
+This appendix gives the relationships between initial conditions for the physical system and the constants $\gamma_j$ and $\rho(0)$ used throughout the analysis.
+These relations enable determination of the constants from specified initial values of $u_j(0)$ and $v_j(0)$.
+
 \begin{align}
 \rho{\left(0 \right)} &= - \frac{1}{4}\sum_{j=1}^{4} u_j{\left(0 \right)} v_j{\left(0 \right)}, \notag \\
 {\gamma}_{j} &= u_j{\left(0\right)} v_j{\left(0 \right)} - \frac{1}{4}\sum_{j=1}^{4} u_j{\left(0\right)} v_j{\left(0\right)}, \notag \\
@@ -656,8 +683,12 @@ The author thanks Maria Dimou for a careful read of the manuscript.
 \section{The Frobenius-Stickelberger determinant}
 \label{app:fs-det-ham-proof}
 
-The Frobenius-Stickelberger (FS) determinant formula is an elliptic function identity that relates products of $\sigma$ functions to a multivariate determinant of higher order derivatives of $\wp$ \cite{frobeniusZurTheorieElliptischen1877, whittakerCourseModernAnalysis2021}.
-In this section we show that the conservation of the Hamiltonian can be viewed as a manifestation of FS.
+The Frobenius-Stickelberger (FS) determinant formula is an elliptic function identity relating products of $\sigma$ functions to determinants of derivatives of $\wp$ \cite{whittakerCourseModernAnalysis2021, frobeniusZurTheorieElliptischen1877}.
+In this appendix we demonstrate that the conservation of the Hamiltonian can be viewed as a manifestation of this classical identity, providing a deeper structural understanding of why the Hamiltonian is conserved in four-wave mixing.
+
+Our starting point is equation \eqref{eq:fs-det-start}, which relates the wave mixing product to the phase modulation terms via the Hamiltonian.
+We will show that this equation can be transformed into the FS determinant formula by treating the left-hand side (the product of modes) and right-hand side (the polynomial in $\rho$) separately, each ultimately expressed in terms of Weierstrass functions.
+
 We are interested in the $4\times4$ case of FS in the form:
 \begin{align}
 \label{eq:fs-det-m}
@@ -688,7 +719,7 @@ We will show how \eqref{eq:fs-det-start} can be transformed into \eqref{eq:fs-de
 
 \subsection{The left hand side}
 From \eqref{eq:uv-wp}, the right hand side of \eqref{eq:fs-det-start} is a doubly periodic elliptic function,
-so too then is the left. Thus for integers $m,n$ and half-periods $\omega_1, \omega_3$ we must have:
+so too then is the left hand side. Thus for integers $m,n$ and half-periods $\omega_1, \omega_3$ we must have:
 \begin{align}
 \prod_{j=1}^{4} \frac{u_j{\left(z\right)}}{u_j{\left(2 m {\omega}_{3} + 2 n {\omega}_{1} + z\right)}} & = 1. \label{eq:u-prod-is-one}
 \end{align}
@@ -709,7 +740,7 @@ This leads to:
 where $\nu_j=\mu_j-z_0$, and in moving from \eqref{eq:exp-arg-is-one} to \eqref{eq:nuj-sum-zero} and \eqref{eq:roj-is-zeta} we made use of the identity $\zeta{\left({\omega}_{3}\right)} {\omega}_{1} - \zeta{\left({\omega}_{1}\right)} {\omega}_{3} = i \pi /2$. 
 Ultimately, equations \eqref{eq:quasi-sigma}, \eqref{eq:nuj-sum-zero} and \eqref{eq:roj-is-zeta} allow us to make the following substitution in the left hand side of \eqref{eq:fs-det-start}:
 \begin{align}
-\frac{\sigma{\left(z + {\nu}_{4} \right)}}{\sigma{\left({\nu}_{4} \right)}}\,\exp{\left(z \sum\limits_{j=1}^{4} {r}_{0,j}\right)} = - \frac{\sigma{\left(z - {\nu}_{1} - {\nu}_{2} - {\nu}_{3} \right)}}{\sigma{\left({\nu}_{1} + {\nu}_{2} + {\nu}_{3} \right)}}
+\frac{\sigma{\left(z + {\nu}_{4} \right)}}{\sigma{\left({\nu}_{4} \right)}}\,\exp{\left(z \sum\limits_{j=1}^{4} {r}_{0,j}\right)} = - \frac{\sigma{\left(z - {\nu}_{1} - {\nu}_{2} - {\nu}_{3} \right)}}{\sigma{\left({\nu}_{1} + {\nu}_{2} + {\nu}_{3} \right)}}.
 \end{align}
 
 \subsection{The right hand side}
@@ -732,11 +763,17 @@ We then divide both sides of \eqref{eq:fs-det-start} by:
 \end{align}
 and observe that it takes the equivalent form to \eqref{eq:fs-det-m} up to constant factors that may look different but can be shown to be identical by multiplying by $\sigma(z)^4$ and taking $z\rightarrow 0$.
 
+This completes the demonstration that the Hamiltonian conservation law \eqref{eq:fs-det-start} is equivalent to the Frobenius-Stickelberger determinant formula.
+This connection reveals that the conserved Hamiltonian of four-wave mixing is not merely a convenient construct but rather a manifestation of deep structural properties of elliptic functions.
+The FS determinant framework may provide tools for generalizing these results to higher-order wave mixing processes or systems with additional degrees of freedom.
+
 % ---------- APPENDIX ------------
 % --------------------------------
 
 \section{Parameter definitions in the bar coordinates}
 \label{app:bar-coords-params}
+
+This appendix provides explicit formulae for the parameters that appear in the bar coordinate system introduced in Section~\ref{subsec:bar-coords}, including the key transformation parameters $d_5$, $\varsigma$, $\chi$, and the rescaled constants $\bar{\gamma}_j$, $\theta_j$, and $\bar{\kappa}_j$.
 
 \begin{align}
 {d}_{5} &= {d}_{1} + 2 {d}_{2} {\lambda}_{1} + 3 {d}_{3} {\lambda}_{1}^{2} + 4 {d}_{4} {\lambda}_{1}^{3}, \notag  \\

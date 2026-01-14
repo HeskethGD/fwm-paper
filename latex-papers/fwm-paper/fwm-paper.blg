@@ -1,17 +1,17 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'fwm-paper.blg'
-[35] biber-darwin:340> INFO - === Wed Jan 14, 2026, 00:54:42
-[44] Biber.pm:420> INFO - Reading 'fwm-paper.bcf'
-[84] Biber.pm:994> INFO - Found 15 citekeys in bib section 0
-[91] Biber.pm:4463> INFO - Processing section 0
-[96] Biber.pm:4654> INFO - Looking for bibtex file 'CW-FWM-Analytic-Solutions.bib' for section 0
-[98] bibtex.pm:1713> INFO - LaTeX decoding ...
-[116] bibtex.pm:1519> INFO - Found BibTeX data source 'CW-FWM-Analytic-Solutions.bib'
-[195] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[195] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[195] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
-[195] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
-[203] bbl.pm:676> INFO - Writing 'fwm-paper.bbl' with encoding 'UTF-8'
-[209] bbl.pm:779> INFO - Output to fwm-paper.bbl
-[209] Biber.pm:131> WARN - ISBN '978-3-540-65036-2 978-3-642-66209-6' in entry 'weilEllipticFunctionsAccording1976' is invalid - run biber with '--validate_datamodel' for details.
-[209] Biber.pm:133> INFO - WARNINGS: 1
+[36] biber-darwin:340> INFO - === Thu Jan 15, 2026, 00:15:23
+[47] Biber.pm:420> INFO - Reading 'fwm-paper.bcf'
+[88] Biber.pm:994> INFO - Found 15 citekeys in bib section 0
+[95] Biber.pm:4463> INFO - Processing section 0
+[101] Biber.pm:4654> INFO - Looking for bibtex file 'CW-FWM-Analytic-Solutions.bib' for section 0
+[102] bibtex.pm:1713> INFO - LaTeX decoding ...
+[121] bibtex.pm:1519> INFO - Found BibTeX data source 'CW-FWM-Analytic-Solutions.bib'
+[201] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[201] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[201] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[201] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[209] bbl.pm:676> INFO - Writing 'fwm-paper.bbl' with encoding 'UTF-8'
+[214] bbl.pm:779> INFO - Output to fwm-paper.bbl
+[214] Biber.pm:131> WARN - ISBN '978-3-540-65036-2 978-3-642-66209-6' in entry 'weilEllipticFunctionsAccording1976' is invalid - run biber with '--validate_datamodel' for details.
+[214] Biber.pm:133> INFO - WARNINGS: 1
