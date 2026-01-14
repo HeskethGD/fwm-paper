@@ -294,10 +294,14 @@ Equation \eqref{eq:dwp} defines the Weierstrass elliptic $\wp$ function and the 
 \begin{equation}
 w(z) = \wp (z - z_0, g_2, g_3)
 \end{equation}
-where $z_0$ is a constant chosen to match initial conditions. This constant $z_0$, and others that we will now introduce, can be obtained by inverting $\wp$ using an elliptic integral, (e.g. Carlson's symmetric $R_F$ integral). 
-As $\wp$ is an even function, it is neccessary to also specify a corresponding condition for the derivative when inverting, i.e., to find $z$ from known $x,y$ we give conditions such as $\wp\left(z\right)=x, \wp'\left(z\right)=y$, where $\wp'$ is the derivative of $\wp$ known as Weierstrass p-prime. 
+where $z_0$ is a constant chosen to match initial conditions. 
+This constant $z_0$, and others that we will now introduce, can be obtained by inverting $\wp$ using an elliptic integral, (e.g. Carlson's symmetric $R_F$ integral). 
+As $\wp$ is an even function, it is necessary to also specify a corresponding condition for the derivative when inverting, i.e., to find $z$ from known $x,y$ we give conditions such as $\wp\left(z\right)=x, \wp'\left(z\right)=y$, where $\wp'$ is the derivative of $\wp$ known as Weierstrass p-prime. 
 The points obtained during such an inversion are determined modulo the period lattice of the doubly periodic $\wp$. 
-Let us proceed to define the point $z_0$, and introduce the point $z_1$ as the pole of $\rho(z)$, and points $\mu_j$ as zeroes of $u_j(z)v_j(z)$:
+In addition to $z_0$, we introduce two other types of special points that characterize the solution structure and enable the use of elliptic function identities to solve for the modes in the following section.
+The point $z_1$ corresponds to the pole of $\rho(z)$ where the denominator in \eqref{eq:rho-wp-1} vanishes, and represents a singularity in the mean modal power.
+The points $\mu_j$ are the locations where individual modal powers vanish, $u_j(\mu_j)v_j(\mu_j) = 0$, and thus where $\rho(\mu_j) = \gamma_j$ from \eqref{eq:uvj-gam-rho}.
+These special points are defined implicitly through their Weierstrass function values:
 \begin{align}
 \wp{\left(z_{0}\right)} &= \frac{{d}_{2}}{12} + \frac{{d}_{3} {\lambda}_{1}}{4} + \frac{{d}_{4} {\lambda}_{1}^{2}}{2} + \frac{- {d}_{1} - 2 {d}_{2} {\lambda}_{1} - 3 {d}_{3} {\lambda}_{1}^{2} - 4 {d}_{4} {\lambda}_{1}^{3}}{4 \left(- \rho{\left(0 \right)} + {\lambda}_{1}\right)}, \notag \\
 \wp'{\left(z_{0}\right)} &= \frac{\left({d}_{1} + 2 {d}_{2} {\lambda}_{1} + 3 {d}_{3} {\lambda}_{1}^{2} + 4 {d}_{4} {\lambda}_{1}^{3}\right) }{4 \left(\rho{\left(0 \right)} - {\lambda}_{1}\right)^{2}}\left. \frac{d}{d z} \rho{\left(z \right)} \right|_{\substack{ z=0 }}, \notag \\
@@ -320,19 +324,22 @@ u_j{\left(z\right)} v_j{\left(z\right)} &= \rho(\mu_j) - \rho(z), \notag \\
 
 \section{Solutions for modes in terms of Weierstrass \texorpdfstring{$\sigma$}{sigma}, \texorpdfstring{$\zeta$}{zeta} functions}
 
-Through substitution of \eqref{eq:ham-uv}, \eqref{eq:duv_j}, \eqref{eq:uvj-gam-rho}, and \eqref{eq:power-conserved} into \eqref{eq:uv-system}, it can be shown that \eqref{eq:uv-system} can be written in terms of logarithmic derivatives such that the right hand side is a function of $\rho$ and its derivative $\rho'$ in the form:
+Having obtained the modal power solutions in the previous section, we now proceed to find solutions for the individual modes $u_j(z)$ and $v_j(z)$ themselves.
+Direct substitution of \eqref{eq:ham-uv}, \eqref{eq:duv_j}, \eqref{eq:uvj-gam-rho}, and \eqref{eq:power-conserved} into \eqref{eq:uv-system} shows that the equations can be recast in terms of logarithmic derivatives:
 \begin{align}
 \frac{\frac{\partial}{\partial z} u_j{\left(z\right)}}{u_j{\left(z\right)}} &= \frac{1}{2}\frac{\rho'{\left(z \right)} - \rho'{\left({\mu}_{j} \right)}}{\rho{\left(z \right)} - \rho{\left({\mu}_{j} \right)}} + \rho{\left(z \right)} {\Lambda}_{1,j} + {\Lambda}_{0,j}, \notag \\
 \frac{\frac{\partial}{\partial z} v_j{\left(z\right)}}{v_j{\left(z\right)}} &= \frac{1}{2}\frac{\rho'{\left(z \right)} + \rho'{\left({\mu}_{j} \right)}}{\rho{\left(z \right)} - \rho{\left({\mu}_{j} \right)}} - \rho{\left(z \right)} {\Lambda}_{1,j} - {\Lambda}_{0,j}, \label{eq:dlog-u-v-rho} \\
 {\Lambda}_{0,j} &= - {a}_{j} - \frac{{\gamma}_{j}}{4} \sum\limits_{k,l=1}^{4} {a}_{k,l} - \sum_{k=1}^{4} {a}_{j,k} {\gamma}_{k} + \frac{1}{2}\sum_{k=1}^{4} {\gamma}_{k} \sum_{l=1}^{4} {a}_{k,l} + \frac{1}{2}\sum_{k=1}^{4} {a}_{k}, \\
 {\Lambda}_{1,j} &= \sum_{k=1}^{4} {a}_{j,k} - \frac{1}{4}\sum\limits_{k,l=1}^{4}  {a}_{k,l}.
 \end{align}
+where the right-hand side is expressed purely in terms of $\rho$ and its derivative $\rho'$.
+This logarithmic derivative form is advantageous because it can be integrated directly to yield solutions in terms of Weierstrass $\sigma$ functions, as we now show.
 
-We substitute \eqref{eq:uv-wp} into \eqref{eq:dlog-u-v-rho} and use the elliptic function identity:
+We substitute the modal power solution \eqref{eq:uv-wp} into \eqref{eq:dlog-u-v-rho} and apply the elliptic function identity:
 \begin{equation}
 \frac{\wp'{\left(x,g_{2},g_{3} \right)}}{\wp{\left(x,g_{2},g_{3} \right)} - \wp{\left(y,g_{2},g_{3} \right)}} = \zeta{\left(x + y,g_{2},g_{3} \right)} + \zeta{\left(x - y,g_{2},g_{3} \right)} - 2 \zeta{\left(x,g_{2},g_{3} \right)}
 \end{equation}
-to write the right hand side in terms of $\zeta$ and constants:
+which allows us to express the right-hand side in terms of $\zeta$ functions and constants:
 \begin{align}
 \frac{\frac{\partial}{\partial z} u{\left(z,{\mu}_{j} \right)}}{u{\left(z,{\mu}_{j} \right)}} =& \frac{\left(\zeta{\left(z - z_{0} + z_{1} \right)} - 2 \zeta{\left(z_{1} \right)} - \zeta{\left(z - z_{0} - z_{1} \right)}\right) {\Lambda}_{1,j}}{\sqrt{{d}_{4}}} \nonumber \\[6pt]
 & + \zeta{\left(z - 2 z_{0} + {\mu}_{j} \right)} - \frac{\zeta{\left(z - z_{0} - z_{1} \right)}}{2} - \frac{\zeta{\left(z - z_{0} + z_{1} \right)}}{2} \nonumber \\[6pt]
@@ -348,7 +355,7 @@ Equations \eqref{eq:dlog-u-v-zeta} can be integrated by noting that the Weierstr
 \zeta\left(z, g_2, g_3\right)=\frac{\partial}{\partial z} \sigma\left(z, g_2, g_3\right).
 \end{equation}
 
-Performing the integration and taking exponentials gives the first main result of this paper, the solutions for modes $u_j, v_j$:
+Performing the integration and taking exponentials gives the first main result of this paper, the complete analytic solutions for the complex mode envelopes $u_j, v_j$ without decomposition into amplitude and phase:
 \begin{align}
 u_j{\left(z\right)} &= \frac{\alpha_j\,\sqrt{W_j} \,\sigma{\left(z - 2 z_{0} + {\mu}_{j} \right)} \exp\left(z {r}_{0,j} + \log{\left(\frac{\sigma{\left(z - z_{0} + z_{1} \right)}}{\sigma{\left(z - z_{0} - z_{1} \right)}} \right)} {r}_{1,j}\right)}{\sqrt{\wp{\left(z_{1} \right)} - \wp{\left(z - z_{0} \right)}} \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0} \right)}}, \notag \\[12pt]
 v_j{\left(z\right)} &= \frac{\sqrt{W_j} \, \sigma{\left(z - {\mu}_{j} \right)} \exp\left(- z {r}_{0,j} - \log{\left(\frac{\sigma{\left(z - z_{0} + z_{1} \right)}}{\sigma{\left(z - z_{0} - z_{1} \right)}} \right)} {r}_{1,j} \right)}{\alpha_j\,\sqrt{\wp{\left(z_{1} \right)} - \wp{\left(z - z_{0} \right)}} \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0} \right)}} \label{eq:u-v-quartic}
@@ -360,54 +367,53 @@ W_j &= \frac{\wp'{\left(z_{1} \right)}}{\sqrt{{d}_{4}}\,\left(\wp{\left(z_{1} \r
 r_{0,j} &= {\Lambda}_{0,j} + {\Lambda}_{1,j} {\lambda}_{1} - \frac{2 \zeta{\left(z_{1} \right)} {\Lambda}_{1,j}}{\sqrt{{d}_{4}}} - \frac{\zeta{\left({\mu}_{j} - z_{0} - z_{1}\right)}}{2} - \frac{\zeta{\left({\mu}_{j} - z_{0} + z_{1}\right)}}{2}, \\[6pt]
 r_{1,j} &= \frac{{\Lambda}_{1,j}}{\sqrt{{d}_{4}}}.
 \end{align}
-Having obtained these solutions we show in Appendix-\ref{app:fs-det-ham-proof} that \eqref{eq:ham-uv} is the Frobenius-Stickelberger determinant.
+These solutions are valid for all initial conditions and include full pump depletion, cross-phase modulation, and phase mismatch effects without approximation.
+
+As a remarkable connection, we show in Appendix~\ref{app:fs-det-ham-proof} that the Hamiltonian \eqref{eq:ham-uv} can be expressed as the Frobenius--Stickelberger determinant, a classical identity relating products of Weierstrass $\sigma$ functions to determinants of derivatives of $\wp$.
+This provides a deeper structural understanding of why the Hamiltonian is conserved and connects the four-wave mixing system to the broader theory of elliptic functions.
 
 % ---------- SECTION -------------
 % --------------------------------
 
-\section{When quartic terms cancel to leave a cubic}
+\section{When quartic terms cancel by special parameter values}
 
-In this section we tackle a special case in which things simplify. 
-There will be no $\rho(z)^4$ term in the differential equation when $d_4=0$. 
-For $d_4=0$, we require $b_2 \pm 2$, which is a parameter requirement, i.e., it cannot be achieved in general through tailored initial conditions of the modes.
-This case is simpler to solve in some ways but it is not easily obtained by taking the limit $d_4\rightarrow0$. 
-When $d_4=0$, we get $\wp'(z_1)=0$, i.e., $z_1$ is congruent to a half-period of the elliptic function, commonly denoted $\omega_i$, for $i=1,2,3$. 
-It can then be shown either by solving the differential equation starting from the cubic, or by applying elliptic function identities to intermediate results in the quartic derivation,
+In this section we examine a special case in which the quartic polynomial in $\rho(z)$ reduces to a cubic, leading to simplified solutions.
+This can occur when specific relationships hold among the system parameters, but it is not achievable through choice of initial conditions alone, nor is it related to the general coordinate transformation we introduce in Section \ref{sec:coord-transforms}.
+Rather, this is a special instance of the original physical system \eqref{eq:fwm-system} where parameters satisfy particular constraints.
+
+The quartic term in \eqref{eq:drho-sqrd-4} vanishes when $d_4=0$, which requires $b_2 = \pm 2$.
+This is a parameter-level constraint that depends on the fiber properties and operating conditions.
+When $d_4=0$, we have $\wp'(z_1)=0$, meaning that $z_1$ is congruent to a half-period of the elliptic function, commonly denoted $\omega_i$ for $i=1,2,3$.
+It follows either by solving the differential equation starting from the cubic, or by applying elliptic function identities to intermediate results in the quartic derivation,
 that the solutions for modes simplify to:
 
 \begin{align}
 u_j{\left(z\right)} &= \frac{\alpha_j\, 2 \sigma{\left(z - 2 z_{0} + 2 z_{1} + {\mu}_{j}\right)} \exp\left( z \left( {\Lambda}_{0,j} + \frac{{d}_{2}}{3 {d}_{3}} {\Lambda}_{1,j} -\zeta{\left({\mu}_{j} -z_{0} + z_{1}\right)}\right) \right)}{ \sqrt{{d}_{3}}\, \sigma{\left({\mu}_{j} - z_{0} + z_{1}\right)} \sigma{\left(z - z_{0} + z_{1}\right)}}, \notag \\[12pt]
 v_j{\left(z\right)} &= \frac{2 \sigma{\left(z - {\mu}_{j}\right)} \exp\left( - z \left({\Lambda}_{0,j} + \frac{{d}_{2}}{3 {d}_{3}}{\Lambda}_{1,j}  -\zeta{\left({\mu}_{j} -z_{0} + z_{1}\right)}\right) \right)}{ \alpha_j\, \sqrt{{d}_{3}}\, \sigma{\left({\mu}_{j} - z_{0} + z_{1}\right)} \sigma{\left(z - z_{0} + z_{1}\right)}} \label{eq:u-v-cubic}
 \end{align}
-where the integration constant $\alpha_j$ is to be determined by initial conditions using \eqref{eq:u-v-cubic} and is therefore not the same $\alpha_j$ as in \eqref{eq:u-v-quartic}, but where all other parameters retain their prior definitions.
+where the integration constant $\alpha_j$ is to be determined by initial conditions using \eqref{eq:u-v-cubic} and does not therefore take the same value as in \eqref{eq:u-v-quartic}, but where all other parameters retain their prior definitions.
 The modal power simplies to:
 \begin{equation}
 \label{eq:modal-power-cubic}
 u_j{\left(z\right)} v_j{\left(z\right)} = \frac{4 \wp{\left({\mu}_{j} - z_{0} + z_{1}\right)}}{{d}_{3}} - \frac{4 \wp{\left(z - z_{0} + z_{1}\right)}}{{d}_{3}}
 \end{equation}
-It is to be noted that this is a special case in which paramters take on particular values in this system. 
-It should not be confused with the subsequent case in coming sections where we show a general nonlinear transform is always possible to remove the quartic term.
+We emphasize that this is a special case arising from particular parameter values in the four-wave mixing system \eqref{eq:fwm-system}.
+It should be clearly distinguished from the canonical coordinate transformation presented in Section \ref{sec:coord-transforms}, which is a general nonlinear transformation applicable to any four-wave mixing system that reduces the quartic to a cubic by transforming the variables themselves rather than requiring special parameter values.
 
 % ---------- SECTION -------------
 % --------------------------------
 
-\section{Transforming to canonical coordinates}
+\section{Transforming to canonical coordinates} \label{sec:coord-transforms}
 
-In this section we will demonstrate an application of the analytic solution by showing how its form guides us towards a canonical coordinate system for the analysis of four-wave mixing.
-In the canonical coordinates the system is simplified in the following ways:
-\begin{itemize}
-    \item there is no cross-phase modulation XPM 
-    \item differential equations for modal powers involve cubic not quartic polynomials
-    \item system parameters are greatly reduced and if desired completely removable
-    \item solutions are single-valued meromorphic Kronecker theta functions.                                                                                                                      
-\end{itemize}
-The transformations preserve the following:
-\begin{itemize}
-    \item conservation of the Hamiltonian and intermodal power laws
-    \item intermodal power ratios
-    \item the cross-ratio between any four distinct modal powers
-    \item differential equation structure in regards to recognisable four-wave mixing terms.                                                                                                                      
-\end{itemize}
+In this section we present the second main result of this paper: a canonical coordinate system for four-wave mixing that substantially simplifies both the governing equations and their solutions.
+The structure of the analytic solutions in \eqref{eq:u-v-quartic} naturally suggests this transformation.
+In particular, the presence of the factor $\sqrt{\wp(z_1) - \wp(z - z_0)}$ in the denominator motivates a local normalisation, while the $z$-dependent logarithmic terms weighted by $r_{1,j}$ suggest a gauge transformation to remove cross-phase modulation.
+
+Remarkably, although the transformation depends explicitly on the propagation variable $z$, it leaves the coupled differential equations structurally invariant, preserving the characteristic four-wave mixing interaction terms while achieving substantial simplifications.
+In the canonical coordinates, cross-phase modulation is eliminated, the differential equations for modal powers reduce from quartic to cubic polynomials, system parameters are greatly reduced (and can be completely removed through rescaling), and the solutions become single-valued meromorphic Kronecker theta functions.
+At the same time, the transformation preserves the Hamiltonian structure, all intermodal power conservation laws, and intermodal power ratios.
+
+We accomplish this through a sequence of three transformations, which we now present in turn.
 
 \subsection{Removing cross-phase modulation with a gauge transform}
 
