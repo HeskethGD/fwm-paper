@@ -1,21 +1,29 @@
-% \documentclass[12pt,a4paper]{article}
-\documentclass{iopjournal}
+\newif\ifpreprint
+% \preprinttrue
+\preprintfalse
+
+\ifpreprint
+  \documentclass[12pt,a4paper]{article}
+\else
+  \documentclass{iopjournal}
+\fi
 
 % Packages for math, symbols, and formatting
 \usepackage{fix-cm}                       % Allow arbitrary font sizes
 \usepackage{amsmath, amssymb, amsfonts}  % Standard math packages
 \usepackage{graphicx}                     % For figures
 \usepackage{hyperref}                     % For links
-% \usepackage{geometry}                     % Page layout
 \usepackage{caption}                      % Captions for figures/tables
 \usepackage{bm}                           % Bold math symbols
+\ifpreprint
+  \usepackage{geometry}                     % Page layout
+  \geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\fi
 
 % Add bibilography
 \usepackage[backend=biber,style=numeric, sorting=none]{biblatex}
 \addbibresource{CW-FWM-Analytic-Solutions.bib}
 
-% Page layout
-% \geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
 
 % Fix plot positions
 \usepackage{float}
@@ -23,24 +31,23 @@
 % Numbering equations by section
 \numberwithin{equation}{section}
 
-% Title and authors
-% \title{The analytic solution to four-wave mixing in nonlinear fibres in Weierstrass notation}
-% \author{Graham Hesketh \\
-% \small United Kingdom \\
-% \small \texttt{gdh1e10@gmail.com}}
-
-% \date{\today}
-
 \begin{document}
 
-% \articletype{Paper}
-\title{Complete Weierstrass elliptic function solutions and canonical coordinates for four-wave mixing in nonlinear optical fibres}
-\author{Graham Hesketh}
-\email{gdh1e10@gmail.com}
-
-\keywords{sample term, sample term, sample term}
-
-% \maketitle
+\ifpreprint
+  % Preprint format (article class)
+  \title{Complete Weierstrass elliptic function solutions and canonical coordinates for four-wave mixing in nonlinear optical fibres}
+  \author{Graham Hesketh \\
+  \small \texttt{gdh1e10@gmail.com}}
+  \date{\today}
+  \maketitle
+\else
+  % Journal format (iopjournal class)
+  % \articletype{Paper}
+  \title{Complete Weierstrass elliptic function solutions and canonical coordinates for four-wave mixing in nonlinear optical fibres}
+  \author{Graham Hesketh}
+  \email{gdh1e10@gmail.com}
+  \keywords{sample term, sample term, sample term}
+\fi
 
 \begin{abstract}
 The general analytic solution to quasi-continuous-wave four-wave mixing in nonlinear optical fibres is presented in terms of Weierstrass elliptic $\wp, \sigma, \zeta$ functions. 
@@ -51,25 +58,6 @@ A canonical coordinate system is identified in which solutions simplify to Krone
 
 % ---------- SECTION -------------
 % --------------------------------
-
-% \section{Introduction}
-% Four-wave mixing (FWM) in nonlinear optical fibres is one of the fundamental parametric processes enabled by the Kerr nonlinearity. 
-% It underpins a wide range of applications, including wavelength conversion, parametric amplification, ultrafast signal processing, frequency-comb generation, and quantum light sources (see \cite{agrawalNonlinearFiberOptics2019} and references therein). 
-% Despite this broad relevance, obtaining closed-form analytic descriptions of FWM remains challenging because the underlying coupled-wave equations are nonlinear and phase-sensitive. 
-% As a result, most textbook treatments rely on simplifying assumptions such as undepleted pumps, identical effective mode areas, negligible phase mismatch, or weak signal and idler powers.
-
-% Two notable bodies of work have previously presented relevant analytic solutions for four-wave mixing. 
-% Firstly, in \cite{chenFourphotonParametricMixing1989, chenFourwaveMixingOptical1989} solutions for the power in each of the frequency modes is derived by inverting elliptic integrals to obtain elliptic functions.
-% Secondly, in \cite{marhicAnalyticSolutionsPhases2013} elliptic integrals are given for the phases for each mode. Both works use Jacobi elliptic functions. 
-% In contrast, the work herein derives complete solutions for the complex mode envelopes themselves, avoiding decomposition into amplitude and phase or real and imaginary parts, and does so using Weierstrass elliptic functions. 
-% This is the first of the two main results of this paper.
-
-%     The structure of the resulting analytic solutions naturally motivates a transformation to a new set of canonical coordinates. 
-% Remarkably, although this transformation depends explicitly on the propagation variable $z$, it leaves the coupled differential equations structurally invariant, preserving the characteristic interaction terms of four-wave mixing dynamics. 
-% At the same time, the transformation leads to a substantial simplification of both the analysis and the solutions which become single-valued meromorphic functions, specifically Kronecker theta functions. 
-% This is the second of this papers main results.
-% The emergence of Kronecker theta functions establishes a direct connection between four-wave mixing and other nonlinear optical systems \cite{heskethGeneralComplexEnvelope2015}. 
-% Within this framework, the four-wave mixing system is cast as a canonical Hamiltonian system, and the associated conservation laws are shown to arise from the Frobenius–Stickelberger determinant formula.
 
 \section{Introduction}
 Four-wave mixing (FWM) in nonlinear optical fibres is one of the fundamental parametric processes enabled by the Kerr nonlinearity. 
@@ -235,7 +223,7 @@ We choose to impose the constraint that:
 \begin{equation}
 \sum\limits_{j=1}^{4}\gamma_j = 0,
 \end{equation} 
-after which $\rho(z)$ is the mean modal power and $\gamma_j$ is the constant difference between a modes power and the mean.
+after which $\rho(z)$ is minus the mean modal power and $\gamma_j$ is the constant difference between a modes power and the mean.
 
 
 % ---------- SECTION -------------
@@ -651,14 +639,11 @@ These parameters are expressed in terms of the system parameters $a_j$, $a_{j,k}
 {c}_{0} &= \prod_{j=1}^{4} {\gamma}_{j}, \notag \\
 {c}_{1} &= - \sum_{k=1}^{4} \prod_{\substack{j=1 \\ j \ne k}}^{4} {\gamma}_{j}, \notag \\
 {c}_{2} &= \frac{3}{2} \sum_{j=1}^{4} {\gamma}_{j}^{2} - \frac{1}{4}\sum\limits_{j,k=1}^{4} \left({\gamma}_{j} - {\gamma}_{k}\right)^{2} = - \frac{1}{2}\sum_{j=1}^{4} {\gamma}_{j}^{2}, \notag \\
-{c}_{3} &= 0, \notag \\
-{c}_{4} &= 1, \notag \\
 {d}_{0} &= {b}_{0}^{2} - 4 {c}_{0}, \notag \\
 {d}_{1} &= 2 {b}_{0} {b}_{1} - 4 {c}_{1}, \notag \\
 {d}_{2} &= 2 {b}_{0} {b}_{2} + {b}_{1}^{2} - 4 {c}_{2}, \notag \\
-{d}_{3} &= 2 {b}_{1} {b}_{2} - 4 {c}_{3}, \notag \\
-{d}_{3} &= 2 {b}_{1} {b}_{2} - 4 {c}_{3}, \notag \\
-{d}_{4} &= {b}_{2}^{2} - 4 {c}_{4} 
+{d}_{3} &= 2 {b}_{1} {b}_{2}, \notag \\
+{d}_{4} &= {b}_{2}^{2} - 4 
 \end{align}
 
 % ---------- APPENDIX ------------
@@ -672,8 +657,8 @@ These relations enable determination of the constants from specified initial val
 
 \begin{align}
 \rho{\left(0 \right)} &= - \frac{1}{4}\sum_{j=1}^{4} u_j{\left(0 \right)} v_j{\left(0 \right)}, \notag \\
-{\gamma}_{j} &= u_j{\left(0\right)} v_j{\left(0 \right)} - \frac{1}{4}\sum_{j=1}^{4} u_j{\left(0\right)} v_j{\left(0\right)}, \notag \\
-\left. \frac{d}{d z} \rho{\left(z \right)} \right|_{\substack{ z=0 }} &= \prod_{j=1}^{4} u_j(0) - \prod_{j=1}^{4} v_j(0)
+\left. \frac{d}{d z} \rho{\left(z \right)} \right|_{\substack{ z=0 }} &= \prod_{j=1}^{4} u_j(0) - \prod_{j=1}^{4} v_j(0), \notag \\
+{\gamma}_{j} &= u_j{\left(0\right)} v_j{\left(0 \right)} + \rho{\left(0 \right)}
 \end{align}
 
 
@@ -811,7 +796,7 @@ We may further use relations:
 \tilde{g}_{3} =& \frac{\tilde{H}^{3}}{216} + \tilde{H}^{2} \left(\frac{{\tilde{e}}_{2}}{144} - \frac{5}{9}\right) + \tilde{H} \left(\frac{{\tilde{e}}_{2}^{2}}{288} - \frac{2 {\tilde{e}}_{2}}{9} - \frac{{\tilde{e}}_{3}}{48} - \frac{64}{9}\right) \notag \\
 &+ \frac{{\tilde{e}}_{2}^{3}}{1728} - \frac{5 {\tilde{e}}_{2}^{2}}{144} - \frac{{\tilde{e}}_{2} {\tilde{e}}_{3}}{96} - \frac{8 {\tilde{e}}_{2}}{9} + \frac{{\tilde{e}}_{3}}{3} + \frac{{\tilde{e}}_{4}}{4} - \frac{512}{27}
 \end{align}
-where $\tilde{e}_j=\tilde{e}_j\left(\tilde{\gamma}_1, \tilde{\gamma}_2, \tilde{\gamma}_3, \tilde{\gamma}_4\right)$ is the $j^{th}$ order \emph{elementary symmetric polynomial} formed with the four $\tilde{\gamma}_j$, and the points $\xi_0, \tilde{\mu}_j$ can be found by inverting:
+where $\tilde{e}_j=\tilde{e}_j\left(\tilde{\gamma}_1, \tilde{\gamma}_2, \tilde{\gamma}_3, \tilde{\gamma}_4\right)$ is the $j^{th}$ order \emph{elementary symmetric polynomial} formed with the four $\tilde{\gamma}_j$. The points $\xi_0, \tilde{\mu}_j$ are found by inverting:
 \begin{align}
 \wp{\left(\xi_{0},\tilde{g}_{2},\tilde{g}_{3} \right)} &= - \frac{\tilde{H}}{12} - \frac{{\tilde{e}}_{2}}{24} - \frac{\sum_{j=1}^{4} \tilde{u}{\left(0,{\mu}_{j} \right)} \tilde{v}{\left(0,{\mu}_{j} \right)}}{4} + \frac{4}{3}, \notag \\
 \wp'{\left(\xi_{0},\tilde{g}_{2},\tilde{g}_{3} \right)} &= \frac{1}{4}\left(\prod_{j=1}^{4}{\tilde{u}_j(0)} - \prod_{j=1}^{4}{\tilde{v}_j(0)}\right), \notag \\
