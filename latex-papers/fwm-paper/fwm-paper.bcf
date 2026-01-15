@@ -2373,26 +2373,32 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">agrawalNonlinearFiberOptics2019</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">chenFourphotonParametricMixing1989</bcf:citekey>
-    <bcf:citekey order="2" intorder="2">chenFourwaveMixingOptical1989</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">marhicAnalyticSolutionsPhases2013</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">heskethGeneralComplexEnvelope2015</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">agrawalNonlinearFiberOptics2019</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">stolenParametricAmplificationFrequency1982</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">sarmaContinuousDiscreteSchrodinger2014</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">whittakerCourseModernAnalysis2021</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">whittakerCourseModernAnalysis2021</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">whittakerCourseModernAnalysis2021</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">agrawalNonlinearFiberOptics2019</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">chenFourphotonParametricMixing1989</bcf:citekey>
+    <bcf:citekey order="3" intorder="2">chenFourwaveMixingOptical1989</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">marhicAnalyticSolutionsPhases2013</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">whittakerCourseModernAnalysis2021</bcf:citekey>
+    <bcf:citekey order="5" intorder="2">frobeniusZurTheorieElliptischen1877</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">heskethGeneralComplexEnvelope2015</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">agrawalNonlinearFiberOptics2019</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">stolenParametricAmplificationFrequency1982</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">heskethGeneralComplexEnvelope2015</bcf:citekey>
+    <bcf:citekey order="9" intorder="2">sarmaContinuousDiscreteSchrodinger2014</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">arnoldMathematicalMethodsClassical1989</bcf:citekey>
     <bcf:citekey order="11" intorder="1">whittakerCourseModernAnalysis2021</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">weilEllipticFunctionsAccording1976</bcf:citekey>
-    <bcf:citekey order="12" intorder="2">charolloisEllipticFunctionsAccording2016</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">heskethGeneralComplexEnvelope2015</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">laurentPyweierstrass2022</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">MpmathPythonLibrary2023</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">virtanenSciPy10Fundamental2020</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">heskethNonlinearEffectsMultimode2014</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">whittakerCourseModernAnalysis2021</bcf:citekey>
-    <bcf:citekey order="18" intorder="2">frobeniusZurTheorieElliptischen1877</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">whittakerCourseModernAnalysis2021</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">whittakerCourseModernAnalysis2021</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">heskethMinimizingInterchannelCrossphase2016</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">whittakerCourseModernAnalysis2021</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">weilEllipticFunctionsAccording1976</bcf:citekey>
+    <bcf:citekey order="16" intorder="2">charolloisEllipticFunctionsAccording2016</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">heskethGeneralComplexEnvelope2015</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">laurentPyweierstrass2022</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">MpmathPythonLibrary2023</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">virtanenSciPy10Fundamental2020</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">heskethNonlinearEffectsMultimode2014</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">whittakerCourseModernAnalysis2021</bcf:citekey>
+    <bcf:citekey order="22" intorder="2">frobeniusZurTheorieElliptischen1877</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

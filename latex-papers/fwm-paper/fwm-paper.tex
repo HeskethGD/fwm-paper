@@ -44,9 +44,12 @@
   % Journal format (iopjournal class)
   % \articletype{Paper}
   \title{Complete Weierstrass elliptic function solutions and canonical coordinates for four-wave mixing in nonlinear optical fibres}
+  
   \author{Graham Hesketh}
+
   \email{gdh1e10@gmail.com}
-  \keywords{sample term, sample term, sample term}
+
+  \keywords{Four-wave mixing, Weierstrass elliptic functions, Nonlinear fibre optics, Kronecker theta functions, Integrable systems}
 \fi
 
 \begin{abstract}
@@ -61,7 +64,8 @@ A canonical coordinate system is identified in which solutions simplify to Krone
 
 \section{Introduction}
 Four-wave mixing (FWM) in nonlinear optical fibres is one of the fundamental parametric processes enabled by the Kerr nonlinearity. 
-It underpins a wide range of applications, including wavelength conversion, parametric amplification, ultrafast signal processing, frequency-comb generation, and quantum light sources (see \cite{agrawalNonlinearFiberOptics2019} and references therein). 
+In FWM, nonlinear interactions enable energy exchange between four optical waves whose frequencies satisfy specific phase-matching conditions, allowing the conversion of photons from pump frequencies to signal and idler frequencies \cite{agrawalNonlinearFiberOptics2019}.
+It underpins a wide range of applications, including wavelength conversion, parametric amplification, ultrafast signal processing, frequency-comb generation, and quantum light sources (see \cite{agrawalNonlinearFiberOptics2019} and references therein for applications). 
 Despite this broad relevance, obtaining closed-form analytic descriptions of FWM remains challenging because the underlying coupled-wave equations are nonlinear and phase-sensitive. 
 As a result, most textbook treatments rely on simplifying assumptions such as undepleted pumps, identical effective mode areas, negligible phase mismatch, or weak signal and idler powers.
 
@@ -75,15 +79,16 @@ The solutions derived herein are expressed using Weierstrass elliptic functions 
 The Weierstrass formulation provides a natural solution pathway for complex envelopes: the coupled equations are recast as logarithmic derivatives, which directly yield Weierstrass $\zeta$ functions, and integration then produces solutions in terms of Weierstrass $\sigma$ functions.
 This progression through the Weierstrass function hierarchy—from $\wp$ to $\zeta$ to $\sigma$—emerges organically from the structure of the complex envelope equations, whereas Jacobi elliptic functions are more naturally suited to systems where amplitudes and phases are treated separately.
 Moreover, the connection to Hamiltonian structure and conservation laws is more transparent in Weierstrass notation.
-In particular, we show that the Hamiltonian conservation arises from the Frobenius--Stickelberger determinant formula, an elliptic function identity most naturally expressed using Weierstrass functions.
-This identification may facilitate future generalizations to higher-order mixing processes or multimode systems. 
-The Weierstrass form also establishes a common framework with other integrable nonlinear optical systems \cite{heskethGeneralComplexEnvelope2015}.
-The derivation of these complete analytic solutions in Weierstrass notation is the first of the two main results of this paper.
+In particular, we show that the Hamiltonian conservation arises from the Frobenius--Stickelberger determinant formula, an elliptic function identity most naturally expressed using Weierstrass functions \cite{whittakerCourseModernAnalysis2021, frobeniusZurTheorieElliptischen1877}.
+This identification may facilitate future generalizations to higher-order mixing processes or multimode systems and furthermore, this connection reveals that Hamiltonian conservation in four-wave mixing is not merely a convenient construct but rather a manifestation of deep structural properties of elliptic functions.
+The derivation of these complete analytic solutions in Weierstrass form is the first of the two main results of this paper.
 
 The structure of the resulting analytic solutions naturally motivates a transformation to a new set of canonical coordinates. 
 Remarkably, although this transformation depends explicitly on the propagation variable $z$, it leaves the coupled differential equations structurally invariant, preserving the characteristic interaction terms of four-wave mixing dynamics. 
+This invariance property, which to the author's knowledge has not been previously reported for four-wave mixing, suggests deep underlying structure that may extend to other parametric processes.
 At the same time, the transformation leads to a substantial simplification: the solutions become single-valued meromorphic functions, specifically Kronecker theta functions, and the system parameters are greatly reduced or eliminated entirely.
 The identification of solutions as Kronecker theta functions opens the door to leveraging known Fourier series and multipole expansions of these functions, which may prove useful for further analysis of four-wave mixing dynamics.
+Solutions in Kronecker theta form appear in other integrable nonlinear optical systems such as wave mixing in quadratic media and polarisation dynamics \cite{heskethGeneralComplexEnvelope2015}, pointing towards a unified mathematical description of parametric processes.
 The canonical coordinates with Kronecker theta function solutions is the second of this paper's main results.
 
 % ---------- SECTION -------------
@@ -91,17 +96,16 @@ The canonical coordinates with Kronecker theta function solutions is the second 
 
 \section{The quasi-continuous-wave four-wave mixing system}
 In this section we recall the four-wave mixing system from nonlinear fiber optics that forms the focus of our study. 
-The coupled system of ordinary differential equations in \eqref{eq:fwm-system} is taken from \cite{agrawalNonlinearFiberOptics2019} which credits \cite{stolenParametricAmplificationFrequency1982} with its creation. 
-The system describes four-wave mixing in the quasi-continuous-wave limit, i.e., when time derivatives can be ignored.
-Physically, the equations describe the evolution of four copropagating optical waves that exchange energy through the Kerr nonlinearity, with each wave experiencing both self-phase modulation (SPM), cross-phase modulation from other waves (XPM), and parametric coupling through the four-wave mixing terms
-
+The coupled system of ordinary differential equations in \eqref{eq:fwm-system} is taken from \cite{agrawalNonlinearFiberOptics2019} which references \cite{stolenParametricAmplificationFrequency1982} as the origin of the theory. 
+The system describes four-wave mixing in the quasi-continuous-wave limit, i.e., when the temporal envelope variations are negligible compared to the spatial evolution along the propagation direction, allowing the partial time derivatives $\partial A_j/\partial t$ to be neglected.
+Physically, the equations describe the evolution of four copropagating optical waves that exchange energy through the Kerr nonlinearity.
+Each wave experiences self-phase modulation (SPM), where its own intensity induces a phase shift on itself, cross-phase modulation (XPM), where the intensities of other waves induce additional phase shifts, and parametric coupling through the four-wave mixing terms, which enable direct energy transfer between the waves when phase-matching conditions are satisfied:
 \begin{align}
 \frac{dA_1}{dz} &= \frac{in_2\omega_1}{c}\left[\left(f_{11}|A_1|^2 + 2\sum_{k\neq 1} f_{1k}|A_k|^2\right)A_1 + 2f_{1234}A_2^*A_3A_4e^{i\Delta kz}\right], \notag \\
 \frac{dA_2}{dz} &= \frac{in_2\omega_2}{c}\left[\left(f_{22}|A_2|^2 + 2\sum_{k\neq 2} f_{2k}|A_k|^2\right)A_2 + 2f_{2134}A_1^*A_3A_4e^{i\Delta kz}\right], \notag \\
 \frac{dA_3}{dz} &= \frac{in_2\omega_3}{c}\left[\left(f_{33}|A_3|^2 + 2\sum_{k\neq 3} f_{3k}|A_k|^2\right)A_3 + 2f_{3412}A_1A_2A_4^*e^{-i\Delta kz}\right], \notag \\
-\frac{dA_4}{dz} &= \frac{in_2\omega_4}{c}\left[\left(f_{44}|A_4|^2 + 2\sum_{k\neq 4} f_{4k}|A_k|^2\right)A_4 + 2f_{4312}A_1A_2A_3^*e^{-i\Delta kz}\right]. \label{eq:fwm-system}
+\frac{dA_4}{dz} &= \frac{in_2\omega_4}{c}\left[\left(f_{44}|A_4|^2 + 2\sum_{k\neq 4} f_{4k}|A_k|^2\right)A_4 + 2f_{4312}A_1A_2A_3^*e^{-i\Delta kz}\right], \label{eq:fwm-system}
 \end{align}
-
 where:
 \begin{itemize}
     \item $A_j$ are the slowly-varying complex field amplitudes for waves $j = 1, 2, 3, 4$
@@ -114,19 +118,16 @@ where:
     \item $f_{jklm}$ are the four-wave mixing (FWM) coefficients
     \item $A^*$ denotes complex conjugation
     \item $\Delta k = \beta_1 + \beta_2 - \beta_3 - \beta_4$ is the phase mismatch
-    \item $\beta_j = n(\omega_j)\omega_j/c$ are the propagation constants
+    \item $\beta_j = n(\omega_j)\omega_j/c$ are the propagation constants.
 \end{itemize}
-
 The modal overlap integrals are defined in terms of the transverse distribution of the fiber mode $F_j(x,y)$ as:
 \begin{align}
 \label{eq:overlaps}
 f_{jklm} &= \frac{\langle F_j^* F_k^* F_l F_m \rangle}{\sqrt{\langle |F_j|^2 \rangle \langle |F_k|^2 \rangle \langle |F_l|^2 \rangle \langle |F_m|^2 \rangle}}, \\
 f_{jk} &= f_{kj} = f_{jjkk}
 \end{align}
-where $\langle \cdots \rangle = \iint_{-\infty}^{\infty} (\cdots) \, dx\,dy$ denotes the transverse spatial integral.
-
-Agrawal says of \eqref{eq:fwm-system} that the equations ``are quite general in the sense that they include the effects of SPM, XPM, and pump depletion on the FWM process'' and stresses that numerical or approximate solutions are commonly utilised.
-Herein, they are solved analytically in full, as written.
+where $\langle \cdots \rangle = \iint_{-\infty}^{\infty} (\cdots) \, dx\,dy$ denotes the transverse spatial integral. Agrawal says of \eqref{eq:fwm-system} that the equations ``are quite general in the sense that they include the effects of SPM, XPM, and pump depletion on the FWM process'' and stresses that numerical or approximate solutions are commonly utilised.
+Herein, they are solved analytically.
 
 
 % ---------- SECTION -------------
@@ -144,8 +145,7 @@ f_{4312} &= f_{1234}^* = |f_{1234}|e^{-i\varphi}, \label{eq:overlap-symms}
 \end{align}
 where $\varphi$ is the phase of $f_{1234}$. 
 The symmetries in \eqref{eq:overlap-symms} hold exactly for scalar (weakly guiding) fiber modes with instantaneous Kerr nonlinearity, but require vectorial generalization when polarization effects or strong guidance become important.
-Assuming \eqref{eq:overlap-symms}, we can conveniently renormalise the functions, and also absorb the phase $\varphi$ as a global phase rotation of the modes, 
-in such a way that the wave mixing coefficients all become equal to one.
+Assuming \eqref{eq:overlap-symms}, we can conveniently renormalise the functions, and also absorb the phase $\varphi$ as a global phase rotation of the modes in such a way that the wave mixing coefficients all become equal to one.
 
 To do so, we introduce the following redefinition of physical complex envelopes $A_j, A^*_j$ in terms of abstracted variables $u_j,v_j$.
 The complex conjugates $A, A^*$ are distributed among $u,v$ in a particular pattern (note that $u_3, u_4$ involve $A^*_3, A^*_4$ while $v_3, v_4$ involve $A_3, A_4$) so as to later give one product over $u$ and one over $v$ in the wave mixing terms:
@@ -169,16 +169,16 @@ We refer to their product $u_j v_j$ as the modal power; while this quantity is n
 We subsequently introduce parameters $a_j, a_{j,k} \in \mathbb{C}$ which we refer to as propagation constants and phase modulation parameters respectively, again borrowing terminology by analogy.
 In the four-wave mixing case these take the values:
 \begin{align}
-{a}_{j} &= - i\, s{\left(j \right)} {\beta}_{j}, \\
-{a}_{j,k} &= {a}_{k,j} = - \frac{\left(\delta_{j k} - 2\right) s{\left(j \right)}\, s{\left(k \right)}\, {f}_{j,k}\, {\omega}_{j}\, {\omega}_{k}}{2 \left|{{f}_{1,2,3,4}}\right| \sqrt{\prod_{l=1}^{4} {\omega}_{l}}}
+{a}_{j} &= - i\, s_j {\beta}_{j}, \\
+{a}_{j,k} &= {a}_{k,j} = - \frac{\left(\delta_{j k} - 2\right) s_j\, s_k\, {f}_{j,k}\, {\omega}_{j}\, {\omega}_{k}}{2 \left|{{f}_{1,2,3,4}}\right| \sqrt{\prod_{l=1}^{4} {\omega}_{l}}}
 \end{align}
-with $\delta$ the Kronecker delta function, and $s(j)$ defined such that $s(1) = s(2) = 1, s(3) = s(4) = -1$.
+with $\delta$ the Kronecker delta function, and $s_j=\pm1$ encodes the signs to match the complex conjugation among $A_j, A^*_j$ and is defined such that $s_1 = s_2 = 1, s_3 = s_4 = -1$.
 The four-wave mixing system in \eqref{eq:fwm-system} is then a special case of the more general system:
 \begin{align}
 \frac{d}{d z} u_j{\left(z \right)} &= - \left({a}_{j} + \sum_{k=1}^{4} {a}_{j,k}\,u_k v_k \right) u_j + \prod\limits_{k=1, k \ne j}^{4} v_k, \notag \\
 \frac{d}{d z} v_j{\left(z \right)} &= \left({a}_{j} + \sum_{k=1}^{4} {a}_{j,k}\,u_k v_k \right) v_j - \prod\limits_{k=1, k \ne j}^{4} u_k. \label{eq:uv-system}
 \end{align}
-This form encompasses the most general coupled system that the methods herein solve and may facilitate future extensions to related systems such as parity-time (PT) symmetric configurations \cite{sarmaContinuousDiscreteSchrodinger2014}.
+This form encompasses the most general coupled system that the methods herein solve and may facilitate future extensions to related systems such as parity-time (PT) symmetric configurations such as the generalisation explored in \cite{heskethGeneralComplexEnvelope2015, sarmaContinuousDiscreteSchrodinger2014}.
 
 
 % ---------- SECTION -------------
@@ -195,7 +195,6 @@ H(u_1,\dots, u_4, v_1, \dots, v_4) &= -\sum_{j=1}^{4} a_{j}\, u_j v_j - \frac{1}
 \frac{d}{d z} v_j{\left(z \right)} &= -\frac{\partial H}{\partial u_j}, \\
 \frac{d}{d z} H &= 0
 \end{align}
-
 The conservation of $H$ is to be expected as a consequence of \eqref{eq:ham-uv} lacking an explicit $z$ dependence. The pair $u_j, v_j$ are Hamiltonian conjugates, and each pair represents one of four degrees of freedom in the system. 
 The modal power $u_j v_j$ evolves according to:
 \begin{equation}
@@ -209,14 +208,13 @@ we may define constants $\gamma_j$ and function $\rho(z)$ such that:
 \label{eq:uvj-gam-rho}
 u_j(z) v_j(z) = \gamma_j - \rho(z)
 \end{equation}
-
 from which it follows that there are 3 (read as $j > k$ to avoid over counting) intermodal power conservation laws of the form:
 \begin{equation}
 \label{eq:power-conserved}
 u_j(z) v_j(z) - u_k(z) v_k(z) = \gamma_j - \gamma_k.
 \end{equation}
 
-The system has 4 degrees of freedom and four conserved quantities which is a requirement for integrability in the Liouville-Arnold sense.
+The system has 4 degrees of freedom and four conserved quantities which is a requirement for integrability in the Liouville-Arnold sense \cite{arnoldMathematicalMethodsClassical1989}.
 The $\gamma_j$ constants can be determined from \eqref{eq:power-conserved} and initial conditions, 
 however, this provides three equations for four unknowns and thus a choice is available for normalisation. 
 We choose to impose the constraint that:
@@ -245,15 +243,13 @@ To proceed in this manner, let us introduce the function $Q$ which represents th
 Q(u_1(z)v_1(z), \dots, u_4(z)v_4(z)) &= a_0 + \sum_{j=1}^{4} a_{j}\, u_j v_j + \frac{1}{2}\,\sum_{j,k=1}^{4} a_{j,k}\, u_j v_j u_k v_k , \notag  \\
 & = \sum_{l=0}^{2}b_l\,\rho\left(z\right)^l \label{eq:Q-uv}
 \end{align}
-
-with $a_0=H$. Observe that squaring \eqref{eq:duv_j} and substituting \eqref{eq:ham-uv}, \eqref{eq:uvj-gam-rho}, \eqref{eq:prod-id}, and \eqref{eq:Q-uv} gives:
+with $a_0=H$ a renaming that indicates the role of $H$ here as the constant term of the polynomial. Observe that squaring \eqref{eq:duv_j} and substituting \eqref{eq:ham-uv}, \eqref{eq:uvj-gam-rho}, \eqref{eq:prod-id}, and \eqref{eq:Q-uv} gives:
 \begin{align}
 \left(\frac{d}{d z} \rho{\left(z \right)}\right)^{2} &= Q^{2}{\left({\gamma}_{1} - \rho{\left(z \right)}, \dots, {\gamma}_{4}  - \rho{\left(z \right)}\right)} - 4 \prod_{j=1}^{4} \left({\gamma}_{j} - \rho{\left(z \right)}\right), \label{eq:drho-sqrd-1} \\
 \left(\frac{d}{d z} \rho{\left(z \right)}\right)^{2} &=  \left(\sum_{l=0}^{2}b_l\,\rho\left(z\right)^l\right)^{2} - 4 \prod_{j=1}^{4} \left({\gamma}_{j} - \rho{\left(z \right)}\right), \label{eq:drho-sqrd-2} \\
 \left(\frac{d}{d z} \rho{\left(z \right)}\right)^{2} &= \sum_{l=0}^{4}d_l\,\rho\left(z\right)^l, \label{eq:drho-sqrd-3} \\
 \left(\frac{d}{d z} \rho{\left(z \right)}\right)^{2} &= d_4 \prod_{l=1}^{4} \left(\rho\left(z\right) -  \lambda_l\right), \label{eq:drho-sqrd-4}
 \end{align}
-
 where $b_l$, and $d_l$ are given in terms of other parameters and initial conditions in Appendices \ref{app:param-def-appendix} and \ref{app:init-conds}, and where $\lambda_l$ are the roots of the quartic polynomial in $\rho(z)$, i.e. $0=\sum_{k=0}^{4}d_k\,\lambda_{l}^k$.
 Equation \eqref{eq:drho-sqrd-4} is a differential equation for an elliptic function and by separating phase modulation and wave mixing terms in the Hamiltonian, and by exploiting intermodal power conservation, we were able to obtain it directly without inverting elliptic integrals first.
 To solve it, we now transform \eqref{eq:drho-sqrd-4} from quartic to the standard cubic form of the Weierstrass $\wp$ function using the classical trick which can be conceptualised in three steps \cite{whittakerCourseModernAnalysis2021}:
@@ -279,7 +275,6 @@ g_{2} &= {d}_{0} {d}_{4} - \frac{{d}_{1} {d}_{3}}{4} + \frac{{d}_{2}^{2}}{12}, \
 g_{3} &= \frac{{d}_{0} {d}_{2} {d}_{4}}{6} - \frac{{d}_{0} {d}_{3}^{2}}{16} - \frac{{d}_{1}^{2} {d}_{4}}{16} + \frac{{d}_{1} {d}_{2} {d}_{3}}{48} - \frac{{d}_{2}^{3}}{216} \label{eq:3-d}
 \end{align}
 where the constants $g_2$ and $g_3$ are known as Weierstrass elliptic invariants. 
-
 Equation \eqref{eq:dwp} defines the Weierstrass elliptic $\wp$ function and the solution is:
 \begin{equation}
 w(z) = \wp (z - z_0, g_2, g_3)
@@ -287,9 +282,9 @@ w(z) = \wp (z - z_0, g_2, g_3)
 where $z_0$ is a constant chosen to match initial conditions. 
 This constant $z_0$, and others that we will now introduce, can be obtained by inverting $\wp$ using an elliptic integral \cite{whittakerCourseModernAnalysis2021}. 
 As $\wp$ is an even function, it is necessary to also specify a corresponding condition for the derivative when inverting to fix the sign, i.e., to find $z$ from known $x,y$ we give conditions such as $\wp\left(z\right)=x, \wp'\left(z\right)=y$, where $\wp'$ is the derivative of $\wp$ known as Weierstrass p-prime. 
-The points obtained during such an inversion are determined modulo the period lattice of the doubly periodic $\wp$. 
+From elliptic function theory, the points obtained during such an inversion are determined modulo the period lattice of the doubly periodic $\wp$, which is a two-dimensional generalisation of saying they are only uniquely determined within a period of oscillation. 
 In addition to $z_0$, we introduce two other types of special points that characterize the solution structure and enable the use of elliptic function identities to solve for the modes in Section \ref{sec:mode-sols-u-v}.
-The point $z_1$ corresponds to the pole of $\rho(z)$ where the denominator in \eqref{eq:rho-wp-1} vanishes, and represents a singularity in the mean modal power.
+The point $z_0+z_1$ corresponds to the pole of $\rho(z)$ where the denominator in \eqref{eq:rho-wp-1} vanishes, and represents a singularity in the mean modal power.
 The points $\mu_j$ are the locations where individual modal powers vanish, $u_j(\mu_j)v_j(\mu_j) = 0$, and thus where $\rho(\mu_j) = \gamma_j$ from \eqref{eq:uvj-gam-rho}.
 These special points are defined implicitly through their Weierstrass function values:
 \begin{align}
@@ -320,7 +315,7 @@ Direct substitution of \eqref{eq:ham-uv}, \eqref{eq:duv_j}, \eqref{eq:uvj-gam-rh
 \frac{\frac{\partial}{\partial z} u_j{\left(z\right)}}{u_j{\left(z\right)}} &= \frac{1}{2}\frac{\rho'{\left(z \right)} - \rho'{\left({\mu}_{j} \right)}}{\rho{\left(z \right)} - \rho{\left({\mu}_{j} \right)}} + \rho{\left(z \right)} {\Lambda}_{1,j} + {\Lambda}_{0,j}, \notag \\
 \frac{\frac{\partial}{\partial z} v_j{\left(z\right)}}{v_j{\left(z\right)}} &= \frac{1}{2}\frac{\rho'{\left(z \right)} + \rho'{\left({\mu}_{j} \right)}}{\rho{\left(z \right)} - \rho{\left({\mu}_{j} \right)}} - \rho{\left(z \right)} {\Lambda}_{1,j} - {\Lambda}_{0,j}, \label{eq:dlog-u-v-rho} \\
 {\Lambda}_{0,j} &= - {a}_{j} - \frac{{\gamma}_{j}}{4} \sum\limits_{k,l=1}^{4} {a}_{k,l} - \sum_{k=1}^{4} {a}_{j,k} {\gamma}_{k} + \frac{1}{2}\sum_{k=1}^{4} {\gamma}_{k} \sum_{l=1}^{4} {a}_{k,l} + \frac{1}{2}\sum_{k=1}^{4} {a}_{k}, \\
-{\Lambda}_{1,j} &= \sum_{k=1}^{4} {a}_{j,k} - \frac{1}{4}\sum\limits_{k,l=1}^{4}  {a}_{k,l}.
+{\Lambda}_{1,j} &= \sum_{k=1}^{4} {a}_{j,k} - \frac{1}{4}\sum\limits_{k,l=1}^{4}  {a}_{k,l},
 \end{align}
 where the right-hand side is expressed purely in terms of $\rho$ and its derivative $\rho'$.
 This logarithmic derivative form is advantageous because it can be integrated directly to yield solutions in terms of Weierstrass $\sigma$ functions, as we now show.
@@ -336,21 +331,18 @@ which allows us to express the right-hand side in terms of Weierstrass $\zeta$ f
 & - \frac{\zeta{\left({\mu}_{j} - z_{0} - z_{1}\right)}}{2} - \frac{\zeta{\left({\mu}_{j} - z_{0} + z_{1}\right)}}{2} + {\Lambda}_{0,j} + {\Lambda}_{1,j} {\lambda}_{1} \notag \\[12pt]
 \frac{\frac{\partial}{\partial z} v{\left(z,{\mu}_{j} \right)}}{v{\left(z,{\mu}_{j} \right)}} =& - \frac{\left(\zeta{\left(z - z_{0} + z_{1} \right)} - 2 \zeta{\left(z_{1} \right)} - \zeta{\left(z - z_{0} - z_{1} \right)}\right) {\Lambda}_{1,j}}{\sqrt{{d}_{4}}} \nonumber \\[6pt]
 & + \zeta{\left(z - {\mu}_{j} \right)} - \frac{\zeta{\left(z - z_{0} - z_{1} \right)}}{2} - \frac{\zeta{\left(z - z_{0} + z_{1} \right)}}{2} \nonumber \\[6pt]
-& + \frac{\zeta{\left({\mu}_{j} - z_{0} - z_{1}\right)}}{2} + \frac{\zeta{\left({\mu}_{j} - z_{0} + z_{1} \right)}}{2} - {\Lambda}_{0,j} - {\Lambda}_{1,j} {\lambda}_{1} \label{eq:dlog-u-v-zeta}
+& + \frac{\zeta{\left({\mu}_{j} - z_{0} - z_{1}\right)}}{2} + \frac{\zeta{\left({\mu}_{j} - z_{0} + z_{1} \right)}}{2} - {\Lambda}_{0,j} - {\Lambda}_{1,j} {\lambda}_{1}. \label{eq:dlog-u-v-zeta}
 \end{align}
-
 Equations \eqref{eq:dlog-u-v-zeta} can be integrated by noting that the Weierstrass $\zeta$ function is the logarithmic derivative of the Weierstrass $\sigma$ function:
 \begin{equation}
 \label{eq:zeta-dlog_sigma}
 \zeta\left(z, g_2, g_3\right)=\frac{\partial}{\partial z} \log{\left(\sigma\left(z, g_2, g_3\right)\right)}.
 \end{equation}
-
 Performing the integration and taking exponentials gives the first main result of this paper, the complete analytic solutions for the complex mode envelopes $u_j, v_j$ without decomposition into amplitude and phase:
 \begin{align}
 u_j{\left(z\right)} &= \frac{\alpha_j\,\sqrt{W_j} \,\sigma{\left(z - 2 z_{0} + {\mu}_{j} \right)} \exp\left(z {r}_{0,j} + \log{\left(\frac{\sigma{\left(z - z_{0} + z_{1} \right)}}{\sigma{\left(z - z_{0} - z_{1} \right)}} \right)} {r}_{1,j}\right)}{\sqrt{\wp{\left(z_{1} \right)} - \wp{\left(z - z_{0} \right)}} \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0} \right)}}, \notag \\[12pt]
 v_j{\left(z\right)} &= \frac{\sqrt{W_j} \, \sigma{\left(z - {\mu}_{j} \right)} \exp\left(- z {r}_{0,j} - \log{\left(\frac{\sigma{\left(z - z_{0} + z_{1} \right)}}{\sigma{\left(z - z_{0} - z_{1} \right)}} \right)} {r}_{1,j} \right)}{\alpha_j\,\sqrt{\wp{\left(z_{1} \right)} - \wp{\left(z - z_{0} \right)}} \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0} \right)}} \label{eq:u-v-quartic}
 \end{align}
-
 where the branch of the logarithm is chosen continuously along the integration path from $z=0$, $\alpha_j$ is the integration constant that can be fixed by initial conditions to capture any phase offset between a mode and its conjugate, and the other constants are:
 \begin{align}
 W_j &= \frac{\wp'{\left(z_{1} \right)}}{\sqrt{{d}_{4}}\,\left(\wp{\left(z_{1} \right)} - \wp{\left({\mu}_{j} - z_{0}\right)}\right)}, \\[6pt]
@@ -376,7 +368,6 @@ This is a parameter-level constraint that depends on the fiber properties and op
 When $d_4=0$, we have $\wp'(z_1)=0$, meaning that $z_1$ is congruent to a half-period of the elliptic function, commonly denoted $\omega_i$ for $i=1,2,3$.
 It follows either by solving the differential equation starting from the cubic, or by applying elliptic function identities to intermediate results in the quartic derivation,
 that the solutions for modes simplify to:
-
 \begin{align}
 u_j{\left(z\right)} &= \frac{\alpha_j\, 2 \sigma{\left(z - 2 z_{0} + 2 z_{1} + {\mu}_{j}\right)} \exp\left( z \left( {\Lambda}_{0,j} + \frac{{d}_{2}}{3 {d}_{3}} {\Lambda}_{1,j} -\zeta{\left({\mu}_{j} -z_{0} + z_{1}\right)}\right) \right)}{ \sqrt{{d}_{3}}\, \sigma{\left({\mu}_{j} - z_{0} + z_{1}\right)} \sigma{\left(z - z_{0} + z_{1}\right)}}, \notag \\[12pt]
 v_j{\left(z\right)} &= \frac{2 \sigma{\left(z - {\mu}_{j}\right)} \exp\left( - z \left({\Lambda}_{0,j} + \frac{{d}_{2}}{3 {d}_{3}}{\Lambda}_{1,j}  -\zeta{\left({\mu}_{j} -z_{0} + z_{1}\right)}\right) \right)}{ \alpha_j\, \sqrt{{d}_{3}}\, \sigma{\left({\mu}_{j} - z_{0} + z_{1}\right)} \sigma{\left(z - z_{0} + z_{1}\right)}} \label{eq:u-v-cubic}
@@ -402,22 +393,18 @@ In particular, the presence of the factor $\sqrt{\wp(z_1) - \wp(z - z_0)}$ in th
 Remarkably, although the transformation depends explicitly on the propagation variable $z$, it leaves the coupled differential equations structurally invariant, preserving the characteristic four-wave mixing interaction terms while achieving substantial simplifications.
 In the canonical coordinates, cross-phase modulation is eliminated, the differential equations for modal powers reduce from quartic to cubic polynomials, system parameters are greatly reduced (and can be completely removed through rescaling), and the solutions become single-valued meromorphic Kronecker theta functions.
 At the same time, the transformation preserves the Hamiltonian structure, all intermodal power conservation laws, and intermodal power ratios.
-
 We accomplish this through a sequence of three transformations, which we now present in turn.
 
 \subsection{Removing cross-phase modulation with a gauge transform}
 
 To begin, let us consider a transform of the system in \eqref{eq:uv-system} of the following form:
-
 \begin{align}
 u_j(z) &= \hat{u}_j(z) e^{- \phi_j(z)}, \notag \\
 v_j(z) &= \hat{v}_j(z) e^{\phi_j(z)}, \\ 
 \sum_{j=1}^{4} \phi_j(z) &= 0,
 \end{align}
-
 where transforming the conjugate mode with the opposing phase leaves modal powers unchanged, and where the sum over $\phi_j$ being zero ensures we do not encounter any new terms appearing in the exponents of wave mixing terms.
 We make the following choice for $\phi_j$ composed of a part linear in $z$ (labelled $L$) and a part nonlinear in $z$ (labelled $NL$) (where $L$ and $NL$ are function labels not exponents):
-
 \begin{align}
 \phi_j(z) &= \phi_j^{L}(z) + \phi_j^{NL}(z) \\
 \phi_j^{L}(z) &= z\left({a}_{j} - \frac{1}{4}\sum_{m=1}^{4} a_{m} - \frac{{\gamma}_{j}}{4} \sum\limits_{l,k=1}^{4} a_{l,k}\right) \\
@@ -430,7 +417,6 @@ This transforms \eqref{eq:uv-system} into the following system:
 \frac{\partial}{\partial z} \hat{u}_j &= \left(\frac{b_1}{4} - \frac{b_2}{2}\hat{u}_j \hat{v}_j \right) \hat{u}_j + \prod\limits_{k=1, k \ne j}^{4} \hat{v}_k \notag \\
 \frac{\partial}{\partial z} \hat{v}_j &= \left( - \frac{b_1}{4} + \frac{b_2}{2}\hat{u}_j \hat{v}_j\right) \hat{v}_j - \prod\limits_{k=1, k \ne j}^{4} \hat{u}_k \label{eq:uv-hat-system}
 \end{align}
-
 for which the conserved canonical Hamiltonian is:
 \begin{align}
 \hat{H} &= \prod_{l=1}^{4} \hat{u}_l + \prod_{l=1}^{4} \hat{v}_l - \frac{1}{4}\sum_{l=1}^{4} \left(b_2 \hat{u}^{2}_l \hat{v}^{2}_l  - b_1 \hat{u}_l \hat{v}_l \right)
@@ -438,8 +424,10 @@ for which the conserved canonical Hamiltonian is:
 and the intermodal power conservation laws are unchanged such that $\hat{u}_j \hat{v}_j - \hat{u}_k \hat{v}_k = \gamma_j - \gamma_k$.
 Comparing \eqref{eq:uv-hat-system} with the original system \eqref{eq:uv-system}, we observe significant simplification.
 All modes now share a single propagation constant $b_1/4$ and a single self-phase modulation coefficient $b_2/2$, whilst all cross-phase modulation terms $a_{j,k}$ with $j \ne k$ have been eliminated.
-In terms of the solutions to the system, the effect of the $\phi_j^{NL}$ transform is to remove the $z$ dependent log terms weighted by $r_{1,j}$ in \eqref{eq:u-v-quartic}. 
 It should be noted that parameters $b_1, b_2$ depend on $\gamma_j$ and thus, in the new coordinates parameters depend on mode power in the original coordinates and are not exclusively fiber parameters.
+In terms of the solutions to the system, the effect of the $\phi_j^{NL}$ transform is to remove the $z$ dependent log terms weighted by $r_{1,j}$ in \eqref{eq:u-v-quartic}. 
+This transformation can be interpreted as an analytic form of back-propagation in that it integrates the accumulated cross-phase modulation from all modes along the propagation path and applies conjugate phase shifts to remove these effects, similar to what is implemented digitally to correct nonlinear distortion in fibre optic communication systems, or physically using phase-conjugating optical fibres as explored in \cite{heskethMinimizingInterchannelCrossphase2016}.
+
 
 \subsection{Reducing the quartic to a cubic via local normalisation}\label{subsec:bar-coords}
 
@@ -464,7 +452,6 @@ The transformation in \eqref{eq:hat-to-bar} sends \eqref{eq:uv-hat-system} to:
 \frac{\partial}{\partial z} \bar{u}_j &= -\left(\frac{1}{\chi} - \frac{\chi}{4}\bar{u}_j \bar{v}_j \right) \bar{u}_j - \frac{\varsigma \chi}{4} \prod\limits_{k=1, k \ne j}^{4} \bar{v}_k, \notag \\
 \frac{\partial}{\partial z} \bar{v}_j &= \left( \frac{1}{\chi} - \frac{\chi}{4}\bar{u}_j \bar{v}_j\right) \bar{v}_j + \frac{\varsigma \chi}{4} \prod\limits_{k=1, k \ne j}^{4} \bar{u}_k \label{eq:uv-bar-system}
 \end{align}
-
 for which the conserved canonical Hamiltonian and intermodal power conservation laws are:
 \begin{align}
 \bar{H} &= \sum_{l=1}^{4} \left(\frac{\chi}{8} \bar{u}^{2}_l \bar{v}^{2}_l  - \frac{1}{\chi}  \bar{u}_l \bar{v}_l \right) - \frac{\varsigma \chi}{4} \left(\prod_{l=1}^{4} \bar{u}_l + \prod_{l=1}^{4} \bar{v}_l\right), \notag \\
@@ -485,7 +472,6 @@ To solve this system, we may define the function $\bar{w}(z)$ in terms of $h$ by
 \begin{align}
 h{\left(z \right)} = \frac{\left({d}_{2} + 3 {d}_{3} {\lambda}_{1} + 6 {d}_{4} {\lambda}_{1}^{2}\right) {\lambda}_{1}}{3} - 4 \bar{w}{\left(z \right)} {\lambda}_{1}
 \end{align}
-
 and we find then that:
 \begin{align}
 \left(\frac{d}{d z} \bar{w}{\left(z \right)}\right)^{2} &= 4\,\bar{w}{\left(z \right)}^3 - g_2\,\bar{w}{\left(z \right)} - g_3, \notag \\
@@ -557,12 +543,12 @@ We evaluate the analytic solutions using the \emph{pyweierstrass} Python package
 For comparison, we solve the differential equations numerically using the DOP853 Runge-Kutta algorithm from \emph{SciPy} \cite{virtanenSciPy10Fundamental2020}.
 
 Figures \ref{fig:u-v-re} and \ref{fig:u-v-im} show the real and imaginary parts of the modal power $u_jv_j$ using the analytic solution \eqref{eq:uv-wp} compared against numerical integration of the abstract system \eqref{eq:uv-system}.
-The analytic solutions (dashed lines) are in excellent agreement with the numerical solutions (symbols).
+The analytic solutions (lines) are in excellent agreement with the numerical solutions (symbols).
 The intermodal power conservation laws in \eqref{eq:power-conserved} are evident from the coordinated evolution of all four modes.
 
 Figures \ref{fig:A-abs} and \ref{fig:A-phi} show the intensity and phase evolution of the physical field amplitudes $A_j$ in a representative four-wave mixing scenario.
 The values were obtained by using \eqref{eq:u-v-quartic} to calculate $u_j, v_j$, then converting to $A_j, A_j^{*}$ via \eqref{eq:u-v-A}.
-Again, the analytic solutions (dashed lines) match the numerical integration (symbols) throughout the propagation distance.
+Again, the analytic solutions (lines) match the numerical integration (symbols) throughout the propagation distance.
 The periodic energy exchange between modes visible in Figure \ref{fig:A-abs} is characteristic of phase-matched four-wave mixing, whilst Figure \ref{fig:A-phi} shows the phase evolution dominated by linear propagation with nonlinear contributions visible as regions of high curvature.
 
 These comparisons confirm both the correctness of the analytic solutions and the feasibility of their numerical evaluation using readily available software tools.
