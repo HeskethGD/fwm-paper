@@ -1,8 +1,8 @@
-PWD /Users/grahamhesketh/mycode/journal-papers/latex-papers/fwm-paper
+PWD /Users/grahamhesketh/mycode/fwm-paper/latex
 INPUT /usr/local/texlive/2025/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/grahamhesketh/mycode/journal-papers/latex-papers/fwm-paper/fwm-paper.tex
+INPUT /Users/grahamhesketh/mycode/fwm-paper/latex/fwm-paper.tex
 OUTPUT fwm-paper.log
 INPUT ./iopjournal.cls
 INPUT iopjournal.cls

@@ -10,7 +10,7 @@ The code contains the following Python Jupyter Notebooks:
 - `The canonical coordinates of FWM.ipynb` - this is the main derivation of the canonical coordinates for four-wave mixing. It uses Python `SymPy` for symbolic maths and follows on from the previous notebook that derives solutions.
 - `Numeric plots for four-wave mixing.ipynb` - this evaluates analytic solutions numerically to produce plots. It uses `mpmath`, `scipy`, and a slightly customised fork of `pyweierstrass`.
 
-Requires Python 3.13
+Requires Python 3.13. To create a virtual environment and install the required packages run the following:
 
 ```
 cd code
@@ -21,4 +21,4 @@ pip install -r requirements.txt
 
 # Latex
 
-Used a VS code plugin to write the latex and the open source `Zotero` for references.
+A VS code plugin was used to write the latex and the open source `Zotero` for references.
