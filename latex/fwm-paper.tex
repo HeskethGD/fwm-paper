@@ -1,9 +1,9 @@
 \newif\ifpreprint
-% \preprinttrue
-\preprintfalse
+\preprinttrue
+% \preprintfalse
 
 \ifpreprint
-  \documentclass[12pt,a4paper]{article}
+  \documentclass[11pt,a4paper]{article}
 \else
   \documentclass{iopjournal}
 \fi
@@ -15,9 +15,8 @@
 \usepackage{hyperref}                     % For links
 \usepackage{caption}                      % Captions for figures/tables
 \usepackage{bm}                           % Bold math symbols
-\ifpreprint
-  \usepackage{geometry}                     % Page layout
-  \geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\ifpreprint         
+  \usepackage[margin=1in]{geometry}  % Page layout
 \fi
 
 % Add bibilography
