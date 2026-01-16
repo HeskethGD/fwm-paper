@@ -49,13 +49,22 @@
 
   \email{gdh1e10@gmail.com}
 
-  \keywords{Four-wave mixing, Weierstrass elliptic functions, Nonlinear fibre optics, Kronecker theta functions, Integrable systems}
+  \keywords{Four-wave mixing, Weierstrass elliptic functions, Nonlinear fibre optics, Integrable systems}
 \fi
 
+% \begin{abstract}
+% The general analytic solution to quasi-continuous-wave four-wave mixing in nonlinear optical fibres is presented in terms of Weierstrass elliptic $\wp, \sigma, \zeta$ functions. 
+% Solutions provide the full complex envelopes for all four frequencies, under all initial conditions, without undepleted pump approximation. 
+% A canonical coordinate system is identified in which solutions simplify to Kronecker theta functions. The Hamiltonian is shown to be a manifestation of the Frobenius-Stickelberger determinant. Numerical validation is shown.
+% \end{abstract}
+
 \begin{abstract}
-The general analytic solution to quasi-continuous-wave four-wave mixing in nonlinear optical fibres is presented in terms of Weierstrass elliptic $\wp, \sigma, \zeta$ functions. 
-Solutions provide the full complex envelopes for all four frequencies, under all initial conditions, without undepleted pump approximation. 
-A canonical coordinate system is identified in which solutions simplify to Kronecker theta functions. The Hamiltonian is shown to be a manifestation of the Frobenius-Stickelberger determinant. Numerical validation is shown.
+Complete analytic solutions to quasi-continuous-wave four-wave mixing in nonlinear optical fibres are presented in terms of Weierstrass elliptic $\wp$, $\zeta$, and $\sigma$ functions, providing the full complex envelopes for all four waves under arbitrary initial conditions.
+A sequence of coordinate transformations reveals a canonical form with universal parameter-free structure.
+Remarkably, these transformations depend explicitly on the propagation variable yet preserve the structural form of the differential equations, an invariance property not previously reported for four-wave mixing.
+In the canonical coordinates, solutions become single-valued meromorphic Kronecker theta functions, establishing connections with other integrable nonlinear optical systems.
+The Hamiltonian conservation is shown to arise from the Frobenius-Stickelberger determinant.
+Numerical validation confirms the solutions using open-source Python libraries.
 \end{abstract}
 
 
@@ -83,11 +92,11 @@ In particular, we show that the Hamiltonian conservation arises from the Frobeni
 This identification may facilitate future generalizations to higher-order mixing processes or multimode systems and furthermore, this connection reveals that Hamiltonian conservation in four-wave mixing is not merely a convenient construct but rather a manifestation of deep structural properties of elliptic functions.
 The derivation of these complete analytic solutions in Weierstrass form is the first of the two main results of this paper.
 
-The structure of the resulting analytic solutions naturally motivates a transformation to a new set of canonical coordinates. 
-Remarkably, although this transformation depends explicitly on the propagation variable $z$, it leaves the coupled differential equations structurally invariant, preserving the characteristic interaction terms of four-wave mixing dynamics. 
-This invariance property, which to the author's knowledge has not been previously reported for four-wave mixing, suggests deep underlying structure that may extend to other parametric processes.
+The structure of the analytic solutions naturally motivates a transformation to a new set of canonical coordinates. 
+Remarkably, although this transformation depends explicitly on the propagation variable $z$, it leaves the coupled differential equations structurally invariant, preserving the characteristic interaction terms of FWM dynamics. 
+This invariance property, which to the author's knowledge has not been previously reported for FWM, suggests deep underlying structure that may extend to other parametric processes.
 At the same time, the transformation leads to a substantial simplification: the solutions become single-valued meromorphic functions, specifically Kronecker theta functions, and the system parameters are greatly reduced or eliminated entirely.
-The identification of solutions as Kronecker theta functions opens the door to leveraging known Fourier series and multipole expansions of these functions, which may prove useful for further analysis of four-wave mixing dynamics.
+The identification of solutions as Kronecker theta functions opens the door to leveraging known Fourier series and multipole expansions of these functions, which may prove useful for further analysis of FWM dynamics.
 Solutions in Kronecker theta form appear in other integrable nonlinear optical systems such as wave mixing in quadratic media and polarisation dynamics \cite{heskethGeneralComplexEnvelope2015}, pointing towards a unified mathematical description of parametric processes.
 The canonical coordinates with Kronecker theta function solutions is the second of this paper's main results.
 
@@ -97,7 +106,7 @@ The canonical coordinates with Kronecker theta function solutions is the second 
 \section{The quasi-continuous-wave four-wave mixing system}
 In this section we recall the four-wave mixing system from nonlinear fiber optics that forms the focus of our study. 
 The coupled system of ordinary differential equations in \eqref{eq:fwm-system} is taken from \cite{agrawalNonlinearFiberOptics2019} which references \cite{stolenParametricAmplificationFrequency1982} as the origin of the theory. 
-The system describes four-wave mixing in the quasi-continuous-wave limit, i.e., when the temporal envelope variations are negligible compared to the spatial evolution along the propagation direction, allowing the partial time derivatives $\partial A_j/\partial t$ to be neglected.
+The system describes four-wave mixing in the quasi-continuous-wave limit, i.e., when temporal envelope variations are negligible compared to the spatial evolution along the propagation direction, allowing time derivatives to be neglected.
 Physically, the equations describe the evolution of four copropagating optical waves that exchange energy through the Kerr nonlinearity.
 Each wave experiences self-phase modulation (SPM), where its own intensity induces a phase shift on itself, cross-phase modulation (XPM), where the intensities of other waves induce additional phase shifts, and parametric coupling through the four-wave mixing terms, which enable direct energy transfer between the waves when phase-matching conditions are satisfied:
 \begin{align}
