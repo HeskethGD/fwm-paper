@@ -681,9 +681,9 @@ C = &\frac{12  \sigma{\left({\nu}_{1} - {\nu}_{2}\right)} \sigma{\left({\nu}_{1}
 & - 6 \left(\wp{\left({\nu}_{1}\right)} - \wp{\left({\nu}_{2}\right)}\right) \left(\wp{\left({\nu}_{1}\right)} - \wp{\left({\nu}_{3}\right)}\right) \left(\wp{\left({\nu}_{2}\right)} - \wp{\left({\nu}_{3}\right)}\right) \wp'{\left(z\right)}
 \end{align}
 
-The starting point for us is the following relation established via \eqref{eq:ham-uv}, \eqref{eq:duv_j}, and \eqref{eq:Q-uv}:
+The starting point for us is the following relation established via \eqref{eq:ham-uv}, \eqref{eq:duv_j}, and \eqref{eq:Q-uv}, in which any $j$ applies in the RHS modal power derivative:
 \begin{align}
-2 \prod_{j=1}^{4} u_j &= - \frac{\partial}{\partial z} u_j\, v_j + {a}_{0} + \sum_{j=1}^{4} {a}_{j} u_j v_j  + \frac{1}{2}\sum\limits_{j,k=1}^{4} {a}_{j,k} u_j v_j u_k v_k, \notag \\
+2 \prod_{k=1}^{4} u_k &= {a}_{0} + \sum_{k=1}^{4} {a}_{k} u_k v_k  + \frac{1}{2}\sum\limits_{k,l=1}^{4} {a}_{k,l} u_k v_k u_l v_l - \frac{\partial}{\partial z} u_j\, v_j, \notag \\
 &=\rho' + \sum_{l=0}^{2}b_l\,\rho\left(z\right)^l. \label{eq:fs-det-start}
 \end{align}
 We will show how \eqref{eq:fs-det-start} can be transformed into \eqref{eq:fs-det-m}
@@ -694,12 +694,10 @@ so too then is the left hand side. Thus for integers $m,n$ and half-periods $\om
 \begin{align}
 \prod_{j=1}^{4} \frac{u_j{\left(z\right)}}{u_j{\left(2 m {\omega}_{3} + 2 n {\omega}_{1} + z\right)}} & = 1. \label{eq:u-prod-is-one}
 \end{align}
-
 We substitute our solution \eqref{eq:u-v-quartic} into \eqref{eq:u-prod-is-one} and use the quasi-periodicity of $\sigma$:
 \begin{align}
 \sigma{\left(2 m {\omega}_{3} + 2 n {\omega}_{1} + z\right)} = \left(-1\right)^{m n + m + n} \sigma{\left(z\right)} e^{\left(2 m {\omega}_{3} + 2 n {\omega}_{1} + 2 z\right) \zeta{\left(m {\omega}_{3} + n {\omega}_{1}\right)}} \label{eq:quasi-sigma}
 \end{align}
-
 to reduce the product in \eqref{eq:u-prod-is-one} to an exponential which, as it is equal to one, must have argument $2\pi i \mathrm{N}(n,m)$, with $\mathrm{N}(n,m)$ an integer that varies with $n,m$.
 This leads to:
 \begin{align}
@@ -707,7 +705,6 @@ This leads to:
 \sum_{j=1}^{4} {\nu}_{j} &= 2 \mathrm{N}{\left(1,0 \right)} {\omega}_{3} - 2 \mathrm{N}{\left(0,1 \right)} {\omega}_{1} = 0 \pmod{\text{lattice}}, \label{eq:nuj-sum-zero}  \\ 
 \sum_{j=1}^{4} {r}_{0,j} &= 2 \,\zeta{\left(\mathrm{N}{\left(0,1 \right)} {\omega}_{1} - \mathrm{N}{\left(1,0 \right)} {\omega}_{3}\right)} \label{eq:roj-is-zeta} 
 \end{align}
-
 where $\nu_j=\mu_j-z_0$, and in moving from \eqref{eq:exp-arg-is-one} to \eqref{eq:nuj-sum-zero} and \eqref{eq:roj-is-zeta} we made use of the identity $\zeta{\left({\omega}_{3}\right)} {\omega}_{1} - \zeta{\left({\omega}_{1}\right)} {\omega}_{3} = i \pi /2$. 
 Ultimately, equations \eqref{eq:quasi-sigma}, \eqref{eq:nuj-sum-zero} and \eqref{eq:roj-is-zeta} allow us to make the following substitution in the left hand side of \eqref{eq:fs-det-start}:
 \begin{align}
@@ -721,12 +718,10 @@ The following algebraic identity follows from Waring-Lagrange interpolation and 
 &\frac{\left({\gamma}_{1} - \rho{\left(z \right)}\right) \left({\gamma}_{3} - \rho{\left(z \right)}\right)}{\left({\gamma}_{1} - {\gamma}_{2}\right) \left({\gamma}_{3} - {\gamma}_{2}\right)} \sum\limits_{l=0}^{2}b_l\,\gamma_2^l + \notag \\
 &\frac{\left({\gamma}_{2} - \rho{\left(z \right)}\right) \left({\gamma}_{3} - \rho{\left(z \right)}\right)}{\left({\gamma}_{1} - {\gamma}_{2}\right) \left({\gamma}_{1} - {\gamma}_{3}\right)} \sum\limits_{l=0}^{2}b_l\,\gamma_3^l \label{eq:waring-lagrange}
 \end{align}
-
 where in our case $\gamma_j=\rho(\mu_j)$ and the sum over $b_l \gamma_j$ can be written using \eqref{eq:drho-sqrd-2} as:
 \begin{align}
 \sum\limits_{l=0}^{2}b_l\,\gamma_j^l = \rho'\left(\mu_j\right).
 \end{align}
-
 We can then use \eqref{eq:uv-wp} to express $\rho$ in terms of $\wp$ so that we can substitute all variables in \eqref{eq:waring-lagrange} for values in terms of $\wp, \wp'$. 
 We then divide both sides of \eqref{eq:fs-det-start} by:
 \begin{align}
