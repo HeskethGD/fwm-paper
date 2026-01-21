@@ -1,6 +1,6 @@
 # Complete Weierstrass elliptic function solutions and canonical coordinates for four-wave mixing in nonlinear optical fibres
 
-This repo contains the code and latex for the paper called _"Complete Weierstrass elliptic function solutions and canonical coordinates for four-wave mixing in nonlinear optical fibres"_
+This repo contains the code and latex for the paper avilable on arXiv as [_"Complete Weierstrass elliptic function solutions and canonical coordinates for four-wave mixing in nonlinear optical fibres"_](https://arxiv.org/abs/2601.11740)
 
 ## Code
 
