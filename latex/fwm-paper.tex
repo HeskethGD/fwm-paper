@@ -13,7 +13,7 @@
 \usepackage{amsmath, amssymb, amsfonts}  % Standard math packages
 \usepackage{graphicx}                     % For figures
 \usepackage{hyperref}                     % For links
-\usepackage{caption}                      % Captions for figures/tables
+\usepackage[hypcap=false]{caption}        % Captions for figures/tables
 \usepackage{bm}                           % Bold math symbols
 \ifpreprint         
   \usepackage[margin=1in]{geometry}  % Page layout
@@ -120,7 +120,7 @@ where:
     \item $f_{jk}$ (for $j \neq k$) are the cross-phase modulation (XPM) coefficients
     \item $f_{jklm}$ are the four-wave mixing (FWM) coefficients
     \item $A^*$ denotes complex conjugation
-    \item $\Delta k = \beta_1 + \beta_2 - \beta_3 - \beta_4$ is the phase mismatch
+    \item $\Delta k = -\beta_1 - \beta_2 + \beta_3 + \beta_4$ is the phase mismatch
     \item $\beta_j = n(\omega_j)\omega_j/c$ are the propagation constants.
 \end{itemize}
 The modal overlap integrals are defined in terms of the transverse distribution of the fiber mode $F_j(x,y)$ as:
@@ -542,46 +542,41 @@ The derivation of this canonical form, together with the demonstration that it c
 In this section we validate the analytic solutions through numerical evaluation and demonstrate their practical implementation using open-source software.
 This serves two purposes, first, to verify that the solutions correctly satisfy the differential equations, and second, to show that the Weierstrass elliptic functions can be readily evaluated using standard numerical libraries.
 
-We evaluate the analytic solutions using the \emph{pyweierstrass} Python package \cite{laurentPyweierstrass2022}, which provides Weierstrass elliptic functions as a wrapper around Jacobi elliptic functions from the \emph{mpmath} package \cite{MpmathPythonLibrary2023}. 
+We evaluate the analytic solutions using the \emph{pyweierstrass} Python package \cite{laurentPyweierstrass2022}, which provides Weierstrass elliptic functions as a wrapper around Jacobi theta functions from the \emph{mpmath} package \cite{MpmathPythonLibrary2023}. 
 For comparison, we solve the differential equations numerically using the DOP853 Runge-Kutta algorithm from \emph{SciPy} \cite{virtanenSciPy10Fundamental2020}.
 
-Figures \ref{fig:u-v-re} and \ref{fig:u-v-im} show the real and imaginary parts of the modal power $u_jv_j$ using the analytic solution \eqref{eq:uv-wp} compared against numerical integration of the abstract system \eqref{eq:uv-system}.
-The analytic solutions (lines) are in excellent agreement with the numerical solutions (symbols).
-The intermodal power conservation laws in \eqref{eq:power-conserved} are evident from the coordinated evolution of all four modes.
+For plotting purposes we define the following complex-valued functions $\mathcal{P}_j(z),\ \phi_j(z) \in \mathbb{C}$ that are analogous to modal power (absolute value squared) and phase; they would be equivalent to the corresponding real-valued functions if $v_j$ were the complex conjugate of $u_j$ rather than the more general Hamiltonian conjugate that we typically consider in our generalised systems:
+\begin{align}
+\mathcal{P}_j(z) &= u_j(z)v_j(z), \notag \\
+\phi_j(z) &= \frac{\log\left(\frac{u_j(z)}{v_j(z)}\right)}{2 i}. \label{eq:A-phi-u-v}
+\end{align}
 
-Figures \ref{fig:A-abs} and \ref{fig:A-phi} show the intensity and phase evolution of the physical field amplitudes $A_j$ in a representative four-wave mixing scenario.
-The values were obtained by using \eqref{eq:u-v-quartic} to calculate $u_j, v_j$, then converting to $A_j, A_j^{*}$ via \eqref{eq:u-v-A}.
-Again, the analytic solutions (lines) match the numerical integration (symbols) throughout the propagation distance.
-The periodic energy exchange between modes visible in Figure \ref{fig:A-abs} is characteristic of phase-matched four-wave mixing, whilst Figure \ref{fig:A-phi} shows the phase evolution dominated by linear propagation with nonlinear contributions visible as regions of high curvature.
+The top row of Figure \ref{fig:case1-plot1} shows the real, \textbf{A}, and imaginary, \textbf{B}, parts of the complex mode power $\mathcal{P}_j$,  
+while the bottom row shows the real, \textbf{C}, and imaginary, \textbf{D}, parts of the complex phase variable $\phi_j$, using the analytic solutions in \eqref{eq:u-v-quartic} (dashed lines) compared against numerical integration of the abstract system \eqref{eq:uv-system} (symbols).
+The intermodal power conservation laws in \eqref{eq:power-conserved} are evident from the coordinated evolution of all four modes. 
+The initial conditions and parameter values used to generate Figure \ref{fig:case1-plot1} are listed in Appendix~\ref{app:case1-params}, Tables~\ref{tab:case1-init} and \ref{tab:case1-params}.
 
+Figure \ref{fig:case2-plot1} shows \textbf{A} (top row) the intensity ($\mathcal{P}_j=\left|A_j\right|^2$), and \textbf{B} (bottom row) phase evolution of the physical field amplitudes $A_j$ in a representative four-wave mixing scenario.
+In this case $A_j, A^*_j$ are used in place of $u_j, v_j$ respectively in \eqref{eq:A-phi-u-v}.
+The analytic solutions are plotted using using \eqref{eq:u-v-quartic} to calculate $u_j, v_j$, then converting to $A_j, A_j^{*}$ via \eqref{eq:u-v-A} (dashed lines), and are compared against numerical integration of the original physical FWM system \eqref{eq:fwm-system} (symbols).
+The periodic energy exchange between modes visible in Figure \ref{fig:case2-plot1} \textbf{A} is characteristic of phase-matched four-wave mixing, whilst Figure \ref{fig:case2-plot1} \textbf{B} shows the phase evolution dominated by linear propagation with nonlinear contributions visible as regions of high curvature.
+The initial conditions and physical parameter values used to generate Figure \ref{fig:case2-plot1} are provided in Appendix~\ref{app:case2-params}, Tables~\ref{tab:case2-init}--\ref{tab:case2-overlap}.
+
+The analytic and numeric solutions are in excellent agreement in all plots.
 These comparisons confirm both the correctness of the analytic solutions and the feasibility of their numerical evaluation using readily available software tools.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{plots/case1_plot_1.pdf}
-\caption{Real part of abstract modal power $u_jv_j$: analytic solution \eqref{eq:uv-wp} (dashed lines) compared with numerical integration (symbols).}
-\label{fig:u-v-re}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=1.0\textwidth]{plots/case1_plot_2.pdf}
-\caption{Imaginary part of abstract modal power $u_jv_j$: analytic solution \eqref{eq:uv-wp} (dashed lines) compared with numerical integration (symbols).}
-\label{fig:u-v-im}
+\caption{\textbf{A} real and \textbf{B} imaginary parts of the complex mode power $\mathcal{P}_j=u_j v_j$, and \textbf{C} real and \textbf{D} imaginary parts of the complex phase variable $\phi_j$, using the analytic solutions in \eqref{eq:u-v-quartic} (dashed lines) compared against numerical integration of the abstract system \eqref{eq:uv-system} (symbols).}
+\label{fig:case1-plot1}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{plots/case2_plot_1.pdf}
-\caption{Intensity $|A_j|^2$ of physical field amplitudes: analytic solution \eqref{eq:u-v-quartic} converted via \eqref{eq:u-v-A} (dashed lines) compared with numerical integration (symbols).}
-\label{fig:A-abs}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=1.0\textwidth]{plots/case2_plot_2.pdf}
-\caption{Phase $\phi_j$ of physical field amplitudes: analytic solution \eqref{eq:u-v-quartic} converted via \eqref{eq:u-v-A} (dashed lines) compared with numerical integration (symbols).}
-\label{fig:A-phi}
+\caption{\textbf{A} Intensity $\mathcal{P}_j=|A_j|^2$, and \textbf{B} phase $\phi_j$ of physical field amplitudes: analytic solution \eqref{eq:u-v-quartic} converted via \eqref{eq:u-v-A} (dashed lines) compared with numerical integration (symbols).}
+\label{fig:case2-plot1}
 \end{figure}
 
 
@@ -673,7 +668,7 @@ We are interested in the $4\times4$ case of FS in the form:
 \end{align}
 where:
 \begin{align}
-C = &\frac{12  \sigma{\left({\nu}_{1} - {\nu}_{2}\right)} \sigma{\left({\nu}_{1} - {\nu}_{3}\right)} \sigma{\left({\nu}_{2} - {\nu}_{3}\right)} }{\sigma{\left({\nu}_{1}\right)} \sigma^{4}{\left({\nu}_{2}\right)} \sigma^{4}{\left({\nu}_{3}\right)}} \\[6pt]
+C = &\frac{12  \sigma{\left({\nu}_{1} - {\nu}_{2}\right)} \sigma{\left({\nu}_{1} - {\nu}_{3}\right)} \sigma{\left({\nu}_{2} - {\nu}_{3}\right)} }{\sigma^{4}{\left({\nu}_{1}\right)} \sigma^{4}{\left({\nu}_{2}\right)} \sigma^{4}{\left({\nu}_{3}\right)}} \\[6pt]
 \det M = &
 \begin{vmatrix}
 1 & \wp(z) & \frac{\partial \wp(z)}{\partial z} & \frac{\partial^2 \wp(z)}{\partial z^2} \\
@@ -790,6 +785,150 @@ where $\tilde{e}_j=\tilde{e}_j\left(\tilde{\gamma}_1, \tilde{\gamma}_2, \tilde{\
 \wp{\left({\tilde{\mu}}_{j} - \xi_{0},\tilde{g}_{2},\tilde{g}_{3} \right)} &= - \frac{\tilde{H}}{12} - \frac{{\tilde{e}}_{2}}{24} + {\tilde{\gamma}}_{j} + \frac{4}{3}, \notag \\
 \wp'{\left({\tilde{\mu}}_{j} - \xi_{0},\tilde{g}_{2},\tilde{g}_{3} \right)} &= \tilde{H} + \frac{{\tilde{e}}_{2}}{4} - \frac{{\tilde{\gamma}}_{j}^{2}}{2} - 4 {\tilde{\gamma}}_{j}.
 \end{align}
+
+% ---------- APPENDIX ------------
+% --------------------------------
+
+\section{Parameters for Figure \ref{fig:case1-plot1}}
+\label{app:case1-params}
+
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\captionof{table}{Initial mode values in Figure \ref{fig:case1-plot1}.}
+\label{tab:case1-init}
+\begin{tabular}{c c}
+\hline
+Variable & Initial value \\
+\hline
+$u_1(0)$ & $0.486-0.712i$ \\
+$u_2(0)$ & $0.358-0.454i$ \\
+$u_3(0)$ & $0.243-0.877i$ \\
+$u_4(0)$ & $-0.918+0.413i$ \\
+$v_1(0)$ & $-0.711+0.512i$ \\
+$v_2(0)$ & $0.36+0.514i$ \\
+$v_3(0)$ & $0.134+0.841i$ \\
+$v_4(0)$ & $-0.751-0.657i$ \\
+\hline
+\end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\captionof{table}{Parameter values in Figure \ref{fig:case1-plot1}.}
+\label{tab:case1-params}
+\begin{tabular}{c c}
+\hline
+Parameter & Value \\
+\hline
+$a_1$ & $0.227$ \\
+$a_2$ & $0.0474$ \\
+$a_3$ & $0.17$ \\
+$a_4$ & $0.874$ \\
+$a_{1,1}$ & $-1.17$ \\
+$a_{1,2}$ & $1.86$ \\
+$a_{1,3}$ & $0.475$ \\
+$a_{1,4}$ & $1.09$ \\
+$a_{2,2}$ & $-1.84$ \\
+$a_{2,3}$ & $-0.0376$ \\
+$a_{2,4}$ & $-1.19$ \\
+$a_{3,3}$ & $0.455$ \\
+$a_{3,4}$ & $-0.341$ \\
+$a_{4,4}$ & $-1.84$ \\
+\hline
+\end{tabular}
+\end{minipage}
+
+\vspace{1em}
+
+\noindent
+The coupling coefficients satisfy $a_{k,j}=a_{j,k}$.
+
+% ---------- APPENDIX ------------
+% --------------------------------
+
+\section{Parameters for Figure \ref{fig:case2-plot1}}
+\label{app:case2-params}
+
+\begin{table}[h!]
+\centering
+
+\begin{minipage}[t]{0.47\textwidth}
+\centering
+\caption{Initial field amplitudes in Figure \ref{fig:case2-plot1}.}
+\label{tab:case2-init}
+\begin{tabular}{c c}
+\hline
+Variable & Initial value \\
+\hline
+$A_1(0)$ & $3.16\times10^{7}+7.27\times10^{5}i$ \\
+$A_2(0)$ & $7.34\times10^{7}+5.58\times10^{7}i$ \\
+$A_3(0)$ & $1.63\times10^{7}+1.16\times10^{7}i$ \\
+$A_4(0)$ & $-1.17\times10^{6}+2.94\times10^{6}i$ \\
+\hline
+\end{tabular}
+
+\vspace{0.5em}
+
+{\small $|A_j|^2$ is measured in Watts [W].}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.47\textwidth}
+\centering
+\caption{Physical parameters in Figure \ref{fig:case2-plot1}.}
+\label{tab:case2-physical}
+\begin{tabular}{c c}
+\hline
+Parameter & Value \\
+\hline
+$c$ & $299792458~[\mathrm{m/s}]$ \\
+$n_2$ & $2.6\times10^{-20}~[\mathrm{m^2/W}]$ \\
+$\omega_1$ & $1.2192\times10^{15}~[\mathrm{rad/s}]$ \\
+$\omega_2$ & $1.2114\times10^{15}~[\mathrm{rad/s}]$ \\
+$\omega_3$ & $1.2232\times10^{15}~[\mathrm{rad/s}]$ \\
+$\omega_4$ & $1.2075\times10^{15}~[\mathrm{rad/s}]$ \\
+$\beta_1$ & $0.0001883~[\mathrm{1/m}]$ \\
+$\beta_2$ & $-0.00019013~[\mathrm{1/m}]$ \\
+$\beta_3$ & $0.00037936~[\mathrm{1/m}]$ \\
+$\beta_4$ & $-0.00037753~[\mathrm{1/m}]$ \\
+\hline
+\end{tabular}
+\end{minipage}
+
+\vspace{1.5em}
+
+\begin{minipage}[t]{0.62\textwidth}
+\centering
+\captionof{table}{Mode overlap coefficients in Figure \ref{fig:case2-plot1}.}
+\label{tab:case2-overlap}
+\begin{tabular}{c c}
+\hline
+Coefficient & Value \\
+\hline
+$f_{1,1}$ & $0.98259$ \\
+$f_{1,2}$ & $0.84077$ \\
+$f_{1,3}$ & $0.84314$ \\
+$f_{1,4}$ & $0.85435$ \\
+$f_{2,1}$ & $0.84077$ \\
+$f_{2,2}$ & $0.98386$ \\
+$f_{2,3}$ & $0.85204$ \\
+$f_{2,4}$ & $0.84794$ \\
+$f_{3,1}$ & $0.84314$ \\
+$f_{3,2}$ & $0.85204$ \\
+$f_{3,3}$ & $0.98654$ \\
+$f_{3,4}$ & $0.84436$ \\
+$f_{4,1}$ & $0.85435$ \\
+$f_{4,2}$ & $0.84794$ \\
+$f_{4,3}$ & $0.84436$ \\
+$f_{4,4}$ & $0.98572$ \\
+\hline
+\end{tabular}
+\end{minipage}
+
+\end{table}
+
+\noindent
+The $\beta_j$ values listed above had their large mean removed to avoid plotting rapid phase oscillations.
 
 \printbibliography
 
