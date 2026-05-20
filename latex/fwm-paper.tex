@@ -1,6 +1,6 @@
 \newif\ifpreprint
-% \preprinttrue
-\preprintfalse
+\preprinttrue
+% \preprintfalse
 
 \ifpreprint
   \documentclass[11pt,a4paper]{article}
@@ -79,6 +79,9 @@ Both works use Jacobi elliptic functions and treat amplitude and phase separatel
 In contrast, the work herein derives complete solutions for the complex mode envelopes themselves, avoiding decomposition into amplitude and phase or real and imaginary parts, which provides a more direct description that naturally preserves all phase relationships and may therefore provide benefits for coherent applications.
 
 The solutions derived herein are expressed using Weierstrass elliptic functions rather than the Jacobi elliptic functions employed in prior work.
+This work is part of a series of papers by the author that provide complete general solutions to coupled mode systems of nonlinear ordinary differential equations in quasi-continuous-wave nonlinear optics that include 
+linearly polarised (LP) modes of a multimode optical fiber \cite{heskethNonlinearEffectsMultimode2014}; two-wave and three-wave mixing in quadratic nonlinear media, polarisation dynamics in nonlinear fibres, and parity-time symmetric nonlinear couplers \cite{heskethGeneralComplexEnvelope2015}; 
+and the exchange of optical power between two evanescently coupled waveguide modes under the Kerr nonlinearity (coherent coupler) \cite{heskethCompleteWeierstrassElliptic2026}.
 The Weierstrass formulation provides a natural solution pathway for complex envelopes: the coupled equations are recast as logarithmic derivatives, which directly yield Weierstrass $\zeta$ functions, and integration then produces solutions in terms of Weierstrass $\sigma$ functions.
 This progression through the Weierstrass function hierarchy—from $\wp$ to $\zeta$ to $\sigma$—emerges organically from the structure of the complex envelope equations, whereas Jacobi elliptic functions are more naturally suited to systems where amplitudes and phases are treated separately.
 Moreover, the connection to Hamiltonian structure and conservation laws is more transparent in Weierstrass notation.
@@ -850,12 +853,10 @@ The coupling coefficients satisfy $a_{k,j}=a_{j,k}$.
 \section{Parameters for Figure \ref{fig:case2-plot1}}
 \label{app:case2-params}
 
-\begin{table}[h!]
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
 \centering
-
-\begin{minipage}[t]{0.47\textwidth}
-\centering
-\caption{Initial field amplitudes in Figure \ref{fig:case2-plot1}.}
+\captionof{table}{Initial field amplitudes used in Figure \ref{fig:case2-plot1}.}
 \label{tab:case2-init}
 \begin{tabular}{c c}
 \hline
@@ -869,13 +870,12 @@ $A_4(0)$ & $-1.17\times10^{6}+2.94\times10^{6}i$ \\
 \end{tabular}
 
 \vspace{0.5em}
-
 {\small $|A_j|^2$ is measured in Watts [W].}
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.47\textwidth}
+\begin{minipage}[t]{0.48\textwidth}
 \centering
-\caption{Physical parameters in Figure \ref{fig:case2-plot1}.}
+\captionof{table}{Physical parameters used in Figure \ref{fig:case2-plot1}.}
 \label{tab:case2-physical}
 \begin{tabular}{c c}
 \hline
@@ -897,10 +897,11 @@ $\beta_4$ & $-0.00037753~[\mathrm{1/m}]$ \\
 
 \vspace{1.5em}
 
-\begin{minipage}[t]{0.62\textwidth}
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
 \centering
-\captionof{table}{Mode overlap coefficients in Figure \ref{fig:case2-plot1}.}
-\label{tab:case2-overlap}
+\captionof{table}{Mode overlap coefficients, part I.}
+\label{tab:case2-overlap-a}
 \begin{tabular}{c c}
 \hline
 Coefficient & Value \\
@@ -913,6 +914,18 @@ $f_{2,1}$ & $0.84077$ \\
 $f_{2,2}$ & $0.98386$ \\
 $f_{2,3}$ & $0.85204$ \\
 $f_{2,4}$ & $0.84794$ \\
+\hline
+\end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\captionof{table}{Mode overlap coefficients, part II.}
+\label{tab:case2-overlap-b}
+\begin{tabular}{c c}
+\hline
+Coefficient & Value \\
+\hline
 $f_{3,1}$ & $0.84314$ \\
 $f_{3,2}$ & $0.85204$ \\
 $f_{3,3}$ & $0.98654$ \\
@@ -925,11 +938,10 @@ $f_{4,4}$ & $0.98572$ \\
 \end{tabular}
 \end{minipage}
 
-\end{table}
+\vspace{1em}
 
 \noindent
 The $\beta_j$ values listed above had their large mean removed to avoid plotting rapid phase oscillations.
-
 \printbibliography
 
 \end{document}
