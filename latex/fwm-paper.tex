@@ -411,28 +411,29 @@ v_j(z) &= \hat{v}_j(z) e^{\phi_j(z)}, \\
 \sum_{j=1}^{4} \phi_j(z) &= 0,
 \end{align}
 where transforming the conjugate mode with the opposing phase leaves modal powers unchanged, and where the sum over $\phi_j$ being zero ensures we do not encounter any new terms appearing in the exponents of wave mixing terms.
-We make the following choice for $\phi_j$ composed of a part linear in $z$ (labelled $L$) and a part nonlinear in $z$ (labelled $NL$) (where $L$ and $NL$ are function labels not exponents):
+We make the following choice for $\phi_j$ composed of a part linear in $z$ (labelled $\mathcal{L}$) and a part nonlinear in $z$ (labelled $\mathcal{NL}$) (where $\mathcal{L}$ and $\mathcal{NL}$ are function labels not exponents):
 \begin{align}
-\phi_j(z) &= \phi_j^{L}(z) + \phi_j^{NL}(z) \\
-\phi_j^{L}(z) &= z\left({a}_{j} - \frac{1}{4}\sum_{m=1}^{4} a_{m} - \frac{{\gamma}_{j}}{4} \sum\limits_{l,k=1}^{4} a_{l,k}\right) \\
-\phi_j^{NL}(z)  &= \sum_{k=1}^{4} \left({a}_{j,k} - \frac{1}{4}\sum_{l=1}^{4} {a}_{l,k}\right) \int_{0}^{z} \hat{u}_k (\xi) \hat{v}_k (\xi) \, d\xi \\
-\sum_{j=1}^{4} \phi_j(z) &= \sum_{j=1}^{4} \phi_j^{L}(z) = \sum_{j=1}^{4} \phi_j^{NL}(z) =0.
+N &= 4,\\
+\phi_j(z) &= \phi_j^{\mathcal{L}}(z) + \phi_j^{\mathcal{NL}}(z) \\
+\phi_j^{\mathcal{L}}(z) &= z\left({a}_{j} - \frac{1}{N}\sum_{m=1}^{N} a_{m} - \frac{{\gamma}_{j}}{N} \sum\limits_{l,k=1}^{N} a_{l,k}\right) \\
+\phi_j^{\mathcal{NL}}(z)  &= \sum_{k=1}^{N} \left({a}_{j,k} - \frac{1}{N}\sum_{l=1}^{N} {a}_{l,k}\right) \int_{0}^{z} \hat{u}_k (\xi) \hat{v}_k (\xi) \, d\xi \\
+\sum_{j=1}^{N} \phi_j(z) &= \sum_{j=1}^{N} \phi_j^{\mathcal{L}}(z) = \sum_{j=1}^{N} \phi_j^{\mathcal{NL}}(z) =0.
 \end{align}
 
 This transforms \eqref{eq:uv-system} into the following system:
 \begin{align}
-\frac{\partial}{\partial z} \hat{u}_j &= \left(\frac{b_1}{4} - \frac{b_2}{2}\hat{u}_j \hat{v}_j \right) \hat{u}_j + \prod\limits_{k=1, k \ne j}^{4} \hat{v}_k \notag \\
-\frac{\partial}{\partial z} \hat{v}_j &= \left( - \frac{b_1}{4} + \frac{b_2}{2}\hat{u}_j \hat{v}_j\right) \hat{v}_j - \prod\limits_{k=1, k \ne j}^{4} \hat{u}_k \label{eq:uv-hat-system}
+\frac{\partial}{\partial z} \hat{u}_j &= \left(b_1 - 2b_2\hat{u}_j \hat{v}_j \right) \frac{\hat{u}_j}{N} + \prod\limits_{k=1, k \ne j}^{N} \hat{v}_k \notag \\
+\frac{\partial}{\partial z} \hat{v}_j &= -\left(b_1 - 2b_2\hat{u}_j \hat{v}_j\right) \frac{\hat{v}_j}{N} - \prod\limits_{k=1, k \ne j}^{N} \hat{u}_k \label{eq:uv-hat-system}
 \end{align}
 for which the conserved canonical Hamiltonian is:
 \begin{align}
-\hat{H} &= \prod_{l=1}^{4} \hat{u}_l + \prod_{l=1}^{4} \hat{v}_l - \frac{1}{4}\sum_{l=1}^{4} \left(b_2 \hat{u}^{2}_l \hat{v}^{2}_l  - b_1 \hat{u}_l \hat{v}_l \right)
+\hat{H} &= \prod_{l=1}^{N} \hat{u}_l + \prod_{l=1}^{N} \hat{v}_l - \frac{1}{N}\sum_{l=1}^{N} \left(b_2 \hat{u}^{2}_l \hat{v}^{2}_l  - b_1 \hat{u}_l \hat{v}_l \right)
 \end{align}
 and the intermodal power conservation laws are unchanged such that $\hat{u}_j \hat{v}_j - \hat{u}_k \hat{v}_k = \gamma_j - \gamma_k$.
 Comparing \eqref{eq:uv-hat-system} with the original system \eqref{eq:uv-system}, we observe significant simplification.
-All modes now share a single propagation constant $b_1/4$ and a single self-phase modulation coefficient $b_2/2$, whilst all cross-phase modulation terms $a_{j,k}$ with $j \ne k$ have been eliminated.
+All modes now share a single propagation constant $b_1/N$ and a single self-phase modulation coefficient $2b_2/N$, whilst all cross-phase modulation terms $a_{j,k}$ with $j \ne k$ have been eliminated.
 It should be noted that parameters $b_1, b_2$ depend on $\gamma_j$ and thus, in the new coordinates parameters depend on mode power in the original coordinates and are not exclusively fibre parameters.
-In terms of the solutions to the system, the effect of the $\phi_j^{NL}$ transform is to remove the $z$ dependent log terms weighted by $r_{1,j}$ in \eqref{eq:u-v-quartic}. 
+In terms of the solutions to the system, the effect of the $\phi_j^{\mathcal{NL}}$ transform is to remove the $z$ dependent log terms weighted by $r_{1,j}$ in \eqref{eq:u-v-quartic}. 
 This transformation can be interpreted as an analytic form of back-propagation in that it integrates the accumulated cross-phase modulation from all modes along the propagation path and applies conjugate phase shifts to remove these effects, similar to what is implemented digitally to correct nonlinear distortion in fibre optic communication systems, or physically using phase-conjugating optical fibres as explored in \cite{heskethMinimizingInterchannelCrossphase2016}.
 
 
@@ -858,7 +859,7 @@ The coupling coefficients satisfy $a_{k,j}=a_{j,k}$.
 \noindent
 \begin{minipage}[t]{0.48\textwidth}
 \centering
-\captionof{table}{Initial field amplitudes used in Figure \ref{fig:case2-plot1}.}
+\captionof{table}{Initial field amplitudes for Figure \ref{fig:case2-plot1}.}
 \label{tab:case2-init}
 \begin{tabular}{c c}
 \hline
@@ -877,7 +878,7 @@ $A_4(0)$ & $-1.17\times10^{6}+2.94\times10^{6}i$ \\
 \hfill
 \begin{minipage}[t]{0.48\textwidth}
 \centering
-\captionof{table}{Physical parameters used in Figure \ref{fig:case2-plot1}.}
+\captionof{table}{Physical parameters for Figure \ref{fig:case2-plot1}.}
 \label{tab:case2-physical}
 \begin{tabular}{c c}
 \hline
@@ -943,7 +944,7 @@ $f_{4,4}$ & $0.98572$ \\
 \vspace{1em}
 
 \noindent
-The $\beta_j$ values listed above had their large mean removed to avoid plotting rapid phase oscillations.
+The $\beta_j$ values above had their large mean removed to avoid plotting rapid phase oscillations.
 \printbibliography
 
 \end{document}

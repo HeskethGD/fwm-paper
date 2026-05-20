@@ -263,9 +263,6 @@ INPUT ./plots/case2_plot_1.pdf
 INPUT ./plots/case2_plot_1.pdf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/omscmr.fd
-INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/omscmr.fd
-INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/omscmr.fd
 INPUT fwm-paper.aux
 INPUT ./fwm-paper.out
 INPUT ./fwm-paper.out
