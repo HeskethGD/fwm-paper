@@ -1,19 +1,19 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'fwm-paper.blg'
-[31] biber-darwin:340> INFO - === Wed May 20, 2026, 14:51:56
-[39] Biber.pm:420> INFO - Reading 'fwm-paper.bcf'
-[74] Biber.pm:994> INFO - Found 20 citekeys in bib section 0
-[81] Biber.pm:4463> INFO - Processing section 0
-[86] Biber.pm:4654> INFO - Looking for bibtex file 'CW-FWM-Analytic-Solutions.bib' for section 0
-[88] bibtex.pm:1713> INFO - LaTeX decoding ...
-[110] bibtex.pm:1519> INFO - Found BibTeX data source 'CW-FWM-Analytic-Solutions.bib'
-[211] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[211] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[211] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
-[211] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
-[221] bbl.pm:676> INFO - Writing 'fwm-paper.bbl' with encoding 'UTF-8'
-[228] bbl.pm:779> INFO - Output to fwm-paper.bbl
-[228] Biber.pm:131> WARN - Duplicate entry key: 'heskethCompleteWeierstrassElliptic2026' in file 'CW-FWM-Analytic-Solutions.bib', skipping ...
-[228] Biber.pm:131> WARN - ISBN '978-1-4419-3087-3 978-1-4757-2063-1' in entry 'arnoldMathematicalMethodsClassical1989' is invalid - run biber with '--validate_datamodel' for details.
-[228] Biber.pm:131> WARN - ISBN '978-3-540-65036-2 978-3-642-66209-6' in entry 'weilEllipticFunctionsAccording1976' is invalid - run biber with '--validate_datamodel' for details.
-[228] Biber.pm:133> INFO - WARNINGS: 3
+[33] biber-darwin:340> INFO - === Wed May 20, 2026, 14:56:11
+[41] Biber.pm:420> INFO - Reading 'fwm-paper.bcf'
+[77] Biber.pm:994> INFO - Found 20 citekeys in bib section 0
+[84] Biber.pm:4463> INFO - Processing section 0
+[89] Biber.pm:4654> INFO - Looking for bibtex file 'CW-FWM-Analytic-Solutions.bib' for section 0
+[91] bibtex.pm:1713> INFO - LaTeX decoding ...
+[113] bibtex.pm:1519> INFO - Found BibTeX data source 'CW-FWM-Analytic-Solutions.bib'
+[218] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[218] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[218] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[218] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[228] bbl.pm:676> INFO - Writing 'fwm-paper.bbl' with encoding 'UTF-8'
+[235] bbl.pm:779> INFO - Output to fwm-paper.bbl
+[235] Biber.pm:131> WARN - Duplicate entry key: 'heskethCompleteWeierstrassElliptic2026' in file 'CW-FWM-Analytic-Solutions.bib', skipping ...
+[235] Biber.pm:131> WARN - ISBN '978-1-4419-3087-3 978-1-4757-2063-1' in entry 'arnoldMathematicalMethodsClassical1989' is invalid - run biber with '--validate_datamodel' for details.
+[235] Biber.pm:131> WARN - ISBN '978-3-540-65036-2 978-3-642-66209-6' in entry 'weilEllipticFunctionsAccording1976' is invalid - run biber with '--validate_datamodel' for details.
+[235] Biber.pm:133> INFO - WARNINGS: 3
