@@ -65,6 +65,194 @@
       \verb https://shop.elsevier.com/books/nonlinear-fiber-optics/agrawal/978-0-12-817042-7
       \endverb
     \endentry
+    \entry{marhicFiberOpticalParametric2007}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=4f4d22cd768a6d500984e982b8a071f6}{%
+           family={Marhic},
+           familyi={M\bibinitperiod},
+           given={Michel\bibnamedelima E.},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{4f4d22cd768a6d500984e982b8a071f6}
+      \strng{fullhash}{4f4d22cd768a6d500984e982b8a071f6}
+      \strng{fullhashraw}{4f4d22cd768a6d500984e982b8a071f6}
+      \strng{bibnamehash}{4f4d22cd768a6d500984e982b8a071f6}
+      \strng{authorbibnamehash}{4f4d22cd768a6d500984e982b8a071f6}
+      \strng{authornamehash}{4f4d22cd768a6d500984e982b8a071f6}
+      \strng{authorfullhash}{4f4d22cd768a6d500984e982b8a071f6}
+      \strng{authorfullhashraw}{4f4d22cd768a6d500984e982b8a071f6}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This book, published in 2007, provides comprehensive coverage of the theory and practice of OPAs and related devices, including fiber optical parametric oscillators (OPOs). After introducing the field, the theory and techniques behind all types of fiber OPAs are covered starting from first principles - topics include the scalar and vector OPA theory; the nonlinear Schrodinger equation; OPO theory; and quantum noise figure of fiber OPAs. Challenges of making fiber OPAs practical for a number of applications are discussed, and a survey of the state-of-the-art in feasibility demonstrations and performance evaluations is provided. The capabilities and limitations of OPAs; the potential applications for OPAs and OPOs, and prospects for future developments in the field are discussed. Theoretical tools developed in this text can also be applied to other areas of nonlinear optics. This is a valuable resource for researchers, advanced practitioners, and graduate students in optoelectronics.}
+      \field{isbn}{978-0-521-86102-1}
+      \field{title}{Fiber {{Optical Parametric Amplifiers}}, {{Oscillators}} and {{Related Devices}}}
+      \field{urlday}{25}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2007}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1017/CBO9780511600265
+      \endverb
+      \verb{file}
+      \verb /Users/grahamhesketh/Zotero/storage/JN3QZ3WK/0D196103820EEF65BAAFC4B355C0EAE3.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/books/fiber-optical-parametric-amplifiers-oscillators-and-related-devices/0D196103820EEF65BAAFC4B355C0EAE3
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/books/fiber-optical-parametric-amplifiers-oscillators-and-related-devices/0D196103820EEF65BAAFC4B355C0EAE3
+      \endverb
+    \endentry
+    \entry{bottrillOptimisationAmplitudeLimiters2016}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=a133722930a0a5476af0a01c6c2ecbea}{%
+           family={Bottrill},
+           familyi={B\bibinitperiod},
+           given={K.\bibnamedelimi R.\bibnamedelimi H.},
+           giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=c078be0eadcf1d595d02fdeb8dcdb587}{%
+           family={Hesketh},
+           familyi={H\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=c5c556f78124daa480a4a4caf18bb42e}{%
+           family={Parmigiani},
+           familyi={P\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=ca4a873f59f09d365a4425008901574d}{%
+           family={Richardson},
+           familyi={R\bibinitperiod},
+           given={D.\bibnamedelimi J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=bcced2dfe3f4ff806a61afd4db092f17}{%
+           family={Petropoulos},
+           familyi={P\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Optica Publishing Group}%
+      }
+      \strng{namehash}{0853594adfc4b11bc01c26e49559da92}
+      \strng{fullhash}{7b3cc78b5fe94db91bed458f5575d71b}
+      \strng{fullhashraw}{7b3cc78b5fe94db91bed458f5575d71b}
+      \strng{bibnamehash}{0853594adfc4b11bc01c26e49559da92}
+      \strng{authorbibnamehash}{0853594adfc4b11bc01c26e49559da92}
+      \strng{authornamehash}{0853594adfc4b11bc01c26e49559da92}
+      \strng{authorfullhash}{7b3cc78b5fe94db91bed458f5575d71b}
+      \strng{authorfullhashraw}{7b3cc78b5fe94db91bed458f5575d71b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Adopting an exact solution to four-wave mixing (FWM), wherein harmonic evolution is described by the sum of two Bessel functions, we identify two causes of amplitude to phase noise conversion which impair FWM saturation based amplitude regenerators: self-phase modulation (SPM) and Bessel-order mixing (BOM). By increasing the pump to signal power ratio, we may arbitrarily reduce their impact, realising a phase preserving amplitude regenerator. We demonstrate the technique by applying it to the regeneration of a 10 GBaud QPSK signal, achieving a high level of amplitude squeezing with minimal amplitude to phase noise conversion.}
+      \field{day}{8}
+      \field{issn}{1094-4087}
+      \field{journaltitle}{Optics Express}
+      \field{langid}{english}
+      \field{month}{2}
+      \field{number}{3}
+      \field{shortjournal}{Opt. Express, OE}
+      \field{title}{Optimisation of Amplitude Limiters for Phase Preservation Based on the Exact Solution to Degenerate Four-Wave Mixing}
+      \field{urlday}{25}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{volume}{24}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{2774\bibrangedash 2787}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1364/OE.24.002774
+      \endverb
+      \verb{file}
+      \verb /Users/grahamhesketh/Zotero/storage/3M7B8Z2E/Bottrill et al. - 2016 - Optimisation of amplitude limiters for phase preservation based on the exact solution to degenerate.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://opg.optica.org/oe/abstract.cfm?uri=oe-24-3-2774
+      \endverb
+      \verb{url}
+      \verb https://opg.optica.org/oe/abstract.cfm?uri=oe-24-3-2774
+      \endverb
+      \keyw{Four wave mixing,Nonlinear optical fibers,Phase matching,Phase noise,Phase shift,Semiconductor optical amplifiers}
+    \endentry
+    \entry{yangReconfigurableOpticalNonlinear2026}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=16bafeb3640a6cbe37dfedb7a9ab8781}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Wanqi},
+           giveni={W\bibinitperiod}}}%
+        {{hash=ab95eac2cb7575a038bf3fd07841fc15}{%
+           family={Bottrill},
+           familyi={B\bibinitperiod},
+           given={Kyle\bibnamedelimb R.\bibnamedelimi H.},
+           giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=33104fd0f457a2964af323817a9d2016}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod}}}%
+        {{hash=2c76b9a8c11d6135dc389814ed12e629}{%
+           family={Petropoulos},
+           familyi={P\bibinitperiod},
+           given={Periklis},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Optica Publishing Group}%
+      }
+      \strng{namehash}{9c2a9793a43d7258f199a2572ea1c4d8}
+      \strng{fullhash}{b296e6f393748068576e202c7ae20e56}
+      \strng{fullhashraw}{b296e6f393748068576e202c7ae20e56}
+      \strng{bibnamehash}{9c2a9793a43d7258f199a2572ea1c4d8}
+      \strng{authorbibnamehash}{9c2a9793a43d7258f199a2572ea1c4d8}
+      \strng{authornamehash}{9c2a9793a43d7258f199a2572ea1c4d8}
+      \strng{authorfullhash}{b296e6f393748068576e202c7ae20e56}
+      \strng{authorfullhashraw}{b296e6f393748068576e202c7ae20e56}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We experimentally demonstrate reconfigurable nonlinear activation functions based on four-wave mixing in highly nonlinear fibre. In an MNIST classifier, the optical activations exceed 97\% test accuracy and stay within 0.45 percentage points of digital ones.}
+      \field{booktitle}{{{CLEO}} 2026 (2026), Paper {{SM4D}}.4}
+      \field{day}{2}
+      \field{eventtitle}{{{CLEO}}: {{Science}} and {{Innovations}}}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{title}{Reconfigurable {{Optical Nonlinear Activation Functions Based}} on {{Four-Wave Mixing}}}
+      \field{urlday}{25}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{SM4D.4}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1364/CLEO_SI.2026.SM4D.4
+      \endverb
+      \verb{urlraw}
+      \verb https://opg.optica.org/abstract.cfm?uri=CLEO_SI-2026-SM4D.4
+      \endverb
+      \verb{url}
+      \verb https://opg.optica.org/abstract.cfm?uri=CLEO_SI-2026-SM4D.4
+      \endverb
+      \keyw{Bandpass filters,Four wave mixing,Frequency combs,Nonlinear optical fibers,Optical neural systems,Optical transfer functions}
+    \endentry
     \entry{chenFourphotonParametricMixing1989}{article}{}{}
       \name{author}{2}{}{%
         {{hash=eb52453427a56e9815ad2687dbc97c45}{%
@@ -89,8 +277,8 @@
       \strng{authornamehash}{bf077b475a17273ffdd8cda1bb945d4f}
       \strng{authorfullhash}{bf077b475a17273ffdd8cda1bb945d4f}
       \strng{authorfullhashraw}{bf077b475a17273ffdd8cda1bb945d4f}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{The analytical solutions to differential equations governing nonlinear four-photon mixing in optical fibers are presented for the general case of depleted pump power. The expressions reduce to those derived earlier with the assumption of nondepleted pump power. We find that the maximum power available for conversion from the pump waves to the signal waves resulting from a third-order nonlinearity depends on the index mismatch and that the index mismatch required for achieving maximum possible power transfer is a function of the frequency shift.}
@@ -145,8 +333,8 @@
       \strng{authornamehash}{eb52453427a56e9815ad2687dbc97c45}
       \strng{authorfullhash}{eb52453427a56e9815ad2687dbc97c45}
       \strng{authorfullhashraw}{eb52453427a56e9815ad2687dbc97c45}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Exact solutions to the equations describing general nonlinear four-wave mixing (including parametric mixing and three-wave sum-frequency generation) in optical fibers are presented. This complements our earlier research on four-photon parametric mixing in optical fibers [ Opt. Lett.14, 87 ( 1989)].}
@@ -201,8 +389,9 @@
       \strng{authornamehash}{4f4d22cd768a6d500984e982b8a071f6}
       \strng{authorfullhash}{4f4d22cd768a6d500984e982b8a071f6}
       \strng{authorfullhashraw}{4f4d22cd768a6d500984e982b8a071f6}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{extraname}{2}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{We show that the phases of waves coupled by four-wave mixing (FWM) can be calculated in closed form, for either degenerate or nondegenerate FWM. The phase of each wave is the sum of a linear function of distance z, and elliptic integrals of the third kind. A variety of behaviors as a function of z are possible. The results can be used for obtaining the phase transfer function between any input wave and any output wave, a subject of interest for phase regeneration of communication signals.}
@@ -237,67 +426,248 @@
       \endverb
       \keyw{Four wave mixing,Nonlinear optical fibers,Numerical simulation,Optical amplifiers,Phase shift,Quantum fluctuations}
     \endentry
-    \entry{heskethNonlinearEffectsMultimode2014}{thesis}{}{}
-      \name{author}{1}{}{%
-        {{hash=377f9db53e2daeb53d6fb8e1e94e3c24}{%
-           family={Hesketh},
-           familyi={H\bibinitperiod},
-           given={Graham},
-           giveni={G\bibinitperiod}}}%
+    \entry{odzijewiczIntegrableClassicalQuantum2020}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=f78b572902b380185ecb30d516bdc11b}{%
+           family={Odzijewicz},
+           familyi={O\bibinitperiod},
+           given={Anatol},
+           giveni={A\bibinitperiod}}}%
+        {{hash=73926f7356e7d39b32c02a10ea78e1be}{%
+           family={Wawreniuk},
+           familyi={W\bibinitperiod},
+           given={Elwira},
+           giveni={E\bibinitperiod}}}%
       }
-      \name{namea}{2}{}{%
-        {{hash=377f9db53e2daeb53d6fb8e1e94e3c24}{%
-           family={Hesketh},
-           familyi={H\bibinitperiod},
-           given={Graham},
-           giveni={G\bibinitperiod}}}%
-        {{hash=7d64ba606da0df95f4390c1e85ac75fc}{%
-           family={Horak},
-           familyi={H\bibinitperiod},
-           given={P.},
-           giveni={P\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {University of Southampton}%
-      }
-      \strng{namehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
-      \strng{fullhash}{377f9db53e2daeb53d6fb8e1e94e3c24}
-      \strng{fullhashraw}{377f9db53e2daeb53d6fb8e1e94e3c24}
-      \strng{bibnamehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
-      \strng{authorbibnamehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
-      \strng{authornamehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
-      \strng{authorfullhash}{377f9db53e2daeb53d6fb8e1e94e3c24}
-      \strng{authorfullhashraw}{377f9db53e2daeb53d6fb8e1e94e3c24}
-      \strng{nameabibnamehash}{c331a21821c9e2b80ac10ca2e844160a}
-      \strng{nameanamehash}{c331a21821c9e2b80ac10ca2e844160a}
-      \strng{nameafullhash}{c331a21821c9e2b80ac10ca2e844160a}
-      \strng{nameafullhashraw}{c331a21821c9e2b80ac10ca2e844160a}
-      \field{extraname}{1}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \strng{namehash}{ac0202a422945d892093c40d99b730f4}
+      \strng{fullhash}{ac0202a422945d892093c40d99b730f4}
+      \strng{fullhashraw}{ac0202a422945d892093c40d99b730f4}
+      \strng{bibnamehash}{ac0202a422945d892093c40d99b730f4}
+      \strng{authorbibnamehash}{ac0202a422945d892093c40d99b730f4}
+      \strng{authornamehash}{ac0202a422945d892093c40d99b730f4}
+      \strng{authorfullhash}{ac0202a422945d892093c40d99b730f4}
+      \strng{authorfullhashraw}{ac0202a422945d892093c40d99b730f4}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Utilizing the modes of a multimode fiber forms a frontier between what is achievable with current fibre technology and what is required for the remainder of the 21st century. Large mode area multimode fibers accommodate the high power delivery demanded by fiber lasers used in industry for precision cutting, welding and drilling functions, and used elsewhere for the generation of white light sources used in fiber communication, medical and precision time keeping applications. This thesis explores the theory of nonlinear effects in multimode fibers with the intention of optimizing existing applications, whilst simultaneously identifying new ones.{$<$}br/{$><$}br/{$>$}A generalized multimode nonlinear Schrodinger equation is numerically solved to explore the phenomenon of self-focusing in multimode fibers, with peak powers in the megawatt regime. Temporal effects compress femtosecond pulses launched into the fundamental mode, driving peak powers up and coupling power into higher order modes; a process identified with transverse spatial contraction and increased intensity. Parameter regimes in which damage may be avoided are identified. The nonlinear interaction of two modes under continuous wave pumping is solved analytically in terms of elliptic functions.{$<$}br/{$><$}br/{$>$}The nonlinear multi frequency dynamics describing the optical regeneration of optical communication signals are researched in a scalar single mode scenario, before nonlinear effects in polarization modes are explored. In the scalar case, a modification to a phase sensitive amplifier from the literature solves the problem of phase to amplitude noise conversion during regeneration. Improved bit error rates in three modulation formats are simulated as a result and experimental collaboration demonstrates proof of principle. Polarization assisted phase sensitive amplification (PAPSA) for signal regeneration is then introduced. Polarization mode benefits include operating power and fiber length reduction, simultaneous regeneration of signal phase and amplitude, and a simple way to decompose the signal into quadrature and in-phase components. An approximate analytic theory of PAPSA is developed. Experimental collaboration demonstrates that PAPSA offers significant signal bit error rate reduction{$<$}br/{$>$}}
-      \field{langid}{english}
-      \field{month}{11}
-      \field{nameatype}{collaborator}
-      \field{pagetotal}{131}
-      \field{title}{Nonlinear Effects in Multimode Optical Fibers}
-      \field{type}{phdthesis}
-      \field{urlday}{31}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{year}{2014}
+      \field{abstract}{A four-wave mixing Hamiltonian system on the classical as well as on the quantum level is investigated. In the classical case, if one assumes the frequency resonance condition of the form \$ω\_0 -ω\_1 +ω\_2 -ω\_3=0\$, this Hamiltonian system is integrated in quadratures and the explicit formulas of solutions are presented. Under the same condition the spectral decomposition of quantum Hamiltonian is found and thus, the Heisenberg equation for this system is solved. Some applications of the obtained results in non-linear optics are disscused.}
+      \field{day}{1}
+      \field{eprintclass}{math-ph}
+      \field{eprinttype}{arXiv}
+      \field{issn}{0022-2488, 1089-7658}
+      \field{journaltitle}{Journal of Mathematical Physics}
+      \field{month}{7}
+      \field{number}{7}
+      \field{title}{An Integrable (Classical and Quantum) Four-Wave Mixing {{Hamiltonian}} System}
+      \field{urlday}{5}
+      \field{urlmonth}{8}
+      \field{urlyear}{2026}
+      \field{volume}{61}
+      \field{year}{2020}
       \field{dateera}{ce}
       \field{urldateera}{ce}
+      \field{pages}{073503}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1063/5.0006887
+      \endverb
+      \verb{eprint}
+      \verb 2003.03060
+      \endverb
       \verb{file}
-      \verb /Users/grahamhesketh/Zotero/storage/9MYV9J2K/Hesketh - 2014 - Nonlinear effects in multimode optical fibers.pdf;/Users/grahamhesketh/Zotero/storage/J7F427WW/374911.html
+      \verb /Users/grahamhesketh/Zotero/storage/QAKSAZ2C/Odzijewicz and Wawreniuk - 2020 - An integrable (classical and quantum) four-wave mixing Hamiltonian system.pdf;/Users/grahamhesketh/Zotero/storage/JLV4F9AB/2003.html
       \endverb
       \verb{urlraw}
-      \verb https://eprints.soton.ac.uk/374911/
+      \verb http://arxiv.org/abs/2003.03060
       \endverb
       \verb{url}
-      \verb https://eprints.soton.ac.uk/374911/
+      \verb http://arxiv.org/abs/2003.03060
+      \endverb
+      \keyw{Mathematical Physics}
+    \endentry
+    \entry{cappelliniThirdorderThreewaveMixing1991}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=08572dfb2e35853e588d6c7237fba8e1}{%
+           family={Cappellini},
+           familyi={C\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=cddd1dde4561ebf02c62c3f8b7e54525}{%
+           family={Trillo},
+           familyi={T\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Optica Publishing Group}%
+      }
+      \strng{namehash}{65c9397853b9a88f1f6f3ae3b0148103}
+      \strng{fullhash}{65c9397853b9a88f1f6f3ae3b0148103}
+      \strng{fullhashraw}{65c9397853b9a88f1f6f3ae3b0148103}
+      \strng{bibnamehash}{65c9397853b9a88f1f6f3ae3b0148103}
+      \strng{authorbibnamehash}{65c9397853b9a88f1f6f3ae3b0148103}
+      \strng{authornamehash}{65c9397853b9a88f1f6f3ae3b0148103}
+      \strng{authorfullhash}{65c9397853b9a88f1f6f3ae3b0148103}
+      \strng{authorfullhashraw}{65c9397853b9a88f1f6f3ae3b0148103}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Exact solutions are presented to the steady-state coupled-mode equations that govern the nonlinear parametric interaction of a central-frequency wave with a pair of upshifted and downshifted sidebands in isotropic single-mode optical fibers. This solution accounts for pump depletion as well for as a possible phase mismatch among the waves. The existence is predicted of eigensolutions propagating unchanged along the fiber, which may be either spatially stable or spatially unstable, depending on the total power and the propagation-constant mismatch. The presence of spatially unstable eigensolutions dramatically affects the power exchange among the three waves. The physical implications of this instability for the frequency-conversion process, as well as its potential application to all-optical switching, are discussed.}
+      \field{day}{1}
+      \field{issn}{1520-8540}
+      \field{journaltitle}{JOSA B}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{number}{4}
+      \field{shortjournal}{J. Opt. Soc. Am. B, JOSAB}
+      \field{shorttitle}{Third-Order Three-Wave Mixing in Single-Mode Fibers}
+      \field{title}{Third-Order Three-Wave Mixing in Single-Mode Fibers: Exact Solutions and Spatial Instability Effects}
+      \field{urlday}{25}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{volume}{8}
+      \field{year}{1991}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{824\bibrangedash 838}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1364/JOSAB.8.000824
+      \endverb
+      \verb{file}
+      \verb /Users/grahamhesketh/Zotero/storage/KS44ISSI/239008104_Third-order_three-wave_mixing_in_single-mode_fibers_exact_solutions_and_spatial_insta.html
+      \endverb
+      \verb{urlraw}
+      \verb https://opg.optica.org/josab/abstract.cfm?uri=josab-8-4-824
+      \endverb
+      \verb{url}
+      \verb https://opg.optica.org/josab/abstract.cfm?uri=josab-8-4-824
+      \endverb
+      \keyw{Harmonic generation,Phase matching,Single mode fibers,Stimulated Brillouin scattering,Sum frequency generation,Three wave mixing}
+    \endentry
+    \entry{alberGeometricPhasesReduction1998}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=f8ca04dd7e97f0ae12b87fcf0ad27d84}{%
+           family={Alber},
+           familyi={A\bibinitperiod},
+           given={Mark\bibnamedelima S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=fce3e1bf8f9252152b22647f26e0ac6e}{%
+           family={Luther},
+           familyi={L\bibinitperiod},
+           given={Gregory\bibnamedelima G.},
+           giveni={G\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=ec03988d2dd9d918b4d7f236b192cc6a}{%
+           family={Marsden},
+           familyi={M\bibinitperiod},
+           given={Jerrold\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=e9a87acee01c3950e04757e1e677fe1f}{%
+           family={Robbins},
+           familyi={R\bibinitperiod},
+           given={Jonathan\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{edeb59fd99549e07257257243a374dc7}
+      \strng{fullhash}{61c23c79e8021f2016bc8c06cf787c19}
+      \strng{fullhashraw}{61c23c79e8021f2016bc8c06cf787c19}
+      \strng{bibnamehash}{edeb59fd99549e07257257243a374dc7}
+      \strng{authorbibnamehash}{edeb59fd99549e07257257243a374dc7}
+      \strng{authornamehash}{edeb59fd99549e07257257243a374dc7}
+      \strng{authorfullhash}{61c23c79e8021f2016bc8c06cf787c19}
+      \strng{authorfullhashraw}{61c23c79e8021f2016bc8c06cf787c19}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Hamiltonian Lie-Poisson structures of the three-wave equations associated with the Lie algebras SU(3) and SU(2, 1) are derived and shown to be compatible. Poisson reduction is performed using the method of invariants, and geometric phases associated with the reconstruction are calculated. These results can be applied to applications of nonlinear-waves in, for instance, nonlinear optics. Some of the general structures presented in the latter part of this paper are implicit in the literature; our purpose is to put the three-wave interaction in the modern setting of geometric mechanics and to explore some new things, such as explicit geometric phase formulas, as well as some old things, such as integrability, in this context.}
+      \field{day}{15}
+      \field{issn}{0167-2789}
+      \field{journaltitle}{Physica D: Nonlinear Phenomena}
+      \field{month}{11}
+      \field{number}{1}
+      \field{series}{Annual {{International Conference}} of the {{Center}} for {{Nonlinear Studies}}}
+      \field{shortjournal}{Physica D: Nonlinear Phenomena}
+      \field{title}{Geometric Phases, Reduction and {{Lie-Poisson}} Structure for the Resonant Three-Wave Interaction}
+      \field{urlday}{24}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{volume}{123}
+      \field{year}{1998}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{271\bibrangedash 290}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1016/S0167-2789(98)00127-4
+      \endverb
+      \verb{file}
+      \verb /Users/grahamhesketh/Zotero/storage/K7Y9IZXU/Alber et al. - 1998 - Geometric phases, reduction and Lie-Poisson structure for the resonant three-wave interaction.pdf;/Users/grahamhesketh/Zotero/storage/QUIMRL7R/S0167278998001274.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0167278998001274
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0167278998001274
+      \endverb
+      \keyw{Geometric phase,Integrable systems,Lax equation,Lie-Poisson,Nonlinear waves,Reduction,Three wave interaction}
+    \endentry
+    \entry{holmStepwisePrecessionResonant2002}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=54da33665d182072fc9af545bafcc456}{%
+           family={Holm},
+           familyi={H\bibinitperiod},
+           given={Darryl\bibnamedelima D.},
+           giveni={D\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=bb6e2fa4da417b8e18a6a074ca00bc17}{%
+           family={Lynch},
+           familyi={L\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Society for Industrial and Applied Mathematics}%
+      }
+      \strng{namehash}{0b4a168812e6af0384c61d33eb11e90f}
+      \strng{fullhash}{0b4a168812e6af0384c61d33eb11e90f}
+      \strng{fullhashraw}{0b4a168812e6af0384c61d33eb11e90f}
+      \strng{bibnamehash}{0b4a168812e6af0384c61d33eb11e90f}
+      \strng{authorbibnamehash}{0b4a168812e6af0384c61d33eb11e90f}
+      \strng{authornamehash}{0b4a168812e6af0384c61d33eb11e90f}
+      \strng{authorfullhash}{0b4a168812e6af0384c61d33eb11e90f}
+      \strng{authorfullhashraw}{0b4a168812e6af0384c61d33eb11e90f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The swinging spring, or elastic pendulum, has a 2:1:1 resonance arising at cubic order in its approximate Lagrangian. The corresponding modulation equations are the well-known three-wave equations that also apply, for example, in laser-matter interaction in a cavity. We use Hamiltonian reduction and pattern evocation techniques to derive a formula that describes the characteristic feature of this system's dynamics, namely, the stepwise precession of its azimuthal angle.MSC codes37J1537J3570H0637N0537N15Keywordsclassical mechanicsvariational principlesaveraged Lagrangianelastic pendulumnonlinear resonance}
+      \field{journaltitle}{SIAM Journal on Applied Dynamical Systems}
+      \field{month}{1}
+      \field{number}{1}
+      \field{shortjournal}{SIAM J. Appl. Dyn. Syst.}
+      \field{title}{Stepwise {{Precession}} of the {{Resonant Swinging Spring}}}
+      \field{urlday}{25}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{volume}{1}
+      \field{year}{2002}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{44\bibrangedash 64}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1137/S1111111101388571
+      \endverb
+      \verb{file}
+      \verb /Users/grahamhesketh/Zotero/storage/9NHVFJTR/Holm and Lynch - 2002 - Stepwise Precession of the Resonant Swinging Spring.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://epubs.siam.org/doi/10.1137/S1111111101388571
+      \endverb
+      \verb{url}
+      \verb https://epubs.siam.org/doi/10.1137/S1111111101388571
       \endverb
     \endentry
     \entry{heskethGeneralComplexEnvelope2015}{article}{}{}
@@ -319,9 +689,9 @@
       \strng{authornamehash}{1d7bc127dff7603699c24117aaf97d4c}
       \strng{authorfullhash}{1d7bc127dff7603699c24117aaf97d4c}
       \strng{authorfullhashraw}{1d7bc127dff7603699c24117aaf97d4c}
-      \field{extraname}{2}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The analytic general solutions for the complex field envelopes are derived using Weierstrass elliptic functions for two- and three-mode systems of differential equations coupled via quadratic χ2 type nonlinearity as well as two-mode systems coupled via cubic χ3 type nonlinearity. For the first time, a compact form of the solutions is given involving simple ratios of Weierstrass sigma functions (or equivalently Jacobi theta functions). A Fourier series is also given. All possible launch states are considered. The models describe sum- and difference-frequency generation, polarization dynamics, parity-time dynamics, and optical processing applications.}
@@ -372,9 +742,9 @@
       \strng{authornamehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
       \strng{authorfullhash}{377f9db53e2daeb53d6fb8e1e94e3c24}
       \strng{authorfullhashraw}{377f9db53e2daeb53d6fb8e1e94e3c24}
-      \field{extraname}{3}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Complete analytic solutions for the coherent coupler with arbitrary propagation constants and self- and cross-phase modulation coefficients are presented in terms of Weierstrass elliptic \$\textbackslash wp\$, \$ζ\$, and \$σ\$ functions, giving the full complex envelopes for both modes under generic initial conditions. Jensen's coupler emerges as a special case of the general system. The mode solutions contain factors of the form \$\textbackslash exp(r\textbackslash log R(z))\$, where \$R(z)\$ is a ratio of Weierstrass \$σ\$ functions, giving a multi-valued branch structure that is removable by a gauge transformation. A projection from the three-mode degenerate four-wave mixing system onto the two-mode coupler is identified, and the corresponding degenerate-system solutions are single-valued meromorphic Kronecker theta functions. This connection establishes the coherent coupler as a reduction of a broader class of integrable parametric processes and opens a pathway to leveraging known expansions of Kronecker theta functions for further analysis of nonlinear coupler dynamics.}
@@ -407,107 +777,93 @@
       \endverb
       \keyw{Nonlinear Sciences - Exactly Solvable and Integrable Systems}
     \endentry
-    \entry{whittakerCourseModernAnalysis2021}{book}{}{}
-      \name{author}{2}{}{%
-        {{hash=5132db19fe0ad334db14252f9887f29d}{%
-           family={Whittaker},
-           familyi={W\bibinitperiod},
-           given={E.\bibnamedelimi T.},
-           giveni={E\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
-        {{hash=35673bb7ba499f77d168ee80794262e8}{%
-           family={Watson},
-           familyi={W\bibinitperiod},
-           given={G.\bibnamedelimi N.},
-           giveni={G\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+    \entry{heskethGeneratingIntegrableSystems2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=377f9db53e2daeb53d6fb8e1e94e3c24}{%
+           family={Hesketh},
+           familyi={H\bibinitperiod},
+           given={Graham},
+           giveni={G\bibinitperiod}}}%
       }
-      \name{editor}{1}{}{%
-        {{hash=459db79507400740d3b2b1509ee49e18}{%
-           family={Moll},
-           familyi={M\bibinitperiod},
-           given={Victor\bibnamedelima H.},
-           giveni={V\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Cambridge}%
-      }
-      \list{publisher}{1}{%
-        {Cambridge University Press}%
-      }
-      \strng{namehash}{72dd6060b6f1d789d78346a350a43218}
-      \strng{fullhash}{72dd6060b6f1d789d78346a350a43218}
-      \strng{fullhashraw}{72dd6060b6f1d789d78346a350a43218}
-      \strng{bibnamehash}{72dd6060b6f1d789d78346a350a43218}
-      \strng{authorbibnamehash}{72dd6060b6f1d789d78346a350a43218}
-      \strng{authornamehash}{72dd6060b6f1d789d78346a350a43218}
-      \strng{authorfullhash}{72dd6060b6f1d789d78346a350a43218}
-      \strng{authorfullhashraw}{72dd6060b6f1d789d78346a350a43218}
-      \strng{editorbibnamehash}{459db79507400740d3b2b1509ee49e18}
-      \strng{editornamehash}{459db79507400740d3b2b1509ee49e18}
-      \strng{editorfullhash}{459db79507400740d3b2b1509ee49e18}
-      \strng{editorfullhashraw}{459db79507400740d3b2b1509ee49e18}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \strng{namehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{fullhash}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{fullhashraw}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{bibnamehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{authorbibnamehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{authornamehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{authorfullhash}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{authorfullhashraw}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \field{extraname}{3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{This classic work has been a unique resource for thousands of mathematicians, scientists and engineers since its first appearance in 1902. Never out of print, its continuing value lies in its thorough and exhaustive treatment of special functions of mathematical physics and the analysis of differential equations from which they emerge. The book also is of historical value as it was the first book in English to introduce the then modern methods of complex analysis. This fifth edition preserves the style and content of the original, but it has been supplemented with more recent results and references where appropriate. All the formulas have been checked and many corrections made. A complete bibliographical search has been conducted to present the references in modern form for ease of use. A new foreword by Professor S.J. Patterson sketches the circumstances of the book's genesis and explains the reasons for its longevity. A welcome addition to any mathematician's bookshelf, this will allow a whole new generation to experience the beauty contained in this text.}
-      \field{edition}{5}
-      \field{isbn}{978-1-316-51893-9}
-      \field{title}{A {{Course}} of {{Modern Analysis}}}
-      \field{urlday}{31}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{year}{2021}
+      \field{abstract}{The freedom to realise special-function dynamics within integrable Kummer-type Hamiltonian systems remains underexplored. We investigate this freedom through examples constructed from prescribed autonomous scalar equations, using the established reduction and mode-reconstruction framework. A local holomorphic equation \$ρ\textasciicircum\textbackslash prime = f(ρ)\$ determines a family of canonical Hamiltonians on a selected energy level, subject to regularity and compatible branch choices. We introduce the category of log-augmented polynomial systems, whose polynomial mode equations retain logarithmic terms in their scalar reductions, and illustrate it with examples including the Lotka-Volterra model and a parity-time-symmetric dimer. For rational generating equations, we prove a correspondence with extended Lambert-W-type inverse laws and establish elementary evaluation of rational reconstruction quadratures, giving local solvability results for the associated coupled systems. Further constructions use inverse incomplete beta and inverse spherical Bessel functions and the modular \$λ\$ function. The modular example has explicit theta-constant mode solutions and a direct map to the Darboux-Halphen system.}
+      \field{day}{19}
+      \field{eprintclass}{nlin.SI}
+      \field{eprinttype}{arXiv}
+      \field{month}{10}
+      \field{pubstate}{prepublished}
+      \field{title}{Generating Integrable Systems from an Autonomous Ordinary Differential Equation}
+      \field{urlday}{25}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2026}
       \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{doi}
-      \verb 10.1017/9781009004091
+      \verb 10.48550/arXiv.2610.26348
+      \endverb
+      \verb{eprint}
+      \verb 2610.26348
       \endverb
       \verb{file}
-      \verb /Users/grahamhesketh/Zotero/storage/PGHWNB9S/B2DDAE32B565419FA452C51FA03F6F3D.html
+      \verb /Users/grahamhesketh/Zotero/storage/TFF459DY/Hesketh - 2026 - Generating integrable systems from an autonomous ordinary differential equation.pdf;/Users/grahamhesketh/Zotero/storage/MDP9K7Z5/2610.html
       \endverb
       \verb{urlraw}
-      \verb https://www.cambridge.org/core/books/course-of-modern-analysis/B2DDAE32B565419FA452C51FA03F6F3D
+      \verb http://arxiv.org/abs/2610.26348
       \endverb
       \verb{url}
-      \verb https://www.cambridge.org/core/books/course-of-modern-analysis/B2DDAE32B565419FA452C51FA03F6F3D
+      \verb http://arxiv.org/abs/2610.26348
       \endverb
+      \keyw{Nonlinear Sciences - Exactly Solvable and Integrable Systems}
     \endentry
-    \entry{frobeniusZurTheorieElliptischen1877}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=35653b53b43b8bda07c9dde729df5e22}{%
-           family={Frobenius},
-           familyi={F\bibinitperiod},
-           given={F.\bibnamedelimi G.},
-           giveni={F\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
-        {{hash=2012c16fded75f7db8ca0c0a8034f483}{%
-           family={Stickelberger},
-           familyi={S\bibinitperiod},
-           given={L},
-           giveni={L\bibinitperiod}}}%
+    \entry{zotero-item-855}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=377f9db53e2daeb53d6fb8e1e94e3c24}{%
+           family={Hesketh},
+           familyi={H\bibinitperiod},
+           given={Graham},
+           giveni={G\bibinitperiod}}}%
       }
-      \strng{namehash}{7a3c0a3aca593a3400f42a4a6d701442}
-      \strng{fullhash}{7a3c0a3aca593a3400f42a4a6d701442}
-      \strng{fullhashraw}{7a3c0a3aca593a3400f42a4a6d701442}
-      \strng{bibnamehash}{7a3c0a3aca593a3400f42a4a6d701442}
-      \strng{authorbibnamehash}{7a3c0a3aca593a3400f42a4a6d701442}
-      \strng{authornamehash}{7a3c0a3aca593a3400f42a4a6d701442}
-      \strng{authorfullhash}{7a3c0a3aca593a3400f42a4a6d701442}
-      \strng{authorfullhashraw}{7a3c0a3aca593a3400f42a4a6d701442}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \strng{namehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{fullhash}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{fullhashraw}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{bibnamehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{authorbibnamehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{authornamehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{authorfullhash}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{authorfullhashraw}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \field{extraname}{4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal für die reine und angewandte Mathematik}
-      \field{langid}{german}
-      \field{title}{Zur Theorie der elliptischen Functionen}
-      \field{year}{1877}
+      \field{abstract}{We study polynomial Hamiltonian systems whose Hamiltonians consist of two weighted products of canonical modes minus a polynomial in their powers. This class extends the structure of familiar genus-one coupled-mode systems from nonlinear optics. We construct local analytic solutions in terms of sigma functions and Abelian integrals on smooth odd-degree hyperelliptic curves, subject to stated degree and regularity conditions. We associate Onishi's determinant identities with the conservation-law structure of these systems, extending the connection previously identified between Frobenius-Stickelberger determinants and conserved quantities in genus-one nonlinear optics. Explicit genus-two and genus-three examples include bounded oscillatory scalar motion. We evaluate the solutions using Generapy, a purpose-built Python package for algebraic curves and Abelian functions, and validate them against independent fourth-order Runge-Kutta integration.}
+      \field{pubstate}{prepublished}
+      \field{title}{Hyperelliptic Sigma Solutions of Polynomial {{Hamiltonian}} Systems}
+      \field{year}{2026}
       \field{dateera}{ce}
+      \verb{file}
+      \verb /Users/grahamhesketh/Zotero/storage/QCYRXEXA/Hesketh - 2026 - Hyperelliptic sigma solutions of polynomial Hamiltonian systems.pdf;/Users/grahamhesketh/Zotero/storage/ES4J3M6X/2610.html
+      \endverb
       \verb{urlraw}
-      \verb https://www.digizeitschriften.de/id/243919689_0083
+      \verb https://arxiv.org/abs/2610.22784
       \endverb
       \verb{url}
-      \verb https://www.digizeitschriften.de/id/243919689_0083
+      \verb https://arxiv.org/abs/2610.22784
       \endverb
+      \keyw{Nonlinear Sciences - Exactly Solvable and Integrable Systems}
     \endentry
     \entry{stolenParametricAmplificationFrequency1982}{article}{}{}
       \name{author}{2}{}{%
@@ -680,164 +1036,106 @@
       \endverb
       \keyw{classical mechanics,differential equation,Lagrangian mechanics,Mathematische Physik,Mechanik,Rigid body,Vector field}
     \endentry
-    \entry{heskethMinimizingInterchannelCrossphase2016}{article}{}{}
+    \entry{whittakerCourseModernAnalysis2021}{book}{}{}
       \name{author}{2}{}{%
-        {{hash=1d7bc127dff7603699c24117aaf97d4c}{%
-           family={Hesketh},
-           familyi={H\bibinitperiod},
-           given={Graham\bibnamedelima D.},
-           giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
-        {{hash=2c76b9a8c11d6135dc389814ed12e629}{%
-           family={Petropoulos},
-           familyi={P\bibinitperiod},
-           given={Periklis},
-           giveni={P\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Optica Publishing Group}%
-      }
-      \strng{namehash}{4f449399a7aac2192e706c0d728a8544}
-      \strng{fullhash}{4f449399a7aac2192e706c0d728a8544}
-      \strng{fullhashraw}{4f449399a7aac2192e706c0d728a8544}
-      \strng{bibnamehash}{4f449399a7aac2192e706c0d728a8544}
-      \strng{authorbibnamehash}{4f449399a7aac2192e706c0d728a8544}
-      \strng{authornamehash}{4f449399a7aac2192e706c0d728a8544}
-      \strng{authorfullhash}{4f449399a7aac2192e706c0d728a8544}
-      \strng{authorfullhashraw}{4f449399a7aac2192e706c0d728a8544}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Using analytic and numerical modelling of fibre transmission systems that employ optical phase conjugation (OPC), we show inter-channel cross-phase modulation depends on the integrated square error between nonlinear profiles before and after OPC and that arranging amplifiers and tuning power levels is crucial to minimizing noise. We derive modulation transparent formulas for phase noise and optimal power settings. Examples are shown for 16 and 64 quadrature amplitude modulation.}
-      \field{day}{5}
-      \field{issn}{1094-4087}
-      \field{journaltitle}{Optics Express}
-      \field{langid}{english}
-      \field{month}{9}
-      \field{number}{18}
-      \field{shortjournal}{Opt. Express, OE}
-      \field{title}{Minimizing Inter-Channel Cross-Phase Modulation with Optical Phase Conjugation in Asymmetric Fibre Links}
-      \field{urlday}{15}
-      \field{urlmonth}{1}
-      \field{urlyear}{2026}
-      \field{volume}{24}
-      \field{year}{2016}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{20270\bibrangedash 20280}
-      \range{pages}{11}
-      \verb{doi}
-      \verb 10.1364/OE.24.020270
-      \endverb
-      \verb{file}
-      \verb /Users/grahamhesketh/Zotero/storage/SP8FP3Z7/Hesketh and Petropoulos - 2016 - Minimizing inter-channel cross-phase modulation with optical phase conjugation in asymmetric fibre l.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://opg.optica.org/oe/abstract.cfm?uri=oe-24-18-20270
-      \endverb
-      \verb{url}
-      \verb https://opg.optica.org/oe/abstract.cfm?uri=oe-24-18-20270
-      \endverb
-      \keyw{Fiber optic communications,Frequency division multiplexing,Optical signal to noise ratio,Phase conjugation,Phase modulation,Phase noise}
-    \endentry
-    \entry{weilEllipticFunctionsAccording1976}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=f5987f3b70bd698e3c1139b23bb8026b}{%
-           family={Weil},
+        {{hash=5132db19fe0ad334db14252f9887f29d}{%
+           family={Whittaker},
            familyi={W\bibinitperiod},
-           given={André},
-           giveni={A\bibinitperiod}}}%
+           given={E.\bibnamedelimi T.},
+           giveni={E\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=35673bb7ba499f77d168ee80794262e8}{%
+           family={Watson},
+           familyi={W\bibinitperiod},
+           given={G.\bibnamedelimi N.},
+           giveni={G\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=459db79507400740d3b2b1509ee49e18}{%
+           family={Moll},
+           familyi={M\bibinitperiod},
+           given={Victor\bibnamedelima H.},
+           giveni={V\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
       }
       \list{location}{1}{%
-        {Berlin, Heidelberg}%
+        {Cambridge}%
       }
       \list{publisher}{1}{%
-        {Springer}%
+        {Cambridge University Press}%
       }
-      \strng{namehash}{f5987f3b70bd698e3c1139b23bb8026b}
-      \strng{fullhash}{f5987f3b70bd698e3c1139b23bb8026b}
-      \strng{fullhashraw}{f5987f3b70bd698e3c1139b23bb8026b}
-      \strng{bibnamehash}{f5987f3b70bd698e3c1139b23bb8026b}
-      \strng{authorbibnamehash}{f5987f3b70bd698e3c1139b23bb8026b}
-      \strng{authornamehash}{f5987f3b70bd698e3c1139b23bb8026b}
-      \strng{authorfullhash}{f5987f3b70bd698e3c1139b23bb8026b}
-      \strng{authorfullhashraw}{f5987f3b70bd698e3c1139b23bb8026b}
+      \strng{namehash}{72dd6060b6f1d789d78346a350a43218}
+      \strng{fullhash}{72dd6060b6f1d789d78346a350a43218}
+      \strng{fullhashraw}{72dd6060b6f1d789d78346a350a43218}
+      \strng{bibnamehash}{72dd6060b6f1d789d78346a350a43218}
+      \strng{authorbibnamehash}{72dd6060b6f1d789d78346a350a43218}
+      \strng{authornamehash}{72dd6060b6f1d789d78346a350a43218}
+      \strng{authorfullhash}{72dd6060b6f1d789d78346a350a43218}
+      \strng{authorfullhashraw}{72dd6060b6f1d789d78346a350a43218}
+      \strng{editorbibnamehash}{459db79507400740d3b2b1509ee49e18}
+      \strng{editornamehash}{459db79507400740d3b2b1509ee49e18}
+      \strng{editorfullhash}{459db79507400740d3b2b1509ee49e18}
+      \strng{editorfullhashraw}{459db79507400740d3b2b1509ee49e18}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{isbn}{978-3-540-65036-2 978-3-642-66209-6}
-      \field{langid}{english}
-      \field{title}{Elliptic {{Functions}} According to {{Eisenstein}} and {{Kronecker}}}
-      \field{urlday}{11}
-      \field{urlmonth}{1}
-      \field{urlyear}{2026}
-      \field{year}{1976}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.1007/978-3-642-66209-6
-      \endverb
-      \verb{urlraw}
-      \verb https://link.springer.com/10.1007/978-3-642-66209-6
-      \endverb
-      \verb{url}
-      \verb https://link.springer.com/10.1007/978-3-642-66209-6
-      \endverb
-      \keyw{algebraic number theory,development,elliptic function,elliptic functions,equation,Etch,form,function,history of mathematics,Lattice,mathematics,number theory,Outlook,society,story}
-    \endentry
-    \entry{charolloisEllipticFunctionsAccording2016}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=4b00634e0c1bf026d435243270e07a1a}{%
-           family={Charollois},
-           familyi={C\bibinitperiod},
-           given={Pierre},
-           giveni={P\bibinitperiod}}}%
-        {{hash=848ddf4e0f29b737a2c2df4fa81af12b}{%
-           family={Sczech},
-           familyi={S\bibinitperiod},
-           given={Robert},
-           giveni={R\bibinitperiod}}}%
-      }
-      \strng{namehash}{5facffddd10df198f54552a89b2717e6}
-      \strng{fullhash}{5facffddd10df198f54552a89b2717e6}
-      \strng{fullhashraw}{5facffddd10df198f54552a89b2717e6}
-      \strng{bibnamehash}{5facffddd10df198f54552a89b2717e6}
-      \strng{authorbibnamehash}{5facffddd10df198f54552a89b2717e6}
-      \strng{authornamehash}{5facffddd10df198f54552a89b2717e6}
-      \strng{authorfullhash}{5facffddd10df198f54552a89b2717e6}
-      \strng{authorfullhashraw}{5facffddd10df198f54552a89b2717e6}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{issn}{1027-488X}
-      \field{journaltitle}{EMS Newsletter}
-      \field{langid}{english}
-      \field{number}{101}
-      \field{shortjournal}{EMS Newsl.}
-      \field{shorttitle}{Elliptic {{Functions According}} to {{Eisenstein}} and {{Kronecker}}}
-      \field{title}{Elliptic {{Functions According}} to {{Eisenstein}} and {{Kronecker}}: {{An Update}}}
-      \field{urlday}{4}
-      \field{urlmonth}{8}
+      \field{abstract}{This classic work has been a unique resource for thousands of mathematicians, scientists and engineers since its first appearance in 1902. Never out of print, its continuing value lies in its thorough and exhaustive treatment of special functions of mathematical physics and the analysis of differential equations from which they emerge. The book also is of historical value as it was the first book in English to introduce the then modern methods of complex analysis. This fifth edition preserves the style and content of the original, but it has been supplemented with more recent results and references where appropriate. All the formulas have been checked and many corrections made. A complete bibliographical search has been conducted to present the references in modern form for ease of use. A new foreword by Professor S.J. Patterson sketches the circumstances of the book's genesis and explains the reasons for its longevity. A welcome addition to any mathematician's bookshelf, this will allow a whole new generation to experience the beauty contained in this text.}
+      \field{edition}{5}
+      \field{isbn}{978-1-316-51893-9}
+      \field{title}{A {{Course}} of {{Modern Analysis}}}
+      \field{urlday}{31}
+      \field{urlmonth}{12}
       \field{urlyear}{2025}
-      \field{volume}{2016--9}
-      \field{year}{2016}
+      \field{year}{2021}
       \field{dateera}{ce}
       \field{urldateera}{ce}
-      \field{pages}{8\bibrangedash 14}
-      \range{pages}{7}
       \verb{doi}
-      \verb 10.4171/NEWS/101/4
+      \verb 10.1017/9781009004091
       \endverb
       \verb{file}
-      \verb /Users/grahamhesketh/Zotero/storage/EA6S346H/Charollois and Sczech - 2016 - Elliptic Functions According to Eisenstein and Kronecker An Update.pdf
+      \verb /Users/grahamhesketh/Zotero/storage/PGHWNB9S/B2DDAE32B565419FA452C51FA03F6F3D.html
       \endverb
       \verb{urlraw}
-      \verb https://ems.press/doi/10.4171/news/101/4
+      \verb https://www.cambridge.org/core/books/course-of-modern-analysis/B2DDAE32B565419FA452C51FA03F6F3D
       \endverb
       \verb{url}
-      \verb https://ems.press/doi/10.4171/news/101/4
+      \verb https://www.cambridge.org/core/books/course-of-modern-analysis/B2DDAE32B565419FA452C51FA03F6F3D
+      \endverb
+    \endentry
+    \entry{frobeniusZurTheorieElliptischen1877}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=35653b53b43b8bda07c9dde729df5e22}{%
+           family={Frobenius},
+           familyi={F\bibinitperiod},
+           given={F.\bibnamedelimi G.},
+           giveni={F\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=2012c16fded75f7db8ca0c0a8034f483}{%
+           family={Stickelberger},
+           familyi={S\bibinitperiod},
+           given={L},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{7a3c0a3aca593a3400f42a4a6d701442}
+      \strng{fullhash}{7a3c0a3aca593a3400f42a4a6d701442}
+      \strng{fullhashraw}{7a3c0a3aca593a3400f42a4a6d701442}
+      \strng{bibnamehash}{7a3c0a3aca593a3400f42a4a6d701442}
+      \strng{authorbibnamehash}{7a3c0a3aca593a3400f42a4a6d701442}
+      \strng{authornamehash}{7a3c0a3aca593a3400f42a4a6d701442}
+      \strng{authorfullhash}{7a3c0a3aca593a3400f42a4a6d701442}
+      \strng{authorfullhashraw}{7a3c0a3aca593a3400f42a4a6d701442}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal für die reine und angewandte Mathematik}
+      \field{langid}{german}
+      \field{title}{Zur Theorie der elliptischen Functionen}
+      \field{year}{1877}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.digizeitschriften.de/id/243919689_0083
+      \endverb
+      \verb{url}
+      \verb https://www.digizeitschriften.de/id/243919689_0083
       \endverb
     \endentry
     \entry{laurentPyweierstrass2022}{software}{}{}
@@ -1112,6 +1410,338 @@
       \endverb
       \keyw{Biophysical chemistry,Computational biology and bioinformatics,Technology}
     \endentry
+    \entry{brownMultipleEllipticPolylogarithms2013}{online}{}{}
+      \name{author}{2}{}{%
+        {{hash=3485879cf93349e5bb811c04c6688a62}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={Francis\bibnamedelimb C.\bibnamedelimi S.},
+           giveni={F\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=d20208ed7721e3993ce723e81c7d0716}{%
+           family={Levin},
+           familyi={L\bibinitperiod},
+           given={Andrey},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{d45be003db622082cc5d884880a41b53}
+      \strng{fullhash}{d45be003db622082cc5d884880a41b53}
+      \strng{fullhashraw}{d45be003db622082cc5d884880a41b53}
+      \strng{bibnamehash}{d45be003db622082cc5d884880a41b53}
+      \strng{authorbibnamehash}{d45be003db622082cc5d884880a41b53}
+      \strng{authornamehash}{d45be003db622082cc5d884880a41b53}
+      \strng{authorfullhash}{d45be003db622082cc5d884880a41b53}
+      \strng{authorfullhashraw}{d45be003db622082cc5d884880a41b53}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We study the de Rham fundamental group of the configuration space \$E\textasciicircum\{(n)\}\$ of \$n+1\$ marked points on an elliptic curve \$E\$, and define multiple elliptic polylogarithms. These are multivalued functions on \$E\textasciicircum\{(n)\}\$ with unipotent monodromy, and are constructed by a general averaging procedure. We show that all iterated integrals on \$E\textasciicircum\{(n)\}\$, and in particular the periods of the unipotent fundamental group of the punctured curve \$E \textbackslash backslash \textbackslash\{0\textbackslash\}\$, can be expressed in terms of these functions.}
+      \field{day}{20}
+      \field{eprintclass}{math.NT}
+      \field{eprinttype}{arXiv}
+      \field{month}{6}
+      \field{pubstate}{prepublished}
+      \field{title}{Multiple {{Elliptic Polylogarithms}}}
+      \field{urlday}{25}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.1110.6917
+      \endverb
+      \verb{eprint}
+      \verb 1110.6917
+      \endverb
+      \verb{file}
+      \verb /Users/grahamhesketh/Zotero/storage/HDWSNJT4/Brown and Levin - 2013 - Multiple Elliptic Polylogarithms.pdf;/Users/grahamhesketh/Zotero/storage/EX3UML2A/1110.html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1110.6917
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1110.6917
+      \endverb
+      \keyw{Mathematics - Number Theory}
+    \endentry
+    \entry{kricheverEllipticSolutionsNonlinear1994}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=b636bad7d71d9fd5070a93edc53b604a}{%
+           family={Krichever},
+           familyi={K\bibinitperiod},
+           given={I.\bibnamedelimi M.},
+           giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{b636bad7d71d9fd5070a93edc53b604a}
+      \strng{fullhash}{b636bad7d71d9fd5070a93edc53b604a}
+      \strng{fullhashraw}{b636bad7d71d9fd5070a93edc53b604a}
+      \strng{bibnamehash}{b636bad7d71d9fd5070a93edc53b604a}
+      \strng{authorbibnamehash}{b636bad7d71d9fd5070a93edc53b604a}
+      \strng{authornamehash}{b636bad7d71d9fd5070a93edc53b604a}
+      \strng{authorfullhash}{b636bad7d71d9fd5070a93edc53b604a}
+      \strng{authorfullhashraw}{b636bad7d71d9fd5070a93edc53b604a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The theory of elliptic solitons for the Kadomtsev-Petviashvili (KP) equation and the dynamics of the corresponding Calogero-Moser system is integrated. It is found that all the elliptic solutions for the KP equation manifest themselves in terms of Riemann theta functions which are associated with algebraic curves admitting a realization in the form of a covering of the initial elliptic curve with some special properties. These curves are given in the paper by explicit formulae. We further give applications of the elliptic Baker-Akhiezer function to generalized elliptic genera of manifolds and to algebraic 2-valued formal groups.}
+      \field{day}{1}
+      \field{issn}{1572-9036}
+      \field{journaltitle}{Acta Applicandae Mathematica}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{number}{1}
+      \field{shortjournal}{Acta Appl Math}
+      \field{title}{Elliptic Solutions of Nonlinear Integrable Equations and Related Topics}
+      \field{urlday}{25}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{volume}{36}
+      \field{year}{1994}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{7\bibrangedash 25}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1007/BF01001540
+      \endverb
+      \verb{file}
+      \verb /Users/grahamhesketh/Zotero/storage/KP4AE5CV/Krichever - 1994 - Elliptic solutions of nonlinear integrable equations and related topics.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF01001540
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF01001540
+      \endverb
+      \keyw{14H52,14H55,35Q51,35Q53,Baker-Akhiezer function,Elliptic soliton,KP equation}
+    \endentry
+    \entry{weilEllipticFunctionsAccording1976}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=f5987f3b70bd698e3c1139b23bb8026b}{%
+           family={Weil},
+           familyi={W\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{f5987f3b70bd698e3c1139b23bb8026b}
+      \strng{fullhash}{f5987f3b70bd698e3c1139b23bb8026b}
+      \strng{fullhashraw}{f5987f3b70bd698e3c1139b23bb8026b}
+      \strng{bibnamehash}{f5987f3b70bd698e3c1139b23bb8026b}
+      \strng{authorbibnamehash}{f5987f3b70bd698e3c1139b23bb8026b}
+      \strng{authornamehash}{f5987f3b70bd698e3c1139b23bb8026b}
+      \strng{authorfullhash}{f5987f3b70bd698e3c1139b23bb8026b}
+      \strng{authorfullhashraw}{f5987f3b70bd698e3c1139b23bb8026b}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-540-65036-2 978-3-642-66209-6}
+      \field{langid}{english}
+      \field{title}{Elliptic {{Functions}} According to {{Eisenstein}} and {{Kronecker}}}
+      \field{urlday}{11}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{year}{1976}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1007/978-3-642-66209-6
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/10.1007/978-3-642-66209-6
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/10.1007/978-3-642-66209-6
+      \endverb
+      \keyw{algebraic number theory,development,elliptic function,elliptic functions,equation,Etch,form,function,history of mathematics,Lattice,mathematics,number theory,Outlook,society,story}
+    \endentry
+    \entry{charolloisEllipticFunctionsAccording2016}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=4b00634e0c1bf026d435243270e07a1a}{%
+           family={Charollois},
+           familyi={C\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod}}}%
+        {{hash=848ddf4e0f29b737a2c2df4fa81af12b}{%
+           family={Sczech},
+           familyi={S\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{5facffddd10df198f54552a89b2717e6}
+      \strng{fullhash}{5facffddd10df198f54552a89b2717e6}
+      \strng{fullhashraw}{5facffddd10df198f54552a89b2717e6}
+      \strng{bibnamehash}{5facffddd10df198f54552a89b2717e6}
+      \strng{authorbibnamehash}{5facffddd10df198f54552a89b2717e6}
+      \strng{authornamehash}{5facffddd10df198f54552a89b2717e6}
+      \strng{authorfullhash}{5facffddd10df198f54552a89b2717e6}
+      \strng{authorfullhashraw}{5facffddd10df198f54552a89b2717e6}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{1027-488X}
+      \field{journaltitle}{EMS Newsletter}
+      \field{langid}{english}
+      \field{number}{101}
+      \field{shortjournal}{EMS Newsl.}
+      \field{shorttitle}{Elliptic {{Functions According}} to {{Eisenstein}} and {{Kronecker}}}
+      \field{title}{Elliptic {{Functions According}} to {{Eisenstein}} and {{Kronecker}}: {{An Update}}}
+      \field{urlday}{4}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{volume}{2016--9}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{8\bibrangedash 14}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.4171/NEWS/101/4
+      \endverb
+      \verb{file}
+      \verb /Users/grahamhesketh/Zotero/storage/EA6S346H/Charollois and Sczech - 2016 - Elliptic Functions According to Eisenstein and Kronecker An Update.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ems.press/doi/10.4171/news/101/4
+      \endverb
+      \verb{url}
+      \verb https://ems.press/doi/10.4171/news/101/4
+      \endverb
+    \endentry
+    \entry{bradenBilinearRecurrencesAddition2005}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=b6dea4886ea4d930746a17bdf027ab88}{%
+           family={Braden},
+           familyi={B\bibinitperiod},
+           given={Harry\bibnamedelima W.},
+           giveni={H\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=a7ead4819298f2bdce2b162fcb2ef6e9}{%
+           family={Enolskii},
+           familyi={E\bibinitperiod},
+           given={Victor\bibnamedelima Z.},
+           giveni={V\bibinitperiod\bibinitdelim Z\bibinitperiod}}}%
+        {{hash=26bf948f4e99780d9cb8b02a47d02ab6}{%
+           family={Hone},
+           familyi={H\bibinitperiod},
+           given={Andrew\bibnamedelimb N.\bibnamedelimi W.},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{4c2ce7165414704d52e2ffb77349907e}
+      \strng{fullhash}{4c2ce7165414704d52e2ffb77349907e}
+      \strng{fullhashraw}{4c2ce7165414704d52e2ffb77349907e}
+      \strng{bibnamehash}{4c2ce7165414704d52e2ffb77349907e}
+      \strng{authorbibnamehash}{4c2ce7165414704d52e2ffb77349907e}
+      \strng{authornamehash}{4c2ce7165414704d52e2ffb77349907e}
+      \strng{authorfullhash}{4c2ce7165414704d52e2ffb77349907e}
+      \strng{authorfullhashraw}{4c2ce7165414704d52e2ffb77349907e}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Somos 4 sequences are a family of sequences satisfying a fourth order bilinear recurrence relation. In recent work, one of us has proved that the general term in such sequences can be expressed in terms of the Weierstrass sigma function for an associated elliptic curve. Here we derive the analogous family of sequences associated with an hyperelliptic curve of genus two. We show that the sequences associated with such curves satisfy bilinear recurrences of order 8. The proof requires an addition formula which involves the genus two Kleinian sigma function with its argument shifted by the Abelian image of the reduced divisor of a single point on the curve. The genus two recurrences are related to a Bäcklund transformation (BT) for an integrable Hamiltonian system, namely the discrete case (ii) Hénon-Heiles system.}
+      \field{day}{1}
+      \field{issn}{1776-0852}
+      \field{journaltitle}{Journal of Nonlinear Mathematical Physics}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{number}{2}
+      \field{shortjournal}{J Nonlinear Math Phys}
+      \field{title}{Bilinear Recurrences and Addition Formulae for Hyperelliptic Sigma Functions}
+      \field{urlday}{3}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{volume}{12}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{46\bibrangedash 62}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.2991/jnmp.2005.12.s2.5
+      \endverb
+      \verb{file}
+      \verb /Users/grahamhesketh/Zotero/storage/BA96J8WG/Braden et al. - 2005 - Bilinear recurrences and addition formulae for hyperelliptic sigma functions.pdf;/Users/grahamhesketh/Zotero/storage/JCS23IPI/Braden et al. - 2005 - Bilinear recurrences and addition formulae for hyperelliptic sigma functions.pdf;/Users/grahamhesketh/Zotero/storage/MFYNP3SA/Braden et al. - 2005 - Bilinear recurrences and addition formulae for hyperelliptic sigma functions.pdf;/Users/grahamhesketh/Zotero/storage/52IGUEAG/0501162.html
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.2991/jnmp.2005.12.s2.5
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.2991/jnmp.2005.12.s2.5
+      \endverb
+      \keyw{Hyperbolic Geometry,Mathematical Physics,Mathematics,Mathematics - Number Theory,Nonlinear Sciences - Exactly Solvable and Integrable Systems,Ordinary Differential Equations,Real Functions,Sequences Series Summability,Special Functions}
+    \endentry
+    \entry{heskethNonlinearEffectsMultimode2014}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=377f9db53e2daeb53d6fb8e1e94e3c24}{%
+           family={Hesketh},
+           familyi={H\bibinitperiod},
+           given={Graham},
+           giveni={G\bibinitperiod}}}%
+      }
+      \name{namea}{2}{}{%
+        {{hash=377f9db53e2daeb53d6fb8e1e94e3c24}{%
+           family={Hesketh},
+           familyi={H\bibinitperiod},
+           given={Graham},
+           giveni={G\bibinitperiod}}}%
+        {{hash=7d64ba606da0df95f4390c1e85ac75fc}{%
+           family={Horak},
+           familyi={H\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {University of Southampton}%
+      }
+      \strng{namehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{fullhash}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{fullhashraw}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{bibnamehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{authorbibnamehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{authornamehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{authorfullhash}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{authorfullhashraw}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{nameabibnamehash}{c331a21821c9e2b80ac10ca2e844160a}
+      \strng{nameanamehash}{c331a21821c9e2b80ac10ca2e844160a}
+      \strng{nameafullhash}{c331a21821c9e2b80ac10ca2e844160a}
+      \strng{nameafullhashraw}{c331a21821c9e2b80ac10ca2e844160a}
+      \field{extraname}{5}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Utilizing the modes of a multimode fiber forms a frontier between what is achievable with current fibre technology and what is required for the remainder of the 21st century. Large mode area multimode fibers accommodate the high power delivery demanded by fiber lasers used in industry for precision cutting, welding and drilling functions, and used elsewhere for the generation of white light sources used in fiber communication, medical and precision time keeping applications. This thesis explores the theory of nonlinear effects in multimode fibers with the intention of optimizing existing applications, whilst simultaneously identifying new ones.{$<$}br/{$><$}br/{$>$}A generalized multimode nonlinear Schrodinger equation is numerically solved to explore the phenomenon of self-focusing in multimode fibers, with peak powers in the megawatt regime. Temporal effects compress femtosecond pulses launched into the fundamental mode, driving peak powers up and coupling power into higher order modes; a process identified with transverse spatial contraction and increased intensity. Parameter regimes in which damage may be avoided are identified. The nonlinear interaction of two modes under continuous wave pumping is solved analytically in terms of elliptic functions.{$<$}br/{$><$}br/{$>$}The nonlinear multi frequency dynamics describing the optical regeneration of optical communication signals are researched in a scalar single mode scenario, before nonlinear effects in polarization modes are explored. In the scalar case, a modification to a phase sensitive amplifier from the literature solves the problem of phase to amplitude noise conversion during regeneration. Improved bit error rates in three modulation formats are simulated as a result and experimental collaboration demonstrates proof of principle. Polarization assisted phase sensitive amplification (PAPSA) for signal regeneration is then introduced. Polarization mode benefits include operating power and fiber length reduction, simultaneous regeneration of signal phase and amplitude, and a simple way to decompose the signal into quadrature and in-phase components. An approximate analytic theory of PAPSA is developed. Experimental collaboration demonstrates that PAPSA offers significant signal bit error rate reduction{$<$}br/{$>$}}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{nameatype}{collaborator}
+      \field{pagetotal}{131}
+      \field{title}{Nonlinear Effects in Multimode Optical Fibers}
+      \field{type}{phdthesis}
+      \field{urlday}{31}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /Users/grahamhesketh/Zotero/storage/9MYV9J2K/Hesketh - 2014 - Nonlinear effects in multimode optical fibers.pdf;/Users/grahamhesketh/Zotero/storage/J7F427WW/374911.html
+      \endverb
+      \verb{urlraw}
+      \verb https://eprints.soton.ac.uk/374911/
+      \endverb
+      \verb{url}
+      \verb https://eprints.soton.ac.uk/374911/
+      \endverb
+    \endentry
     \entry{heskethHeskethGDFwmpaper2026}{software}{}{}
       \name{author}{1}{}{%
         {{hash=377f9db53e2daeb53d6fb8e1e94e3c24}{%
@@ -1128,9 +1758,9 @@
       \strng{authornamehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
       \strng{authorfullhash}{377f9db53e2daeb53d6fb8e1e94e3c24}
       \strng{authorfullhashraw}{377f9db53e2daeb53d6fb8e1e94e3c24}
-      \field{extraname}{4}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{extraname}{6}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Code and latex for journal publication}
@@ -1311,8 +1941,8 @@
       \strng{authornamehash}{3b98d798f6abce49b004b950c7399ba8}
       \strng{authorfullhash}{84c6fbc34416f121bcaaf3c9fdbd6d96}
       \strng{authorfullhashraw}{84c6fbc34416f121bcaaf3c9fdbd6d96}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{SymPy is an open source computer algebra system written in pure Python. It is built with a focus on extensibility and ease of use, through both interactive and programmatic applications. These characteristics have led SymPy to become a popular symbolic library for the scientific Python ecosystem. This paper presents the architecture of SymPy, a description of its features, and a discussion of select submodules. The supplementary material provide additional examples and further outline details of the architecture and features of SymPy.}
